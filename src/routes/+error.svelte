@@ -6,7 +6,4 @@ import { page } from '$app/stores'
 <h2>{$page.status}</h2>
 <p class="subhead">{$page.error.message}</p>
 
-<p><strong>Sorry!</strong> Maybe try one of these links?</p>
-<ul>
-	<li><a href="/">Home</a></li>
-</ul>
+<p><strong>Whoops!</strong> Something went wrong. Try <a href="/">heading back to the homepage.</a></p>

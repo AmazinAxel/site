@@ -10,11 +10,10 @@
 
 <h1>Contact</h1>
 
-This starter was made by Josh Collinsworth. You can <a rel="external" href="https://joshcollinsworth.com/contact">get in touch with Josh here</a>.
+This page is broken and doesn't do anything yet!!
+Stuff is still being worked on so things will be broken.
 
-If you're using this starter for your own site, feel free to delete this page, or replace it with a contact page of your own. (I'm a big fan of <a href="https://docs.netlify.com/forms/setup/">Netlify forms</a>, personally.)
-
-<Callout>This form does nothing! It's just here to show default styling.</Callout>
+<Callout>Hi!</Callout>
 
 <form on:submit|preventDefault>
 	<div class="form-section">
@@ -48,8 +47,8 @@ If you're using this starter for your own site, feel free to delete this page, o
 
 	<div class="form-section">
 		<input type="checkbox" id="c1" >
-		<label for="c1">Sign me up for something!</label>
+		<label for="c1">Sign me up</label>
 	</div>
 
-	<input type="submit" value="Do nothing!">
+	<input type="submit" value="Submit (broken)!">
 </form>
