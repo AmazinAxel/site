@@ -1,9 +1,9 @@
 <svelte:head>
-	<title>About</title>
+<title>About</title>
 </svelte:head>
 
 # About
 
-*Markdown*
+_Markdown_
 
 **COMING SOON!**

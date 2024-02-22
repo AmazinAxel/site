@@ -1,5 +1,9 @@
+# Don't include dependencies, should be installed after using 'bun install'
 node_modules
+
+# Don't include the built site, should be generated after using 'bun run build'
 /build
-/.svelte-kit
-/package
+
+# Don't include cached files or junk
 *timestamp*
+/.svelte-kit
