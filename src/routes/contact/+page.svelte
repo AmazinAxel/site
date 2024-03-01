@@ -10,8 +10,8 @@
 
 <h1>Contact</h1>
 
-This page is broken and doesn't do anything yet!!
-Stuff is still being worked on so things will be broken.
+<p>This page is broken and doesn't do anything yet!!</p>
+<p>Stuff is still being worked on so things will be broken.</p>
 
 <Callout>Hi!</Callout>
 
