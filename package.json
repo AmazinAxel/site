@@ -3,8 +3,9 @@
 	"description": "My personal landing site",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "bunx vite build",
-		"preview": "bunx vite preview",
+		"build": "vite build",
+		"preview": "vite preview",
+		"dev": "vite build && vite preview",
 		"lint": "prettier --check plugin-search-dir=. . && eslint .",
 		"format": "prettier --write ."
 	},

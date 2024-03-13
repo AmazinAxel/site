@@ -42,8 +42,6 @@
 	<link rel="stylesheet" href="/css/forms.css" />
 	<link rel="stylesheet" href="/css/animation.css" />
 	<link rel="stylesheet" href="/css/utilities.css" />
-	<link rel="stylesheet" href="/css/code.css" />
-	<link rel="stylesheet" href="/css/prism.css" />
 </svelte:head>
 
 <!--
