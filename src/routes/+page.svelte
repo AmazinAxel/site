@@ -12,10 +12,9 @@
 
 <h2>Under construction</h2>
 
-<p>This website is still being developed!</p>
-<p>Check back later when it's done (hopefully in a week or two)</p>
+<p>This website is under development!</p>
+<p>Check back later when I'm done (hopefully in a week or two...)</p>
 
 <h3>Visit my other site!</h3>
 
-<p>While this site remains unfinished, check out my other (finished) blog site:
- at <a href="https://alecshome.com">Alecshome.com</a>.</p>
+<p>Check out my other blog site at <a href="https://alecshome.com">Alecshome.com</a> for current information.</p>
