@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/*@layer base {
 	:root {
 		--font-geist-sans: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 			Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -70,27 +70,23 @@
 	}
 }
 @layer base {
-	* {
-		@apply border-border;
-	}
 	html {
 		-webkit-text-size-adjust: 100%;
 		font-variation-settings: normal;
 	}
 	body {
-		@apply bg-background text-foreground;
 		font-feature-settings:
 			'rlig' 1,
 			'calt' 1;
 	}
 
-	/* Mobile tap highlight */
-	/* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color */
+	/* Mobile tap highlight 
 	html {
 		-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
 	}
 
-	/* Font face Geist font */
+	/* Font face Geist font 
+	
 
 	@font-face {
 		font-family: 'Geist Sans';
@@ -124,7 +120,7 @@
 		src: url('/fonts/Geist/Geist-Bold.woff2') format('woff2');
 	}
 
-	/* === Scrollbars === */
+	/* === Scrollbars === 
 
 	::-webkit-scrollbar {
 		@apply w-2;
@@ -136,25 +132,6 @@
 	}
 	::-webkit-scrollbar-thumb {
 		@apply rounded-sm !bg-muted-foreground/30;
-	}
-
-	/* Firefox */
-	/* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color#browser_compatibility */
-	html {
-		scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3);
-	}
-
-	html.dark {
-		scrollbar-color: hsl(215.4 16.3% 56.9% / 0.3);
-	}
-
-	.hide-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
-
-	.hide-scrollbar {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
 	}
 
 	.antialised {
@@ -294,4 +271,4 @@
 }
 .super-debug--code .boolean {
 	@apply !text-[#FFF8];
-}
+} */

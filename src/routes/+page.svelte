@@ -1,11 +1,5 @@
-<script>
-	import { siteTitle } from '$lib/config';
-
-	export let data;
-</script>
-
 <svelte:head>
-	<title>{siteTitle}</title>
+	<title>AmazinAxel's Stuff</title>
 </svelte:head>
 
 <h1>AmazinAxel's Site</h1>
