@@ -8,6 +8,9 @@ const config = {
 			allow: ['.']
 		}
 	},
+  alias: {
+    src: '/src',
+  },
 	build: {
 		target: "es2020"
 	},
