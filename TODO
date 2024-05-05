@@ -1,0 +1,4 @@
+Remove all previous styling, and replace with custom styling
+
+Add sidebar functionality
+- Make sidebar state remain when pages are changed

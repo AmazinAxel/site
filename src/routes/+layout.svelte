@@ -7,7 +7,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import '../styles/globals.css';
+	//import '../styles/globals.css';
 	export let data;
 
 	const transitionIn = { delay: 150, duration: 150 };
@@ -30,6 +30,8 @@
 		const navRoutes = navItems.map((item) => item.route);
 		preloadCode(...navRoutes);
 	});
+
+	import '../lib/tailwind.svelte';
 </script>
 <svelte:head>
 	<link rel="stylesheet" href="/css/vars.css" />
