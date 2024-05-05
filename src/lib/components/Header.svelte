@@ -1,6 +1,6 @@
 <script>
-	import MainNav from './sidebarNav.svelte'
-	import HamburgerMenuButton from './sidebarExpandButton.svelte'
+	import SidebarNav from './sidebarNav.svelte';
+	import SidebarExpandButton from './sidebarExpandButton.svelte';
 
 	const focusMain = () => {
 		const main = document.querySelector('main');
@@ -16,7 +16,7 @@
 	
 	<a href="/" class="site-title">AmazinAxel</a>
 	
-	<HamburgerMenuButton />
-	<MainNav />
+	<SidebarExpandButton/>
+	<SidebarNav/>
 
 </header>

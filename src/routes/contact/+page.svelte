@@ -1,5 +1,5 @@
 <script>
-	import Callout from '$lib/components/card.svelte'
+	import Card from '$lib/components/card.svelte';
 </script>
 
 
@@ -13,7 +13,7 @@
 <p>This page is broken and doesn't do anything yet!!</p>
 <p>Stuff is still being worked on so things will be broken.</p>
 
-<Callout>Hi!</Callout>
+<Card>Hi!</Card>
 
 <form on:submit|preventDefault>
 	<div class="form-section">

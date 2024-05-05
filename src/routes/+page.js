@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit';
+/*import { error } from '@sveltejs/kit';
 
 export const load = async () => {
 	try {
@@ -12,3 +12,17 @@ export const load = async () => {
 		error(500, err);
 	}
 };
+
+let items = [];
+async function loadRSS() {
+	const res = await fetch('https://alecshome.com/rss.xml');
+	const text = await res.text();
+	const feedDocument = new DOMParser().parseFromString(text, 'text/xml')
+	items = [...feedDocument.querySelectorAll('item')].map(item => {
+		const title = item.querySelector('title').textContent;
+		const url = item.querySelector('link').textContent;
+		
+		return { title, url };
+	});
+}
+loadRSS()*/

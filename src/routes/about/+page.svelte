@@ -1,6 +1,3 @@
-<script>
-    import '../../lib/tailwind.svelte';
-</script>
 <svelte:head>
 
 <title>About</title>

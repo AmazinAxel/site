@@ -2,7 +2,7 @@
 	import { navItems } from '$lib/config';
 	import { isMenuOpen } from '../assets/js/store';
 	import NavItem from './navButton.svelte';
-	import HamburgerMenuButton from './sidebarExpandButton.svelte';
+	import SidebarExpandButton from './sidebarExpandButton.svelte';
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
@@ -14,5 +14,5 @@
 			</NavItem>
 		{/each}
 	</ul>
-	<HamburgerMenuButton closeOnly="true" />
+	<SidebarExpandButton closeOnly="true"/>
 </nav>

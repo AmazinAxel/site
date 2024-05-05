@@ -18,8 +18,8 @@
 >
 	<span class="sr-only">Toggle hamburger menu</span>
 	{#if closeOnly}
-		<XSVG />
+		<XSVG/>
 	{:else}
-		<HamburgerSVG />
+		<HamburgerSVG/>
 	{/if}
 </button>
