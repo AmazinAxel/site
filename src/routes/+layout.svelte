@@ -2,7 +2,7 @@
 <script>
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
-	import { currentPage, isMenuOpen } from '../lib/assets/js/store.js';
+	import { currentPage, isMenuOpen } from '$lib/assets/js/store.js';
 	import { navItems } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
