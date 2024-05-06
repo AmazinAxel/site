@@ -24,8 +24,9 @@
 </script>
 <svelte:head>
 	<link rel="stylesheet" href="/css/typography.css"/>
-	<link rel="stylesheet" href="/css/animation.css"/>
 	<link rel="stylesheet" href="/css/header-and-footer.css"/>
+	<link rel="stylesheet" href="/css/layout.css"/>
+	<link rel="stylesheet" href="/css/typography.css"/>
 </svelte:head>
 
 <!-- Data below is used on every page throughout the site -->
