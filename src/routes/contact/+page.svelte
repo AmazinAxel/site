@@ -18,12 +18,12 @@
 <form on:submit|preventDefault>
 	<div class="form-section">
 		<label for="name">Name</label>
-		<input type="text" id="name" placeholder="First name" />
+		<input type="text" id="name" placeholder="First name"/>
 	</div>
 	
 	<div class="form-section">
 		<label for="email">Email</label>
-		<input type="email" id="email" placeholder="Email address" />
+		<input type="email" id="email" placeholder="Email address"/>
 	</div>
 
 	<fieldset>

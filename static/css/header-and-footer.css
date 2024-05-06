@@ -78,7 +78,7 @@ header {
 	}
 }
 
-.main-nav {
+.navbar {
 	position: fixed;
 	z-index: 2;
 	top: 0;
@@ -97,52 +97,52 @@ header {
 	transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.main-nav.open {
+.navbar.open {
 	transform: translateX(0);
 	opacity: 1;
 	pointer-events: unset;
 	visibility: unset;
 }
 
-.main-nav.open li {
+.navbar.open li {
 	--delay: 0.1s;
 	opacity: 0;
 	animation: slide_in_left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
-.main-nav a {
+.navbar a {
 	color: inherit;
 }
 
-.main-nav li:nth-of-type(1) {
+.navbar li:nth-of-type(1) {
 	animation-delay: calc(var(--delay) * 1);
 }
 
-.main-nav li:nth-of-type(2) {
+.navbar li:nth-of-type(2) {
 	animation-delay: calc(var(--delay) * 2);
 }
 
-.main-nav li:nth-of-type(3) {
+.navbar li:nth-of-type(3) {
 	animation-delay: calc(var(--delay) * 3);
 }
 
-.main-nav li:nth-of-type(4) {
+.navbar li:nth-of-type(4) {
 	animation-delay: calc(var(--delay) * 4);
 }
 
-.main-nav li:nth-of-type(5) {
+.navbar li:nth-of-type(5) {
 	animation-delay: calc(var(--delay) * 5);
 }
 
-.main-nav li:nth-of-type(6) {
+.navbar li:nth-of-type(6) {
 	animation-delay: calc(var(--delay) * 6);
 }
 
-.main-nav li:nth-of-type(7) {
+.navbar li:nth-of-type(7) {
 	animation-delay: calc(var(--delay) * 7);
 }
 
-.main-nav li:nth-of-type(8) {
+.navbar li:nth-of-type(8) {
 	animation-delay: calc(var(--delay) * 8);
 }
 
@@ -161,7 +161,7 @@ header {
 }
 
 @media (min-width: 48rem) {
-	header .main-nav {
+	header .navbar {
 		opacity: 1;
 		transform: none;
 		position: unset;
@@ -173,14 +173,14 @@ header {
 		color: inherit;
 	}
 
-	header .main-nav ul {
+	header .navbar ul {
 		margin: 1rem auto 0;
 		padding-top: 0.5rem;
 		border-top: 1px solid var(--dark);
 		width: max-content;
 	}
 
-	header .main-nav li {
+	header .navbar li {
 		font-size: inherit;
 		display: initial;
 		width: initial;
