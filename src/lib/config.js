@@ -7,30 +7,32 @@
 export const navItems = [
 	{
 		title: 'About',
-		route: '/about'
+		route: '/about',
+		icon: 'about'
 	},
 	{
 		title: 'Contact',
-		route: '/contact'
+		route: '/contact',
+		icon: 'unknown'
 	},
 	{
 		title: 'Projects',
-		route: '/projects'
-	},
-	{
-		title: 'Privacy Policy',
-		route: '/privacy-policy'
+		route: '/projects',
+		icon: 'projects'
 	},
 	{
 		title: 'GitHub',
-		route: '/github'
+		route: '/github',
+		icon: 'github'
 	},
 	{
 		title: 'Blog',
-		route: '/blog'
+		route: '/blog',
+		icon: 'blog'
 	},
 	{
 		title: 'Announcements',
-		route: 'https://alecshome.com'
+		route: 'https://alecshome.com',
+		icon: 'link'
 	}
 ];

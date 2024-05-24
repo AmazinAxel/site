@@ -1,4 +1,4 @@
-<!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
+<!-- Wraps every page on the site, most important parent layout -->
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -23,6 +23,8 @@
 
 </script>
 <svelte:head>
+	<!-- Top: least important styles | bottom: most important styles -->
+	<link rel="stylesheet" href="/css/reset.css"/>
 	<link rel="stylesheet" href="/css/typography.css"/>
 	<link rel="stylesheet" href="/css/header-and-footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
