@@ -8,7 +8,8 @@ const config = {
 
 	// Tells Sveltekit where to look for files
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ precompress: true })
+
 		prerender: {
 			default: true
 		},
