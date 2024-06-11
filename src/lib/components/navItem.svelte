@@ -20,7 +20,7 @@
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
 	>
-		<slot/>
 		<img src="/media/icons/{icon}.svg" alt="{href} Header icon" title="{href} Header icon">
+		<slot/>
 	</a>
 </li>

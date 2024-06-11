@@ -38,7 +38,7 @@
 	{#key data.path}
 		<main id="main-content" tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
 			<slot/> <!-- Main content goes here -->
+			<Footer/>
 		</main>
 	{/key}
-	<Footer/>
 </div>

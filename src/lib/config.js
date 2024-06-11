@@ -34,5 +34,10 @@ export const navItems = [
 		title: 'Announcements',
 		route: 'https://alecshome.com',
 		icon: 'link'
+	},
+	{
+		title: 'Tools',
+		route: '/tools',
+		icon: 'unknown'
 	}
 ];

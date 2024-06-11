@@ -9,13 +9,6 @@ const config = {
 	// Tells Sveltekit where to look for files
 	kit: {
 		adapter: adapter({ precompress: true })
-
-		prerender: {
-			default: true
-		},
-		prerender: {
-			entries: ['*']
-		}
 	},
 	preprocess: vitePreprocess()
 };

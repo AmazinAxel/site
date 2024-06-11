@@ -1,10 +1,10 @@
 <div class="card">
     <div class="inset nomargin">
     
-    <p>Hey! I'm AmazinAxel and I own this website and domain, AmazinAxel.com, along with other affiliated websites and domains (such as [AlecsHome.com](https://alecshome.com)).</p>
+    <p>Hey! I'm AmazinAxel and I own this website and domain, AmazinAxel.com, along with other affiliated websites and domains (such as [AlecsHome.com](https://alecshome.com)). This privacy policy applies to this site and to my other affiliated sites.</p>
     <br>
     
-    <h3>I care a lot about privacy and security. Please read this policy throughly <a href="#TLDR">or the TL;DR at the bottom</a> so you understand your privacy whilst being on my site.</h3>
+    <h3>I care a lot about privacy and security. Please read this policy throughly <a href="#TLDR">or the TL;DR at the bottom</a> so you understand your privacy while on my site.</h3>
     </div>
     
     <br>
@@ -23,7 +23,7 @@
     
     <p>I am always looking out for everyone's safety on my website and take it very, very seriously. If you have any questions or concerns, you may contact me through my [contact form.](/about#contact) Please browse safely and take care of your privacy online!</p>
     
-    <p>My privacy policy was last updated on May 26th, 2023 and updates to this privacy policy could happen without any notice.</p>
+    <p>My privacy policy was last updated on June 10th, 2024 and updates to this privacy policy could happen without any notice.</p>
     
 </div>
 <div class="card" id="TLDR">
