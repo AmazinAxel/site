@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* tailwind globals are glitchy */
 @layer base {
 	:root {
 		/* Colors */
@@ -48,17 +48,5 @@
 	.antialised {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	@keyframes slide_in_left {
-		from {
-			opacity: 0;
-			transform: translateX(-2rem);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
-	
+	}	
 }
