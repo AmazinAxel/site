@@ -1,7 +1,7 @@
 <script>
 	import { navItems } from '$lib/config';
 	import { isMenuOpen } from '../assets/js/store';
-	import NavItem from '$lib/components/NavItem.svelte';
+	import NavItem from '$lib/components/navItem.svelte';
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
