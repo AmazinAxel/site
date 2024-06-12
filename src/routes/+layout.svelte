@@ -7,7 +7,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import '../styles/globals.css';
+	import '$lib/styles/globals.css';
 	export let data;
 
 	const transitionIn = { delay: 150, duration: 150 };
@@ -24,8 +24,6 @@
 </script>
 <svelte:head>
 	<!-- Top: least important styles | bottom: most important styles -->
-	<link rel="stylesheet" href="/css/reset.css"/>
-	<link rel="stylesheet" href="/css/typography.css"/>
 	<link rel="stylesheet" href="/css/header-and-footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
 	<link rel="stylesheet" href="/css/typography.css"/>

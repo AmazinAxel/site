@@ -62,12 +62,13 @@ header {
 
 .navbar {
     z-index: 2;
-    transform: translateX(-100vw);
+    transform: translateX(-200px);
     visibility: hidden;
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+	transition: opacity ease .1s, transform ease .15s, visibility .15s;
 }
 
 .navbar.open {
@@ -78,7 +79,7 @@ header {
 }
 
 .navbar.open li {
-	--delay: 0.05s;
+	--delay: 0.025s;
 	opacity: 0;
 	animation: slide_in_left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }

@@ -1,5 +1,7 @@
 <script>
 	import { currentPage, isMenuOpen } from '../assets/js/store';
+	import { Icon } from 'svelte-icons-pack';
+	import { AiOutlineHome, AiFillQuestionCircle } from 'svelte-icons-pack/ai';
 
 	export let href;
 	export let icon;
@@ -20,7 +22,8 @@
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
 	>
-		<img src="/media/icons/{icon}.svg" alt="{href} Header icon" title="{href} Header icon">
+		<Icon src={AiFillQuestionCircle} alt="{href} Header icon" size="50" title="{href} Header icon"/>
+		<!--<Icon src={icon} color="red" size="64"title="Custom icon"/>-->
 		<slot/>
 	</a>
 </li>
