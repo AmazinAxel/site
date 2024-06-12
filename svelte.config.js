@@ -8,9 +8,19 @@ const config = {
 
 	// Tells Sveltekit where to look for files
 	kit: {
-		adapter: adapter({ precompress: true })
-	},
-	preprocess: vitePreprocess()
+		adapter: adapter({
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			},
+			platformProxy: {
+				configPath: 'wrangler.toml',
+				environment: undefined,
+				experimentalJsonConfig: false,
+				persist: false
+			}
+		})
+	}
 };
 
 export default config;
