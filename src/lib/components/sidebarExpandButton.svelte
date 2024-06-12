@@ -1,7 +1,7 @@
 <script>
 	import { isMenuOpen } from '../assets/js/store';
-	import HamburgerSVG from './svg/HamburgerSVG.svelte';
-	import XSVG from './svg/XSVG.svelte';
+	import HamburgerSVG from '$lib/components/svg/HamburgerSVG.svelte';
+	import XSVG from '$lib/components/svg/XSVG.svelte';
 
 	export let closeOnly = false;
 

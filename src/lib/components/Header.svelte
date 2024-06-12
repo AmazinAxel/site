@@ -1,6 +1,6 @@
 <script>
-	import SidebarNav from './SidebarNav.svelte';
-	import SidebarExpandButton from './SidebarExpandButton.svelte';
+	import SidebarNav from '$lib/components/SidebarNav.svelte';
+	import SidebarExpandButton from '$lib/components/SidebarExpandButton.svelte';
 
 	const focusMainContent = () => { document.querySelector("main-content").focus(); }
 </script>
