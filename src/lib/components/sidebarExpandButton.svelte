@@ -16,7 +16,7 @@
 	class="menu-button"
 	tabindex={$isMenuOpen || !closeOnly ? '0' : '-1'}
 >
-	<span class="sr-only">Toggle hamburger menu</span>
+<!-- todo add text that says 'toggle hamburger menu' -->
 	{#if closeOnly}
 		<XSVG/>
 	{:else}

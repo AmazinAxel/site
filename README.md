@@ -1,6 +1,6 @@
 # AmazinAxel.com Website
 
-💻 This is my portfolio website built with Sveltekit, Tailwind, and Bun, hosted on Cloudflare Pages.
+💻 This is my portfolio website built with Sveltekit and Bun, hosted on Cloudflare Pages.
 
 ## 🥱 Boring stuff
 
