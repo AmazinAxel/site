@@ -7,6 +7,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import "../app.css";
 	export let data;
 
 	const transitionIn = { delay: 150, duration: 150 };
@@ -26,24 +27,6 @@
 	<link rel="stylesheet" href="/css/header-and-footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
 	<link rel="stylesheet" href="/css/typography.css"/>
-	<style lang="postcss">
-		@tailwind base;
-    	@tailwind components;
-    	@tailwind utilities;
-
-		@layer main {
-			@keyframes slide_in_left {
-				from {
-					opacity: 0;
-					transform: translateX(-2rem);
-				}
-				to {
-					opacity: 1;
-					transform: translateX(0);
-				}
-			}
-		}
-	</style>
 </svelte:head>
 
 <!-- Data below is used on every page throughout the site -->
