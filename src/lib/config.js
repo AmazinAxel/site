@@ -37,7 +37,7 @@ export const navItems = [
 	},
 	{
 		title: 'Tools',
-		route: '/tools',
+		route: '/utilities',
 		icon: 'unknown'
 	}
 ];

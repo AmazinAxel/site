@@ -7,7 +7,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import "../app.css";
+	import "../app.css"; // Kinda broken on cf idek y
 	export let data;
 
 	const transitionIn = { delay: 150, duration: 150 };
@@ -15,10 +15,10 @@
 
 	$: currentPage.set(data.path); // Sets global store with the current site path
 
-	// Pre-fetch all top-level routes in the background (for better speed)
+	// Prefetch all top-level routes for better speed
 	onMount(() => {
-		const navRoutes = navItems.map((item) => item.route);
-		preloadCode(...navRoutes);
+		const routes = navItems.map((item) => item.route);
+		preloadCode(...routes);
 	});
 
 </script>
@@ -36,7 +36,7 @@
 <div class="layout" class:open={$isMenuOpen}>
 	<Header/>
 	{#key data.path}
-		<main id="main-content" tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
+		<main id="main" tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
 			<slot/> <!-- Main content goes here -->
 			<Footer/>
 		</main>

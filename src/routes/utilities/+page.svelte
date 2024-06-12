@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Contact</title>
+	<title>Utilities</title>
 </svelte:head>
 
 Available Tools:
