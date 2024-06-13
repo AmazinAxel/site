@@ -125,7 +125,7 @@ header {
 .menu-button {
 	position: absolute;
     top: 0.75rem;
-    right: 0;
+    right: 12px;
 }
 
 .main nav ul li {

@@ -9,8 +9,8 @@
 	import { fade } from 'svelte/transition';
 	export let data;
 
-	const transitionIn = { delay: 150, duration: 150 };
-	const transitionOut = { duration: 100 };
+	// Delays and fadeouts are glitchy atm ;(
+	const transitionIn = { duration: 150 };
 
 	$: currentPage.set(data.path); // Sets global store with the current site path
 
@@ -35,7 +35,7 @@
 <div class="layout" class:open={$isMenuOpen}>
 	<Header/>
 	{#key data.path}
-		<main id="main" tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
+		<main id="main" tabindex="-1" in:fade|local={transitionIn}>
 			<div class="content">
 				<slot/> <!-- Main content goes here -->
 			</div>
