@@ -13,8 +13,8 @@
 			</NavItem>
 		{/each}
 
-		<!-- Bottom Navbar (todo organize this into a new list)-->
-		<NavItem href="/privacy-policy" icon="link"><p>Privacy Policy</p></NavItem>
+		<!-- Bottom Navbar (todo organize this into a new list)
+		<NavItem href="/privacy-policy" icon="link"><p>Privacy Policy</p></NavItem>-->
 	</ul>
 
 </nav>

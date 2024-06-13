@@ -13,7 +13,7 @@ export const navItems = [
 	{
 		title: 'Contact',
 		route: '/contact',
-		icon: 'unknown'
+		icon: 'contact'
 	},
 	{
 		title: 'Projects',
@@ -38,6 +38,6 @@ export const navItems = [
 	{
 		title: 'Tools',
 		route: '/utilities',
-		icon: 'unknown'
+		icon: 'tools'
 	}
 ];

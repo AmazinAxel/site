@@ -6,7 +6,7 @@
 	<title>AmazinAxel's Stuff</title>
 </svelte:head>
 
-
+<div class="center"></div>
 <h2>🚧Under construction🚧</h2>
 <p>This site is currently under development!</p>
 

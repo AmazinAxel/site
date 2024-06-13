@@ -2,7 +2,8 @@
 	<title>Utilities</title>
 </svelte:head>
 
-Available Tools:
+<h1>Useful Utilities</h1>
+<p>Utilities that I wish I didn't have to create.</p>
 
 [ Minecraft ]
 Minecraft Small Text Converter
