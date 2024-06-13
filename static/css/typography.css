@@ -1,6 +1,8 @@
 body {
 	line-height: 1.5;
+	font-size: 1.125rem;
 }
+
 /* Attempted typefaces: Rowdies Hammersmith One */
 @font-face {
 	font-family: 'Viga';
@@ -53,20 +55,8 @@ body {
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@media (min-width: 48rem) {
-	body {
-		font-size: 1.125rem;
-	}
-}
-
-@media (min-width: 80rem) {
-	body {
-		font-size: 1.25rem;
-	}
-}
-
 h1, h2, h3, h4, h5, h6 {
-	margin: 4.5rem 0 1rem;
+	margin: 1rem 0 1rem;
 	line-height: 1.1;
 	font-family: var(--headerFont);
 	font-weight: 400;
@@ -89,14 +79,6 @@ h3 {
 
 h4 {
 	font-size: clamp(1.5rem, calc(1.5rem + 1vw), 1.8rem);
-}
-
-h5 {
-	font-size: clamp(1.35rem, calc(1.35rem + 1vw), 1.5rem);
-}
-
-h6 {
-	font-size: clamp(1.1rem, calc(1.1rem + 1vw), 1.25rem);
 }
 
 a {

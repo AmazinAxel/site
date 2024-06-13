@@ -13,8 +13,8 @@
 <h3>Visit my other site</h3>
 <p>Visit <a href="https://alecshome.com">Alecshome.com</a> for current information.</p>
 
-<h1>My Latest Announcements</h1>
-<!--<ul>
+<!--<h1>My Latest Announcements</h1>
+<ul>
 	{#each items as { title, url }}
 		<li>
 			<a href={url} target="_blank" rel="noreferrer noopener">
