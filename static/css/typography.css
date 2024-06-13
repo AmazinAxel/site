@@ -69,10 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 4.5rem 0 1rem;
 	line-height: 1.1;
 	font-family: var(--headerFont);
-	font-weight: bold;
-	color: var(--darker);
-	text-wrap: balance;
-	
+	font-weight: 400;
 }
 
 h1 {
@@ -103,9 +100,9 @@ h6 {
 }
 
 a {
-	color: var(--darker);
+	color: var(--nordLightComplimentary);
 	text-decoration-thickness: 1px;
-	text-decoration-color: var(--dark);
+	text-decoration-color: var(--nordLightComplimentary);
 }
 
 ul {
@@ -118,5 +115,5 @@ ul ul {
 }
 
 ul::marker {
-	color: var(--accent);
+	color: var(--blue);
 }

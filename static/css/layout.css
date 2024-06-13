@@ -1,17 +1,21 @@
 *, *:before, *:after {
 	box-sizing: inherit;
 	font-family: inherit;
-	max-width: 100%;
 }
 
 main {
-    margin: 2rem;
-    width: -webkit-fill-available;
+    flex: 2;
 }
-
 .layout {
 	display: flex;
-    gap: 1rem;
+	height: 100%;
+
+}
+
+.content { 
+    margin: 3rem 1rem;
+	/* This fixes the footer issue; 6rem is padding size, 4rem is footer height) */
+    min-height: calc(100vh - 6rem - 4rem);
 }
 
 img {
@@ -69,7 +73,7 @@ li {
 }
 
 .post-footer a {
-	background-color: var(--lightAccent);
+	background-color: var(--nordDarkComplimentary);
 	padding: 0.5rem 0.75rem;
 	text-transform: uppercase;
 	font-family: var(--primaryFont);
@@ -105,9 +109,9 @@ li {
 body {
     margin: 0;
     min-height: 100vh;
-    color: var(--ink);
+    color: var(--nordLightPrimary);
     font-family: var(--primaryFont);
-    background: var(--paper);
+    background: var(--nordDark);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -117,7 +121,23 @@ html {
     -webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
 }
 
+html, body {
+	height: 100%;
+}
+
 .antialised {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes animatePageOut {
+    from {
+        opacity: 0;
+        transform: translateX(0rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(50vw);
+    }
+
 }

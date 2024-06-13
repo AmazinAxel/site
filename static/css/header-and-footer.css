@@ -1,6 +1,7 @@
 header {
 	font-family: var(--primaryFont);
     padding: 1rem 1rem;
+    background-color: var(--nordDarkPrimary);
 }
 
 :where(header, footer) a {
@@ -32,22 +33,16 @@ header {
     position: sticky;
     top: 0;
     height: 100vh;
-    width: 200px;
+    width: 13rem;
 }
 
 
 .site-title {
 	font-family: var(--headerFont);
-	font-size: 2.1rem;
-	line-height: 1;
-	color: inherit;
-	margin: 0;
-	display: block;
-	font-size: 1.4rem;
-	font-weight: bold;
-
-	width: 100%;
-	font-size: 1.6rem;
+    font-size: 2.1rem;
+    line-height: 1;
+    color: inherit;
+    font-size: 1.6rem;
 }
 
 .menu-button {
@@ -62,14 +57,13 @@ header {
 
 
 .navbar {
-    z-index: 2;
-    transform: translateX(-200px);
+	transform: translateX(-200px);
     visibility: hidden;
     opacity: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-	transition: opacity ease .1s, transform ease .15s, visibility .15s;
+    transition: opacity ease .1s, transform ease .15s, visibility .15s;
+	z-index: 2;
 }
 
 .navbar.open {
@@ -158,6 +152,8 @@ header .navbar li {
 
 footer {
     padding-top: 1rem;
+	background-color: var(--nordDarkPrimary);
+	height: 4rem;
 }
 
 footer p {
@@ -191,8 +187,8 @@ footer ul li + li {
 	justify-content: center;
 	align-items: center;
 	height: 3rem;
-	background: var(--darker);
-	color: var(--background);
+	background: var(--nordLightWhite);
+	color: var(--nordDarkPrimary);
 }
 
 .skip-to-content-link:focus {
