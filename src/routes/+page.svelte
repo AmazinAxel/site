@@ -6,14 +6,16 @@
 	<title>AmazinAxel's Stuff</title>
 </svelte:head>
 
-<div class="center"></div>
-<h2>🚧Under construction🚧</h2>
-<p>This site is currently under development!</p>
+<div style="text-align: center; margin-top: 10rem;">
+	<h2>🚧Under construction🚧</h2>
+	<p>This site is currently under development!</p>	
+</div>
 
-<h3>Visit my other site</h3>
-<p>Visit <a href="https://alecshome.com">Alecshome.com</a> for current information.</p>
+<!--
+<h1>My Projects</h1>
 
-<!--<h1>My Latest Announcements</h1>
+
+<h1>What I'm working on</h1>
 <ul>
 	{#each items as { title, url }}
 		<li>
@@ -22,4 +24,7 @@
 			</a>
 		</li>
 	{/each}
-</ul>-->
+</ul>
+
+<h1>Learn more about me</h1>
+-->

@@ -21,6 +21,10 @@ img {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
+    background-color: var(--nordDarkComplimentary);
+    border: 2px var(--nordDarkBorder) solid;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 6px var(--nordDark);
 }
 
 body {

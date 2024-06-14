@@ -1,0 +1,22 @@
+.card {
+    background-color: var(--nordDarkComplimentary);
+    border: 2px var(--nordDarkBorder) solid;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 3px var(--nordDark);
+    margin: 10px 0;
+}
+.flex.card {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:55rem){
+    .flex.card {
+        flex-direction: column-reverse;
+    }
+}
+
+.card img {
+    width: 50%;
+}

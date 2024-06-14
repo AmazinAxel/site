@@ -3,6 +3,11 @@
 <title>About</title>
 </svelte:head>
 
-Coming Soon (tm)
+<!--
+What I do
 
-<h1 class="py-8 px-4 border border-indigo-900 shadow-lg">Hello!</h1>
+what i enjoy
+
+what are my skills
+
+-->
