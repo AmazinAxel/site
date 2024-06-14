@@ -9,6 +9,7 @@
 .flex.card {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 @media(max-width:55rem){
@@ -17,6 +18,10 @@
     }
 }
 
-.card img {
+.card img:not(.flex.card img) {
     width: 50%;
+}
+
+.flex.card p {
+    margin-bottom: 14px;
 }

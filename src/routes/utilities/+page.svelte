@@ -12,6 +12,7 @@
 
 <h2>Minecraft Development Utilities</h2>
 
+<div style="display: flex; gap: 14px;">
 <a href="" style="text-decoration: none;">
 <Card>
 	<div>
@@ -21,6 +22,7 @@
 	<img src="/media/temporary-img-cover.png" alt="Screenshot of the text converter page">
 </Card>
 </a>
+<a href="" style="text-decoration: none;">
 <Card>
 	<div>
 		<h3>Minecraft Emoji Picker</h3>
@@ -28,7 +30,8 @@
 	</div>
 	<img src="/media/temporary-img-cover.png" alt="Screenshot of the emoji picker page">
 </Card>
-
+</a>
+</div>
 <h2>Coming Soon</h2>
 
 Skript Inventory Slot IDs
