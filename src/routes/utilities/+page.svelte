@@ -12,7 +12,7 @@
 
 <h2>Minecraft Development Utilities</h2>
 
-<a href="#top" style="text-decoration: none;">
+<a href="" style="text-decoration: none;">
 <Card>
 	<div>
 		<h3>Small Text Converter</h3>
