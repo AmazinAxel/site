@@ -36,8 +36,8 @@
 <div class="layout" class:open={$isMenuOpen}>
 	<Header/>
 	{#key data.path}
-		<main id="main" tabindex="-1" in:fade|local={transitionIn}>
-			<div class="content">
+		<main tabindex="-1" in:fade|local={transitionIn}>
+			<div id="content">
 				<slot/> <!-- Main content goes here -->
 			</div>
 			<Footer/>

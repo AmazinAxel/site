@@ -16,6 +16,9 @@
     .flex.card {
         flex-direction: column-reverse;
     }
+    .menu-button {
+        visibility: visible;
+    }
 }
 
 .card img:not(.flex.card img) {

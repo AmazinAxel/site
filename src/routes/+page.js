@@ -1,28 +1,16 @@
-/*import { error } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
+import { XMLParser } from 'fast-xml-parser';
 
+// Load all of the posts from alecshome.com
 export const load = async () => {
 	try {
-		const ReadMeFile = await import('../../README.md');
-		const ReadMe = ReadMeFile.default;
-
-		return {
-			ReadMe
-		};
+ 		const RSS_URL = `https://alecshome.com/rss.xml`;
+ 		const posts = await fetch(RSS_URL)
+ 		   .then((response) => response.text())
+ 		   .then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);			  
+		
+		return { posts };
 	} catch (err) {
 		error(500, err);
 	}
 };
-
-let items = [];
-async function loadRSS() {
-	const res = await fetch('https://alecshome.com/rss.xml');
-	const text = await res.text();
-	const feedDocument = new DOMParser().parseFromString(text, 'text/xml')
-	items = [...feedDocument.querySelectorAll('item')].map(item => {
-		const title = item.querySelector('title').textContent;
-		const url = item.querySelector('link').textContent;
-		
-		return { title, url };
-	});
-}
-loadRSS()*/
