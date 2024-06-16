@@ -30,14 +30,21 @@ nav {
     top: 0;
     height: 100vh;
     width: 5rem;
+	transition: width .1s cubic-bezier(0, 0.6, 0.3, 1);
+}
+
+#logoicon {
+	width: 3rem;
+}
+
+nav:hover #logoicon{
+	display: none;
 }
 
 .site-title {
 	font-family: var(--headerFont);
-    font-size: 2.1rem;
-    line-height: 1;
+    font-size: 2rem;
     color: inherit;
-    font-size: 1.6rem;
 	display: none;
 }
 
@@ -58,9 +65,6 @@ nav:hover .site-title {
 
 
 .navItems {
-	transform: translateX(-200px);
-    visibility: hidden;
-    opacity: 0;
     display: flex;
     justify-content: center;
     transition: opacity ease .1s, transform ease .15s, visibility .15s;
@@ -80,11 +84,25 @@ nav:hover li {
 	animation: slide_in_left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
+.navItems p {
+    display: none;
+}
+
+nav:hover p {
+    display: initial;
+}
+
+
 #expandbtn {
 	position: absolute;
     left: 5rem;
     top: 1rem;
     width: 50px;
+	transition: left .1s cubic-bezier(0, 0.6, 0.3, 1);
+    background-color: var(--nordDarkPrimary);
+    border: 0 solid;
+    border-radius: 0 0.5rem 0.5rem 0;
+    box-shadow: 0 0;
 }
 
 nav:hover #expandbtn {
@@ -96,35 +114,35 @@ nav a img {
     min-width: 50px;
 }
 
-nav li:nth-of-type(1) {
+nav p:nth-of-type(1) {
 	animation-delay: calc(var(--delay) * 1);
 }
 
-nav li:nth-of-type(2) {
+nav p:nth-of-type(2) {
 	animation-delay: calc(var(--delay) * 2);
 }
 
-nav li:nth-of-type(3) {
+nav p:nth-of-type(3) {
 	animation-delay: calc(var(--delay) * 3);
 }
 
-nav li:nth-of-type(4) {
+nav p:nth-of-type(4) {
 	animation-delay: calc(var(--delay) * 4);
 }
 
-nav li:nth-of-type(5) {
+nav p:nth-of-type(5) {
 	animation-delay: calc(var(--delay) * 5);
 }
 
-nav li:nth-of-type(6) {
+nav p:nth-of-type(6) {
 	animation-delay: calc(var(--delay) * 6);
 }
 
-nav li:nth-of-type(7) {
+nav p:nth-of-type(7) {
 	animation-delay: calc(var(--delay) * 7);
 }
 
-nav li:nth-of-type(8) {
+nav p:nth-of-type(8) {
 	animation-delay: calc(var(--delay) * 8);
 }
 
@@ -143,11 +161,12 @@ nav li:nth-of-type(8) {
 }
 
 nav ul {
-	margin: 1rem auto 0;
-	padding-top: 0.5rem;
-	border-top: 1px solid var(--dark);
-	width: max-content;
+    margin: 1rem auto 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--nordDark);
+    padding-left: 0;
 }
+
 nav li {
 	font-size: inherit;
 	display: initial;

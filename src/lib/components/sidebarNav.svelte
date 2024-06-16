@@ -12,8 +12,18 @@
 			<NavItem href={page.route} icon={page.icon}>
 				<p>{page.title}</p>
 			</NavItem>
-		{/each}
 
+
+			{#if typeof page.subitems !== 'undefined' }
+				{#each page.subitems as subpage}
+				<NavItem href={subpage.route} icon={subpage.icon}>
+					<p>{subpage.title}</p>
+				</NavItem>
+				{/each}
+
+			{/if}
+
+		{/each}
 		<!-- Bottom Navbar (todo organize this into a new list)
 		<NavItem href="/privacy-policy" icon="link"><p>Privacy Policy</p></NavItem>-->
 	</ul>

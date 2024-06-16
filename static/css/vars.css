@@ -1,17 +1,9 @@
 :root {
-    /* Colors */
-    --accent: var(--red);
-    --background: #var(--nordDarkPrimary);
-    --lightAccent: var(--blue);
-    --lighterAccent: var(--nordDarkComplimentary);
-    --dark: #457b9d;
-    --darker: #1d3557;
-    --slate: #2f3948;
-    
-    --ink: var(--slate);
-    --paper: var(--background);
-    
+    /* Colors */        
     --blue: #b5d2d9; /* Permafrost Blue */
+    /* Used in gradients */
+    --blue1: #88C0D0;
+    --blue2: #81A1C1;
     
     /* Polar Night colors */
     --nordDark: #2E3440;

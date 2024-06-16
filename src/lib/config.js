@@ -27,17 +27,34 @@ export const navItems = [
 	},
 	{
 		title: 'Blog',
-		route: '/blog',
+		route: 'https://alecshome.com',
 		icon: 'blog'
 	},
 	{
-		title: 'Announcements',
-		route: 'https://alecshome.com',
-		icon: 'link'
+		title: 'Tools',
+		route: '/utils',
+		icon: 'tools',
+		subitems: [
+			{
+				title: 'Emoji Picker',
+				route: '/utils/emojipicker',
+				icon: 'about'
+			},
+			{
+				title: 'Inventory IDs',
+				route: '/utils/emojipicker',
+				icon: 'about'
+			},
+			{
+				title: 'Text Converter',
+				route: '/utils/textconvert',
+				icon: 'about'
+			},
+		]
 	},
 	{
-		title: 'Tools',
-		route: '/utilities',
-		icon: 'tools'
+		title: 'Help',
+		route: '/help',
+		icon: 'about'
 	}
 ];

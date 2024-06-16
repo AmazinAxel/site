@@ -9,6 +9,7 @@
 		Skip to main content
 	</a>
 	
+	<img src="/favicon.png" alt="AmazinAxel logo" id="logoicon">
 	<a href="/" class="site-title">AmazinAxel</a>
 	<img src="/media/icons/expand.svg" alt="Expand/Un-expand sidebar" id="expandbtn">
 	<SidebarNav/>

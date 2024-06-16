@@ -15,7 +15,8 @@ damage the learning process, but you
 
 ### Remember the proverb
 **Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime.**
-Spoonfeeding is like giving a man a fish; they'll be hungry again in a day. Teach them how to fish, and they'll
+Spoonfeeding is like giving a man a fish; they'll ask you to make code for them again.
+Teach them how to fish, and they'll create code on their own.
 
 
 ## 
@@ -26,4 +27,4 @@ trust the process™
 ## Read more
 If you'd like to read more about this topic, check out these articles:
 - [The Problem with Spoon-feeding - Java Programming Forums](https://www.javaprogrammingforums.com/cafe/9544-problem-spoon-feeding.html)
-- [More coming soon]
+- [More coming soon](yes)
