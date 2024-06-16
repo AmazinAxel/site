@@ -46,9 +46,9 @@ h4 {
 }
 
 a:not(ul a) {
-	color: var(--nordLightComplimentary);
+	color: var(--lightest3);
 	text-decoration-thickness: 1px;
-	text-decoration-color: var(--nordLightComplimentary);
+	text-decoration-color: var(--lightest3);
 	text-decoration: underline;
 }
 
@@ -62,5 +62,5 @@ ul ul {
 }
 
 ul::marker {
-	color: var(--blue);
+	color: var(--blue1);
 }

@@ -1,7 +1,7 @@
 nav {
 	font-family: var(--primaryFont);
     padding: 1rem 1rem;
-    background-color: var(--nordDarkPrimary);
+    background-color: var(--darkest2);
 }
 
 :where(nav, footer) a {
@@ -99,7 +99,7 @@ nav:hover p {
     top: 1rem;
     width: 50px;
 	transition: left .1s cubic-bezier(0, 0.6, 0.3, 1);
-    background-color: var(--nordDarkPrimary);
+    background-color: var(--darkest2);
     border: 0 solid;
     border-radius: 0 0.5rem 0.5rem 0;
     box-shadow: 0 0;
@@ -163,7 +163,7 @@ nav p:nth-of-type(8) {
 nav ul {
     margin: 1rem auto 0;
     padding-top: 1rem;
-    border-top: 3px solid var(--nordDark);
+    border-top: 3px solid var(--darkest1);
     padding-left: 0;
 }
 
@@ -184,7 +184,7 @@ nav a {
 
 footer {
     padding-top: 1rem;
-	background-color: var(--nordDarkPrimary);
+	background-color: var(--darkest2);
 	height: 4rem;
 }
 
@@ -204,7 +204,7 @@ footer p {
 	align-items: center;
 	height: 3rem;
 	background: var(--nordLightWhite);
-	color: var(--nordDarkPrimary);
+	color: var(--darkest2);
 }
 
 .skip-to-content-link:focus {

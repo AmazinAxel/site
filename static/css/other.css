@@ -1,9 +1,9 @@
 .card {
-    background-color: var(--nordDarkComplimentary);
-    border: 2px var(--nordDarkBorder) solid;
+    background-color: var(--darkest3);
+    border: 2px var(--darkest4) solid;
     padding: 10px;
     border-radius: 0.5rem;
-    box-shadow: 3px 3px 3px var(--nordDark);
+    box-shadow: 3px 3px 3px var(--darkest1);
     margin: 10px 0;
 }
 .flex.card {
