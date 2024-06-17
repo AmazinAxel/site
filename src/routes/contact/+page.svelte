@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-	import Card from '$lib/components/Card.svelte';
+	import Card from '$lib/components/card.svelte';
 </script>
 
 <h1>Contact</h1>
