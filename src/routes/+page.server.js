@@ -8,7 +8,7 @@ export const load = async () => {
  		const posts = await fetch(RSS_URL)
  		   .then((response) => response.text())
  		   .then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);			  
-		
+				
 		return { posts };
 	} catch (err) {
 		error(500, err);

@@ -48,15 +48,3 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-@keyframes animatePageOut {
-    from {
-        opacity: 0;
-        transform: translateX(0rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(50vw);
-    }
-
-}

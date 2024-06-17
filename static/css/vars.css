@@ -21,19 +21,10 @@
     --blue1: #b5d2d9; /* Permafrost Blue */
     --blue2: #81A1C1;
     --blue3: #5E81AC;
+
+    --delay: 0.025s;
     
     /* Fonts */
     --headerFont: 'Hammersmith One', Roboto, Helvetica, Arial, sans-serif;
     --primaryFont: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-@keyframes slide_in_left {
-    from {
-        opacity: 0;
-        transform: translateX(-1rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }

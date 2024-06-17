@@ -36,12 +36,12 @@ export const navItems = [
 		icon: 'tools',
 		subitems: [
 			{
-				title: 'Emoji Picker',
+				title: 'Emojis',
 				route: '/utils/emojipicker',
 				icon: 'about'
 			},
 			{
-				title: 'Inventory IDs',
+				title: 'Inventory',
 				route: '/utils/emojipicker',
 				icon: 'about'
 			},

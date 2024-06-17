@@ -1,5 +1,5 @@
 <script>
-	// Necessary for the blog post system
+	// Necessary for the SWR blog post system
 	export let data;
 </script>
 
@@ -26,8 +26,11 @@
 </div>
 
 
-<h2>My Projects</h2>
+<h3>🚧 This site is currently under construction! 🚧</h3>
+<p>Please check back later when this website is completed.</p>
+<br><br><hr><br>
 
+<h2>My Projects</h2>
 
 <h2>What I'm working on</h2>
 <ul>
