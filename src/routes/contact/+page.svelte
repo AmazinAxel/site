@@ -3,12 +3,13 @@
 </svelte:head>
 
 <script>
-	//import Card from '$lib/components/Card.svelte';
+	import Card from '$lib/components/Card.svelte';
 </script>
 
 <h1>Contact</h1>
 
-<p>
-	My preferred way of contact is through Discord (handle: @amazinaxel). If you have a grudge against Discord
-	or need to talk about something securely, use the contact form below.
-</p>
+<Card>
+	<p>I prefer to talk over Discord, when possible. Reach out to me using the Discord handle: <code>@amazinaxel</code></p>
+	<br>
+	<p>If you cannot use Discord for any reason, use the contact form below to reach out to me.</p>
+</Card>

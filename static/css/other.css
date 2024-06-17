@@ -5,7 +5,9 @@
     border-radius: 0.5rem;
     box-shadow: 3px 3px 3px var(--darkest1);
     margin: 10px 0;
+    text-align: center;
 }
+
 .flex.card {
     display: flex;
     align-items: center;

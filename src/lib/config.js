@@ -42,7 +42,7 @@ export const navItems = [
 			},
 			{
 				title: 'Inventory',
-				route: '/utils/emojipicker',
+				route: '/utils/inventoryids',
 				icon: 'about'
 			},
 			{
