@@ -9,7 +9,7 @@ how to solve the problem themselves. Spoonfeeding varies depending on the contex
 
 ## Why is it bad?
 Spoonfeeding robs the person of the most important aspect of programming: problem solving. By giving handouts, you not only
-damage the learning process, but you 
+damage the OP's learning process, but you 
 
 ###
 
@@ -21,8 +21,13 @@ Teach them how to fish, and they'll create code on their own.
 
 ## 
 
+## Sample and example code
+Typically, sending examples and sample code to users is perfectly acceptable. The key difference between providing example code
+and spoonfeeding is that sample code is generalized (the person must modify it and understand how it works before using it) and
+handout code is tailored to solve *exactly* what the person is trying to do
 
-trust the process™
+
+when it comes to learning, trust the process™
 
 ## Read more
 If you'd like to read more about this topic, check out these articles:
