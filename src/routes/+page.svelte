@@ -3,24 +3,11 @@
 	export let data;
 </script>
 
-<style>
-	#attentionGrabber {
-		text-align: center;
-    	height: 25rem;
-    	display: grid;
-    	align-items: end;
-    	align-content: center;
-	}
-	#attentionGrabber h1 {
-		margin: 0;
-	}
-</style>
-
 <svelte:head>
 	<title>AmazinAxel's Stuff</title>
 </svelte:head>
 
-<div id="attentionGrabber">
+<div id="hero">
 	<h1>AmazinAxel</h1>
 	<p>Game developer and fullstack web developer</p>	
 </div>

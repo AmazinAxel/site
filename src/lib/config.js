@@ -32,22 +32,22 @@ export const navItems = [
 	},
 	{
 		title: 'Tools',
-		route: '/utils',
+		route: '/tools',
 		icon: 'tools',
 		subitems: [
 			{
 				title: 'Emojis',
-				route: '/utils/emojipicker',
+				route: '/tools/emojipicker',
 				icon: 'about'
 			},
 			{
 				title: 'Inventory',
-				route: '/utils/inventoryids',
+				route: '/tools/inventoryids',
 				icon: 'about'
 			},
 			{
 				title: 'Text Converter',
-				route: '/utils/textconvert',
+				route: '/tools/textconvert',
 				icon: 'about'
 			},
 		]
@@ -58,3 +58,24 @@ export const navItems = [
 		icon: 'about'
 	}
 ];
+
+export const projects = [
+	{
+		title: 'Permafrost',
+		role: 'Lead Developer and Project Manager',
+		description: 'desc here',
+		image: 'add an image here todo'
+	},
+	{
+		title: 'Dueling',
+		role: 'Developer',
+		description: 'description here',
+		image: 'todo'
+	},
+	{
+		title: 'more coming soon',
+		role: 'yes',
+		description: 'hohoho',
+		image: 'todo'
+	}
+]

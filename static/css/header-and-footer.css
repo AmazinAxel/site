@@ -30,7 +30,7 @@ nav {
     top: 0;
     height: 100vh;
     width: 5rem;
-	transition: width .1s cubic-bezier(0, 0.6, 0.3, 1);
+	transition: width .1s cubic-bezier(0, 0.6, 0.3, 1), padding .1s cubic-bezier(0, 0.6, 0.3, 1);
 	box-shadow: 10px 0 20px 0px var(--darkest1);
 }
 
@@ -55,6 +55,7 @@ nav:hover #logoicon{
 	display: none;
 	z-index: 3;
     position: relative;
+    padding-left: 3px;
 }
 
 nav:hover .site-title {
@@ -118,7 +119,7 @@ a.active img {
 }
 
 nav:hover #expandbtn {
-	left: 13rem;
+	left: 12rem;
     transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;
 }
@@ -130,7 +131,7 @@ nav a img {
 
 nav p {
 	opacity: 0;
-	transform: translateX(-2rem);
+	transform: translateX(-2.5rem);
 	transition: opacity .1s cubic-bezier(0, 0.6, 0.3, 1), transform .1s cubic-bezier(0, 0.6, 0.3, 1);
 }
 
@@ -153,7 +154,7 @@ nav:hover p {
 	margin-bottom: calc(0.2rem + 2vh);
 }
 
-nav ul {
+nav ul:not(ul ul) {
     margin: 1rem auto 0;
     padding-top: 1rem;
     border-top: 3px solid var(--darkest1);
@@ -207,5 +208,30 @@ footer p {
 
 /* Navigation open on hover */
 nav:hover {
-    width: 13rem;
+    width: 12rem;
+	padding: 1rem 0.5rem
+}
+
+nav ul ul {
+	max-height: 0px;
+	transition: max-height .3s cubic-bezier(0, 0.6, 0.3, 1), margin-bottom .3s cubic-bezier(0, 0.6, 0.3, 1);
+    overflow: hidden;
+    padding-left: 10px;
+	
+    border-left: 2px solid var(--lightest1);
+    margin-left: 5px;
+	white-space: nowrap
+}
+
+nav:hover ul ul {
+	max-height: 10rem;
+	margin-bottom: 10px;
+}
+
+nav ul ul li:last-child a {
+	margin-bottom: 0;
+}
+
+nav ul ul p {
+	transform: translateX(0)!important;
 }

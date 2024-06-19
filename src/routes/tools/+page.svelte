@@ -8,10 +8,10 @@
 
 
 <h1>Useful Minecraft Development Utilities</h1>
-<p>Utilities that speeds up development and makes your server look professional.</p>
+<p>Tools that help make you an efficient developer.</p>
 
 <div style="display: flex; gap: 14px;">
-	<a href="/utils/textconvert/" style="text-decoration: none;">
+	<a href="/tools/textconvert/" style="text-decoration: none;">
 	<Card>
 		<div>
 			<h3>Small Text Converter</h3>
@@ -21,7 +21,7 @@
 	</Card>
 	</a>
 
-	<a href="/utils/emojipicker" style="text-decoration: none;">
+	<a href="/tools/emojipicker" style="text-decoration: none;">
 	<Card>
 		<div>
 			<h3>Minecraft Emoji Picker</h3>
@@ -31,7 +31,7 @@
 	</Card>
 	</a>
 
-	<a href="/utils/inventoryids" style="text-decoration: none;">
+	<a href="/tools/inventoryids" style="text-decoration: none;">
 		<Card>
 			<div>
 				<h3>Skript Inventory Slot ID Mappings</h3>

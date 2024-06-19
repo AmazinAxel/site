@@ -1,6 +1,8 @@
 <script>
 	import { navItems } from '$lib/config';
 	import NavItem from '$lib/components/navItem.svelte';
+	import NavSubitem from '$lib/components/navSubitem.svelte';
+	import { page } from '$app/stores';
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. 
@@ -8,19 +10,20 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div class="navItems">
 	<ul>
-		{#each navItems as page}
-			<NavItem href={page.route} icon={page.icon}>
-				<p>{page.title}</p>
+		{#each navItems as navitem}
+			<NavItem href={navitem.route} icon={navitem.icon}>
+				<p>{navitem.title}</p>
 			</NavItem>
-
-
-			{#if typeof page.subitems !== 'undefined' }
-				{#each page.subitems as subpage}
-				<NavItem href={subpage.route} icon={subpage.icon}>
-					<p>{subpage.title}</p>
-				</NavItem>
-				{/each}
-
+			{#if typeof navitem.subitems !== 'undefined' }
+				{#if $page.url.pathname.includes(navitem.title.toLowerCase())}
+					<ul>
+					{#each navitem.subitems as subpage}
+					<NavSubitem href={subpage.route}>
+						<p>{subpage.title}</p>
+					</NavSubitem>
+					{/each}
+					</ul>
+				{/if}
 			{/if}
 
 		{/each}
