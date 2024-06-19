@@ -1,7 +1,7 @@
 
 /*
- * AmazinAxel.com quick config option settings
- * Change commonly-modified options easily!
+ * AmazinAxel.com quick config options
+ * Change sidebar-related settings easily
  */
 
 export const navItems = [
@@ -37,25 +37,37 @@ export const navItems = [
 		subitems: [
 			{
 				title: 'Emojis',
-				route: '/tools/emojipicker',
-				icon: 'about'
+				route: '/tools/emojipicker'
 			},
 			{
 				title: 'Inventory',
-				route: '/tools/inventoryids',
-				icon: 'about'
+				route: '/tools/inventoryids'
 			},
 			{
 				title: 'Text Converter',
-				route: '/tools/textconvert',
-				icon: 'about'
+				route: '/tools/textconvert'
 			},
 		]
 	},
 	{
 		title: 'Help',
 		route: '/help',
-		icon: 'about'
+		icon: 'about',
+		subitems: [
+			{
+				title: 'Questions',
+				route: '/help/askbetterquestions'
+			},
+			{
+				title: 'Handouts',
+				route: '/help/handouts'
+			},
+			{
+				title: 'Try it Yourself',
+				route: '/help/try-it-yourself'
+			},
+		]
+
 	}
 ];
 
