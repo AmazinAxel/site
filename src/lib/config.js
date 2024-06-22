@@ -25,11 +25,11 @@ export const navItems = [
 		route: '/github',
 		icon: 'github'
 	},
-	{
+	/*{ RECONSIDER: may want to remove all mention of this except for SWR posts
 		title: 'Blog',
 		route: 'https://alecshome.com',
 		icon: 'blog'
-	},
+	},*/
 	{
 		title: 'Tools',
 		route: '/tools',

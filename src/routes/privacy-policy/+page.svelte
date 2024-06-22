@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Privacy Policy</title>
+</svelte:head>
+
 <div class="card">
     <div class="inset nomargin">
     

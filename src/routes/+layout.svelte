@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="/css/vars.css"/>
 	<link rel="stylesheet" href="/css/reset.css"/>
 	<link rel="stylesheet" href="/css/other.css"/>
+	<link rel="stylesheet" href="/css/checkbox.css"/>
 </svelte:head>
 
 <!-- Data below is used on every page throughout the site -->

@@ -49,3 +49,62 @@
     margin: 0;
     color: var(--darkest1)
 }
+
+/* Progress bar styling */
+.progress {
+    margin-top: 10px;
+    border-radius: 7px;
+    background-color: var(--darkest3);
+    box-shadow: 5px 3px 10px 0 var(--darkest2);
+    transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.progressinner {
+  font-size: 20px;
+  border-radius: 7px;
+  line-height: 35px;
+  width: 5px;
+  min-width: 50px;
+  background-image: linear-gradient(240deg, rgba(25,170,214,1) 0%, rgba(10,127,237,1) 100%);
+  box-shadow: 0 0 10px 0 var(--blue);
+  color: white;
+}
+
+.progress::before {
+    content: var(--language);
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 35px;
+    color: var(--progress);
+    transition: color .2s ease;
+}
+
+/* Tooltip styling */
+.tooltip { display: inline-block; border-bottom: 2px dotted var(--lightest1); }
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity .3s ease, visibility .3s, transform .4s cubic-bezier(0.2, 1.4, 0.5, 1.2);
+    padding: 10px;
+    border-radius: 10px 7px 7px 10px;
+    background-color: var(--darkest2);
+    box-shadow: 5px 4px 20px var(--darkest3), inset 11px 7px 20px 0px var(--darkest2);
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translate(-50%, -40%);
+    overflow: auto;
+    text-align: center;
+    visibility: hidden;
+    cursor: text;
+    max-height: 115px;
+    color: var(--lightest1);
+    line-height: 1.2;
+    font-size: 1em;
+}
+.tooltiptext::-webkit-scrollbar-thumb { border-radius: 0 5px 5px 0; }
+.tooltip:hover .tooltiptext, .tooltip:active .tooltiptext { opacity: 1; visibility: visible; transform: translate(-50%, -50%); }
+.tooltip:hover { cursor: pointer; }
+.full.tooltip { position: relative; display: revert; border-bottom: none; }   
+.full.tooltip .tooltiptext { max-height: unset; width: 100%; }

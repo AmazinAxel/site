@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Help - Try it Yourself</title>
+</svelte:head>
+
+
 # Try it yourself: the proper way to learn
 
 There comes a time during the learning process where you may feel overwhelmed, stressed, and confused. Most often,

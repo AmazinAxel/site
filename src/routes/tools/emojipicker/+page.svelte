@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Tools - Emoji Picker</title>
+</svelte:head>
+
 Use the buttons below to copy the character you want.
 
 <script>

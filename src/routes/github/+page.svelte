@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>GitHub</title>
+	<title>GitHub Projects</title>
 </svelte:head>
 
 Test

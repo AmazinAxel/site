@@ -1,3 +1,6 @@
+<svelte:head>
+	<title>Help - Handouts</title>
+</svelte:head>
 
 
 # Spoonfeeding

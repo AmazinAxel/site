@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Help Center</title>
+</svelte:head>
+
 <h1>Help Center</h1>
 <p>
     This subpage is dedicated to the topic of <i>learning how to learn.</i> It may seem confusing, but the success
