@@ -1,6 +1,7 @@
 <script>
     let inputText = '';
     let textType = false;
+    let selected = 0;
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘꞯʀsᴛᴜᴠᴡxʏᴢ';
@@ -29,6 +30,11 @@
         }
         return convertedText;
     }
+
+    function openFuncPopup(event) {
+        selected = parseInt(event.target.value);
+        console.log(selected) // ai made this idek man
+    }
     // todo maybe include ‘’“” somehow
 </script>
 
@@ -55,20 +61,41 @@ TOOLTIP: Subscript and superscript characters apply to numbers and basic math ch
 
 
 <div class="info card">
-    <p><b>TIP:</b> Use Skript functions to create small text in-game, without the need for this converter!</p>
+    <p><b>TIP:</b> Use Skript functions or reflect expressions to create small text in-game, without the need for this converter!</p>
     <button>Learn more</button>
+
+    <input type="radio" name="noscript" value="1" bind:group={selected} on:change={openFuncPopup}>
+    <label for="noscript">No text script types</label><br>
+    <input type="radio" name="scripttypes" value="2" bind:group={selected} on:change={openFuncPopup}>
+    <label for="scripttypes">CSS</label><br>
+    <input type="radio" name="expression" value="3" bind:group={selected} on:change={openFuncPopup}>
+    <label for="expression">JavaScript</label>
+
 </div>
 
 <div class="popup">
     Paste one of the following functions in any Skript file to use:
+    
     [No text script types] [Text script types] [Custom expression with reflect]
 
-    <!--{#if selected == 1}
-    
-    {/if}
-    {#if selected == 3} 
+    {#if selected == 1}
+        
+        Example usage: `stxt("Hello")`
+        send image of using it as a skript chat effect
+    {:else if selected == 2}
+        
+        Example usage: `stxt("Hello (123+5) Test")`
+        send image here of chat effect
+    {:else if selected == 3} 
+
         <div class="warning card">
         You need the <a href="TODO">skript-reflect</a> plugin to use this method.
         </div>
-    {/if}-->
+
+        Example usage: `stxt "Hello (123-5) Test"
+        send imagage of chat
+    {:else}
+        <p>Unknown function type, please close this popup and try again</p>
+    {/if}
+
 </div>
