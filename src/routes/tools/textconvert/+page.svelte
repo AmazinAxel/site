@@ -67,17 +67,15 @@ TOOLTIP: Subscript and superscript characters apply to numbers and basic math ch
     <input type="radio" name="noscript" value="1" bind:group={selected} on:change={openFuncPopup}>
     <label for="noscript">No text script types</label><br>
     <input type="radio" name="scripttypes" value="2" bind:group={selected} on:change={openFuncPopup}>
-    <label for="scripttypes">CSS</label><br>
+    <label for="scripttypes">Text script included</label><br>
     <input type="radio" name="expression" value="3" bind:group={selected} on:change={openFuncPopup}>
-    <label for="expression">JavaScript</label>
+    <label for="expression">Custom reflect expression</label>
 
 </div>
 
 <div class="popup">
     Paste one of the following functions in any Skript file to use:
     
-    [No text script types] [Text script types] [Custom expression with reflect]
-
     {#if selected == 1}
         
         Example usage: `stxt("Hello")`

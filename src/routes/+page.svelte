@@ -47,9 +47,8 @@
 	{#each data.posts as { title, url, description }}
 		<li>
 			<a href={url} target="_blank" rel="noreferrer noopener">
-				{title}
-				<!-- maybe instead of splitting this we just hide the remaning content using a CSS gradient -->
-				{description.split('.')[1]}
+				<h4>{title}</h4>
+				{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
 			</a>
 		</li>
 	{/each}
