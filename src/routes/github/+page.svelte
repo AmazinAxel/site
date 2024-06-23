@@ -8,5 +8,32 @@
 
 
 {#each data.repos as { ...repo }}
-	{repo.name}
+	<a href={repo.html_url} style="text-decoration: none">
+		<div class="card">
+			<h3>{repo.name}</h3>
+			<p>{repo.description}</p>
+
+			<p>Forks: {repo.forks_count}<br>
+			Issues: {repo.open_issues_count}<br>
+			Stars: {repo.stargazers_count}<br>
+			{#if repo.homepage}
+				Homepage: {repo.homepage}<br>
+			{/if}
+			{#if repo.language}
+				Language: {repo.language}<br>
+			{/if}
+			Watchers: {repo.watchers_count}<br>
+			</p>
+		
+			{#if repo.fork}
+				This is a fork!<br>
+			{/if}
+
+			{#if repo.archived}
+				This repository is archived and not maintained anymore.
+			{/if}
+
+
+		</div>
+	</a>
 {/each}

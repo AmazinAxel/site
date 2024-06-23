@@ -1,27 +1,36 @@
 <script>
 	// Necessary for the SWR blog post system
 	export let data;
+	let randomSubtitle = "";
 
 	const randomSubtitles = [
-		"Permafrost lead developer and manager", 
+		"Permafrost lead developer and project manager", 
 		"Back-end web developer",
-		"Obviously not a good Svelte developer",
-		"Terrible at low-level languages",
-		"AI prompt engineer",
+		"Not a good low-level programmer",
+		"Enjoys Linux server administrating & IT/IoT",
+		"Professional AI prompt engineer",
 		"Minecraft server manager and developer",
-		"Avid Linux and NixOS user",
+		"Avid Linux/NixOS user",
+		"Addicted to Minecraft server development",
 		"Average Skript enjoyer"
 	];
 
-	/*TODO make this work
-	/* after finishing this then move on to fixing text converter
-	not updating text after clicking the button */
+	/*fixing text converter not updating text after clicking the button */
 
 	function getRandomSubtitle() {
 		
+		// Get subtitles and remove previous subtitle from the list
+		const subtitles = randomSubtitles.filter(word => word !== randomSubtitle);
+
 		// Get random element
-		const subtitle = items[items.length * Math.random() | 0];
+		randomSubtitle = subtitles[subtitles.length * Math.random() | 0];
 	}
+
+	const interval = setInterval(function() {
+		getRandomSubtitle()
+	}, 5000);
+	getRandomSubtitle()
+
 
 	import Card from '$lib/components/imgCard.svelte';
 </script>
@@ -32,7 +41,7 @@
 
 <div id="hero">
 	<h1>AmazinAxel</h1>
-	<p>Game developer and fullstack web developer</p>	
+	<p>{randomSubtitle}</p>	
 </div>
 
 <Card>
