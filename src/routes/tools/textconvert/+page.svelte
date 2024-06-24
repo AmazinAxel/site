@@ -1,4 +1,6 @@
 <script>
+	import Tooltip from '$lib/components/tooltip.svelte';
+
     let inputText = '';
     let textType = false;
     let selected = 0;
@@ -39,18 +41,23 @@
 </script>
 
 <h1>Small Text Generator</h1>
-<!-- use checked="checked" on the input tag to autocheck it (is name even needed)-->
-<label class="container">
-    <input type="checkbox" id="useDifferentText" name="useDifferentText" bind:checked={textType}>
-    <span class="checkmark"></span>
-    <div class="tooltip">Use alternate text style<span class="tooltiptext">Use a different text style where some characters look slightly different</span></div>
-</label>
 
-<input type="range" min="1" value="2" max="3" id="scriptType">
-TOOLTIP: Subscript and superscript characters apply to numbers and basic math characters
+<div class="selector">
+    <div class="border"></div>
+    <h3>Text Options</h3>
+    <label class="container">
+        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:click={convertToSmallText(inputText)}>
+        <span class="checkmark"></span>
+        <Tooltip inlineText="Use alternate text style">Use a different text style where some characters look slightly different</Tooltip>
+    </label>
+
+    <input type="range" min="1" value="2" max="3" id="scriptType">
+    <Tooltip inlineText="test"><b>NOTE:</b> Subscript and superscript characters apply to numbers and basic math characters</Tooltip>
+</div>
+
+
 <textarea id="normaltext" bind:value={inputText} on:input/>
-<!-- TODO add reversability, disabled for now 
-     TODO 2 turn tooltip into a component for reusability -->
+<!-- TODO add reversability, disabled for now  -->
 <textarea disabled>{convertedText}</textarea>
 
 <br>

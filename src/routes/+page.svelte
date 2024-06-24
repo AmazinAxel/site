@@ -1,35 +1,43 @@
 <script>
+	import { fade } from 'svelte/transition';
+
 	// Necessary for the SWR blog post system
 	export let data;
 	let randomSubtitle = "";
+	let subtitleVisibility = false;
 
+	// TODO: update randomness calc to start at a random index
+	// and increase by 1 instead of choosing a random subtitle
 	const randomSubtitles = [
-		"Permafrost lead developer and project manager", 
-		"Back-end web developer",
+		"Permafrost lead developer and project manager",
+		"Back-end web dev",
 		"Not a good low-level programmer",
 		"Enjoys Linux server administrating & IT/IoT",
 		"Professional AI prompt engineer",
 		"Minecraft server manager and developer",
 		"Avid Linux/NixOS user",
 		"Addicted to Minecraft server development",
-		"Average Skript enjoyer"
+		"Average Skript enjoyer",
+		"Stuck in the Linux rabbit hole"
 	];
 
-	/*fixing text converter not updating text after clicking the button */
+	// TOOD: fix text converter not updating text after clicking button
 
-	function getRandomSubtitle() {
-		
+	function updSubtitle() {
+		subtitleVisibility = false;
 		// Get subtitles and remove previous subtitle from the list
 		const subtitles = randomSubtitles.filter(word => word !== randomSubtitle);
 
 		// Get random element
-		randomSubtitle = subtitles[subtitles.length * Math.random() | 0];
+		setTimeout(function() {
+			randomSubtitle = subtitles[subtitles.length * Math.random() | 0];
+			subtitleVisibility = true;		
+		}, 500);
 	}
 
-	const interval = setInterval(function() {
-		getRandomSubtitle()
-	}, 5000);
-	getRandomSubtitle()
+	// Random subtitle every 2.5 seconds
+	setInterval(updSubtitle, 2500);
+	updSubtitle()
 
 
 	import Card from '$lib/components/imgCard.svelte';
@@ -41,7 +49,9 @@
 
 <div id="hero">
 	<h1>AmazinAxel</h1>
-	<p>{randomSubtitle}</p>	
+	{#if subtitleVisibility}
+		<p out:fade={{ duration: 500 }} in:fade={{ duration: 500 }}>{randomSubtitle}</p>
+	{/if}	
 </div>
 
 <Card>

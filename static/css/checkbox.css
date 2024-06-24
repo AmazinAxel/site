@@ -2,20 +2,17 @@
 input[type="checkbox"] {
     cursor: pointer;
     margin-left: 5px;
-    box-shadow: 0 1px 3px 0 #c3c3c3;
+    box-shadow: 0 1px 3px 0 var(--darkest1);
 }
-.checked { text-decoration: line-through; }
 
 /* The checkbox container */
 .container {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
+
 /* Hide the browser's default checkbox */
 .container input {
     position: absolute;
@@ -33,19 +30,19 @@ input[type="checkbox"] {
    width: 40px;
    transition: background-color .3s, box-shadow .3s;
    border-radius: 10px;
-   box-shadow: 0 1px 3px 0 #c3c3c3;
-   background-color: #f6f6fd;
+   box-shadow: 0 1px 3px 0 var(--darkest4);
+   background-color: var(--darkest3);
 }
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark { box-shadow: 0 0 10px 1px #ddd; }
-.container input:checked ~ .checkmark:hover { box-shadow: 0 0 10px 1px #ddd; }
-.container input:checked ~ .checkmark:active { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
-.container:active input ~ .checkmark { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
+.container:hover input ~ .checkmark { box-shadow: 0 0 10px 1px var(--darkest4); }
+.container input:checked ~ .checkmark:hover { box-shadow: 0 0 10px 1px var(--darkest4); }
+.container input:checked ~ .checkmark:active { background-color: var(--darkest2); box-shadow: 0 1px 3px 0 var(--darkest4); }
+.container:active input ~ .checkmark { background-color: var(--darkest4); box-shadow: 0 1px 3px 0 var(--darkest4); }
 .container input:checked ~ .checkmark {
     transition: background-color .3s, box-shadow .3s;
     border-radius: 10px;
-    box-shadow: 0 1px 3px 0 #c3c3c3;
-    background-color: #f6f6fd;
+    box-shadow: 0 1px 3px 0 var(--darkest1);
+    background-color: var(--darkest4);
 }
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -57,13 +54,14 @@ input[type="checkbox"] {
 .container input:checked ~ .checkmark:after { display: block; }
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-   left: 15px;
-   top: 8px;
-   width: 10px;
-   height: 20px;
-   border: solid #444;
-   border-width: 0 4px 4px 0;
-   -webkit-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   transform: rotate(45deg);
+    left: 12px;
+    top: 11px;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    border: solid var(--blue2);
+    border-width: 5px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px 0 var(--blue2);
 }
