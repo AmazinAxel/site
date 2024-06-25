@@ -78,9 +78,17 @@
         gap: 10px;
         align-items: center;
     }
+
+    .selector h3 {
+        position: relative;
+        top: -34px;
+        left: 10px;
+        margin-bottom: 15px;
+        height: 0;
+    }
 </style>
 
-<h1>Small Text Generator</h1>
+<h1>Small Text Converter</h1>
 
 <div class="selector">
     <h3>Text Options</h3>
