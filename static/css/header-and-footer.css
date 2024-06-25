@@ -94,12 +94,13 @@ a img {
 	border: 0 solid;
 }
 
-.navItems img {
+.navItems ul li a img {
 	padding: 5px;
 	background-color: var(--darkest3);
     border: 0 solid;
     border-radius: 0.75rem;
     box-shadow: 1px 1px 6px var(--darkest1);
+    width: revert; /* fix annoying bug */
 }
 
 a.active img {

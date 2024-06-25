@@ -82,10 +82,10 @@
 
 /* Tooltips */
 
-.tooltip { display: inline-block; border-bottom: 2px dotted var(--lightest1); }
+.tooltip { display: inline-block; border-bottom: 2px dotted var(--lightest1); position: relative; }
 .tooltip .tooltiptext {
     opacity: 0;
-    transition: opacity .2s ease, visibility .2s, transform .3s ease;
+    transition: opacity .1s ease, visibility .1s, transform .15s ease;
     padding: 10px;
     border-radius: 10px 7px 7px 10px;
     background-color: var(--darkest2);
@@ -99,7 +99,7 @@
     text-align: center;
     visibility: hidden;
     cursor: text;
-    max-height: 115px;
+    max-height: 150px;
     color: var(--lightest1);
     line-height: 1.2;
     font-size: 1em;
@@ -110,3 +110,16 @@
 .tooltip:hover { cursor: pointer; }
 .full.tooltip { position: relative; display: revert; border-bottom: none; }   
 .full.tooltip .tooltiptext { max-height: unset; width: 100%; }
+
+
+/* Inputs */
+textarea {
+    resize: none;
+    background: var(--darkest2);
+    border: 5px solid var(--darkest4);
+    box-shadow: 1px 1px 9px var(--darkest2);
+    border-radius: 5px;
+}
+textarea:focus-visible {
+    outline: 3px solid var(--blue2);
+}

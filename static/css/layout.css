@@ -19,7 +19,7 @@ main {
     min-height: calc(100vh - 6rem - 4rem);
 }
 
-img {
+img:not(.noImgStyle) {
 	width: 100%;
 	max-width: 100%;
 	height: auto;

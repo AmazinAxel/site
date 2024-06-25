@@ -1,7 +1,8 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
 
-    let inputText = '';
+    var inputText = '';
+    var convertedText = '';
     let textType = false;
     let selected = 0;
 
@@ -13,11 +14,9 @@
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹*⁺⁻⁼⁽⁾';
     const subChars = '₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
-    $: convertedText = convertToSmallText(inputText);
-
-    function convertToSmallText(text) {
-        var text = text.toLowerCase(); // Convert text to lowercase
-        let convertedText = '';
+    function convertToSmallText() {
+        var text = inputText.toLowerCase(); // Convert text to lowercase
+        let preConvertedText = '';
 
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
@@ -28,9 +27,9 @@
             const index = normalAlphabet.indexOf(char);
 
             // Set character and fall back if char is not found in list
-            convertedText += (index !== -1) ? chars[index] : char;
+            preConvertedText += (index !== -1) ? chars[index] : char;
         }
-        return convertedText;
+        convertedText = preConvertedText;
     }
 
     function openFuncPopup(event) {
@@ -40,29 +39,81 @@
     // todo maybe include ‘’“” somehow
 </script>
 
+<style>
+    .selector {
+        border-left: 5px solid white;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    } /* todo consider using & and combining this into selector */
+
+    .selector::before {
+        content: "";
+        border-top: 5px solid var(--lightest3);
+        width: 23px;
+        right: 20px;
+        display: block;
+        position: relative;
+    }
+
+    .selector::after {
+        content: "";
+        border-bottom: 5px solid var(--lightest3);
+        width: 23px;
+        right: 20px;
+        display: block;
+        position: relative;
+        top: 20px;
+    }
+
+    textarea {
+        width: 45%;
+        height: 300px;
+    }
+
+    .inputs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+    }
+</style>
+
 <h1>Small Text Generator</h1>
 
 <div class="selector">
-    <div class="border"></div>
     <h3>Text Options</h3>
     <label class="container">
-        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:click={convertToSmallText(inputText)}>
+        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertToSmallText}>
         <span class="checkmark"></span>
-        <Tooltip inlineText="Use alternate text style">Use a different text style where some characters look slightly different</Tooltip>
+        <Tooltip inlineText="Use alternate text style">
+            Use a different text style where some characters look
+            slightly different. <b>Example:</b>
+            <img src="/media/tools/textconvert/texttypepreview.png" alt="Shows difference between the text type function" class="noImgStyle" style="border-radius: 5px">
+        </Tooltip>
     </label>
 
-    <input type="range" min="1" value="2" max="3" id="scriptType">
-    <Tooltip inlineText="test"><b>NOTE:</b> Subscript and superscript characters apply to numbers and basic math characters</Tooltip>
+    <br>
+    <Tooltip isIcon style="top: 7px;">Subscript/superscript chars apply to numbers and some basic math</Tooltip>
+    <h4 style="display: inline-block">Script character type</h4>
+    <br>
+    <div style="display: flex; gap: 5px">
+        <Tooltip inlineText="Subscript">Appears below the text <b>Example:</b></Tooltip>
+        <input type="range" min="1" value="2" max="3" id="scriptType">
+        <Tooltip inlineText="Superscript">Appears above the text <b>Example:</b></Tooltip>
+    </div>
+</div>
+<div class="inputs">
+    <textarea id="normaltext" bind:value={inputText} on:input={convertToSmallText}/>
+    <!-- TODO add reversability, disabled for now  -->
+    
+    <p>-></p>
+    <textarea disabled>{convertedText}</textarea>
 </div>
 
-
-<textarea id="normaltext" bind:value={inputText} on:input/>
-<!-- TODO add reversability, disabled for now  -->
-<textarea disabled>{convertedText}</textarea>
-
-<br>
-
 <div class="info card">
+    <p><b>Disclaimer:</b> I am not affiliated with Mojang or Microsoft. Previews of each character are copyright</p>
     <p><b>NOTE:</b> This tool is not finished. Please report any bugs to @amazinaxel on Discord. Additionally, some features such as text reversability do not currently work.</p>
 </div>
 
