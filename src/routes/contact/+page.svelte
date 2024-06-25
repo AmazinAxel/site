@@ -13,3 +13,6 @@
 	<br>
 	<p>If you cannot use Discord for any reason, use the contact form below to reach out to me.</p>
 </Card>
+
+<h4>Contact form in development -- check back later.</h4>
+<p>In the meantime, communicate through Discord.</p>

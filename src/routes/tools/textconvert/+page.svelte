@@ -113,16 +113,15 @@
     </div>
 </div>
 <div class="inputs">
-    <textarea id="normaltext" bind:value={inputText} on:input={convertToSmallText}/>
+    <textarea id="normaltext" bind:value={inputText} on:input={convertToSmallText} placeholder="Normal text"/>
     <!-- TODO add reversability, disabled for now  -->
     
     <p>-></p>
-    <textarea disabled>{convertedText}</textarea>
+    <textarea placeholder="Small text">{convertedText}</textarea>
 </div>
 
 <div class="info card">
-    <p><b>Disclaimer:</b> I am not affiliated with Mojang or Microsoft. Previews of each character are copyright</p>
-    <p><b>NOTE:</b> This tool is not finished. Please report any bugs to @amazinaxel on Discord. Additionally, some features such as text reversability do not currently work.</p>
+    <p><b>NOTE:</b> This tool is not finished. Please report any bugs to <code>@amazinaxel</code> on Discord. Additionally, some features such as text reversability do not currently work.</p>
 </div>
 
 

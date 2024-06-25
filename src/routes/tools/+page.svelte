@@ -8,7 +8,13 @@
 
 
 <h1>Useful Minecraft Development Utilities</h1>
-<p>Tools that help make you an efficient developer.</p>
+<p>
+	I'm not a person who wants to reinvent the wheel.
+	These utilities were created because there were no
+	good other alternatives. These utilities help to speed
+	up development time by reducing wasted time and
+	optimizing your existing tools.
+</p>
 
 <div style="display: flex; gap: 14px;">
 	<a href="/tools/textconvert/" style="text-decoration: none;">

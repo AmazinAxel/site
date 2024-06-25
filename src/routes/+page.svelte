@@ -21,8 +21,6 @@
 		"Stuck in the Linux rabbit hole"
 	];
 
-	// TOOD: fix text converter not updating text after clicking button
-
 	function updSubtitle() {
 		subtitleVisibility = false;
 		// Get subtitles and remove previous subtitle from the list
@@ -62,15 +60,21 @@
 
 <h2>My Projects</h2>
 <h2>What I'm working on</h2>
-<ul>
+<div class="cardListContainer">
 	{#each data.posts as { title, url, description }}
-		<li>
-			<a href={url} target="_blank" rel="noreferrer noopener">
-				<h4>{title}</h4>
-				{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
-			</a>
-		</li>
+	<div class="listCard card">
+		<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+			<h4>{title}</h4>
+			{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
+		</a>
+	</div>
 	{/each}
-</ul>
+</div>
 
 <h1>Learn more about me</h1>
+
+<h1>GitHub repositories</h1>
+
+<h1>Minecraft utilities</h1>
+
+<h1>Help articles</h1>

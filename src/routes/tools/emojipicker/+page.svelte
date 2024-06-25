@@ -23,5 +23,12 @@ Use the buttons below to copy the character you want.
     <button onclick="navigator.clipboard.writeText(this.innerText);">{icon}</button>
 {/each}
 
+<div class="card">
+    <p><b>Disclaimer:</b> I am not affiliated with Mojang or Microsoft. Previews of each character are copyrighted by their respective owner(s).</p>
+</div>
 
-[Copy plaintext list of all characters] from the Minecraft font mappings
+<div class="card">
+    <b>Want a full list of every character?</b>
+    <button>Copy plaintext list of all characters</button>
+    All characters are copied from the font mappings of the Minecraft 1.20 jar. 
+</div>

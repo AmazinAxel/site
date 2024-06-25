@@ -112,7 +112,10 @@
 .full.tooltip .tooltiptext { max-height: unset; width: 100%; }
 
 .tooltiptext::before {
-    content: url("/media/icons/about.svg")
+    content: "◆";
+    padding-right: 5px;
+    position: relative;
+    bottom: 2px;
 }
 
 /* Inputs */
@@ -126,3 +129,42 @@ textarea {
 textarea:focus-visible {
     outline: 3px solid var(--blue2);
 }
+
+::placeholder {
+    color: #cdcdcd;
+}
+
+
+/* Stacked cards list */
+.cardListContainer {
+    display: flex;
+}
+  
+.listCard {
+    height: 280px;
+    width: 200px;
+    transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
+    position: relative;
+    left: 0px;
+    overflow: hidden;
+}
+
+.listCard.elipsis::after {
+    content: "";
+}
+  
+.listCard:not(:first-child) {
+    margin-left: -100px;
+}
+  
+.listCard:hover {
+    transform: translateY(-20px);
+    transition: 0.4s cubic-bezier(0, 0.6, 0.3, 1);
+}
+  
+.listCard:hover ~ .listCard {
+    position: relative;
+    left: 75px;
+    transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
+}
+  

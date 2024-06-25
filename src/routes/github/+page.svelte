@@ -8,6 +8,7 @@
 
 
 {#each data.repos as { ...repo }}
+	{#if repo.name !== "AmazinAxel"}
 	<a href={repo.html_url} style="text-decoration: none">
 		<div class="card">
 			<h3>{repo.name}</h3>
@@ -36,4 +37,5 @@
 
 		</div>
 	</a>
+	{/if}
 {/each}
