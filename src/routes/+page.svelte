@@ -1,44 +1,57 @@
 <script>
 	import { fade } from 'svelte/transition';
+	import Card from '$lib/components/imgCard.svelte';
 
 	// Necessary for the SWR blog post system
 	export let data;
 	let randomSubtitle = "";
 	let subtitleVisibility = false;
+	let index = 0;
 
-	// TODO: update randomness calc to start at a random index
-	// and increase by 1 instead of choosing a random subtitle
-	const randomSubtitles = [
+	// Shuffle list
+	function shuffle(arr) {
+		for (let i = arr.length - 1; i > 0; i--) {
+    		// pick a random index from 0 to i inclusive
+    		const j = Math.floor(Math.random() * (i + 1)); // at random index
+    		// Swap arr[i] with the element
+    		[arr[i], arr[j]] = [arr[j], arr[i]];
+  		}
+		return arr;
+	}
+
+	const randomSubtitleList = [
 		"Permafrost lead developer and project manager",
-		"Back-end web dev",
+		"Full-stack web dev",
 		"Not a good low-level programmer",
 		"Enjoys Linux server administrating & IT/IoT",
-		"Professional AI prompt engineer",
 		"Minecraft server manager and developer",
 		"Avid Linux/NixOS user",
 		"Addicted to Minecraft server development",
 		"Average Skript enjoyer",
-		"Stuck in the Linux rabbit hole"
+		"Stuck in the Linux rabbit hole",
+		"Lofi and synthwave music enjoyer",
+		"Bubble tea addict",
+		"Upcoming Neovim user"
 	];
 
+	const randomSubtitles = shuffle(randomSubtitleList);
 	function updSubtitle() {
 		subtitleVisibility = false;
-		// Get subtitles and remove previous subtitle from the list
-		const subtitles = randomSubtitles.filter(word => word !== randomSubtitle);
 
 		// Get random element
 		setTimeout(function() {
-			randomSubtitle = subtitles[subtitles.length * Math.random() | 0];
-			subtitleVisibility = true;		
+			randomSubtitle = randomSubtitles[index];
+			subtitleVisibility = true;
 		}, 500);
+
+		// Get subtitles and remove previous subtitle from the list
+		index += 1
+		if (index == randomSubtitleList.length) index = 0;
 	}
 
 	// Random subtitle every 2.5 seconds
 	setInterval(updSubtitle, 2500);
 	updSubtitle()
-
-
-	import Card from '$lib/components/imgCard.svelte';
 </script>
 
 <svelte:head>
