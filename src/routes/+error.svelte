@@ -3,6 +3,7 @@
     import { page } from '$app/stores';
 </script>
 
+<!-- TODO add a random project image as the background, use the hero styling -->
 <h2>{$page.status}</h2>
 <p class="subhead">{$page.error.message}</p>
 

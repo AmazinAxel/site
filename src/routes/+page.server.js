@@ -8,9 +8,17 @@ export const load = async () => {
  		const posts = await fetch(RSS_URL)
  		   .then((response) => response.text())
  		   .then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);			  
-				
+		
+		console.log(posts) // TODO fix this to throw error properly
+		// and then add it to the Github thing too
 		return { posts };
-	} catch (err) {
-		error(500, err);
+	} catch (e) {
+		console.log('No connection to external server!');
+		const returnValue = {
+			"title": "ae",
+			"url": "https://amazinaxel.com",
+			"description": "NO"
+		}
+		return returnValue;
 	}
 };

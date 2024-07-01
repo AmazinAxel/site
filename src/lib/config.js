@@ -71,23 +71,42 @@ export const navItems = [
 	}
 ];
 
-export const projects = [
-	{
-		title: 'Permafrost',
-		role: 'Lead Developer and Project Manager',
-		description: 'desc here',
-		image: 'add an image here todo'
-	},
-	{
-		title: 'Dueling',
-		role: 'Developer',
-		description: 'description here',
-		image: 'todo'
-	},
-	{
-		title: 'more coming soon',
-		role: 'yes',
-		description: 'hohoho',
-		image: 'todo'
-	}
-]
+export const projects = {
+	major: [
+		{
+			title: 'Permafrost',
+			role: 'Lead Developer and Project Manager',
+			description: 'desc here',
+			image: 'add an image here todo'
+		},
+		{
+			title: ''
+		}
+	],
+
+	other: [
+		{
+			title: 'Dueling',
+			role: 'Developer',
+			description: 'Lead developer of a fast-paced, 1v1 PvP matchup tournament event server.',
+			image: 'todo'
+		},
+	],
+
+	archived: [
+		{
+			title: 'Lofi Player',
+			url: 'TODO add url here',
+			description: "The Lofi player is a music webapp intended for listening to Lo-fi music. The project was archived because I began using Spotify.",
+			image: 'todo'
+		},
+		{
+			title: 'Egg Development Games',
+			description: "My first solo indie game studio, I created various Minecraft servers, including: WizardryKB, EggEvents, EggSiege, and EggDuels. All assets from this studio were liquidated into Permafrost Games.",
+			image: 'todo'
+		},
+		{
+			title: ''
+		}
+	]
+}

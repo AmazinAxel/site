@@ -35,7 +35,14 @@
 	];
 
 	const randomSubtitles = shuffle(randomSubtitleList);
-	function updSubtitle() {
+	function updSubtitle(isInstant = false) {
+		if (isInstant == true) {
+			subtitleVisibility = true;
+			randomSubtitle = randomSubtitles[index];
+			index += 1
+			return;
+		}
+
 		subtitleVisibility = false;
 
 		// Get random element
@@ -51,7 +58,7 @@
 
 	// Random subtitle every 2.5 seconds
 	setInterval(updSubtitle, 2500);
-	updSubtitle()
+	updSubtitle(true)
 </script>
 
 <svelte:head>
@@ -74,14 +81,14 @@
 <h2>My Projects</h2>
 <h2>What I'm working on</h2>
 <div class="cardListContainer">
-	{#each data.posts as { title, url, description }}
+	<!--{#each data.posts as { title, url, description }}
 	<div class="listCard card">
 		<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
 			<h4>{title}</h4>
 			{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
 		</a>
 	</div>
-	{/each}
+	{/each}-->
 </div>
 
 <h1>Learn more about me</h1>
