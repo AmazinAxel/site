@@ -1,7 +1,4 @@
-Remove all previous styling, and replace with custom styling
-
-Add sidebar functionality
-- Make sidebar state remain when pages are changed
+make sidebar not push the main content (overlap it instead)
 convert to Typescript
 research Bun support with svelte
 fix all TODOs throughout the code

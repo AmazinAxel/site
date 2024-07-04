@@ -15,7 +15,6 @@
     const subChars = '₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
     function convertText(toSmallText) {
-        console.log('aee');
         let preConvertedText = '';
 
         if (toSmallText) {
@@ -34,18 +33,11 @@
             const scriptIndex = scriptChars.indexOf(char);
 
             // Set character and fall back if char is not found in list
-            if (toSmallText) {
-                preConvertedText += (index !== -1) ? chars[index] : char;
-                preConvertedText += (scriptIndex !== -1) ? scriptTypeChars[index] : char;
-            } else {
-                preConvertedText += (index !== -1) ? scriptChars[index] : char;
-                preConvertedText += (scriptIndex !== -1) ? normalAlphabet[index] : char;
-            }
+            preConvertedText += (index !== -1) ? chars[index] : char;
+            //preConvertedText += (scriptIndex !== -1) ? scriptTypeChars[index] : char;
         }
 
-        //(toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
-        outputText = preConvertedText;
-        inputText = preConvertedText;
+        (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
     }
 
     function openFuncPopup(event) {
@@ -171,9 +163,9 @@
 </div>
 <!-- todo convert to just value instead of having extra closing tags-->
 <div class="inputs">
-    <textarea bind:value={inputText} on:input={convertText(true)} placeholder="Normal text"/>
+    <textarea bind:value={inputText} on:input={() => convertText(true)} placeholder="Normal text"/>
     <p>➡️</p>
-    <textarea bind:value={outputText} on:input={convertText(false)} placeholder="Small text"/>
+    <textarea bind:value={outputText} on:input={() => convertText(false)} placeholder="Small text"/>
 </div>
 
 <div class="info card">

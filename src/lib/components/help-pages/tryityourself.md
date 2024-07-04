@@ -1,7 +1,6 @@
 <svelte:head>
-	<title>Help - Try it Yourself</title>
+<title>Help - Try it Yourself</title>
 </svelte:head>
-
 
 # Try it yourself: the proper way to learn
 

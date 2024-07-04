@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 	font-family: inherit;
 }
@@ -11,40 +13,40 @@ main {
 	display: flex;
 }
 
-#content { 
-    margin: 3rem auto;
-    max-width: 90rem;
-    padding: 30px 15px;
+#content {
+	margin: 3rem auto;
+	max-width: 90rem;
+	padding: 30px 15px;
 	/* This fixes the footer issue; 6rem is padding size, 4rem is footer height) */
-    min-height: calc(100vh - 6rem - 4rem);
+	min-height: calc(100vh - 6rem - 4rem);
 }
 
 img:not(.noImgStyle) {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
-    background-color: var(--darkest3);
-    border: 2px var(--darkest4) solid;
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 6px var(--darkest1);
+	background-color: var(--darkest3);
+	border: 2px var(--darkest4) solid;
+	border-radius: 0.5rem;
+	box-shadow: 1px 1px 6px var(--darkest1);
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    color: var(--lightest2);
-    font-family: var(--primaryFont);
-    background: var(--darkest1);
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+	margin: 0;
+	min-height: 100vh;
+	color: var(--lightest2);
+	font-family: var(--primaryFont);
+	background: var(--darkest1);
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Mobile tap highlight */
 html {
-    -webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
+	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
 }
 
 .antialised {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

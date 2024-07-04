@@ -1,7 +1,7 @@
 nav {
 	font-family: var(--primaryFont);
-    padding: 1rem 1rem;
-    background-color: var(--darkest2);
+	padding: 1rem 1rem;
+	background-color: var(--darkest2);
 }
 
 :where(nav, footer) a {
@@ -26,12 +26,14 @@ nav {
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 5rem;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	width: 5rem;
 	min-width: 5rem;
-	transition: min-width .1s cubic-bezier(0, 0.6, 0.3, 1), padding .1s cubic-bezier(0, 0.6, 0.3, 1);
+	transition:
+		min-width 0.1s cubic-bezier(0, 0.6, 0.3, 1),
+		padding 0.1s cubic-bezier(0, 0.6, 0.3, 1);
 	box-shadow: 10px 0 20px 0px var(--darkest1);
 }
 
@@ -39,24 +41,26 @@ nav {
 	width: 3rem;
 	transform: translateX(0);
 	opacity: 1;
-	transition: transform .1s cubic-bezier(0, 0.6, 0.3, 1), opacity .1s cubic-bezier(0, 0.6, 0.3, 1);
+	transition:
+		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1),
+		opacity 0.1s cubic-bezier(0, 0.6, 0.3, 1);
 	z-index: 2;
 }
 
-nav:hover #logoicon{
+nav:hover #logoicon {
 	transform: translateX(3rem);
 	opacity: 0;
-    position: absolute;
+	position: absolute;
 }
 
 .site-title {
 	font-family: var(--headerFont);
-    font-size: 2rem;
-    color: inherit;
+	font-size: 2rem;
+	color: inherit;
 	display: none;
 	z-index: 3;
-    position: relative;
-    padding-left: 3px;
+	position: relative;
+	padding-left: 3px;
 }
 
 nav:hover .site-title {
@@ -70,15 +74,16 @@ nav:hover .site-title {
 	padding: 0;
 	border: 0;
 	width: 2rem;
-    cursor: pointer;
-    visibility: hidden;
+	cursor: pointer;
+	visibility: hidden;
 }
 
-
 .navItems {
-    display: flex;
+	display: flex;
 	justify-content: flex-start;
-    transition: transform ease .15s, visibility .15s;
+	transition:
+		transform ease 0.15s,
+		visibility 0.15s;
 	z-index: 2;
 }
 
@@ -89,19 +94,19 @@ nav:hover .navItems {
 }
 
 a img {
-    background-image: linear-gradient(240deg, var(--blue1) 0%, var(--blue2) 100%);
-    border-radius: 15px;
-    box-shadow: 0 0 10px 0 var(--blue1);
+	background-image: linear-gradient(240deg, var(--blue1) 0%, var(--blue2) 100%);
+	border-radius: 15px;
+	box-shadow: 0 0 10px 0 var(--blue1);
 	border: 0 solid;
 }
 
 .navItems ul li a img {
 	padding: 5px;
 	background-color: var(--darkest3);
-    border: 0 solid;
-    border-radius: 0.75rem;
-    box-shadow: 1px 1px 6px var(--darkest1);
-    width: revert; /* fix annoying bug */
+	border: 0 solid;
+	border-radius: 0.75rem;
+	box-shadow: 1px 1px 6px var(--darkest1);
+	width: revert; /* fix annoying bug */
 }
 
 a.active img {
@@ -110,31 +115,35 @@ a.active img {
 
 #expandbtn {
 	position: absolute;
-    left: 5rem;
-    top: 1rem;
-    width: 50px;
-	transition: left .1s cubic-bezier(0, 0.6, 0.3, 1), transform .1s cubic-bezier(0, 0.6, 0.3, 1);
-    background-color: var(--darkest2);
-    border: 0 solid;
-    border-radius: 0 0.5rem 0.5rem 0;
-    box-shadow: 0 0;
+	left: 5rem;
+	top: 1rem;
+	width: 50px;
+	transition:
+		left 0.1s cubic-bezier(0, 0.6, 0.3, 1),
+		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1);
+	background-color: var(--darkest2);
+	border: 0 solid;
+	border-radius: 0 0.5rem 0.5rem 0;
+	box-shadow: 0 0;
 }
 
 nav:hover #expandbtn {
 	left: 12rem;
-    transform: scaleX(-1);
+	transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;
 }
 
 nav a img {
-    width: 50px;
-    min-width: 50px;
+	width: 50px;
+	min-width: 50px;
 }
 
 nav p {
 	opacity: 0;
 	transform: translateX(-2.5rem);
-	transition: opacity .1s cubic-bezier(0, 0.6, 0.3, 1), transform .1s cubic-bezier(0, 0.6, 0.3, 1);
+	transition:
+		opacity 0.1s cubic-bezier(0, 0.6, 0.3, 1),
+		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1);
 }
 
 nav:hover p {
@@ -144,8 +153,8 @@ nav:hover p {
 
 .menu-button {
 	position: absolute;
-    top: 0.75rem;
-    right: 12px;
+	top: 0.75rem;
+	right: 12px;
 }
 
 .main nav ul li {
@@ -157,11 +166,11 @@ nav:hover p {
 }
 
 nav ul:not(ul ul) {
-    margin: 1rem auto 0;
-    padding-top: 1rem;
-    border-top: 3px solid var(--darkest1);
-    padding-left: 0;
-    width: 100%;
+	margin: 1rem auto 0;
+	padding-top: 1rem;
+	border-top: 3px solid var(--darkest1);
+	padding-left: 0;
+	width: 100%;
 }
 
 nav li {
@@ -169,18 +178,18 @@ nav li {
 }
 
 nav a {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	gap: 5px;
-    margin-bottom: 0.65rem;
+	margin-bottom: 0.65rem;
 }
 
 footer {
-    padding-top: 1rem;
+	padding-top: 1rem;
 	background-color: var(--darkest2);
 	height: 4rem;
 	z-index: 3;
-    position: relative;
+	position: relative;
 }
 
 footer p {
@@ -210,20 +219,22 @@ footer p {
 
 /* Navigation open on hover */
 nav:hover {
-    width: 12rem;
+	width: 12rem;
 	padding: 1rem 0.5rem;
 	min-width: 12rem;
 }
 
 nav ul ul {
 	max-height: 0px;
-	transition: max-height .3s cubic-bezier(0, 0.6, 0.3, 1), margin-bottom .3s cubic-bezier(0, 0.6, 0.3, 1);
-    overflow: hidden;
-    padding-left: 10px;
-	
-    border-left: 2px solid var(--lightest1);
-    margin-left: 5px;
-	white-space: nowrap
+	transition:
+		max-height 0.3s cubic-bezier(0, 0.6, 0.3, 1),
+		margin-bottom 0.3s cubic-bezier(0, 0.6, 0.3, 1);
+	overflow: hidden;
+	padding-left: 10px;
+
+	border-left: 2px solid var(--lightest1);
+	margin-left: 5px;
+	white-space: nowrap;
 }
 
 nav:hover ul ul {
@@ -236,5 +247,5 @@ nav ul ul li:last-child a {
 }
 
 nav ul ul p {
-	transform: translateX(0)!important;
+	transform: translateX(0) !important;
 }

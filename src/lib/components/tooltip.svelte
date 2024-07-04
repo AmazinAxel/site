@@ -1,7 +1,7 @@
 <script>
     export let inlineText;
-    export let isIcon;
-    export let style;
+    export let isIcon = false;
+    export let style = '';
 </script>
 
 <div class="tooltip" style={style}>

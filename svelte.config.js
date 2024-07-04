@@ -26,14 +26,8 @@ const config = {
 	},
 	// todo look this up
 	prerender: {
-		entries: [
-		  '*',
-		  '/',
-		  '/help/',
-		  '/help/*',
-		]
-	  }
-  
+		entries: ['*', '/', '/help/', '/help/*']
+	}
 };
 
 export default config;

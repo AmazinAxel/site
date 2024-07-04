@@ -1,180 +1,204 @@
 .card {
-    background-color: var(--darkest3);
-    border: 2px var(--darkest4) solid;
-    padding: 10px;
-    border-radius: 0.5rem;
-    box-shadow: 3px 3px 3px var(--darkest1);
-    margin: 10px 0;
-    text-align: center;
+	background-color: var(--darkest3);
+	border: 2px var(--darkest4) solid;
+	padding: 10px;
+	border-radius: 0.5rem;
+	box-shadow: 3px 3px 3px var(--darkest1);
+	margin: 10px 0;
+	text-align: center;
 }
 
 .flex.card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
-@media(max-width:55rem){
-    .flex.card {
-        flex-direction: column-reverse;
-    }
-    .menu-button {
-        visibility: visible;
-    }
+@media (max-width: 55rem) {
+	.flex.card {
+		flex-direction: column-reverse;
+	}
+	.menu-button {
+		visibility: visible;
+	}
 }
 
 .card img:not(.flex.card img) {
-    width: 50%;
+	width: 50%;
 }
 
 .flex.card p {
-    margin-bottom: 14px;
+	margin-bottom: 14px;
 }
 
 /* Homepage hero */
 #hero {
-    text-align: center;
-    height: 25rem;
-    display: grid;
-    align-items: end;
-    align-content: center;
-    background-image: url(https://amazinaxel.com/media/Banner-grass.jpg);
-    background-size: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 3rem;
-    border: 3px solid var(--darkest2);
+	text-align: center;
+	height: 25rem;
+	display: grid;
+	align-items: end;
+	align-content: center;
+	background-image: url(https://amazinaxel.com/media/Banner-grass.jpg);
+	background-size: cover;
+	border-radius: 0.5rem;
+	margin-bottom: 3rem;
+	border: 3px solid var(--darkest2);
 }
 
-#hero h1, #hero p {
-    margin: 0;
-    color: var(--darkest1)
+#hero h1,
+#hero p {
+	margin: 0;
+	color: var(--darkest1);
 }
 
 /* Progress bar styling */
 .progress {
-    margin-top: 10px;
-    border-radius: 7px;
-    background-color: var(--darkest3);
-    box-shadow: 5px 3px 10px 0 var(--darkest2);
-    transition: background-color .2s ease, box-shadow .2s ease;
+	margin-top: 10px;
+	border-radius: 7px;
+	background-color: var(--darkest3);
+	box-shadow: 5px 3px 10px 0 var(--darkest2);
+	transition:
+		background-color 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 .progressinner {
-  font-size: 20px;
-  border-radius: 7px;
-  line-height: 35px;
-  width: 5px;
-  min-width: 50px;
-  background-image: linear-gradient(240deg, rgba(25,170,214,1) 0%, rgba(10,127,237,1) 100%);
-  box-shadow: 0 0 10px 0 var(--blue);
-  color: white;
+	font-size: 20px;
+	border-radius: 7px;
+	line-height: 35px;
+	width: 5px;
+	min-width: 50px;
+	background-image: linear-gradient(240deg, rgba(25, 170, 214, 1) 0%, rgba(10, 127, 237, 1) 100%);
+	box-shadow: 0 0 10px 0 var(--blue);
+	color: white;
 }
 
 .progress::before {
-    content: var(--language);
-    float: right;
-    margin-right: 10px;
-    font-size: 20px;
-    line-height: 35px;
-    color: var(--progress);
-    transition: color .2s ease;
+	content: var(--language);
+	float: right;
+	margin-right: 10px;
+	font-size: 20px;
+	line-height: 35px;
+	color: var(--progress);
+	transition: color 0.2s ease;
 }
 
 /* Tooltips */
 
-.tooltip { 
-    display: inline-block; 
-    border-bottom: 2px dotted var(--lightest1); 
-    position: relative; 
-    z-index: 1;
+.tooltip {
+	display: inline-block;
+	border-bottom: 2px dotted var(--lightest1);
+	position: relative;
+	z-index: 1;
 }
 .tooltip .tooltiptext {
-    opacity: 0;
-    transition: opacity .1s ease, visibility .1s, transform .15s ease;
-    padding: 10px;
-    border-radius: 10px 7px 7px 10px;
-    background-color: var(--darkest2);
-    box-shadow: 5px 4px 20px var(--darkest3), inset 11px 7px 20px 0px var(--darkest2), 0px 20px 20px 5px inset var(--darkest1);    width: 250px;
-    position: absolute;
-    left: 50%;
-    top: -70px;
-    transform: translate(-50%, -40%);
-    overflow: auto;
-    text-align: center;
-    visibility: hidden;
-    cursor: text;
-    max-height: 150px;
-    color: var(--lightest1);
-    line-height: 1.2;
-    font-size: 1em;
-    border-top: 8px solid var(--blue2);
+	opacity: 0;
+	transition:
+		opacity 0.1s ease,
+		visibility 0.1s,
+		transform 0.15s ease;
+	padding: 10px;
+	border-radius: 10px 7px 7px 10px;
+	background-color: var(--darkest2);
+	box-shadow:
+		5px 4px 20px var(--darkest3),
+		inset 11px 7px 20px 0px var(--darkest2),
+		0px 20px 20px 5px inset var(--darkest1);
+	width: 250px;
+	position: absolute;
+	left: 50%;
+	top: -70px;
+	transform: translate(-50%, -40%);
+	overflow: auto;
+	text-align: center;
+	visibility: hidden;
+	cursor: text;
+	max-height: 150px;
+	color: var(--lightest1);
+	line-height: 1.2;
+	font-size: 1em;
+	border-top: 8px solid var(--blue2);
 }
 
-.tooltiptext::-webkit-scrollbar-thumb { border-radius: 0 5px 5px 0; }
-.tooltip:hover .tooltiptext, .tooltip:active .tooltiptext { opacity: 1; visibility: visible; transform: translate(-50%, -50%); }
-.tooltip:hover { cursor: pointer; }
-.full.tooltip { position: relative; display: revert; border-bottom: none; }   
-.full.tooltip .tooltiptext { max-height: unset; width: 100%; }
+.tooltiptext::-webkit-scrollbar-thumb {
+	border-radius: 0 5px 5px 0;
+}
+.tooltip:hover .tooltiptext,
+.tooltip:active .tooltiptext {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(-50%, -50%);
+}
+.tooltip:hover {
+	cursor: pointer;
+}
+.full.tooltip {
+	position: relative;
+	display: revert;
+	border-bottom: none;
+}
+.full.tooltip .tooltiptext {
+	max-height: unset;
+	width: 100%;
+}
 
 .tooltiptext::before {
-    content: "◆";
-    padding-right: 5px;
-    position: relative;
-    bottom: 2px;
+	content: '◆';
+	padding-right: 5px;
+	position: relative;
+	bottom: 2px;
 }
 
 /* Inputs */
 textarea {
-    resize: none;
-    background: var(--darkest2);
-    border: 5px solid var(--darkest4);
-    box-shadow: 1px 1px 9px var(--darkest2);
-    border-radius: 5px;
+	resize: none;
+	background: var(--darkest2);
+	border: 5px solid var(--darkest4);
+	box-shadow: 1px 1px 9px var(--darkest2);
+	border-radius: 5px;
 }
 textarea:focus-visible {
-    outline: 3px solid var(--blue2);
+	outline: 3px solid var(--blue2);
 }
 
 ::placeholder {
-    color: #cdcdcd;
+	color: #cdcdcd;
 }
-
 
 /* Stacked cards list */
 .cardListContainer {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    left: 15px;
-    overflow-x: hidden;
-    padding-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	left: 15px;
+	overflow-x: hidden;
+	padding-top: 10px;
 }
-  
+
 .listCard {
-    height: 280px;
-    width: 200px;
-    transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
-    position: relative;
-    left: 0px;
-    overflow: hidden;
+	height: 280px;
+	width: 200px;
+	transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
+	position: relative;
+	left: 0px;
+	overflow: hidden;
 }
 
 .listCard.elipsis::after {
-    content: "";
+	content: '';
 }
-  
+
 .listCard:not(:first-child) {
-    margin-left: -100px;
+	margin-left: -100px;
 }
-  
+
 .listCard:hover {
-    transform: translateY(-20px);
-    transition: 0.4s cubic-bezier(0, 0.6, 0.3, 1);
+	transform: translateY(-20px);
+	transition: 0.4s cubic-bezier(0, 0.6, 0.3, 1);
 }
-  
+
 .listCard:hover ~ .listCard {
-    position: relative;
-    left: 75px;
-    transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
+	position: relative;
+	left: 75px;
+	transition: 0.2s cubic-bezier(0, 0.6, 0.3, 1);
 }
-  
