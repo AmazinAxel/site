@@ -1,7 +1,7 @@
 <!-- Wraps every page on the site, most important parent layout -->
 <script>
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/header.svelte';
+	import Footer from '$lib/components/footer.svelte';
 	import { currentPage, isMenuOpen } from '$lib/assets/js/store';
 	import { navItems } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
