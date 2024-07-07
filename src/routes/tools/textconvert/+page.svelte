@@ -1,9 +1,10 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
 
-    var inputText = '';
-    var outputText = '';
+    var inputText;
+    var outputText;
     let textType = false;
+    let scriptType = 2;
     let selected = 0;
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -11,10 +12,10 @@
     const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ';
 
     const scriptChars = '0123456789*+-=()';
-    const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹*⁺⁻⁼⁽⁾';
-    const subChars = '₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
+    const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';
+    const subChars = '₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
-    function convertText(toSmallText) {
+    function convertText(toSmallText = true) {
         let preConvertedText = '';
 
         if (toSmallText) {
@@ -25,7 +26,7 @@
 
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
-        const scriptTypeChars = scriptType ? superChars : subChars;
+        const scriptTypeChars = (scriptType == 1) ? subChars : superChars;
 
         for (let i = 0; i < text.length; i++) {
             const char = text[i];
@@ -33,8 +34,14 @@
             const scriptIndex = scriptChars.indexOf(char);
 
             // Set character and fall back if char is not found in list
-            preConvertedText += (index !== -1) ? chars[index] : char;
-            //preConvertedText += (scriptIndex !== -1) ? scriptTypeChars[index] : char;
+            if (scriptIndex !== -1) {
+                (scriptType == 2) ?
+                    preConvertedText += char :
+                    preConvertedText += scriptTypeChars[scriptIndex];
+            } else {
+                (index !== -1) ?
+                    preConvertedText += chars[index] : preConvertedText += char;
+            }
         }
 
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
@@ -141,7 +148,7 @@
 <div class="selector">
     <h3>Text Options</h3>
     <label class="container">
-        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText(true)}>
+        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText}>
         <span class="checkmark"></span>
         <Tooltip inlineText="Use alternate text style">
             Use a different text style where some characters look
@@ -155,7 +162,7 @@
         <Tooltip inlineText="Subscript">Appears below the text <b>Example:</b></Tooltip>
         <!-- TODO turn this into a component -->
         <div class="slider_container">
-            <input type="range" class="seek_slider" min="1" value="2" max="3" id="scriptType">
+            <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
         </div>
 
         <Tooltip inlineText="Superscript">Appears above the text <b>Example:</b></Tooltip>
@@ -163,7 +170,7 @@
 </div>
 <!-- todo convert to just value instead of having extra closing tags-->
 <div class="inputs">
-    <textarea bind:value={inputText} on:input={() => convertText(true)} placeholder="Normal text"/>
+    <textarea bind:value={inputText} on:input={convertText} placeholder="Normal text"/>
     <p>➡️</p>
     <textarea bind:value={outputText} on:input={() => convertText(false)} placeholder="Small text"/>
 </div>
@@ -174,7 +181,7 @@
 
 
 <div class="info card">
-    <p><b>TIP:</b> Use Skript functions or reflect expressions to create small text in-game, without the need for this converter!</p>
+    <p><b>TIP:</b> Use Skript functions or reflect expressions to create small text in-game, without the need for an online converter!</p>
     <button>Learn more</button>
 
     <input type="radio" name="noscript" value="1" bind:group={selected} on:change={openFuncPopup}>
@@ -200,7 +207,7 @@
     {:else if selected == 3} 
 
         <div class="warning card">
-        You need the <a href="TODO">skript-reflect</a> plugin to use this method.
+        This method requires the <a href="TODO">skript-reflect</a> plugin.
         </div>
 
         Example usage: `stxt "Hello (123-5) Test"
