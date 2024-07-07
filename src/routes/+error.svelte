@@ -4,7 +4,9 @@
 </script>
 
 <!-- TODO add a random project image as the background, use the hero styling -->
-<h2>{$page.status}</h2>
-<p class="subhead">{$page.error.message}</p>
+<div id="hero">
+	<h1>{$page.status}</h1>
+	<p>Error: {$page.error.message}</p>
+</div>
 
 <p><strong>Whoops!</strong> Something went wrong. Try <a href="/">heading back to the homepage.</a></p>
