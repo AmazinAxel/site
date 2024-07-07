@@ -6,12 +6,8 @@ export const load = async () => {
 
 		return { repos };
 	} catch (e) {
-		console.log('No connection to external site!');
-		return {
-			title: 'Unable to find repositories',
-			link: 'https://amazinaxel.com',
-			description: 'The build server cannot connect the GitHub API so the repository list could not be generated.'
-		};
+		console.log('No connection to GitHub API!');
+		return { noConnection: true };
 	};
 };
 

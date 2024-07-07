@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import Card from '$lib/components/imgCard.svelte';
+	import Info from '$lib/components/info.svelte';
 
 	// Necessary for the SWR blog post system
 	export let data;
@@ -69,7 +70,7 @@
 	<h1>AmazinAxel</h1>
 	{#if subtitleVisibility}
 		<p out:fade={{ duration: 500 }} in:fade={{ duration: 500 }}>{randomSubtitle}</p>
-	{/if}	
+	{/if}
 </div>
 
 <Card>
@@ -78,23 +79,49 @@
 </Card>
 <hr>
 
-<h2>My Projects</h2>
-<h2>What I'm working on</h2>
+<a href="projects" class="notextdeco"><h2>My Projects</h2></a>
+<a href="https://alecshome.com" class="notextdeco"><h2>What I'm working on</h2></a>
 <div class="cardListContainer">
-	<!--{#each data.posts as { title, url, description }}
+	{#if data.noConnection}
+		<Info error>No connection to outside server! Posts could not be shown.</Info>
+	{:else}
+	{#each data.posts as { title, url, description }}
 	<div class="listCard card">
 		<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
 			<h4>{title}</h4>
 			{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
 		</a>
 	</div>
-	{/each}-->
+	{/each}
+	{/if}
 </div>
 
-<h1>Learn more about me</h1>
+<a href="about" class="notextdeco"><h2>Learn more about me</h2></a>
 
-<h1>GitHub repositories</h1>
+<a href="github" class="notextdeco"><h2>GitHub repositories</h2></a>
+<!--{#each data.repos as { ...repo }}
+	{#if repo.name !== "AmazinAxel" && !repo.archived}
+	<a href={repo.html_url} style="text-decoration: none">
+		<div class="card">
+			<h3>{repo.name}</h3>
+			<p>{repo.description}</p>
 
-<h1>Minecraft utilities</h1>
+			<p>Forks: {repo.forks_count}<br>
+			Issues: {repo.open_issues_count}<br>
+			Stars: {repo.stargazers_count}<br>
+			{#if repo.homepage}
+				Homepage: {repo.homepage}<br>
+			{/if}
+			{#if repo.language}
+				Language: {repo.language}<br>
+			{/if}
+			Watchers: {repo.watchers_count}<br>
+			</p>
 
-<h1>Help articles</h1>
+		</div>
+	</a>
+	{/if}
+{/each}-->
+<a href="tools" class="notextdeco"><h2>Minecraft utilities</h2></a>
+
+<a href="help" class="notextdeco"><h2>Help articles</h2></a>

@@ -11,10 +11,6 @@ export const load = async () => {
 		return { posts };
 	} catch (e) {
 		console.log('No connection to external server!');
-		return {
-			title: 'Unable to build posts',
-			link: 'https://amazinaxel.com',
-			description: 'The build server cannot connect to an external site so these posts could not be built.'
-		}
+		return { noConnection: true }
 	}
 };

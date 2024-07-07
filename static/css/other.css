@@ -1,3 +1,5 @@
+.notextdeco { text-decoration: none; }
+
 .card {
 	background-color: var(--darkest3);
 	border: 2px var(--darkest4) solid;

@@ -24,6 +24,8 @@
             var text = outputText; // Convert text to lowercase
         }
 
+        console.log(text);
+
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
         const scriptTypeChars = (scriptType == 1) ? subChars : superChars;
@@ -34,22 +36,33 @@
             const scriptIndex = scriptChars.indexOf(char);
 
             // Set character and fall back if char is not found in list
-            if (scriptIndex !== -1) {
-                (scriptType == 2) ?
-                    preConvertedText += char :
-                    preConvertedText += scriptTypeChars[scriptIndex];
-            } else {
-                (index !== -1) ?
-                    preConvertedText += chars[index] : preConvertedText += char;
+            if (toSmallText) {
+                if (scriptIndex !== -1) {
+                    (scriptType == 2) ?
+                        preConvertedText += char :
+                        preConvertedText += scriptTypeChars[scriptIndex];
+                } else {
+                    (index !== -1) ?
+                        preConvertedText += chars[index] : preConvertedText += char;
+                }
+            } else { // Convert small to normal large text
+                if (scriptIndex !== -1) {
+                    (scriptType == 2) ?
+                        preConvertedText += char :
+                        preConvertedText += scriptChars[scriptIndex];
+                } else {
+                    (index !== -1) ?
+                        preConvertedText += normalAlphabet[index] : preConvertedText += char;
+                }
             }
         }
 
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
     }
 
+    // TODO add popup visibility
     function openFuncPopup(event) {
         selected = parseInt(event.target.value);
-        console.log(selected) // ai made this idek man
     }
     // todo maybe include ‘’“” somehow
 </script>
@@ -57,8 +70,7 @@
 <style>
     .selector {
         border-left: 5px solid white;
-        padding-left: 20px;
-        padding-bottom: 20px;
+        padding: 20px;
         border-radius: 5px;
         margin-bottom: 10px;
     } /* todo consider using & and combining this into selector */
@@ -68,6 +80,7 @@
         border-top: 5px solid var(--lightest3);
         width: 23px;
         right: 20px;
+        bottom: 20px;
         display: block;
         position: relative;
     }
@@ -92,14 +105,6 @@
         justify-content: center;
         gap: 10px;
         align-items: center;
-    }
-
-    .selector h3 {
-        position: relative;
-        top: -34px;
-        left: 10px;
-        margin-bottom: 15px;
-        height: 0;
     }
 
 
@@ -146,7 +151,6 @@
 <h1>Small Text Converter</h1>
 
 <div class="selector">
-    <h3>Text Options</h3>
     <label class="container">
         <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText}>
         <span class="checkmark"></span>
