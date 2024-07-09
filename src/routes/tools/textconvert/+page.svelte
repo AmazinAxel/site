@@ -18,41 +18,36 @@
     function convertText(toSmallText = true) {
         let preConvertedText = '';
 
-        if (toSmallText) {
-            var text = inputText.toLowerCase(); // Convert text to lowercase
-        } else {
-            var text = outputText; // Convert text to lowercase
-        }
-
-        console.log(text);
-
+        var text = (toSmallText) ? inputText.toLowerCase() : outputText;
+        
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
         const scriptTypeChars = (scriptType == 1) ? subChars : superChars;
 
         for (let i = 0; i < text.length; i++) {
             const char = text[i];
-            const index = normalAlphabet.indexOf(char);
-            const scriptIndex = scriptChars.indexOf(char);
 
             // Set character and fall back if char is not found in list
             if (toSmallText) {
+                const index = normalAlphabet.indexOf(char);
+                const scriptIndex = scriptChars.indexOf(char);
+
                 if (scriptIndex !== -1) {
-                    (scriptType == 2) ?
-                        preConvertedText += char :
-                        preConvertedText += scriptTypeChars[scriptIndex];
+                    preConvertedText += (scriptType != 2) ?
+                        scriptTypeChars[scriptIndex] : char;
                 } else {
-                    (index !== -1) ?
-                        preConvertedText += chars[index] : preConvertedText += char;
+                    preConvertedText += (index !== -1) ?
+                        chars[index] : char;
                 }
             } else { // Convert small to normal large text
+                const index = chars.indexOf(char);
+                const scriptIndex = scriptTypeChars.indexOf(char);
+
                 if (scriptIndex !== -1) {
-                    (scriptType == 2) ?
-                        preConvertedText += char :
-                        preConvertedText += scriptChars[scriptIndex];
+                    preConvertedText += scriptChars[scriptIndex];
                 } else {
-                    (index !== -1) ?
-                        preConvertedText += normalAlphabet[index] : preConvertedText += char;
+                    preConvertedText += (index !== -1) ? 
+                        normalAlphabet[index] : char;
                 }
             }
         }
@@ -63,6 +58,7 @@
     // TODO add popup visibility
     function openFuncPopup(event) {
         selected = parseInt(event.target.value);
+
     }
     // todo maybe include ‘’“” somehow
 </script>
@@ -164,7 +160,8 @@
     <br><br>
     <div style="display: flex; gap: 5px">
         <Tooltip inlineText="Subscript">Appears below the text <b>Example:</b></Tooltip>
-        <!-- TODO turn this into a component -->
+
+        <!-- Slider -->
         <div class="slider_container">
             <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
         </div>
@@ -172,7 +169,7 @@
         <Tooltip inlineText="Superscript">Appears above the text <b>Example:</b></Tooltip>
     </div>
 </div>
-<!-- todo convert to just value instead of having extra closing tags-->
+
 <div class="inputs">
     <textarea bind:value={inputText} on:input={convertText} placeholder="Normal text"/>
     <p>➡️</p>

@@ -5,7 +5,7 @@
 Use the buttons below to copy the character you want.
 
 <script>
-    // TODO: Switch to client side rendering (CSR) on this page to fix page speed bandwidth issues
+    // CONSIDER: Switch to *CLIENT* side rendering (CSR) on this page to fix page speed bandwidth issues
     const icons = "¡‰­·₴≠¿×ØÞһðøþΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρςστυφχψωЂЅІЈЉЊЋАБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзиклмнопрстуфхцчшщъыьэюяєѕіјљњ–—‘’“”„…⁊←↑→↓⇄＋ƏəɛɪҮүӨөʻˌ;ĸẞß₽€ѢѣѴѵӀѲѳ⁰¹³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁱ™ʔʕ⧈⚔☠ҚқҒғҰұӘәҖҗҢңҺאבגדהוזחטיכלמםנןסעפףצץקר¢¤¥©®µ¶¼½¾·‐‚†‡•‱′″‴‵‶";
 
     const iconList = icons.split('');
