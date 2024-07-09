@@ -1,4 +1,5 @@
-<svelte:head>
-<title>Help - Ask Better Questions</title>
-</svelte:head>
+---
+title: Ask better questions
+---
+
 aeea

@@ -23,14 +23,6 @@ const config = {
 	// Tells Sveltekit where to look for files
 	kit: {
 		adapter: adapter()
-	},
-	// todo look this up
-	prerender: {
-		entries: [
-		'*',
-		'/', 
-		'/help/*'
-	]
 	}
 };
 

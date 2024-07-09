@@ -113,7 +113,8 @@ a.active img {
 	box-shadow: 1px 1px 6px var(--blue1);
 }
 
-#expandbtn {
+#expandbtn, #unexpandbtn {
+	visibility: visible;
 	position: absolute;
 	left: 5rem;
 	top: 1rem;
@@ -127,10 +128,19 @@ a.active img {
 	box-shadow: 0 0;
 }
 
-nav:hover #expandbtn {
+nav:hover #expandbtn { visibility: hidden; }
+
+#unexpandbtn { visibility: hidden; }
+
+nav:hover + #unexpandbtn, nav:hover #expandbtn {
+	visibility: visible;
 	left: 12rem;
 	transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;
+}
+
+nav:hover + #unexpandbtn {
+	visibility: visible;
 }
 
 nav a img {

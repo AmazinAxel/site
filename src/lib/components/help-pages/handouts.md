@@ -1,7 +1,15 @@
-<svelte:head>
-<title>Help - Handouts</title>
-</svelte:head>
+---
+title: Spoonfeeding - why its bad and how to avoid it
+---
 
+<script>
+    	import Info from '$lib/components/info.svelte';
+
+</script>
+
+<Info error>AEAE</Info>
+
+<Info>EEEEEE</Info>
 # Spoonfeeding
 
 This article will go over the aspects of **spoonfeeding**, specifically why its a bad practice and what should be done instead.
