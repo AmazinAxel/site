@@ -1,13 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
-/*import { mdsvex } from 'mdsvex'
+import { mdsvex } from 'mdsvex'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeSlug from 'rehype-slug'*/
+import rehypeSlug from 'rehype-slug'
 
 const config = {
 	// Ensures .svelte files are treated as components (can be imported anywhere)
 	extensions: ['.svelte', '.md'],
 
-	/*preprocess: [
+	preprocess: [
 		mdsvex({
 			// The default mdsvex extension is .svx; this overrides that.
 			extensions: ['.md'],
@@ -18,7 +18,7 @@ const config = {
 				rehypeAutolinkHeadings,
 			],
 		}),
-	],*/
+	],
 
 	// Tells Sveltekit where to look for files
 	kit: {
@@ -29,7 +29,6 @@ const config = {
 		entries: [
 		'*',
 		'/', 
-		'/help/', 
 		'/help/*'
 	]
 	}
