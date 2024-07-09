@@ -126,6 +126,7 @@ a.active img {
 	border: 0 solid;
 	border-radius: 0 0.5rem 0.5rem 0;
 	box-shadow: 0 0;
+	transition: visibility 0.1s;
 }
 
 nav:hover #expandbtn { visibility: hidden; }
