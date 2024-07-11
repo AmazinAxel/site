@@ -120,28 +120,24 @@ a.active img {
 	top: 1rem;
 	width: 50px;
 	transition:
-		left 0.1s cubic-bezier(0, 0.6, 0.3, 1),
-		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1);
+		left 1s cubic-bezier(0, 0.6, 0.3, 1),
+		transform 1s cubic-bezier(0, 0.6, 0.3, 1);
 	background-color: var(--darkest2);
+	transform: scaleX(1);
 	border: 0 solid;
 	border-radius: 0 0.5rem 0.5rem 0;
 	box-shadow: 0 0;
-	transition: visibility 0.1s;
+	transition: visibility 0.2s;
+    z-index: 16;
 }
 
-nav:hover #expandbtn { visibility: hidden; }
-
-#unexpandbtn { visibility: hidden; }
+nav:hover #expandbtn, #unexpandbtn { visibility: hidden; }
+nav:hover + #unexpandbtn { visibility: visible; }
 
 nav:hover + #unexpandbtn, nav:hover #expandbtn {
-	visibility: visible;
 	left: 12rem;
 	transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;
-}
-
-nav:hover + #unexpandbtn {
-	visibility: visible;
 }
 
 nav a img {

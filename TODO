@@ -3,3 +3,4 @@ convert to Typescript
 research Bun support with svelte
 fix all TODOs throughout the code
 Add About page
+consider fixing the weird arrow not animating
