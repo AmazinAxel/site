@@ -2,6 +2,9 @@
 	<title>Blog Posts</title>
 </svelte:head>
 
-<h1>Hi</h1>
+<h2>Blog Aggregate</h2>
+<p>
+	This list includes all posts from my various blogs. 
+	Old posts are not shown. Refreshes once per day.
+</p>
 
-<p>This is my blog aggregate feed; every post from my various blogs are added here.</p>

@@ -1,14 +1,14 @@
 <script>
 	// Necessary for the Github repo system to work
 	export let data;
-	import Info from '$lib/components/info.svelte';
+	import Admonition from '$lib/components/admonition.svelte';
 </script>
 <svelte:head>
 	<title>GitHub Projects</title>
 </svelte:head>
 
 {#if data.noConnection}
-	<Info error>Could not connect to the GitHub API! Repositories cannot be shown.</Info>
+	<Admonition builderror>Could not connect to the GitHub API! Repositories cannot be shown.</Admonition>
 {:else}
 	{#each data.repos as { ...repo }}
 		{#if repo.name !== "AmazinAxel"}

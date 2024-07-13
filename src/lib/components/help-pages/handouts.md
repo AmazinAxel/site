@@ -3,13 +3,13 @@ title: Spoonfeeding - why its bad and how to avoid it
 ---
 
 <script>
-    	import Info from '$lib/components/info.svelte';
-
+    	import Admonition from '$lib/components/admonition.svelte';
 </script>
 
-<Info error>AEAE</Info>
+<Admonition builderror>AEAE</Admonition>
 
-<Info>EEEEEE</Info>
+<Admonition info>EEEEEE</Admonition>
+
 # Spoonfeeding
 
 This article will go over the aspects of **spoonfeeding**, specifically why its a bad practice and what should be done instead.

@@ -1,24 +1,15 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import Card from '$lib/components/imgCard.svelte';
-	import Info from '$lib/components/info.svelte';
+	import Admonition from '$lib/components/admonition.svelte';
+	import Hero from '$lib/components/hero.svelte';
+	import { shuffle } from '$lib/utils'
 
 	// Necessary for the SWR blog post system
 	export let data;
 	let randomSubtitle = "";
 	let subtitleVisibility = false;
 	let index = 0;
-
-	// Shuffle list
-	function shuffle(arr) {
-		for (let i = arr.length - 1; i > 0; i--) {
-    		// pick a random index from 0 to i inclusive
-    		const j = Math.floor(Math.random() * (i + 1)); // at random index
-    		// Swap arr[i] with the element
-    		[arr[i], arr[j]] = [arr[j], arr[i]];
-  		}
-		return arr;
-	}
 
 	const randomSubtitleList = [
 		"Permafrost lead developer and project manager",
@@ -32,7 +23,8 @@
 		"Stuck in the Linux rabbit hole",
 		"Lofi and synthwave music enjoyer",
 		"Bubble tea addict",
-		"Upcoming Neovim user"
+		"Upcoming Neovim user",
+		"Professional Linux desktop ricer"
 	];
 
 	const randomSubtitles = shuffle(randomSubtitleList);
@@ -50,7 +42,7 @@
 		setTimeout(function() {
 			randomSubtitle = randomSubtitles[index];
 			subtitleVisibility = true;
-		}, 500);
+		}, 300);
 
 		// Get subtitles and remove previous subtitle from the list
 		index += 1
@@ -66,12 +58,11 @@
 	<title>AmazinAxel's Stuff</title>
 </svelte:head>
 
-<div id="hero">
-	<h1>AmazinAxel</h1>
+<Hero>	<h1>AmazinAxel</h1>
 	{#if subtitleVisibility}
-		<p out:fade={{ duration: 500 }} in:fade={{ duration: 500 }}>{randomSubtitle}</p>
+		<p out:fade={{ duration: 300 }} in:fade={{ duration: 300 }}>{randomSubtitle}</p>
 	{/if}
-</div>
+</Hero>
 
 <Card>
 	<h3>🚧 This site is currently under construction! 🚧</h3>
@@ -83,16 +74,16 @@
 <a href="https://alecshome.com" class="notextdeco"><h2>What I'm working on</h2></a>
 <div class="cardListContainer">
 	{#if data.noConnection}
-		<Info error>No connection to outside server! Posts could not be shown.</Info>
+		<Admonition builderror>No connection to outside server! Posts could not be shown.</Admonition>
 	{:else}
-	{#each data.posts as { title, url, description }}
-	<div class="listCard card">
-		<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
-			<h4>{title}</h4>
-			{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
-		</a>
-	</div>
-	{/each}
+		{#each data.posts as { title, url, description }}
+		<div class="listCard card">
+			<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+				<h4>{title}</h4>
+				{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
+			</a>
+		</div>
+		{/each}
 	{/if}
 </div>
 
