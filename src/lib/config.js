@@ -44,7 +44,7 @@ export const navItems = [
 			},
 			{
 				title: 'Text Converter',
-				route: '/tools/textconvert'
+				route: '/tools/textconverter'
 			}
 		]
 	},

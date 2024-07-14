@@ -4,10 +4,9 @@
 	import Hero from '$lib/components/hero.svelte';
 </script>
 
-<!-- TODO add a random project image as the background, use the hero styling -->
 <Hero>
 	<h1>{$page.status}</h1>
-	<p>Error: {$page.error.message}</p>
+	<p>{$page.error.message}</p>
 </Hero>
 
 <p><strong>Whoops!</strong> Something went wrong. Try <a href="/">heading back to the homepage.</a></p>

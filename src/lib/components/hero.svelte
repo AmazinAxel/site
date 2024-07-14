@@ -13,8 +13,10 @@
 
 <div id="hero">
     <slot/>
-
-    <h3>{ randomHero.project }</h3>
-    <p>{ randomHero.description }</p>
-    { image }
+    <button><img src="/media/icons/about.svg" class="noImgStyle" alt="Question mark icon"></button>
+    <div class="heroInfo">
+        <h3>{ randomHero.project }</h3>
+        <p>{ randomHero.description }</p>
+        { image }
+    </div>
 </div>

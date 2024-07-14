@@ -17,7 +17,7 @@
 </p>
 
 <div style="display: flex; gap: 14px;">
-	<a href="/tools/textconvert/" style="text-decoration: none;">
+	<a href="/tools/textconverter/" style="text-decoration: none;">
 	<Card>
 		<div>
 			<h3>Small Text Converter</h3>
