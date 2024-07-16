@@ -114,17 +114,26 @@ export const projects = {
 export const heroItems = [
 	{
 		project: 'Myst',
-		description: 'An abandoned Roblox exploration game.',
-		image: 'Myst.png'
+		description: 'A discontinued Roblox exploration game.',
+		images: [{ image: 'Myst.jpg' }]
 	},
 	{
 		project: 'Permafrost',
-		description: 'A custom Minecraft survival server based in the deep dark Northern tundra.',
-		images: ['Permafrost1.png', 'Permafrost2.png', 'Permafrost3.png']
+		description: 'A custom Minecraft survival server based in the dark, cold, snowy Northern tundra.',
+		images: [
+			{
+				image: 'Permafrost2.png'
+			}
+		]
 	},
 	{
 		project: 'Dueling',
 		description: 'A fast-paced, 1v1 tournament-style matchup server featuring custom kits, maps, and Titles.',
-		images: ['Dueling1.png', 'Dueling2.png', 'Dueling3.png'],
+		images: [
+			{
+				image: 'Dueling1.png',
+				invertColors: true
+			}
+		]
 	}
 ]

@@ -35,12 +35,12 @@
 
 /* Homepage hero */
 #hero {
+    position: relative;
 	text-align: center;
 	height: 25rem;
 	display: grid;
 	align-items: end;
 	align-content: center;
-	background-image: url(https://amazinaxel.com/media/Banner-grass.jpg);
 	background-size: cover;
 	border-radius: 0.5rem;
 	margin-bottom: 3rem;
@@ -58,10 +58,26 @@
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1.15rem;
+    right: 0;
     padding: 10px;
 }
 
+.heroInfo {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    max-width: 275px;
+    padding: 3px;
+    margin: 5px;
+    background: var(--darkest4);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px var(--darkest4);
+}
+#hero.invertColors h1, #hero.invertColors h4, #hero.invertColors h5, #hero.invertColors p {
+	color: var(--lightest1);
+}
+
+#hero:not(.invertColors) img { filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(75%); }
 
 /* Checkbox styling */
 
