@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Help Center</title>
+<title>Help Center</title>
 </svelte:head>
 
 <h1>Help Center</h1>

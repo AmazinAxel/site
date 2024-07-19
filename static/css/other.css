@@ -1,4 +1,6 @@
-.notextdeco { text-decoration: none; }
+.notextdeco {
+	text-decoration: none;
+}
 
 .card {
 	background-color: var(--darkest3);
@@ -35,7 +37,7 @@
 
 /* Homepage hero */
 #hero {
-    position: relative;
+	position: relative;
 	text-align: center;
 	height: 25rem;
 	display: grid;
@@ -54,30 +56,35 @@
 }
 
 #hero button {
-    background: none;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    padding: 10px;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	padding: 10px;
 }
 
 .heroInfo {
-    position: absolute;
-    right: 0;
-    bottom: 40px;
-    max-width: 275px;
-    padding: 3px;
-    margin: 5px;
-    background: var(--darkest4);
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 5px var(--darkest4);
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+	max-width: 275px;
+	padding: 3px;
+	margin: 5px;
+	background: var(--darkest4);
+	border-radius: 0.5rem;
+	box-shadow: 1px 1px 5px var(--darkest4);
 }
-#hero.invertColors h1, #hero.invertColors h4, #hero.invertColors h5, #hero.invertColors p {
+#hero.invertColors h1,
+#hero.invertColors h4,
+#hero.invertColors h5,
+#hero.invertColors p {
 	color: var(--lightest1);
 }
 
-#hero:not(.invertColors) img { filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(75%); }
+#hero:not(.invertColors) img {
+	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(75%);
+}
 
 /* Checkbox styling */
 
@@ -165,7 +172,6 @@ input[type='checkbox'] {
 		0 0 6px 0 var(--blue2),
 		inset 0 0 3px 0 var(--blue2);
 }
-
 
 /* Progress bar styling */
 .progress {
@@ -322,5 +328,4 @@ textarea:focus-visible {
 a:hover {
 	text-decoration: underline;
 	text-decoration-color: var(--blue1);
-
 }

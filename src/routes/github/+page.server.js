@@ -8,6 +8,5 @@ export const load = async () => {
 	} catch (e) {
 		console.log('No connection to GitHub API!');
 		return { noConnection: true };
-	};
+	}
 };
-

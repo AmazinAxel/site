@@ -119,7 +119,8 @@ export const heroItems = [
 	},
 	{
 		project: 'Permafrost',
-		description: 'A custom Minecraft survival server based in the dark, cold, snowy Northern tundra.',
+		description:
+			'A custom Minecraft survival server based in the dark, cold, snowy Northern tundra.',
 		images: [
 			{
 				image: 'Permafrost2.png'
@@ -128,7 +129,8 @@ export const heroItems = [
 	},
 	{
 		project: 'Dueling',
-		description: 'A fast-paced, 1v1 tournament-style matchup server featuring custom kits, maps, and Titles.',
+		description:
+			'A fast-paced, 1v1 tournament-style matchup server featuring custom kits, maps, and Titles.',
 		images: [
 			{
 				image: 'Dueling1.png',
@@ -136,4 +138,4 @@ export const heroItems = [
 			}
 		]
 	}
-]
+];

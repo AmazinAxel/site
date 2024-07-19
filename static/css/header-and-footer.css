@@ -113,7 +113,8 @@ a.active img {
 	box-shadow: 1px 1px 6px var(--blue1);
 }
 
-#expandbtn, #unexpandbtn {
+#expandbtn,
+#unexpandbtn {
 	visibility: visible;
 	position: absolute;
 	left: 5rem;
@@ -128,13 +129,19 @@ a.active img {
 	border-radius: 0 0.5rem 0.5rem 0;
 	box-shadow: 0 0;
 	transition: visibility 0.2s;
-    z-index: 16;
+	z-index: 16;
 }
 
-nav:hover #expandbtn, #unexpandbtn { visibility: hidden; }
-nav:hover + #unexpandbtn { visibility: visible; }
+nav:hover #expandbtn,
+#unexpandbtn {
+	visibility: hidden;
+}
+nav:hover + #unexpandbtn {
+	visibility: visible;
+}
 
-nav:hover + #unexpandbtn, nav:hover #expandbtn {
+nav:hover + #unexpandbtn,
+nav:hover #expandbtn {
 	left: 12rem;
 	transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;

@@ -11,6 +11,6 @@ export const load = async () => {
 		return { posts };
 	} catch (e) {
 		console.log('No connection to external server!');
-		return { noConnection: true }
+		return { noConnection: true };
 	}
 };

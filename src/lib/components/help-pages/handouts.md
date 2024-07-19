@@ -24,7 +24,6 @@ how to solve the problem themselves. Spoonfeeding varies depending on the contex
 Spoonfeeding robs the person of the most important aspect of programming: problem solving. By giving handouts, you not only
 damage the OP's learning process, but you
 
-
 ### Remember the proverb
 
 **Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime.**
