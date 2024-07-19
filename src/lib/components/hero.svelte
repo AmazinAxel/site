@@ -23,8 +23,9 @@
     </button>
     {#if showHero}
         <div class="heroInfo" in:fly|local={transition} out:fly|local={transition}>
-            <h4>{ randomHero.project }</h4>
-            <h5>{ randomHero.description }</h5>
+            <h6>BACKGROUND INFORMATION</h6>
+            <h4>{ randomHero.project }:</h4>
+            <p>{ randomHero.description }</p>
         </div>
     {/if}
 </div>

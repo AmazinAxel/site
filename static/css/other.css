@@ -50,9 +50,14 @@
 }
 
 #hero h1,
-#hero p {
+#hero p:not(.heroInfo p) {
 	margin: 0;
 	color: var(--darkest1);
+}
+
+#hero p {
+	font-size: 15px;
+    padding-bottom: 0.5rem;
 }
 
 #hero button {
@@ -69,21 +74,21 @@
 	right: 0;
 	bottom: 40px;
 	max-width: 275px;
-	padding: 3px;
+	padding: 10px;
 	margin: 5px;
 	background: var(--darkest4);
 	border-radius: 0.5rem;
 	box-shadow: 1px 1px 5px var(--darkest4);
 }
+
 #hero.invertColors h1,
 #hero.invertColors h4,
-#hero.invertColors h5,
-#hero.invertColors p {
+#hero.invertColors p:not(.heroInfo p) {
 	color: var(--lightest1);
 }
 
 #hero:not(.invertColors) img {
-	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(75%);
+	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(50%);
 }
 
 /* Checkbox styling */
