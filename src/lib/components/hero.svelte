@@ -1,4 +1,3 @@
-
 <script>
     // Get all projects
     import { heroItems } from '$lib/config';
@@ -16,7 +15,7 @@
 
 </script>
 
-<div id="hero" style="background-image: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors}>
+<div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors}>
     <slot/>
     <button on:click={() => (showHero = !showHero)}>
         <img src="/media/icons/about.svg" class="noImgStyle" alt="Question mark icon">

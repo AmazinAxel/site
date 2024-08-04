@@ -46,7 +46,17 @@
 	background-size: cover;
 	border-radius: 0.5rem;
 	margin-bottom: 3rem;
-	border: 3px solid var(--darkest2);
+	border: 3px solid #ffffff1c;
+}
+
+#hero::before {
+	content: "";
+	position: absolute;
+	width: 100%; height: 100%;
+	background-image: var(--heroBackground);
+    background-size: cover;
+	filter: blur(10px);
+    z-index: -1;
 }
 
 #hero h1,

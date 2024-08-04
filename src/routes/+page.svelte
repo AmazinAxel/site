@@ -49,8 +49,8 @@
 		if (index == randomSubtitleList.length) index = 0;
 	}
 
-	// Random subtitle every 2.5 seconds
-	setInterval(updSubtitle, 2500);
+	// Random subtitle every 10 seconds
+	setInterval(updSubtitle, 10000);
 	updSubtitle(true)
 </script>
 
