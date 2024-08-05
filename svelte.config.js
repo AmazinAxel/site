@@ -16,7 +16,13 @@ const config = {
 	],
 
 	// Tells Sveltekit where to look for files
-	kit: { adapter: adapter() }
+	kit: { adapter: adapter() },
+	prerender: {
+		entries: [
+		  '/404',
+		]
+	  }
+  
 };
 
 export default config;
