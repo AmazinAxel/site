@@ -14,4 +14,6 @@
 	<img src="/media/icons/expand.svg" alt="Expand sidebar" id="expandbtn">
 	<SidebarNav/>
 </nav>
-<img src="/media/icons/expand.svg" alt="Un-expand sidebar" id="unexpandbtn">
+<div id="unexpandParent">
+	<img src="/media/icons/expand.svg" alt="Un-expand sidebar" id="unexpandbtn">
+</div>

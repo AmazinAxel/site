@@ -19,7 +19,7 @@ const config = {
 	kit: { adapter: adapter() },
 	prerender: {
 		entries: [
-		  '/404',
+		  '404',
 		]
 	  }
   

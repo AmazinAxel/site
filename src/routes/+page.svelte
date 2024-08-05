@@ -78,6 +78,7 @@
 	{:else}
 		{#each data.posts as { title, url, description }}
 		<div class="listCard card backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
+			<div class="contentFader"></div>
 			<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
 				<h4>{title}</h4>
 				<p>{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...</p>

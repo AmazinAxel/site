@@ -32,9 +32,10 @@ nav {
 	width: 5rem;
 	min-width: 5rem;
 	transition:
-		min-width 0.1s cubic-bezier(0, 0.6, 0.3, 1),
-		padding 0.1s cubic-bezier(0, 0.6, 0.3, 1);
+		min-width 0.1s var(--ease),
+		padding 0.1s var(--ease);
 	box-shadow: 10px 0 20px 0px var(--darkest1);
+	z-index: 2;
 }
 
 #logoicon {
@@ -42,8 +43,8 @@ nav {
 	transform: translateX(0);
 	opacity: 1;
 	transition:
-		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1),
-		opacity 0.1s cubic-bezier(0, 0.6, 0.3, 1);
+		transform 0.1s var(--ease),
+		opacity 0.1s var(--ease);
 	z-index: 2;
 }
 
@@ -121,8 +122,8 @@ a.active img {
 	top: 1rem;
 	width: 50px;
 	transition:
-		left 0.05s cubic-bezier(0, 0.6, 0.3, 1),
-		transform 0.05s cubic-bezier(0, 0.6, 0.3, 1),
+		left 0.05s var(--ease),
+		transform 0.05s var(--ease),
 		visibility 0.1s;
 	background-color: var(--darkest2);
 	transform: scaleX(1);
@@ -136,16 +137,20 @@ nav:hover #expandbtn,
 #unexpandbtn {
 	visibility: hidden;
 }
-nav:hover + #unexpandbtn {
+nav:hover + #unexpandParent #unexpandbtn {
 	visibility: visible;
 }
 
-nav:hover + #unexpandbtn,
+#unexpandbtn { position: fixed; }
+
+nav:hover + #unexpandParent #unexpandbtn,
 nav:hover #expandbtn {
 	left: 12rem;
 	transform: scaleX(-1);
 	border-radius: 0.5rem 0 0 0.5rem;
 }
+
+#unexpandParent { position: absolute; }
 
 nav a img {
 	width: 50px;
@@ -156,8 +161,8 @@ nav p {
 	opacity: 0;
 	transform: translateX(-2.5rem);
 	transition:
-		opacity 0.1s cubic-bezier(0, 0.6, 0.3, 1),
-		transform 0.1s cubic-bezier(0, 0.6, 0.3, 1);
+		opacity 0.1s var(--ease),
+		transform 0.1s var(--ease);
 }
 
 nav:hover p {
@@ -241,8 +246,8 @@ nav:hover {
 nav ul ul {
 	max-height: 0px;
 	transition:
-		max-height 0.3s cubic-bezier(0, 0.6, 0.3, 1),
-		margin-bottom 0.3s cubic-bezier(0, 0.6, 0.3, 1);
+		max-height 0.3s var(--ease),
+		margin-bottom 0.3s var(--ease);
 	overflow: hidden;
 	padding-left: 10px;
 
