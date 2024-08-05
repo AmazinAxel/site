@@ -5,8 +5,6 @@
 </script>
 
 <Hero>
-	<h1>{$page.status}</h1>
-	<p>{$page.error.message}</p>
+	<h1>Error {$page.status}: {$page.error.message}</h1>
+	<p><strong>Whoops!</strong> Something went wrong. Try <a href="/" >heading back to the homepage.</a></p>
 </Hero>
-
-<p><strong>Whoops!</strong> Something went wrong. Try <a href="/">heading back to the homepage.</a></p>

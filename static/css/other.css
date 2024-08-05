@@ -102,6 +102,10 @@
 	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(50%);
 }
 
+#hero a:not(.invertColors a) { color: var(--darkest3); }
+
+#hero a:hover { text-decoration: underline }
+
 /* Checkbox styling */
 
 input[type='checkbox'] {
