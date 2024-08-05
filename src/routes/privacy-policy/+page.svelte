@@ -5,7 +5,7 @@
 <div class="card">
     <div class="inset nomargin">
     
-    <p>Hey! I'm AmazinAxel and I own this website and domain, AmazinAxel.com, along with other affiliated websites and domains (such as [AlecsHome.com](https://alecshome.com)). This privacy policy applies to this site and to my other affiliated sites.</p>
+    <p>Hey! I'm AmazinAxel and I own this website and domain, AmazinAxel.com, along with other affiliated websites and domains. This privacy policy applies to this site and to my other affiliated sites.</p>
     <br>
     
     <h3>I care a lot about privacy and security. Please read this policy throughly <a href="#TLDR">or the TL;DR at the bottom</a> so you understand your privacy while on my site.</h3>

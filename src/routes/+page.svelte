@@ -5,7 +5,7 @@
 	import Hero from '$lib/components/hero.svelte';
 	import { shuffle } from '$lib/utils'
 
-	// Necessary for the SWR blog post system
+	// Necessary for the journal post system
 	export let data;
 	let randomSubtitle = "";
 	let subtitleVisibility = false;
@@ -66,21 +66,21 @@
 
 <Card>
 	<h3>🚧 This site is currently under construction! 🚧</h3>
-	<p>Please revisit later when this website is completed. In the meantime, check out <a href="https://alecshome.com">my other site</a> for up-to-date information.</p>
+	<p>Please revisit later when this website is completed. In the meantime, check out <a href="https://journal.amazinaxel.com">my other site</a> for up-to-date information.</p>
 </Card>
 <hr>
 
 <a href="projects" class="notextdeco"><h2>My Projects</h2></a>
-<a href="https://alecshome.com" class="notextdeco"><h2>What I'm working on</h2></a>
+<a href="https://journal.amazinaxel.com" class="notextdeco"><h2>What I'm working on</h2></a>
 <div class="cardListContainer">
 	{#if data.noConnection}
 		<Admonition builderror>No connection to outside server! Posts could not be shown.</Admonition>
 	{:else}
 		{#each data.posts as { title, url, description }}
-		<div class="listCard card">
+		<div class="listCard card backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
 			<a href={url} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
 				<h4>{title}</h4>
-				{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...
+				<p>{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...</p>
 			</a>
 		</div>
 		{/each}

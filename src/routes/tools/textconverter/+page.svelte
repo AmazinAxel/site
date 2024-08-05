@@ -1,5 +1,6 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
+	import Admonition from '$lib/components/admonition.svelte';
 
     var inputText;
     var outputText;
@@ -177,7 +178,7 @@
 </div>
 
 <div class="info card">
-    <p><b>NOTE:</b> This tool is not finished. Please report any bugs to <code>@amazinaxel</code> on Discord. Additionally, some features such as text reversability do not currently work.</p>
+    <p><b>NOTE:</b> This tool is not finished. Please report any bugs to <code>@amazinaxel</code> on Discord. Please disregard unfinished features such as the converter code generator below.</p>
 </div>
 
 
@@ -195,24 +196,24 @@
 </div>
 
 <div class="popup">
-    Paste one of the following functions in any Skript file to use:
+    Paste and reload one of the following Skript functions to use:
     
     {#if selected == 1}
-        
-        Example usage: `stxt("Hello")`
+        <pre><code>
+            code goes here
+        </code></pre>
+        Example usage: <code>stxt("Hello")</code>
         send image of using it as a skript chat effect
     {:else if selected == 2}
         
-        Example usage: `stxt("Hello (123+5) Test")`
+        Example usage: <code>stxt("Hello (123+5) Test")</code>
         send image here of chat effect
     {:else if selected == 3} 
 
-        <div class="warning card">
-        This method requires the <a href="TODO">skript-reflect</a> plugin.
-        </div>
+    <Admonition builderror>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
 
         Example usage: `stxt "Hello (123-5) Test"
-        send imagage of chat
+        send image of chat
     {:else}
         <p>Unknown function type, please close this popup and try again</p>
     {/if}

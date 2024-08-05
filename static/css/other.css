@@ -63,6 +63,7 @@
 #hero p:not(.heroInfo p) {
 	margin: 0;
 	color: var(--darkest1);
+	text-shadow: white 0px 1px 20px;
 }
 
 #hero p {
@@ -319,6 +320,30 @@ textarea:focus-visible {
 	position: relative;
 	left: 0px;
 	overflow: hidden;
+	box-shadow: 0px -17px 20px 0px inset var(--darkest2);
+}
+
+.listCard h4 {
+	font-size: 1rem;
+}
+
+.backgroundIcon::after {
+	content: "";
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: -1;
+    left: 0.5rem;
+    background-size: cover;
+    top: 0.5rem;
+    transform: rotateZ(-10deg);
+    display: inline-block;
+    background-image: var(--bg);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%);
+}
+
+.listCard p {
+	font-size: 0.9rem;
 }
 
 .listCard.elipsis::after {

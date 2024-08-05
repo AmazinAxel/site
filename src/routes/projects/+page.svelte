@@ -5,12 +5,14 @@
 
 <h1>Projects</h1>
 
-<h2> Projects </h2>
-<p>I created or participated a large part in the creation of:</p>
-
+Permafrost
 
 <h2> Small Projects </h2>
-<p>These projects were created for specific purposes quickly:</p>
+
+Dueling
 
 <h2> Archived Projects </h2>
-<p>These projects have been archived, as I no longer work on them:</p>
+<p>
+	All projects listed here will not recieve support. They are 
+	for archival purposes only.
+</p>

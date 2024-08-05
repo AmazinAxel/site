@@ -24,11 +24,11 @@ export const navItems = [
 		route: '/github',
 		icon: 'github'
 	},
-	/*{ RECONSIDER: may want to remove all mention of this except for SWR posts
-		title: 'Blog',
-		route: 'https://alecshome.com',
-		icon: 'blog'
-	},*/
+	{
+		title: 'Journal',
+		route: 'https://journal.amazinaxel.com',
+		icon: 'journal'
+	},
 	{
 		title: 'Tools',
 		route: '/tools',
@@ -74,7 +74,11 @@ export const projects = {
 		{
 			title: 'Permafrost',
 			role: 'Lead Developer and Project Manager',
-			description: 'desc here',
+			description: `
+				Originally inspired from Barrenlands, a cancelled project,
+				Permafrost is a winter survival game. As the sole developer
+				and project manager, I create new features and maintain the
+				game, while managing the community.`,
 			image: 'add an image here todo'
 		},
 		{
