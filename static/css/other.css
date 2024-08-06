@@ -338,12 +338,11 @@ textarea:focus-visible {
 
 /* Stacked cards list */
 .cardListContainer {
-	display: flex;
-	justify-content: flex-start;
-	position: relative;
-	left: 15px;
-	overflow-x: hidden;
-	padding-top: 10px;
+    display: flex;
+    overflow: hidden;
+    padding-top: 10px;
+    max-height: 20rem;
+    flex-wrap: wrap;
 }
 
 .listCard {
