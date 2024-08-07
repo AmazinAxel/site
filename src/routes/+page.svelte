@@ -71,6 +71,8 @@
 <hr>
 
 <a href="projects" class="notextdeco"><h2>My Projects</h2></a>
+
+<div class="section">
 <a href="https://journal.amazinaxel.com" class="notextdeco"><h2>What I'm working on</h2></a>
 <div class="cardListContainer">
 	{#if data.noConnection}
@@ -87,7 +89,7 @@
 		{/each}
 	{/if}
 </div>
-
+</div>
 <a href="about" class="notextdeco"><h2>Learn more about me</h2></a>
 
 <a href="github" class="notextdeco"><h2>GitHub repositories</h2></a>

@@ -16,8 +16,8 @@
 	optimizing your existing tools.
 </p>
 
-<div style="display: flex; gap: 14px;">
-	<a href="/tools/textconverter/" style="text-decoration: none;">
+<div class="gridLayout">
+	<a href="/tools/textconverter/" style="text-decoration: none;" class="gridItem">
 	<Card>
 		<div>
 			<h3>Small Text Converter</h3>
@@ -27,7 +27,7 @@
 	</Card>
 	</a>
 
-	<a href="/tools/emojipicker" style="text-decoration: none;">
+	<a href="/tools/emojipicker" style="text-decoration: none;" class="gridItem">
 	<Card>
 		<div>
 			<h3>Minecraft Emoji Picker</h3>
@@ -37,7 +37,7 @@
 	</Card>
 	</a>
 
-	<a href="/tools/inventoryids" style="text-decoration: none;">
+	<a href="/tools/inventoryids" style="text-decoration: none;" class="gridItem">
 		<Card>
 			<div>
 				<h3>Skript Inventory Slot ID Mappings</h3>

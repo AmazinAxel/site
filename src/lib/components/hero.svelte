@@ -5,7 +5,7 @@
 
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
-	const transition = { y: 5, duration: 100, easing: cubicOut };
+	const transition = { y: 10, duration: 150, easing: cubicOut };
     
     let showHero = false;
     
