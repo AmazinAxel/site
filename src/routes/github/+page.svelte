@@ -7,12 +7,13 @@
 	<title>GitHub Projects</title>
 </svelte:head>
 
+<div class="gridLayout">
 {#if data.noConnection}
 	<Admonition builderror>Could not connect to the GitHub API! Repositories cannot be shown.</Admonition>
 {:else}
 	{#each data.repos as { ...repo }}
 		{#if repo.name !== "AmazinAxel"}
-		<a href={repo.html_url} style="text-decoration: none">
+		<a href={repo.html_url} style="text-decoration: none; flex: 32%;">
 			
 			<div class="card backgroundIcon" style="--bg: url(/media/icons/github.svg)">
 				<h3>{repo.name}</h3>
@@ -42,3 +43,4 @@
 		{/if}
 	{/each}
 {/if}
+</div>

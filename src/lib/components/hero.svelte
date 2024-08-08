@@ -17,12 +17,12 @@
 
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
     <slot/>
-    <button on:click={() => (showHero = !showHero)}>
+    <button class="nostyle" on:click={() => (showHero = !showHero)}>
         <img src="/media/icons/about.svg" class="noImgStyle" alt="Open hero information">
     </button>
     {#if showHero}
         <div class="heroInfo" in:fly|local={transition} out:fly|local={transition}>
-            <button class="heroClose" on:click={() => (showHero = !showHero)}>
+            <button class="heroClose nostyle" on:click={() => (showHero = !showHero)}>
                 <img src="/media/icons/xmark.svg" class="noImgStyle" alt="Close hero information">
             </button>        
             <h6>BACKGROUND INFORMATION</h6>

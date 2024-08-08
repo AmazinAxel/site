@@ -1,10 +1,14 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
 	import Admonition from '$lib/components/admonition.svelte';
+    
+    import { fly } from 'svelte/transition';
+    import { cubicOut } from 'svelte/easing';
+	const transition = { y: 10, duration: 150, easing: cubicOut };
 
     var inputText;
     var outputText;
-    let textType = false;
+    let textType, isOpen = false;
     let scriptType = 2;
     let selected = 0;
 
@@ -57,9 +61,9 @@
     }
 
     // TODO add popup visibility
-    function openFuncPopup(event) {
-        selected = parseInt(event.target.value);
-
+    function toggleFuncPopup(sel) {
+        selected = sel;
+        isOpen = !isOpen;
     }
     // todo maybe include ‘’“” somehow
 </script>
@@ -183,19 +187,23 @@
 
 
 <div class="info card">
-    <p><b>TIP:</b> Use Skript functions or reflect expressions to create small text in-game, without the need for an online converter!</p>
-    <button>Learn more</button>
+    <p><b>TIP:</b> Use these Skript functions/reflect expressions to create small text without leaving your code!</p>
 
-    <input type="radio" name="noscript" value="1" bind:group={selected} on:change={openFuncPopup}>
-    <label for="noscript">No text script types</label><br>
-    <input type="radio" name="scripttypes" value="2" bind:group={selected} on:change={openFuncPopup}>
-    <label for="scripttypes">Text script included</label><br>
-    <input type="radio" name="expression" value="3" bind:group={selected} on:change={openFuncPopup}>
-    <label for="expression">Custom reflect expression</label>
+    <button type="button" on:click={() => toggleFuncPopup(1)}>Minimal</button>
+    
+    <button type="button" on:click={() => toggleFuncPopup(2)}>Full</button>
+
+    <button type="button" on:click={() => toggleFuncPopup(3)}>Reflect Expression</button>
 
 </div>
-
-<div class="popup">
+{#if isOpen}
+<!-- 
+    Warning can be ignored safely since this is a alias button
+    svelte-ignore a11y-click-events-have-key-events 
+-->
+<div class="popupBg" tabindex="0" role="button" on:click={toggleFuncPopup} in:fly|local={transition} out:fly|local={transition}></div>
+<div class="popup" in:fly|local={transition} out:fly|local={transition}>
+    <button on:click={toggleFuncPopup}>Close</button>
     Paste and reload one of the following Skript functions to use:
     
     {#if selected == 1}
@@ -219,3 +227,4 @@
     {/if}
 
 </div>
+{/if}
