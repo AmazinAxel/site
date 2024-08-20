@@ -27,7 +27,7 @@
 			{/if}
 
 		{/each}
-		<!-- Bottom Navbar (todo organize this into a new list)
-		<NavItem href="/privacy-policy" icon="link"><p>Privacy Policy</p></NavItem>-->
+		<!-- Bottom Navbar (todo organize this into a new list) -->
+		<NavItem href="https://journal.amazinaxel.com" icon="journal"><p>Journal</p></NavItem>
 	</ul>
 </div>

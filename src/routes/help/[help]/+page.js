@@ -8,6 +8,6 @@ export const load = async ({ params }) => {
 			meta: { ...article.metadata }
 		};
 	} catch (err) {
-		error(404, "BUILD ERROR: The article you're looking for cannot be found.");
+		error(404, "Not Found");
 	}
 };

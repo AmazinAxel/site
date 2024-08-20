@@ -2,10 +2,10 @@
 	// Necessary for the Github repo system to work
 	export let data;
 	import Admonition from '$lib/components/admonition.svelte';
+	import Title from '$lib/components/title.svelte';
 </script>
-<svelte:head>
-	<title>GitHub Projects</title>
-</svelte:head>
+
+<Title name="GitHub Projects"/>
 
 <div class="gridLayout">
 {#if data.noConnection}

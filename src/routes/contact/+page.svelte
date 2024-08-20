@@ -1,10 +1,9 @@
-<svelte:head>
-	<title>Contact</title>
-</svelte:head>
-
 <script>
 	import Card from '$lib/components/card.svelte';
+	import Title from '$lib/components/title.svelte';
 </script>
+
+<Title name="Contact"/>
 
 <h1>Contact</h1>
 
@@ -44,11 +43,12 @@ TODO: use Workers script and css from old site and reimplement this
 		Typically, you'll find me online under the name 'AmazinAxel'.
 		Below are some of my common social profiles.
 	</p>
-
-	<ul>
-		<li><a href="https://github.com/amazinaxel">GitHub</a></li>
-		<li><a href="https://youtube.com/@amazinaxel">YouTube</a></li>
-		<li><a href="https://www.roblox.com/users/1362593157/profile">Roblox</a></li>
-		<li><a href="https://replit.com/@AmazinAxel">Repl.it</a></li>
-	</ul>
+	<div class="innerCard">
+		<ul>
+			<li><a href="https://github.com/amazinaxel">GitHub</a></li>
+			<li><a href="https://youtube.com/@amazinaxel">YouTube</a></li>
+			<li><a href="https://www.roblox.com/users/1362593157/profile">Roblox</a></li>
+			<li><a href="https://replit.com/@AmazinAxel">Repl.it</a></li>
+		</ul>
+	</div>
 </Card>

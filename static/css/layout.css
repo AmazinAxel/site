@@ -55,17 +55,16 @@ body {
 	.gridItem { flex: 100%; }
 }
 
+.section { display: flex; }
 .section a { width: 15rem; }
 .section h2 { margin-bottom: 0; }
 
 @media (min-width: 950px) {
 	.section {
-		display: flex;
 		align-items: center;
 		gap: 1rem;
 	}
 	.section h2 { font-size: 3rem; }
-
 }
 
 /* Mobile tap highlight */

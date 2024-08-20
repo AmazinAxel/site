@@ -6,15 +6,75 @@
     import { cubicOut } from 'svelte/easing';
 	const transition = { y: 10, duration: 150, easing: cubicOut };
 
+    const snippet1 = `on load:
+    set {_lower} to "abcdefghijklmnopqrstuvwxyz"
+    set {-tiny::*} to "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀѕᴛᴜᴠᴡxʏᴢ" split at ""
+    set {-lower::*} to {_lower} split at ""
+    set {-upper::*} to (uppercase {_lower}) split at ""	
+
+function stxt(text: text) :: text:    
+    loop {-tiny::*}:
+        replace {-lower::%loop-index%} and {-upper::%loop-index%} with loop-value in {_text}
+        replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
+
+    return {_text}`
+
+    const snippet2 = `on load:
+	set {_lower} to "abcdefghijklmnopqrstuvwxyz"
+	set {-tiny::*} to "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀѕᴛᴜᴠᴡxʏᴢ" split at ""
+	set {-lower::*} to {_lower} split at ""
+	set {-upper::*} to (uppercase {_lower}) split at ""	
+	set {-nums::*} to "1234567890+-=()" split at ""
+	set {-super::*} to "¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻⁼⁽⁾" split at ""
+	set {-sub::*} to "₁₂₃₄₅₆₇₈₉₀₊₋₌₍₎" split at ""
+
+function stxt(text: text, scripttype: integer = 0) :: text:
+	# Script-type Values:
+	# 0 = no superscript or subscript numbers
+	# 1 = superscript numbers
+	# 2 = subscript numbers
+	
+	# Replace the text
+	loop {-tiny::*}:
+		replace {-lower::%loop-index%} and {-upper::%loop-index%} with loop-value in {_text}
+		replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
+
+	# Numbers can only be super or subscript, not both (anything other than 1 or 2 will ignore this)
+	if {_scripttype} is 1:
+		loop {-super::*}:
+			replace {-nums::%loop-index%} with loop-value in {_text}
+			replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
+	else if {_scripttype} is 2:
+		loop {-sub::*}:
+			replace {-nums::%loop-index%} with loop-value in {_text}
+			replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
+
+	return {_text}`
+
+    const snippet3 = `
+        
+    `
+
+    const snippet4 = `function ntxt(text: text) :: text:
+	loop {-lower::*}: # Lowercase
+		replace {-tiny::%loop-index%} with loop-value in {_text}
+
+	# Upper/lower scripts
+	loop {-nums::*}:
+		replace {-super::%loop-index%} with loop-value in {_text}
+		replace {-sub::%loop-index%} with loop-value in {_text}
+	
+	return {_text}`
+
     var inputText;
     var outputText;
     let textType, isOpen = false;
     let scriptType = 2;
     let selected = 0;
 
-    const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘꞯʀsᴛᴜᴠᴡxʏᴢ';
-    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ';
+    const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
+    const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
+    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴘǫʀsᴛᴜᴠᴡxʏᴢ';
 
     const scriptChars = '0123456789+-=()';
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';
@@ -195,6 +255,7 @@
 
     <button type="button" on:click={() => toggleFuncPopup(3)}>Reflect Expression</button>
 
+    <button type="button" on:click={() => toggleFuncPopup(4)}>Normalized</button>
 </div>
 {#if isOpen}
 <!-- 
@@ -202,26 +263,29 @@
     svelte-ignore a11y-click-events-have-key-events 
 -->
 <div class="popupBg" tabindex="0" role="button" on:click={toggleFuncPopup} in:fly|local={transition} out:fly|local={transition}></div>
-<div class="popup" in:fly|local={transition} out:fly|local={transition}>
+<div class="popup card" in:fly|local={transition} out:fly|local={transition}>
     <button on:click={toggleFuncPopup}>Close</button>
-    Paste and reload one of the following Skript functions to use:
-    
     {#if selected == 1}
-        <pre><code>
-            code goes here
-        </code></pre>
+        (adapted from <a href="https://github.com/ShaneBeee/SkriptSnippets/blob/master/snippets/Tiny-Text.sk">Shanebee/SkriptSnippets</a>)
+        <pre><code>{snippet2}</code></pre>
         Example usage: <code>stxt("Hello")</code>
-        send image of using it as a skript chat effect
+        <img src="/media/tools/textconverter/minimaldemo.png" alt="Example code usage">
     {:else if selected == 2}
-        
+        (adapted from <a href="https://github.com/ShaneBeee/SkriptSnippets/blob/master/snippets/Tiny-Text.sk">Shanebee/SkriptSnippets</a>)
+        <pre><code>{snippet2}</code></pre>
         Example usage: <code>stxt("Hello (123+5) Test")</code>
-        send image here of chat effect
-    {:else if selected == 3} 
-
-    <Admonition builderror>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
-
+        <img src="/media/tools/textconverter/fulldemo.png" alt="Example code usage">
+    {:else if selected == 3}
+        TODO
+        <Admonition builderror>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
         Example usage: `stxt "Hello (123-5) Test"
         send image of chat
+    {:else if selected == 4}
+    TODO
+        Example usage: `ntxt("ѕᴍᴀʟʟ ᴛᴇxᴛ ᴅᴇᴍᴏ")`
+        <img src="/media/tools/textconverter/normalizeddemo.png" alt="Example code usage">
+
+
     {:else}
         <p>Unknown function type, please close this popup and try again</p>
     {/if}

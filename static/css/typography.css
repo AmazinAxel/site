@@ -54,7 +54,7 @@ h4 {
 	font-size: clamp(1.5rem, calc(1.5rem + 1vw), 1.8rem);
 }
 
-a:not(ul a) {
+a:not(.navItems ul li a) {
 	color: var(--lightest3);
 	text-decoration-thickness: 1px;
 	text-decoration-color: var(--lightest3);

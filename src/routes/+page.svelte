@@ -54,11 +54,8 @@
 	updSubtitle(true)
 </script>
 
-<svelte:head>
-	<title>AmazinAxel's Stuff</title>
-</svelte:head>
-
-<Hero>	<h1>AmazinAxel</h1>
+<Hero>
+	<h1>AmazinAxel</h1>
 	{#if subtitleVisibility}
 		<p out:fade={{ duration: 300 }} in:fade={{ duration: 300 }}>{randomSubtitle}</p>
 	{/if}

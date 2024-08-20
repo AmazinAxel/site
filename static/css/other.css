@@ -85,6 +85,8 @@
 	color: var(--darkest1);
 }
 
+#hero h1 { font-size: 3rem; }
+
 #hero p {
 	font-size: 15px;
     padding-bottom: 0.5rem;
@@ -339,12 +341,16 @@ textarea:focus-visible {
 /* Stacked cards list */
 .cardListContainer {
     display: flex;
-    overflow: hidden;
+    overflow-y: clip;
+    overflow-x: scroll;
     padding-top: 15px;
-	padding-left: 5px;
+    padding-left: 5px;
     max-height: 20rem;
-    flex-wrap: wrap;
-    padding-right: 5rem;
+    flex-wrap: nowrap;
+}
+
+@media(min-width: 950px) {
+	cardListContainer { padding-right: 5rem; }
 }
 
 .listCard {
@@ -424,13 +430,16 @@ a:hover {
 
 .popup {
 	transform: translate(-50%, -50%);
-    height: 100px;
+    height: 30rem;
     width: 750px;
     position: fixed;
     left: 50%;
     top: 50%;
 	z-index: 11;
+    overflow-y: scroll;
 }
+
+.popup img { margin: auto; }
 
 /* Buttons */
 button:not(.nostyle) {
@@ -466,3 +475,17 @@ pre { /* Applied only to large codeblocks */
     box-shadow: 3px 6px 14px var(--darkest1);
     margin-bottom: 10px;
 }
+
+/* Inner card */
+
+.innerCard { 
+    padding: 20px;
+    background-color: var(--darkest2);
+    border-radius: 5px;
+    border: 3px solid var(--darkest4);
+    text-align: left;
+    margin-top: 15px;
+    transition: background-color .2s ease, border .2s ease, box-shadow .2s ease;
+}
+
+.innerCard p:last-child { margin-bottom: 0; }

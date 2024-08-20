@@ -25,11 +25,6 @@ export const navItems = [
 		icon: 'github'
 	},
 	{
-		title: 'Journal',
-		route: 'https://journal.amazinaxel.com',
-		icon: 'journal'
-	},
-	{
 		title: 'Tools',
 		route: '/tools',
 		icon: 'tools',

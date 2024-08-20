@@ -1,6 +1,8 @@
-<svelte:head>
-	<title>Blog Posts</title>
-</svelte:head>
+<script>
+	import Title from '$lib/components/title.svelte';
+</script>
+
+<Title name="Blog Posts"/>
 
 <h2>Blog Aggregate</h2>
 <p>
