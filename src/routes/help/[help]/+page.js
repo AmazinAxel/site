@@ -7,7 +7,5 @@ export const load = async ({ params }) => {
 			articleContent: article.default,
 			meta: { ...article.metadata }
 		};
-	} catch (err) {
-		error(404, "Not Found");
-	}
+	} catch (err) { error(404, "Not Found"); }
 };

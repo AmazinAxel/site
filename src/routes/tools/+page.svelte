@@ -11,7 +11,7 @@
 <p>
 	I'm not a person who wants to reinvent the wheel.
 	These utilities were created because there were no
-	good other alternatives. These utilities help to speed
+	other better alternatives. These utilities help to speed
 	up development time by reducing wasted time and
 	optimizing your existing tools.
 </p>
