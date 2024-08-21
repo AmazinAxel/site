@@ -1,6 +1,8 @@
-<svelte:head>
-<title>Help Center</title>
-</svelte:head>
+<script>
+    import Title from '$lib/components/title.svelte';
+</script>
+
+<Title name="Help Center"/>
 
 <h1>Help Center</h1>
 <p>

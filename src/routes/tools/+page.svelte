@@ -1,11 +1,9 @@
-<svelte:head>
-	<title>Utilities</title>
-</svelte:head>
-
 <script>
+	import Title from '$lib/components/title.svelte';
 	import Card from '$lib/components/imgCard.svelte';
 </script>
 
+<Title name="Utilities"/>
 
 <h1>Useful Minecraft Development Utilities</h1>
 <p>

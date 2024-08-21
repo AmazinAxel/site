@@ -1,7 +1,8 @@
-<svelte:head>
-	<title>Projects</title>
-</svelte:head>
+<script>
+    import Title from '$lib/components/title.svelte';
+</script>
 
+<Title name="Projects"/>
 
 <h1>Projects</h1>
 

@@ -3,7 +3,10 @@
     import { page } from '$app/stores';
 	import Hero from '$lib/components/hero.svelte';
 	import Card from '$lib/components/card.svelte';
+	import Title from '$lib/components/title.svelte';
 </script>
+
+<Title name="Error {$page.status}"/>
 
 <Hero>
 	<h1>Error {$page.status}: {$page.error.message}</h1>

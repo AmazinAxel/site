@@ -1,9 +1,5 @@
-<svelte:head>
-	<title>Help - Inventory IDs</title>
-</svelte:head>
 <script>
     const inventoryRows = ["Player", "6 row chest"];
-
 </script>
 <h1>Skript Inventory IDs</h1>
 <p>

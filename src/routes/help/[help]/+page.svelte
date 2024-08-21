@@ -4,7 +4,7 @@
     const { title } = data.meta;
 </script>
 
-<svelte:head>
+<svelte:head> <!-- Custom title ending -->
 	<title>{ title } - AmazinAxel's Help Center</title>
 </svelte:head>
 
