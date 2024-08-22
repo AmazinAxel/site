@@ -1,12 +1,15 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import Card from '$lib/components/imgCard.svelte';
-	import Admonition from '$lib/components/admonition.svelte';
 	import Hero from '$lib/components/hero.svelte';
+	import Section from '$lib/components/section.svelte';
 	import { shuffle } from '$lib/utils'
 
 	// Necessary for the journal post system
 	export let data;
+	const { journalPosts } = data;
+	const { projectItems } = data;
+	console.log(projectItems)
 	let randomSubtitle = "";
 	let subtitleVisibility = false;
 	let index = 0;
@@ -67,27 +70,10 @@
 </Card>
 <hr>
 
-<a href="projects" class="notextdeco"><h2>My Projects</h2></a>
+<Section link="projects" titleText="My Projects" icon="projects" data={ projectItems }/>
 
-<div class="section">
-<a href="https://journal.amazinaxel.com" class="notextdeco"><h2>What I'm writing about</h2></a>
-<div class="cardListContainer">
-	{#if data.noConnection}
-		<Admonition builderror>No connection to outside server! Posts could not be shown.</Admonition>
-	{:else}
-		{#each data.posts as { title, link, description }}
-		<div class="listCard card backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
-			<a href={link} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
-				<h4>{title}</h4>
-				<p>{description.replaceAll("and#39;", "'").replaceAll("amp;", "").split(/(?=\.)/g).slice(0, 10).join('')}...</p>
-				<div class="contentFader"></div>
-			</a>
-		</div>
-		{/each}
-	{/if}
-</div>
-</div>
-
+<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>	
+	
 <a href="github" class="notextdeco"><h2>GitHub repositories</h2></a>
 <!--{#each data.repos as { ...repo }}
 	{#if repo.name !== "AmazinAxel" && !repo.archived}

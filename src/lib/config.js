@@ -77,7 +77,9 @@ export const projects = {
 			image: 'add an image here todo'
 		},
 		{
-			title: ''
+			title: '',
+			role: '',
+			description: ''
 		}
 	],
 
