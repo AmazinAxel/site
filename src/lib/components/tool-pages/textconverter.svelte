@@ -74,7 +74,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
-    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴘǫʀsᴛᴜᴠᴡxʏᴢ';
+    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏᴢ';
 
     const scriptChars = '0123456789+-=()';
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';

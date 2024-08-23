@@ -70,7 +70,7 @@
 </Card>
 <hr>
 
-<Section link="projects" titleText="My Projects" icon="projects" data={ projectItems }/>
+<Section link="projects" titleText="My Projects" icon="projects" right data={ projectItems }/>
 
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>	
 	

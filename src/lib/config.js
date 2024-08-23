@@ -87,7 +87,7 @@ export const projects = {
 		{
 			title: 'Dueling',
 			role: 'Developer',
-			description: 'Lead developer of a fast-paced, 1v1 PvP matchup tournament event server.',
+			description: 'A fast-paced, 1v1 PvP matchup tournament event server.',
 			image: 'todo'
 		}
 	],
@@ -97,13 +97,13 @@ export const projects = {
 			title: 'Lofi Player',
 			url: 'TODO add url here',
 			description:
-				'The Lofi player is a music webapp intended for listening to Lo-fi music. The project was archived because I began using Spotify.',
+				'The Lofi player is a music PWA intended for listening to Lo-fi music on-the-go.',
 			image: 'todo'
 		},
 		{
-			title: 'Egg Development Games',
+			title: 'Egg Development',
 			description:
-				'My first solo indie game studio, I created various Minecraft servers, including: WizardryKB, EggEvents, EggSiege, and EggDuels. All assets from this studio were liquidated into Permafrost Games.',
+				'My first solo indie game studio, I created various Minecraft servers, including: WizardryKB, EggEvents, EggSiege, and EggDuels. All assets from this studio were liquidated into the Permafrost community.',
 			image: 'todo'
 		},
 		{

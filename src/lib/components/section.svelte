@@ -1,10 +1,10 @@
 <script>
-    export let link, titleText, icon, data;
+    export let link, titleText, icon, right, data;
     import Admonition from '$lib/components/admonition.svelte';
 </script>
 
 
-<div class="section">
+<div class="section" class:right={right}>
     <a href={link} class="notextdeco"><h2>{titleText}</h2></a>
     <div class="cardListContainer">
         {#if data.length < 1}
