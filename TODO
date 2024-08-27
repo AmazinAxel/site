@@ -4,3 +4,4 @@
 - fix all TODOs throughout the code
 - add About page
 - make title a variable that is set and use that instead of Title component
+- merge CSS with journal site

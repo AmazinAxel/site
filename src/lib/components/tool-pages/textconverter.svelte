@@ -157,8 +157,9 @@ function stxt(text: text, scripttype: integer = 0) :: text:
     }
 
     textarea {
-        width: 45%;
+        width: 50%;
         height: 300px;
+        margin: 0;
     }
 
     .inputs {
@@ -234,6 +235,8 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         <Tooltip inlineText="Superscript">Appears above the text <b>Example:</b></Tooltip>
     </div>
 </div>
+
+<br>
 
 <div class="inputs">
     <textarea bind:value={inputText} on:input={convertText} placeholder="Normal text"/>

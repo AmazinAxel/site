@@ -73,7 +73,7 @@ export const projects = {
 				Originally inspired from Barrenlands, a cancelled project,
 				Permafrost is a winter survival game. As the sole developer
 				and project manager, I create new features and maintain the
-				game, while managing the community.`,
+				game while also managing the community.`,
 			image: 'add an image here todo'
 		},
 		{
@@ -99,6 +99,12 @@ export const projects = {
 			description:
 				'The Lofi player is a music PWA intended for listening to Lo-fi music on-the-go.',
 			image: 'todo'
+		},
+		{
+			title: 'Siege',
+			url: '',
+			description:
+				'A rotating minigame server, focused on quick-combat, close-range gameplay. Inspired from Rainbow Six Siege.'
 		},
 		{
 			title: 'Egg Development',

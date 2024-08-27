@@ -330,7 +330,7 @@ textarea {
 	box-shadow: 1px 1px 9px var(--darkest2);
 	border-radius: 5px;
 }
-textarea:focus-visible {
+textarea:focus-visible, input:focus-visible {
 	outline: 3px solid var(--blue2);
 }
 
@@ -381,6 +381,32 @@ textarea:focus-visible {
     display: inline-block;
     background-image: var(--bg);
     filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%);
+}
+
+.coverCard.innerCard {
+	text-align: center; 
+	position: relative;
+}
+
+.coverCard::after {
+	content: "";
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+    z-index: 1;
+	/* todo remove size */
+    left: calc(var(--size) / 4 * -1);
+    background-size: cover;
+    top: calc(var(--size) / 4 * -1);
+    transform: rotateZ(-10deg);
+    display: inline-block;
+    background-image: var(--bg);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%);
+}
+
+.innerCard * {
+    z-index: 2;
+    position: inherit;
 }
 
 .listCard p {
@@ -486,6 +512,43 @@ pre { /* Applied only to large codeblocks */
     text-align: left;
     margin-top: 15px;
     transition: background-color .2s ease, border .2s ease, box-shadow .2s ease;
+    overflow: hidden;
 }
 
 .innerCard p:last-child { margin-bottom: 0; }
+
+/* Forms */
+
+input:not([type=range]), textarea {
+    padding: 10px;
+    background-color: var(--darkest3);
+    border-radius: 5px;
+	border: 0;
+    margin: 10px;
+    transition: background-color .2s ease, box-shadow .2s ease, color .2s ease;
+    max-width: -webkit-fill-available;
+    max-height: 400px;
+    color: var(--complimentary);
+}
+
+textarea { min-width: 200px; min-height: 100px; }
+
+label.heavy {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.animateIn { animation: reveal 0.7s cubic-bezier(0.4, 0, 0.2, 1.1); }
+.animateOut { animation: reveal reverse .5s cubic-bezier(1, 0, 1, 1); }
+
+@keyframes reveal {
+    0% { max-height: 0; opacity: 0; margin-bottom: 0; padding: 0; }
+    100% { max-height: 500px; opacity: 1; margin-bottom: 15px; padding: 10px; }
+}
+
+label { color: var(--complimentary); transition: color .2s ease; }
+
+/* Subtext */
+sub { color: var(--blue1); }
+sub a { color: var(--blue2)!important; } /* todo fix: use of !important */

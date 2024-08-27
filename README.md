@@ -1,7 +1,11 @@
-# AmazinAxel.com Website
+# 🌐 AmazinAxel.com Site
 
-💻 This is my portfolio website built with Sveltekit and Bun, hosted on Cloudflare Pages.
+My portfolio website - built with Sveltekit and Bun, hosted on Cloudflare Pages.
 
-## 🥱 Boring stuff
+Features my help pages (automagically parses markdown and features admonitons), Minecraft development tools, and more.
 
-Use `bun i` to install, then use `bun run dev` to develop quickly and `bun run deploy` to deploy to Pages. Use `bun run build` and `bun run preview` to preview site builds.
+## Localhost development
+
+Bun is preferred over node/npm for development and deployment.
+
+Use `bun i` to install, then use `bun run dev` to develop quickly and `bun run deploy` to deploy to Pages. Use `bun run build && bun run preview` to build & preview.

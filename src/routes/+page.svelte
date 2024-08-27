@@ -3,6 +3,7 @@
 	import Card from '$lib/components/imgCard.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
+	import Title from '$lib/components/title.svelte';
 	import { shuffle } from '$lib/utils'
 
 	// Necessary for the journal post system
@@ -57,6 +58,7 @@
 	updSubtitle(true)
 </script>
 
+<Title name="Home"/>
 <Hero>
 	<h1>AmazinAxel</h1>
 	{#if subtitleVisibility}

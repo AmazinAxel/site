@@ -6,8 +6,6 @@ title: Spoonfeeding - why its bad and how to avoid it
     	import Admonition from '$lib/components/admonition.svelte';
 </script>
 
-<Admonition builderror>AEAE</Admonition>
-
 <Admonition info>EEEEEE</Admonition>
 
 # Spoonfeeding
