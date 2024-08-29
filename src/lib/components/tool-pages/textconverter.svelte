@@ -245,7 +245,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
 </div>
 
 <div class="info card">
-    <p><b>NOTE:</b> This tool is not finished. Please report any bugs to <code>@amazinaxel</code> on Discord. Please disregard unfinished features such as the converter code generator below.</p>
+    <p><b>NOTE:</b> This tool is not finished. Expect unfinished features.</p>
 </div>
 
 

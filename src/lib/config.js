@@ -73,7 +73,7 @@ export const projects = {
 				Originally inspired from Barrenlands, a cancelled project,
 				Permafrost is a winter survival game. As the sole developer
 				and project manager, I create new features and maintain the
-				game while also managing the community.`,
+				game while also being the community manager.`,
 			image: 'add an image here todo'
 		},
 		{

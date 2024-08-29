@@ -1,6 +1,7 @@
 <script>
 	import Admonition from '$lib/components/admonition.svelte';
 	import Title from '$lib/components/title.svelte';
+	import ErrorBtn from '$lib/components/errorbutton.svelte';
 	import { enhance } from '$app/forms';
 
 	let buttonText = 'Send Message';
@@ -70,12 +71,10 @@
         <div class="input">
         	<label for="message" class="heavy">Message:</label> <textarea id="message" name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
         </div>
-        <div class="cf-turnstile" data-sitekey="TODO add site key" data-theme="auto" id="turnstileWidget"></div>
-        <button class="button">{ buttonText }</button>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEGFTl2ESubJ-n9" data-theme="auto"></div>
+        <button type="submit" class="button">{ buttonText }</button>
 		{#if showError}
-		<button class="nostyle">
-			<img src="/media/icons/xmark.svg" class="noImgStyle" alt="Show error info">
-		</button>        
+		<ErrorBtn/>     
 		{/if}
     </form>
 	<br>
