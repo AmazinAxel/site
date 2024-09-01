@@ -4,6 +4,8 @@
 	import Tooltip from '$lib/components/tooltip.svelte';
 	import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
+	import { Turnstile } from 'svelte-turnstile';
+
 	const transition = { y: -5, duration: 500, easing: cubicOut };
 
 	let buttonText = 'Send Message';
@@ -24,21 +26,17 @@
 		console.log("Sending message....");
 		
 		xhr.onload = function() { // Get the response
-			if (xhr.status == 200) { buttonText = 'Message Sent!'; window.turnstile.reset(); } // Success!
+			if (xhr.status == 200) { buttonText = 'Message Sent!'; reset(); } // Success!
 			else { // There was an error, show a helpful error message
 				buttonText = 'Resubmit'; // Show error confirmation on button
 				errorMessage = '<p><strong>Error ' + xhr.status + ':</strong> ' + xhr.responseText + '</p>'; // Create message
 				showError = true // Insert error message
-				window.turnstile.reset(); // Reset Turnstile captcha
+				reset(); // Reset Turnstile captcha
 			};
 		};
 		xhr.send(data); // Send off the form data*/
 	}
 </script>
-
-<svelte:head>
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</svelte:head>
 
 <Title name="Contact"/>
 
@@ -79,7 +77,9 @@
 				</Tooltip>
 			</label>
 		</div>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEGFTl2ESubJ-n9" data-theme="auto"></div>
+		
+		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
+		
         <button type="submit" class="button">{ buttonText }</button>
     </form>
 	<br>
