@@ -1,6 +1,7 @@
 <script>
 	import Admonition from '$lib/components/admonition.svelte';
 	import Title from '$lib/components/title.svelte';
+	import Tooltip from '$lib/components/tooltip.svelte';
 	import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
 	const transition = { y: -5, duration: 500, easing: cubicOut };
@@ -23,7 +24,7 @@
 		console.log("Sending message....");
 		
 		xhr.onload = function() { // Get the response
-			if (xhr.status == 200) { button.innerHTML = 'Message Submitted!'; window.turnstile.reset(); } // Success!
+			if (xhr.status == 200) { buttonText = 'Message Sent!'; window.turnstile.reset(); } // Success!
 			else { // There was an error, show a helpful error message
 				buttonText = 'Resubmit'; // Show error confirmation on button
 				errorMessage = '<p><strong>Error ' + xhr.status + ':</strong> ' + xhr.responseText + '</p>'; // Create message
@@ -44,12 +45,9 @@
 <h1>Contact</h1>
 <Admonition info size=20>
 	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> when possible.</strong> Reach out to me using my Discord handle: <code>@amazinaxel</code></p>
+	<p><strong>NOTE:</strong> I do not provide support over DMs.</p>
 	<br>
-	<p>If you cannot use Discord for any reason, use the below contact form.</p>
-</Admonition>
-
-<Admonition error>spotdl --download-ffmpeg --format mp3 download
-	<p><strong>This contact form is not finished.</strong> Please check back later.</p>
+	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you expect a response.</p>
 </Admonition>
 
 {#if showError}
@@ -66,14 +64,21 @@
         	<label for="subject">Subject:</label> <input id="text" name="title" type="text" placeholder="Message Subject"/>
         </div>
         <div class="input">
-        	<label for="name">Name:</label> <input id="name" name="name" type="text" placeholder="Your Name (optional)"/>
-        </div>
-        <div class="input">
-        	<label for="email">Email:</label> <input id="email" name="email" type="email" placeholder="Your Email (optional)"/>
+        	<label for="name">Name:</label> <input id="name" name="name" type="text" placeholder="Your Name"/>
         </div>
         <div class="input">
         	<label for="message" class="heavy">Message:</label> <textarea id="message" name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
         </div>
+		<div style="padding-bottom: 1rem;">
+			<label class="container">
+				<input type="checkbox" id="useDifferentText">
+				<span class="checkmark"></span>
+				<Tooltip inlineText="Urgent">
+					Only select this option if this
+					message is urgent and time-sensitive 
+				</Tooltip>
+			</label>
+		</div>
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEGFTl2ESubJ-n9" data-theme="auto"></div>
         <button type="submit" class="button">{ buttonText }</button>
     </form>
