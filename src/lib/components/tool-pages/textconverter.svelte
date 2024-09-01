@@ -225,14 +225,20 @@ function stxt(text: text, scripttype: integer = 0) :: text:
 
     <br><br>
     <div style="display: flex; gap: 5px">
-        <Tooltip inlineText="Subscript">Appears below the text <b>Example:</b></Tooltip>
+        <Tooltip inlineText="Subscript">
+            Appears below the text <b>Example:</b>
+            <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle" style="border-radius: 5px">
+        </Tooltip>
 
         <!-- Slider -->
         <div class="slider_container">
             <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
         </div>
 
-        <Tooltip inlineText="Superscript">Appears above the text <b>Example:</b></Tooltip>
+        <Tooltip inlineText="Superscript">
+            Appears above the text <b>Example:</b>
+            <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle" style="border-radius: 5px">
+        </Tooltip>
     </div>
 </div>
 
@@ -244,11 +250,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
     <textarea bind:value={outputText} on:input={() => convertText(false)} placeholder="Small text"/>
 </div>
 
-<div class="info card">
-    <p><b>NOTE:</b> This tool is not finished. Expect unfinished features.</p>
-</div>
-
-
+<!--
 <div class="info card">
     <p><b>TIP:</b> Use these Skript functions/reflect expressions to create small text without leaving your code!</p>
 
@@ -261,10 +263,10 @@ function stxt(text: text, scripttype: integer = 0) :: text:
     <button type="button" on:click={() => toggleFuncPopup(4)}>Normalized</button>
 </div>
 {#if isOpen}
-<!-- 
+</!-- 
     Warning can be ignored safely since this is a alias button
     svelte-ignore a11y-click-events-have-key-events 
--->
+--/>
 <div class="popupBg" tabindex="0" role="button" on:click={toggleFuncPopup} in:fly|local={transition} out:fly|local={transition}></div>
 <div class="popup card" in:fly|local={transition} out:fly|local={transition}>
     <button on:click={toggleFuncPopup}>Close</button>
@@ -295,3 +297,4 @@ function stxt(text: text, scripttype: integer = 0) :: text:
 
 </div>
 {/if}
+-->
