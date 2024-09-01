@@ -26,12 +26,12 @@
 		console.log("Sending message....");
 		
 		xhr.onload = function() { // Get the response
-			if (xhr.status == 200) { buttonText = 'Message Sent!'; reset(); } // Success!
+			if (xhr.status == 200) { buttonText = 'Message Sent!'; window.turnstile.reset(); } // Success!
 			else { // There was an error, show a helpful error message
 				buttonText = 'Resubmit'; // Show error confirmation on button
 				errorMessage = '<p><strong>Error ' + xhr.status + ':</strong> ' + xhr.responseText + '</p>'; // Create message
 				showError = true // Insert error message
-				reset(); // Reset Turnstile captcha
+				window.turnstile.reset(); // Reset Turnstile captcha
 			};
 		};
 		xhr.send(data); // Send off the form data*/
