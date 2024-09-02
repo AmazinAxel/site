@@ -41,18 +41,12 @@
 <Title name="Contact"/>
 
 <h1>Contact</h1>
-<Admonition info size=20>
-	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> when possible.</strong> Reach out to me using my Discord handle: <code>@amazinaxel</code></p>
-	<p><strong>NOTE:</strong> I do not provide support over DMs.</p>
+<Admonition info>
+	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> wherever possible.</strong> Reach out to me using my Discord handle: <code>@amazinaxel</code></p>
+	<p><strong>NOTE:</strong> Support is not provided over DMs.</p>
 	<br>
 	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you expect a response.</p>
 </Admonition>
-
-{#if showError}
-	<div in:fly|local={transition} out:fly|local={transition}>
-		<Admonition>{@html errorMessage}</Admonition>
-	</div>
-{/if}
 
 <!-- https://kit.svelte.dev/docs/form-actions -->
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
@@ -79,6 +73,13 @@
 		</div>
 		
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
+
+		{#if showError}
+			<div in:fly|local={transition} out:fly|local={transition}>
+				<Admonition error>{@html errorMessage}</Admonition>
+			</div>
+			<br>
+		{/if}
 		
         <button type="submit" class="button">{ buttonText }</button>
     </form>

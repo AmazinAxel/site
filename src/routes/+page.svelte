@@ -4,29 +4,31 @@
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
 	import Title from '$lib/components/title.svelte';
+	import GithubCard from '$lib/components/githubCard.svelte';
 	import { shuffle } from '$lib/utils'
 
 	// Necessary for the journal post system
 	export let data;
 	const { journalPosts } = data;
 	const { projectItems } = data;
-	console.log(projectItems)
+	const { githubRepos } = data;
+
 	let randomSubtitle = "";
 	let subtitleVisibility = false;
 	let index = 0;
 
 	const randomSubtitleList = [
 		"Permafrost lead developer and project manager",
+		"Bubble tea enjoyer",
 		"Full-stack web dev",
-		"Not a good low-level programmer",
-		"Enjoys Linux server administrating & IT/IoT",
-		"Minecraft server manager and developer",
+		"Linux server administrating & IT/IoT enthusiast",
+		"Minecraft server developer & manager",
 		"Avid Linux/NixOS user",
+		"❤️ Open source",
 		"Addicted to Minecraft server development",
-		"Average Skript enjoyer",
-		"Stuck in the Linux rabbit hole",
+		"Average 10x Skript enjoyer",
+		"Stuck in the world of Linux",
 		"Lofi and synthwave music enjoyer",
-		"Bubble tea addict",
 		"Upcoming Neovim user",
 		"Professional Linux desktop ricer"
 	];
@@ -77,29 +79,11 @@
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>	
 	
 <a href="github" class="notextdeco"><h2>GitHub repositories</h2></a>
-<!--{#each data.repos as { ...repo }}
+{#each githubRepos as { ...repo }}
 	{#if repo.name !== "AmazinAxel" && !repo.archived}
-	<a href={repo.html_url} style="text-decoration: none">
-		<div class="card">
-			<h3>{repo.name}</h3>
-			<p>{repo.description}</p>
-
-			<p>Forks: {repo.forks_count}<br>
-			Issues: {repo.open_issues_count}<br>
-			Stars: {repo.stargazers_count}<br>
-			{#if repo.homepage}
-				Homepage: {repo.homepage}<br>
-			{/if}
-			{#if repo.language}
-				Language: {repo.language}<br>
-			{/if}
-			Watchers: {repo.watchers_count}<br>
-			</p>
-
-		</div>
-	</a>
+		<GithubCard repo={repo}/>
 	{/if}
-{/each}-->
+{/each}
 <a href="tools" class="notextdeco"><h2>Minecraft utilities</h2></a>
 
 <a href="help" class="notextdeco"><h2>Help articles</h2></a>

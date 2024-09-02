@@ -222,7 +222,6 @@ input[type='checkbox'] {
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
 	border-width: 6px;
-	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 	opacity: 1;
 }
@@ -384,7 +383,7 @@ textarea:focus-visible, input:focus-visible {
     transform: rotateZ(-10deg);
     display: inline-block;
     background-image: var(--bg);
-    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(2px);
 }
 
 .coverCard.innerCard {
@@ -398,14 +397,13 @@ textarea:focus-visible, input:focus-visible {
     width: var(--size);
     position: absolute;
     z-index: 1;
-	/* todo remove size */
     left: calc(var(--size) / 4 * -1);
     background-size: cover;
     top: calc(var(--size) / 4 * -1);
     transform: rotateZ(-10deg);
     display: inline-block;
     background-image: var(--bg);
-    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(2px);
 }
 
 .innerCard * {
@@ -556,3 +554,34 @@ label { color: var(--complimentary); transition: color .2s ease; }
 /* Subtext */
 sub { color: var(--blue1); }
 sub a { color: var(--blue2)!important; } /* todo fix: use of !important */
+
+/* Admonitions */
+.error {
+	background-color: var(--red);
+	border: 3px solid #cf7f87;
+}
+
+.warning {
+	background-color: var(--orange);
+	border: 3px solid #d9a393;
+}
+
+.important {
+	background-color: var(--blue3);
+	border: 3px solid var(--blue2);
+}
+
+.note {
+    background-color: var(--blue2);
+    border: 3px solid var(--blue1);
+}
+
+.info {
+	background-color: var(--darkest1);
+	border: 3px solid var(--darkest2);
+}
+
+.error.coverCard::after, .warning.coverCard::after, .important.coverCard::after, .note.coverCard::after, .info.coverCard::after {
+	opacity: 0.3;
+	filter: blur(2px);
+}

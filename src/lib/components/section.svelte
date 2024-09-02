@@ -8,7 +8,7 @@
     <a href={link} class="notextdeco"><h2>{titleText}</h2></a>
     <div class="cardListContainer">
         {#if data.length < 1}
-            <Admonition builderror>No connection to outside server! Posts could not be shown.</Admonition>
+            <Admonition error>No connection to outside server! Posts could not be shown.</Admonition>
         {:else}
             {#each data as { title, link, description }}
             <div class="listCard card backgroundIcon" style="--bg: url(/media/icons/{icon}.svg)">
@@ -22,4 +22,3 @@
         {/if}
     </div>
     </div>
-    

@@ -6,8 +6,25 @@ title: Spoonfeeding - why its bad and how to avoid it
     	import Admonition from '$lib/components/admonition.svelte';
 </script>
 
-<Admonition info>EEEEEE</Admonition>
+<Admonition warning>
+this is a warning
+</Admonition>
 
+<Admonition error>
+this is an error
+</Admonition>
+
+<Admonition important>
+this is <strong>IMPORTANT</strong>
+</Admonition>
+
+<Admonition note>
+note
+</Admonition>
+
+<Admonition info>
+INFo
+</Admonition>
 # Spoonfeeding
 
 This article will go over the aspects of **spoonfeeding**, specifically why its a bad practice and what should be done instead.

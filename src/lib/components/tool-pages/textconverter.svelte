@@ -120,12 +120,14 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
     }
 
+    /*
     // TODO add popup visibility
     function toggleFuncPopup(sel) {
         selected = sel;
         isOpen = !isOpen;
     }
-    // todo maybe include ‘’“” somehow
+    // todo maybe include ‘’“” somehow 
+    */
 </script>
 
 <style>
@@ -282,7 +284,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         <img src="/media/tools/textconverter/fulldemo.png" alt="Example code usage">
     {:else if selected == 3}
         TODO
-        <Admonition builderror>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
+        <Admonition error>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
         Example usage: `stxt "Hello (123-5) Test"
         send image of chat
     {:else if selected == 4}
