@@ -79,7 +79,7 @@
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
 	
 <div class="section right">
-	<a href="github" class="notextdeco"><h2>GitHub repos</h2></a>
+	<a href="github" class="notextdeco"><h2>GitHub Repos</h2></a>
     <div class="cardListContainer">
 
 {#each githubRepos as { ...repo }}
@@ -90,8 +90,13 @@
 </div>
 </div>
 
-<a href="tools" class="notextdeco"><h2>Minecraft utilities</h2></a>
-
+<div class="section">
+	<a href="tools" class="notextdeco"><h2>Minecraft Utilities</h2></a>
+    <div class="cardListContainer">
+		<div class="card">cool text converter thing</div>
+		<div class="card">emoji picker weird thing haha</div>
+	</div>
+</div>
 <!--
 <a href="help" class="notextdeco"><h2>Help articles</h2></a>
 -->

@@ -12,8 +12,8 @@
 	After much frustration from using other tools, I
 	created these to do what other tools didn't.
 	My tools are designed to optimize development time
-	by providing a quicker, more enhanced alternative to
-	existing tools.
+	by providing a quicker & improved alternative to
+	existing development tools.
 </p>
 </Admonition>
 

@@ -1,9 +1,14 @@
 <script>
     import Title from '$lib/components/title.svelte';
+    import Admonition from '$lib/components/admonition.svelte';
 </script>
 
 <Title name="Help Center"/>
 
+<Admonition error>
+    Help center articles are not finished. Expect broken articles while they're still being written. Not for evaluation or sharing purposes during this time.
+</Admonition>
+<br><hr><br>
 <p>
     This subpage is dedicated to the topic of <i>learning how to learn.</i> It may seem confusing, but the success
     of understanding the <i>right way to learn</i> and asking for help will improve 

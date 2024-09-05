@@ -5,11 +5,6 @@
 
 export const navItems = [
 	{
-		title: 'About',
-		route: '/about',
-		icon: 'about'
-	},
-	{
 		title: 'Contact',
 		route: '/contact',
 		icon: 'contact'
@@ -30,11 +25,11 @@ export const navItems = [
 		icon: 'tools',
 		subitems: [
 			{
-				title: 'Emojis',
+				title: 'Emoji Picker',
 				route: '/tools/emojipicker'
 			},
 			{
-				title: 'Inventory',
+				title: 'Inventory IDs',
 				route: '/tools/inventoryids'
 			},
 			{

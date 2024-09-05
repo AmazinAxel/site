@@ -322,7 +322,7 @@ input[type='checkbox'] {
     content: '◆';
     padding-right: 0.4rem;
     position: relative;
-    bottom: 0.2rem;
+    bottom: 0.25rem;
     font-size: 0.8rem;
     color: var(--blue2);
 }
