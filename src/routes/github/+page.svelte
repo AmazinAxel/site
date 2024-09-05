@@ -21,8 +21,10 @@
 	{/each}
 	<Admonition info style="display: flex; flex: 33%;">
 		<div style="margin: auto">
-			<p>This list excludes some repositories. View my (updated) repository list on my GitHub page</p> 
-			<a href="https://github.com/AmazinAxel?tab=repositories"><button>View Repoositories on GitHub</button></a>
+			<p style="padding-bottom: 0.5rem;">
+				This list excludes some repositories. View all repositories on my GitHub page.
+			</p> 
+			<a href="https://github.com/AmazinAxel?tab=repositories"><button>View Repositories on GitHub</button></a>
 		</div>
 	</Admonition>
 {/if}

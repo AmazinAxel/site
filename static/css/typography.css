@@ -6,7 +6,7 @@ body {
 @font-face {
 	font-family: 'Hammersmith One';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 200;
 	font-display: swap;
 	src: url(/fonts/hammersmith-one.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
@@ -32,7 +32,7 @@ h6 {
 	margin: 1rem 0 1rem;
 	line-height: 1.1;
 	font-family: var(--headerFont);
-	font-weight: 400;
+	font-weight: 200;
 }
 
 h1 {
@@ -52,6 +52,10 @@ h3 {
 
 h4 {
 	font-size: clamp(1.5rem, calc(1.5rem + 1vw), 1.8rem);
+}
+
+h5 {
+	font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.4rem);
 }
 
 a:not(.navItems ul li a) {

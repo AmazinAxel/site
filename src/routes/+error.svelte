@@ -6,7 +6,7 @@
 	import Title from '$lib/components/title.svelte';
 </script>
 
-<Title name="Error {$page.status}"/>
+<Title name="Error {$page.status}" dontShowHeader/>
 
 <Hero>
 	<h1>Error {$page.status}: {$page.error.message}</h1>

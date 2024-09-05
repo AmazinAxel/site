@@ -94,7 +94,7 @@ nav:hover .navItems {
 	visibility: unset;
 }
 
-a img:not(.noImgStyle) {
+nav a img {
 	background-image: linear-gradient(240deg, var(--blue1) 0%, var(--blue2) 100%);
 	border-radius: 15px;
 	box-shadow: 0 0 10px 0 var(--blue1);

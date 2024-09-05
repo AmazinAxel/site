@@ -4,8 +4,6 @@
 
 <Title name="Projects"/>
 
-<h1>Projects</h1>
-
 Permafrost
 
 <h2> Small Projects </h2>

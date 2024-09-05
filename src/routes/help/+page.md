@@ -4,7 +4,6 @@
 
 <Title name="Help Center"/>
 
-<h1>Help Center</h1>
 <p>
     This subpage is dedicated to the topic of <i>learning how to learn.</i> It may seem confusing, but the success
     of understanding the <i>right way to learn</i> and asking for help will improve 

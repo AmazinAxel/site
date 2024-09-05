@@ -8,7 +8,7 @@
     {#if isIcon}
         <img src="/media/icons/about.svg" alt="About tooltip" class="noImgStyle">
     {:else}
-        { inlineText }
+        { @html inlineText }
     {/if}
     <span class="tooltiptext">
         <slot/>

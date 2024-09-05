@@ -1,9 +1,14 @@
 <script>
+    import Admonition from '$lib/components/admonition.svelte';
+
     // CONSIDER: Switch to CLIENT side rendering (CSR) on this page to fix page speed bandwidth issues
     const icons = "¡‰­·₴≠¿×ØÞһðøþΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρςστυφχψωЂЅІЈЉЊЋАБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзиклмнопрстуфхцчшщъыьэюяєѕіјљњ–—‘’“”„…⁊←↑→↓⇄＋ƏəɛɪҮүӨөʻˌ;ĸẞß₽€ѢѣѴѵӀѲѳ⁰¹³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁱ™ʔʕ⧈⚔☠ҚқҒғҰұӘәҖҗҢңҺאבגדהוזחטיכלמםנןסעפףצץקר¢¤¥©®µ¶¼½¾·‐‚†‡•‱′″‴‵‶";
 
     const iconList = icons.split('');
 </script>
+
+<Admonition error>This tool is not finished, please check back later</Admonition>
+<br><br>
 
 <p>
     Use the buttons below to copy the character you want.

@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import Card from '$lib/components/imgCard.svelte';
+	import Admonition from '$lib/components/admonition.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
 	import Title from '$lib/components/title.svelte';
@@ -24,7 +25,6 @@
 		"Linux server administrating & IT/IoT enthusiast",
 		"Minecraft server developer & manager",
 		"Avid Linux/NixOS user",
-		"❤️ Open source",
 		"Addicted to Minecraft server development",
 		"Average 10x Skript enjoyer",
 		"Stuck in the world of Linux",
@@ -60,7 +60,7 @@
 	updSubtitle(true)
 </script>
 
-<Title name="Home"/>
+<Title name="Home" dontShowHeader/>
 <Hero>
 	<h1>AmazinAxel</h1>
 	{#if subtitleVisibility}
@@ -68,22 +68,30 @@
 	{/if}
 </Hero>
 
-<Card>
+<Admonition error>
 	<h3>🚧 This site is currently under construction! 🚧</h3>
 	<p>Please revisit later when this website is completed. In the meantime, check out <a href="https://journal.amazinaxel.com">my other site</a> for up-to-date information.</p>
-</Card>
-<hr>
+</Admonition>
+<br><hr>
 
 <Section link="projects" titleText="My Projects" icon="projects" right data={ projectItems }/>
 
-<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>	
+<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
 	
-<a href="github" class="notextdeco"><h2>GitHub repositories</h2></a>
+<div class="section right">
+	<a href="github" class="notextdeco"><h2>GitHub repos</h2></a>
+    <div class="cardListContainer">
+
 {#each githubRepos as { ...repo }}
 	{#if repo.name !== "AmazinAxel" && !repo.archived}
 		<GithubCard repo={repo}/>
 	{/if}
 {/each}
+</div>
+</div>
+
 <a href="tools" class="notextdeco"><h2>Minecraft utilities</h2></a>
 
+<!--
 <a href="help" class="notextdeco"><h2>Help articles</h2></a>
+-->

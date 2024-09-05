@@ -215,12 +215,15 @@ function stxt(text: text, scripttype: integer = 0) :: text:
 <h1>Small Text Converter</h1>
 
 <div class="selector">
+    <h5 style="position: absolute; margin-top: -2rem; margin-left: 0.65rem;">OPTIONS</h5>
+    <div style="height: 0.5rem;"/>
     <label class="container">
         <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText}>
         <span class="checkmark"></span>
         <Tooltip inlineText="Use alternate text style">
             Use a different text style where some characters look
-            slightly different. <b>Example:</b>
+            slightly different.
+            <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/texttypepreview.png" alt="Shows difference between the text type function" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
     </label>
@@ -228,7 +231,8 @@ function stxt(text: text, scripttype: integer = 0) :: text:
     <br><br>
     <div style="display: flex; gap: 5px">
         <Tooltip inlineText="Subscript">
-            Appears below the text <b>Example:</b>
+            Shown below the text
+            <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
 
@@ -238,7 +242,8 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         </div>
 
         <Tooltip inlineText="Superscript">
-            Appears above the text <b>Example:</b>
+            Shown above the text
+            <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
     </div>

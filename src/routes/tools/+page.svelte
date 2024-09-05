@@ -4,15 +4,16 @@
 	import Admonition from '$lib/components/admonition.svelte';
 </script>
 
-<Title name="Utilities"/>
+<Title name="Utilities" dontShowHeader/>
+<h1>Minecraft Development Tools</h1>
 
-<h1>Useful Minecraft Development Utilities</h1>
 <Admonition info>
 <p>
-	As much as I hate to reinvent the wheel,
-	these utilities were created because there were no
-	other better alternatives. These tools can help to
-	speed up development time by reducing wasted time.
+	After much frustration from using other tools, I
+	created these to do what other tools didn't.
+	My tools are designed to optimize development time
+	by providing a quicker, more enhanced alternative to
+	existing tools.
 </p>
 </Admonition>
 

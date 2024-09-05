@@ -1,12 +1,11 @@
 <script>
-    import Admonition from '$lib/components/admonition.svelte';
-
     export let repo;
 
     const icon = (repo.fork) ? "git-fork.svg" : "github.svg"
     const attributes =     [repo.forks_count, repo.stargazers_count, repo.watchers_count, repo.language]
     const attributeIcons = ['git-fork',       'star',                'eye',               'code']
 
+    // TODO implement language with colored dot
     //if (!repo.language) {
         attributes.pop();
         attributeIcons.pop();
@@ -15,6 +14,8 @@
 
 <div class="coverCard innerCard" style="--bg: url(/media/icons/{icon}); --size: 10rem;">
     <h3>{repo.name}</h3>
+    {#if repo.archived}<h5 style="font-size: 1rem; margin-top: -0.75rem;">📦️ ARCHIVED</h5>{/if}
+
     <p>{repo.description || ""}</p>
 
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: space-evenly;">
@@ -25,8 +26,4 @@
         </div>
     {/each}
     </div>
-
-    <!--{#if repo.archived}
-        <Admonition warning>This repository is archived and no longer maintained.</Admonition>
-    {/if}-->
 </div>

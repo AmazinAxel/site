@@ -1,5 +1,6 @@
 <script>
     const inventoryRows = ["Player", "6 row chest"];
+	import Admonition from '$lib/components/admonition.svelte';
 </script>
 <h1>Skript Inventory IDs</h1>
 <p>
@@ -12,6 +13,7 @@
     visualizing mockup inventory layouts while designing interfaces.
 </p>
 
+
 <label for="inventorysize">Select Inventory Type:</label>
 <select name="inventorysize" id="inventorysize">
     {#each inventoryRows as item}
@@ -19,4 +21,4 @@
     {/each}
 </select>
 
-<h3>Tool not finished, please check back later</h3>
+<Admonition error>Tool not finished, please check back later</Admonition>
