@@ -26,15 +26,23 @@ export const navItems = [
 		subitems: [
 			{
 				title: 'Emoji Picker',
-				route: '/tools/emojipicker'
+				route: '/tools/emojipicker',
+				description: 'Pick the perfect emoji with a list of every character preview.',
+				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Inventory IDs',
-				route: '/tools/inventoryids'
+				route: '/tools/inventoryids',
+				description: 'Visualize slot numbers and see mapping values to speed up Skript development.',
+				image: 'temporary-img-cover.png',
+				url: 'inventoryids'
 			},
 			{
 				title: 'Text Converter',
-				route: '/tools/textconverter'
+				route: '/tools/textconverter',
+				description: 'Easily convert text to small text commonly seen in new servers.',
+				image: 'temporary-img-cover.png',
+				url: 'textconverter'
 			}
 		]
 	},

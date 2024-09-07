@@ -7,6 +7,7 @@
 	import Title from '$lib/components/title.svelte';
 	import GithubCard from '$lib/components/githubCard.svelte';
 	import { shuffle } from '$lib/utils'
+	import { navItems } from '$lib/config';
 
 	// Necessary for the journal post system
 	export let data;
@@ -92,9 +93,18 @@
 
 <div class="section">
 	<a href="tools" class="notextdeco"><h2>Minecraft Utilities</h2></a>
-    <div class="cardListContainer">
-		<div class="card">cool text converter thing</div>
-		<div class="card">emoji picker weird thing haha</div>
+	<div class="cardListContainer">
+		{#each navItems[3].subitems as tool}
+			<a href="/tools/{tool.url}" style="text-decoration: none;" class="gridItem">
+			<Card>
+				<div>
+					<h3>{tool.title}</h3>
+					<p>{tool.description}</p>
+				</div>
+				<img src="/media/{tool.image}" alt="Screenshot of the {tool.title} page">
+			</Card>
+			</a>
+		{/each}
 	</div>
 </div>
 <!--
