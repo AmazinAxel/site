@@ -1,5 +1,5 @@
 major:
-- make sidebar not push the main content (overlap it instead)
+x make sidebar not push the main content (overlap it instead)
 - fix all TODOs throughout the code
 - finish Projects embed on the homepage
 - finish Projects page

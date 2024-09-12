@@ -16,7 +16,7 @@ main {
 #content {
 	margin: 3rem auto;
 	max-width: 80rem;
-	padding: 30px 15px;
+	padding: 30px 15px 30px 6rem;
 	/* This fixes the footer issue; 6rem is padding size, 4rem is footer height) */
 	min-height: calc(100vh - 6rem - 4rem);
 }
