@@ -1,6 +1,5 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import Card from '$lib/components/imgCard.svelte';
 	import Admonition from '$lib/components/admonition.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
@@ -22,17 +21,17 @@
 
 	const randomSubtitleList = [
 		"Permafrost lead developer and project manager",
-		"Bubble tea enjoyer",
+		"Common bubble tea enjoyer",
 		"Full-stack web dev",
-		"Linux server administrating & IT/IoT enthusiast",
+		"Open source enjoyer",
+		"Linux server administrator & IT/IoT enthusiast",
 		"Minecraft server developer & manager",
-		"Avid Linux/NixOS user",
-		"Addicted to Minecraft server development",
 		"Average 10x Skript enjoyer",
-		"Stuck in the world of Linux",
-		"Lofi and synthwave music enjoyer",
+		"Avid Linux/NixOS user",
+		"Lofi music enjoyer",
 		"Upcoming Neovim user",
-		"Professional Linux desktop ricer"
+		"Professional Linux desktop ricer",
+		"🇺🇸"
 	];
 
 	const randomSubtitles = shuffle(randomSubtitleList);
@@ -72,30 +71,35 @@
 
 <Admonition error>
 	<h3>🚧 This site is currently under construction! 🚧</h3>
-	<p>Please revisit later when this website is completed. In the meantime, check out <a href="https://journal.amazinaxel.com">my other site</a> for up-to-date information.</p>
+	<p>Please revisit later when this website is completed. In the meantime, visit <a href="https://journal.amazinaxel.com">my Journal site</a> for up-to-date information.</p>
 </Admonition>
 <br><hr>
 
+<!-- Projects list -->
 <Section link="projects" titleText="My Projects" icon="projects" right data={ projectItems }/>
 
+<!-- Journal posts -->
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
 	
+<!-- Github repos -->
 <div class="section right">
 	<a href="github" class="notextdeco"><h2>GitHub Repos</h2></a>
     <div class="cardListContainer">
 
-{#each githubRepos as { ...repo }}
-	{#if repo.name !== "AmazinAxel" && !repo.archived}
-		<GithubCard repo={repo}/>
-	{/if}
-{/each}
-</div>
+		{#each githubRepos as { ...repo }}
+			{#if repo.name !== "AmazinAxel" && !repo.archived}
+				<GithubCard repo={repo}/>
+			{/if}
+		{/each}
+	</div>
 </div>
 
+<!-- Minecraft utilities -->
 <div class="section">
 	<a href="tools" class="notextdeco"><h2>Minecraft Utilities</h2></a>
 	<ImgCardList data={navItems[3].subitems} alt="Picture of"/>
 </div>
-<!--
+<!-- Help articles 
+
 <a href="help" class="notextdeco"><h2>Help articles</h2></a>
 -->
