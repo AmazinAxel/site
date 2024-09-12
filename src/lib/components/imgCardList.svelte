@@ -6,7 +6,7 @@
 
 <div style="display: flex; gap: 0.5rem;">
     {#each data as item}
-        <a href="/tools/{item.url}" style="text-decoration: none;" class="gridItem">
+        <a href={item.route} style="text-decoration: none;" class="gridItem">
             <div class="card imgCard">
                 <img src="/media/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt="TODo">
                 <div>

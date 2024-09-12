@@ -34,15 +34,13 @@ export const navItems = [
 				title: 'Inventory IDs',
 				route: '/tools/inventoryids',
 				description: 'Visualize slot numbers and see mapping values to speed up Skript development.',
-				image: 'temporary-img-cover.png',
-				url: 'inventoryids'
+				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Text Converter',
 				route: '/tools/textconverter',
 				description: 'Easily convert text to small text commonly seen in new servers.',
-				image: 'temporary-img-cover.png',
-				url: 'textconverter'
+				image: 'temporary-img-cover.png'
 			}
 		]
 	},
