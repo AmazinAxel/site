@@ -51,26 +51,22 @@
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
     <form method="POST" on:submit={handleSubmit}>
-        <div class="input">
-        	<label for="subject">Subject:</label> <input id="text" name="title" type="text" placeholder="Message Subject"/>
-        </div>
-        <div class="input">
-        	<label for="name">Name:</label> <input id="name" name="name" type="text" placeholder="Your Name"/>
-        </div>
-        <div class="input">
-        	<label for="message" class="heavy">Message:</label> <textarea id="message" name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
-        </div>
-		<div style="padding-bottom: 1rem;">
-			<label class="container">
-				<input type="checkbox" id="useDifferentText">
-				<span class="checkmark"></span>
-				<Tooltip inlineText="Urgent">
-					Only select this option if this
-					message is urgent and time-sensitive 
-				</Tooltip>
-			</label>
-		</div>
-		
+        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message Subject"/>
+		<div></div>
+		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your Name"/>
+		<div></div>
+		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
+		<div></div>
+		<label class="container" for="urgent">
+			<input type="checkbox" id="urgent" name="urgent">
+			<span class="checkmark"></span>
+			<Tooltip inlineText="Urgent">
+				Only select this option if this
+				message is urgent and time-sensitive 
+			</Tooltip>
+		</label>
+
+		<div style="padding: 0.5rem"/>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
 
 		{#if showError}

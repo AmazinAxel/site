@@ -8,10 +8,11 @@
     {#each data as item}
         <a href={item.route} style="text-decoration: none;" class="gridItem">
             <div class="card imgCard">
-                <img src="/media/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt="TODo">
+                <picture>
+                    <img src="/media/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt="TODo">
+                </picture>
                 <div>
                     <h3>{item.title}</h3>
-                    <div style="height: 0.5rem"/>
                     <p>{item.description}</p>
                 </div>
             </div>

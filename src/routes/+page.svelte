@@ -21,17 +21,13 @@
 
 	const randomSubtitleList = [
 		"Permafrost lead developer and project manager",
-		"Common bubble tea enjoyer",
+		"Avid Linux/NixOS user",
 		"Full-stack web dev",
 		"Open source enjoyer",
 		"Linux server administrator & IT/IoT enthusiast",
-		"Minecraft server developer & manager",
-		"Average 10x Skript enjoyer",
-		"Avid Linux/NixOS user",
-		"Lofi music enjoyer",
-		"Upcoming Neovim user",
+		"Average 10x Skript user",
 		"Professional Linux desktop ricer",
-		"🇺🇸"
+		"Upcoming (Neo)vim user",
 	];
 
 	const randomSubtitles = shuffle(randomSubtitleList);
