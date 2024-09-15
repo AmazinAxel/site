@@ -10,9 +10,7 @@
 
 <Admonition info>
 <p>
-	These tools are designed to optimize development time
-	by providing a quicker, improved alternative to
-	existing development tools.
+	Intuitive, well-crafted tools to speed up Minecraft server development.
 </p>
 </Admonition>
 

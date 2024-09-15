@@ -1,22 +1,17 @@
 <script>
     export let data;
     const { pageContent } = data;
+    import { navItems } from '$lib/config';
+
     let title;
 
-    // TODO: there must be a better way to do this...
-    switch(data.path.split("/")[2]) {
-        case 'emojipicker':
-            title = "Emoji Picker";
-            break;
-        case 'inventoryids':
-            title = "Inventory ID's";
-            break;
-        case 'textconverter':
-            title = "Text Converter";
-            break;
-        default:
-            title = "Unknown";
-            break;
+    // Loop each tool item and compare their route
+    // If their route matches, set the title
+    for (let i = 0; i < navItems[3].subitems.length; i++) {
+        let navItem = navItems[3].subitems[i];
+
+        if (data.path === navItem.route) 
+            title = navItem.title
     }
 </script>
 

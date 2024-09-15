@@ -266,6 +266,7 @@ input[type='checkbox'] {
 	position: relative;
     left: 0.25rem;
 }
+
 .tooltip .tooltiptext {
 	opacity: 0;
 	transition:
@@ -385,7 +386,7 @@ textarea:focus-visible, input:focus-visible {
     transform: rotateZ(-10deg);
     display: inline-block;
     background-image: var(--bg);
-    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(2px);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
 }
 
 .coverCard.innerCard {
@@ -405,7 +406,7 @@ textarea:focus-visible, input:focus-visible {
     transform: rotateZ(-10deg);
     display: inline-block;
     background-image: var(--bg);
-    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(2px);
+    filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
 }
 
 .innerCard * {
@@ -458,7 +459,6 @@ a:hover {
     height: 100%;
 }
 
-/* Todo fix image card picture hacks */
 .imgCard picture { position: relative }
 .imgCard picture::after {
     content: '';

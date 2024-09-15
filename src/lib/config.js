@@ -44,7 +44,7 @@ export const navItems = [
 			}
 		]
 	},
-	{
+	/*{
 		title: 'Help',
 		route: '/help',
 		icon: 'about',
@@ -62,7 +62,7 @@ export const navItems = [
 				route: '/help/try-it-yourself'
 			}
 		]
-	}
+	}*/
 ];
 
 export const projects = {

@@ -41,8 +41,7 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> wherever possible.</strong> Reach out to me using my Discord handle: <code>@amazinaxel</code></p>
-	<p><strong>NOTE:</strong> Support is not provided over DMs.</p>
+	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> wherever possible.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
 	<br>
 	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you expect a response.</p>
 </Admonition>

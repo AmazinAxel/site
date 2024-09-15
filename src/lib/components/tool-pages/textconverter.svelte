@@ -221,8 +221,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText}>
         <span class="checkmark"></span>
         <Tooltip inlineText="Use alternate text style">
-            Use a different charset where
-            some characters look slightly different
+            Use a slightly different text charset
             <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/texttypepreview.png" alt="Shows difference between the text type function" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
@@ -237,7 +236,7 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         </Tooltip>
 
         <!-- Slider -->
-        <div class="slider_container">
+        <div class="slider_container" style="margin-left: 7px">
             <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
         </div>
 
