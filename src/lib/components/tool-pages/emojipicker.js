@@ -1,4 +1,4 @@
-const commonIcons = `­·≠×ØÞΔΘ
+export const commonIcons = `­·≠×ØÞΔΘ
 ΦΨ
 ψ
 ф–—‘’“”
@@ -60,7 +60,7 @@ const commonIcons = `­·≠×ØÞΔΘ
 ∅
 ≡±≥≤⌠⌡÷≈°∙√ⁿ■`;
 
-const allChars = `
+export const allChars = `
 ¡‰­·₴≠¿×ØÞһðøþΑΒ
 ΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣ
 ΤΥΦΧΨΩαβγδεζηθικ

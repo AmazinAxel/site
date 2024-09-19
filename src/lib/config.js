@@ -69,18 +69,23 @@ export const projects = {
 	major: [
 		{
 			title: 'Permafrost',
-			role: 'Lead Developer and Project Manager',
+			role: 'Lead Developer & Project Manager',
 			description: `
-				Originally inspired from Barrenlands, a cancelled project,
-				Permafrost is a winter survival game. As the sole developer
-				and project manager, I create new features and maintain the
-				game while also being the community manager.`,
-			image: 'add an image here todo'
+				A northern tundra survival Minecraft server. Survive the
+				harsh, cold environment and adapt to its changing landscapes. 
+				As the sole developer and (current) project manager, 
+				I must maintain and update the server according to community needs.
+				`,
+			image: 'Permafrost2.png'
 		},
 		{
-			title: '',
-			role: '',
-			description: ''
+			title: 'Nix Flake',
+			role: 'Developer',
+			description: `
+				After many long hours of perfecting a Linux desktop which fit
+				my needs, I made this Nix flake available so anyone can use my personal configs.
+				`,
+			image: 'Permafrost2.png'
 		}
 	],
 
@@ -89,7 +94,13 @@ export const projects = {
 			title: 'Dueling',
 			role: 'Developer',
 			description: 'A fast-paced, 1v1 PvP matchup tournament event server.',
-			image: 'todo'
+			image: 'Dueling1.png'
+		},
+		{
+			title: 'My Journal',
+			role: 'Developer',
+			description: 'Although this site was created with SvelteKit, my Journal site uses a custom-made SSG created with pure JS and Squirrelly as the templating engine. It was created to handle thousands of posts in an organized manner.',
+			image: 'Dueling1.png'
 		}
 	],
 

@@ -24,7 +24,7 @@
         <div class="heroInfo" in:fly|local={transition} out:fly|local={transition}>
             <button class="heroClose nostyle" on:click={() => (showHero = !showHero)}>
                 <img src="/media/icons/xmark.svg" class="noImgStyle" alt="Close hero information">
-            </button>        
+            </button>
             <h6>BACKGROUND INFORMATION</h6>
             <p><strong>{ randomHero.project }:</strong> { randomHero.description }</p>
         </div>

@@ -25,9 +25,9 @@
 		"Full-stack web dev",
 		"Open source enjoyer",
 		"Linux server administrator & IT/IoT enthusiast",
-		"Average 10x Skript user",
+		"10x Skript dev",
 		"Professional Linux desktop ricer",
-		"Upcoming (Neo)vim user",
+		"Upcoming vim user",
 	];
 
 	const randomSubtitles = shuffle(randomSubtitleList);
@@ -66,8 +66,13 @@
 </Hero>
 
 <Admonition error>
-	<h3>🚧 This site is currently under construction! 🚧</h3>
-	<p>Please revisit later when this website is completed. In the meantime, visit <a href="https://journal.amazinaxel.com">my Journal site</a> for up-to-date information.</p>
+	<h3>🚧 Under construction 🚧</h3>
+	<p>
+		<strong>Please revisit later when this website is completed.</strong> 
+		In the meantime, visit <a href="https://journal.amazinaxel.com">my Journal site</a> for up-to-date information.
+		<br>
+		Expect some site features to be missing or broken.
+	</p>
 </Admonition>
 <br><hr>
 

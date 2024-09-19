@@ -1,0 +1,13 @@
+.embla__slide img {
+  height: 50%;
+  object-fit: cover;
+  height: 20rem;
+}
+
+.embla { overflow: hidden; }
+.embla__container { display: flex; }
+.embla__slide { flex: 0 0 100%; }
+
+.carouselContent {
+  position: absolute;
+}

@@ -1,17 +1,27 @@
 <script>
     import Title from '$lib/components/title.svelte';
+	import Carousel from '$lib/components/carousel.svelte';
+
+	import { projects } from '$lib/config';
 </script>
+<svelte:head>
+	<link rel="stylesheet" href="/css/carousel.css"/>
+</svelte:head>
 
 <Title name="Projects"/>
 
-Permafrost
+<!-- Major projects -->
+<Carousel data={projects.major}/>
 
-<h2> Small Projects </h2>
 
-Dueling
+<h2>Other</h2>
 
-<h2> Archived Projects </h2>
+<Carousel data={projects.other}/>
+
+
+<h2>Archived</h2>
 <p>
 	All projects listed here will not recieve support. They are 
 	for archival purposes only.
 </p>
+TODO make this a grid showing archived projects

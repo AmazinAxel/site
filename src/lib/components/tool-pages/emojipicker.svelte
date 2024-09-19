@@ -1,10 +1,29 @@
 <script>
     import Admonition from '$lib/components/admonition.svelte';
+    import { fly } from 'svelte/transition';
+    import { cubicOut } from 'svelte/easing';
+	const transition = { y: 10, duration: 250, easing: cubicOut };
 
     // CONSIDER: Switch to CLIENT side rendering (CSR) on this page to fix page speed bandwidth issues
-    const icons = "¡‰­·₴≠¿×ØÞһðøþΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρςστυφχψωЂЅІЈЉЊЋАБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзиклмнопрстуфхцчшщъыьэюяєѕіјљњ–—‘’“”„…⁊←↑→↓⇄＋ƏəɛɪҮүӨөʻˌ;ĸẞß₽€ѢѣѴѵӀѲѳ⁰¹³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁱ™ʔʕ⧈⚔☠ҚқҒғҰұӘәҖҗҢңҺאבגדהוזחטיכלמםנןסעפףצץקר¢¤¥©®µ¶¼½¾·‐‚†‡•‱′″‴‵‶";
+    import { commonIcons } from '$lib/components/tool-pages/emojipicker.js';
+    const iconList = commonIcons.split('');
+    let showCopyMessage = false;
+    let randomID;
+    function copy(event) {
+        // Copy text and show admonition
+        navigator.clipboard.writeText(event.target.innerText);
+        showCopyMessage = true;
+        
+        // Get a random ID so if the user spams the button it won't glitch
+        let localRandom;
+        localRandom = randomID = Math.random();
 
-    const iconList = icons.split('');
+        // After 3 seconds, hide the admonition
+        setTimeout(function() { 
+            if (randomID == localRandom)
+                showCopyMessage = false
+        }, 3000);
+    }
 </script>
 
 <Admonition error>This tool is not finished, please check back later</Admonition>
@@ -26,7 +45,7 @@
 </div>
 
 {#each iconList as icon}
-    <button onclick="navigator.clipboard.writeText(this.innerText);">{icon}</button>
+    <button on:click={copy}>{icon}</button>
 {/each}
 
 <div class="card">
@@ -39,3 +58,7 @@
     <button>Copy plaintext list of all characters</button>
     All characters are copied from the font mappings of the Minecraft 1.20 jar.
 </div>
+
+{#if showCopyMessage}
+    <p class="stickyAdmonition" in:fly|local={transition} out:fly|local={transition}>Copied!</p>
+{/if}

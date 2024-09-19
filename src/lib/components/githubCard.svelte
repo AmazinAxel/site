@@ -10,6 +10,8 @@
         attributes.pop();
         attributeIcons.pop();
     //}
+
+    // TODO: Reduce inlined styles
 </script>
 
 <div class="coverCard innerCard" style="--bg: url(/media/icons/{icon}); --size: 10rem;">
@@ -20,9 +22,9 @@
 
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: space-evenly;">
     {#each attributes as item, index}
-        <div style="display: flex; align-items: center; gap: 0.25rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
             <img src="/media/icons/{attributeIcons[index]}.svg" alt="Git icon" class="noImgStyle"/>
-            <h4>{item || "0"}</h4>
+            <h4 style="position: relative; top: 2px;">{item || "0"}</h4>
         </div>
     {/each}
     </div>

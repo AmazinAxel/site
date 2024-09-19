@@ -9,9 +9,10 @@
 <h1>Minecraft Development Tools</h1>
 
 <Admonition info>
-<p>
-	Intuitive, well-crafted tools to speed up Minecraft server development.
-</p>
+	<p>
+	Improve Minecraft development with my collection of tools designed
+	to make your development workflow quicker. 
+	</p>
 </Admonition>
 
 <ImgCardList data={navItems[3].subitems}/>
