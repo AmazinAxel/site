@@ -1,13 +1,31 @@
+/* Necessary Embla styling */
+.embla {
+  overflow: hidden;
+  cursor: grab;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+
+.embla__container {
+  display: flex;
+  margin-left: calc(var(--slide-spacing) * -1);
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  
+  transform: translate3d(0, 0, 0);
+}
+
+/* Actual carousel styling */
+.carouselContent {
+  position: absolute;
+}
+
 .embla__slide img {
   height: 50%;
   object-fit: cover;
   height: 20rem;
-}
-
-.embla { overflow: hidden; cursor: grab; }
-.embla__container { display: flex; }
-.embla__slide { flex: 0 0 100%; }
-
-.carouselContent {
-  position: absolute;
 }
