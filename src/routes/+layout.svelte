@@ -23,10 +23,10 @@
 </script>
 <svelte:head>
 	<!-- Top: least important styles | bottom: most important styles -->
+	<link rel="stylesheet" href="/css/vars.css"/>
 	<link rel="stylesheet" href="/css/header-and-footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
 	<link rel="stylesheet" href="/css/typography.css"/>
-	<link rel="stylesheet" href="/css/vars.css"/>
 	<link rel="stylesheet" href="/css/reset.css"/>
 	<link rel="stylesheet" href="/css/other.css"/>
 </svelte:head>

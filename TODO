@@ -1,8 +1,9 @@
 major:
-x make sidebar not push the main content (overlap it instead)
 - fix all TODOs throughout the code
 - finish Projects embed on the homepage
 - finish Projects page
+- redo the entire homepage system, add background seperator system
+- split css into more files
 
 minor:
 - make title a variable that is set and use that instead of Title component

@@ -9,7 +9,7 @@ export const load = async () => {
 			.then((response) => response.text())
 			.then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);
 		
-		// Get projects
+		// Get projects TODo what am i doing here
 		const selectedProjects = [...projects.major, ...projects.other];
 		const projectItems = selectedProjects.map(item => ({ // Map all project items to the post
 			title: item.title, // Get title from first object split by |

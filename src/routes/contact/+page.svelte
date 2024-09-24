@@ -41,8 +41,7 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord,</a> wherever possible.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
-	<br>
+	<p><strong>I prefer to communicate over <a href="https://discord.com/">Discord</a> wherever possible.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
 	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you expect a response.</p>
 </Admonition>
 
@@ -61,7 +60,7 @@
 			<span class="checkmark"></span>
 			<Tooltip inlineText="Urgent">
 				Only select this option if this
-				message is urgent and time-sensitive 
+				message is urgent and time sensitive 
 			</Tooltip>
 		</label>
 

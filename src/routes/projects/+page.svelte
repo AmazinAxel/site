@@ -14,14 +14,6 @@
 <Carousel data={projects.major}/>
 
 
-<h2>Other</h2>
+<h2>Other <span class="subtext">Smaller, sometimes unmaintained projects</span></h2>
 
 <Carousel data={projects.other}/>
-
-
-<h2>Archived</h2>
-<p>
-	All projects listed here will not recieve support. They are 
-	for archival purposes only.
-</p>
-TODO make this a grid showing archived projects

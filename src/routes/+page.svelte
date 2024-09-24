@@ -24,7 +24,6 @@
 		"Avid Linux/NixOS user",
 		"Full-stack web dev",
 		"Open source enjoyer",
-		"Linux server administrator & IT/IoT enthusiast",
 		"10x Skript dev",
 		"Professional Linux desktop ricer",
 		"Upcoming vim user",
@@ -98,7 +97,7 @@
 <!-- Minecraft utilities -->
 <div class="section">
 	<a href="tools" class="notextdeco"><h2>Minecraft Utilities</h2></a>
-	<ImgCardList data={navItems[3].subitems} alt="Picture of"/>
+	<ImgCardList data={navItems[3].subitems} alt="Picture of" isHomepage/>
 </div>
 <!-- Help articles 
 

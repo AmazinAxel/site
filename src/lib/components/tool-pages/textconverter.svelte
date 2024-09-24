@@ -1,76 +1,10 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
-	import Admonition from '$lib/components/admonition.svelte';
-    
-    import { fly } from 'svelte/transition';
-    import { cubicOut } from 'svelte/easing';
-	const transition = { y: 10, duration: 150, easing: cubicOut };
-
-    const snippet1 = `on load:
-    set {_lower} to "abcdefghijklmnopqrstuvwxyz"
-    set {-tiny::*} to "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀѕᴛᴜᴠᴡxʏᴢ" split at ""
-    set {-lower::*} to {_lower} split at ""
-    set {-upper::*} to (uppercase {_lower}) split at ""	
-
-function stxt(text: text) :: text:    
-    loop {-tiny::*}:
-        replace {-lower::%loop-index%} and {-upper::%loop-index%} with loop-value in {_text}
-        replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
-
-    return {_text}`
-
-    const snippet2 = `on load:
-	set {_lower} to "abcdefghijklmnopqrstuvwxyz"
-	set {-tiny::*} to "ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀѕᴛᴜᴠᴡxʏᴢ" split at ""
-	set {-lower::*} to {_lower} split at ""
-	set {-upper::*} to (uppercase {_lower}) split at ""	
-	set {-nums::*} to "1234567890+-=()" split at ""
-	set {-super::*} to "¹²³⁴⁵⁶⁷⁸⁹⁰⁺⁻⁼⁽⁾" split at ""
-	set {-sub::*} to "₁₂₃₄₅₆₇₈₉₀₊₋₌₍₎" split at ""
-
-function stxt(text: text, scripttype: integer = 0) :: text:
-	# Script-type Values:
-	# 0 = no superscript or subscript numbers
-	# 1 = superscript numbers
-	# 2 = subscript numbers
-	
-	# Replace the text
-	loop {-tiny::*}:
-		replace {-lower::%loop-index%} and {-upper::%loop-index%} with loop-value in {_text}
-		replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
-
-	# Numbers can only be super or subscript, not both (anything other than 1 or 2 will ignore this)
-	if {_scripttype} is 1:
-		loop {-super::*}:
-			replace {-nums::%loop-index%} with loop-value in {_text}
-			replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
-	else if {_scripttype} is 2:
-		loop {-sub::*}:
-			replace {-nums::%loop-index%} with loop-value in {_text}
-			replace "§%loop-value%" with "§%{-lower::%loop-index%}%" in {_text} # put back color codes
-
-	return {_text}`
-
-    const snippet3 = `
-        
-    `
-
-    const snippet4 = `function ntxt(text: text) :: text:
-	loop {-lower::*}: # Lowercase
-		replace {-tiny::%loop-index%} with loop-value in {_text}
-
-	# Upper/lower scripts
-	loop {-nums::*}:
-		replace {-super::%loop-index%} with loop-value in {_text}
-		replace {-sub::%loop-index%} with loop-value in {_text}
-	
-	return {_text}`
 
     var inputText;
     var outputText;
-    let textType, isOpen = false;
+    let textType = false;
     let scriptType = 2;
-    let selected = 0;
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
@@ -120,14 +54,8 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
     }
 
-    /*
-    // TODO add popup visibility
-    function toggleFuncPopup(sel) {
-        selected = sel;
-        isOpen = !isOpen;
-    }
     // todo maybe include ‘’“” somehow 
-    */
+    // todo merge the css into stylesheet
 </script>
 
 <style>
@@ -170,7 +98,6 @@ function stxt(text: text, scripttype: integer = 0) :: text:
         gap: 10px;
         align-items: center;
     }
-
 
     input#scriptType {
         width: 100%;
@@ -255,52 +182,3 @@ function stxt(text: text, scripttype: integer = 0) :: text:
     <p>➡️</p>
     <textarea bind:value={outputText} on:input={() => convertText(false)} placeholder="Small text"/>
 </div>
-
-<!--
-<div class="info card">
-    <p><b>TIP:</b> Use these Skript functions/reflect expressions to create small text without leaving your code!</p>
-
-    <button type="button" on:click={() => toggleFuncPopup(1)}>Minimal</button>
-    
-    <button type="button" on:click={() => toggleFuncPopup(2)}>Full</button>
-
-    <button type="button" on:click={() => toggleFuncPopup(3)}>Reflect Expression</button>
-
-    <button type="button" on:click={() => toggleFuncPopup(4)}>Normalized</button>
-</div>
-{#if isOpen}
-</!-- 
-    Warning can be ignored safely since this is a alias button
-    svelte-ignore a11y-click-events-have-key-events 
---/>
-<div class="popupBg" tabindex="0" role="button" on:click={toggleFuncPopup} in:fly|local={transition} out:fly|local={transition}></div>
-<div class="popup card" in:fly|local={transition} out:fly|local={transition}>
-    <button on:click={toggleFuncPopup}>Close</button>
-    {#if selected == 1}
-        (adapted from <a href="https://github.com/ShaneBeee/SkriptSnippets/blob/master/snippets/Tiny-Text.sk">Shanebee/SkriptSnippets</a>)
-        <pre><code>{snippet2}</code></pre>
-        Example usage: <code>stxt("Hello")</code>
-        <img src="/media/tools/textconverter/minimaldemo.png" alt="Example code usage">
-    {:else if selected == 2}
-        (adapted from <a href="https://github.com/ShaneBeee/SkriptSnippets/blob/master/snippets/Tiny-Text.sk">Shanebee/SkriptSnippets</a>)
-        <pre><code>{snippet2}</code></pre>
-        Example usage: <code>stxt("Hello (123+5) Test")</code>
-        <img src="/media/tools/textconverter/fulldemo.png" alt="Example code usage">
-    {:else if selected == 3}
-        TODO
-        <Admonition error>This method requires the <a href="https://github.com/SkriptLang/skript-reflect">skript-reflect</a> addon.</Admonition>
-        Example usage: `stxt "Hello (123-5) Test"
-        send image of chat
-    {:else if selected == 4}
-    TODO
-        Example usage: `ntxt("ѕᴍᴀʟʟ ᴛᴇxᴛ ᴅᴇᴍᴏ")`
-        <img src="/media/tools/textconverter/normalizeddemo.png" alt="Example code usage">
-
-
-    {:else}
-        <p>Unknown function type, please close this popup and try again</p>
-    {/if}
-
-</div>
-{/if}
--->

@@ -55,18 +55,21 @@ body {
 	.gridItem { flex: 100%; }
 }
 
-.section { display: flex; }
-.section a { width: 15rem; }
+.section a { width: 100%; }
 .section h2 { margin-bottom: 0; }
-.section.right h2 { text-align: right; }
 
-@media (min-width: 950px) {
+/* Styles applied only on larger screens */
+@media (min-width: 1000px) {
 	.section {
+		display: flex;
+		flex-direction: revert;
 		align-items: center;
 		gap: 1rem;
 	}
 	.section.right { flex-direction: row-reverse; }
 	.section h2 { font-size: 3rem; }
+	.section a { width: 15rem; }
+	.section.right h2 { text-align: right; }
 }
 
 /* Mobile tap highlight */

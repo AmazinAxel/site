@@ -1,16 +1,11 @@
 <script>
   import emblaCarouselSvelte from 'embla-carousel-svelte';
-  import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
   export let data;
-  let options = { loop: true };
-  let plugins = [ WheelGesturesPlugin() ];
+  let options = { loop: true, watchSlides: false };
 </script>
 
-<style>
-</style>  
-
-<div class="embla" use:emblaCarouselSvelte="{{ options, plugins }}">
+<div class="embla" use:emblaCarouselSvelte="{{ options }}">
   <div class="embla__container">
     {#each data as { title, role, description, image }}
     <div class="embla__slide">

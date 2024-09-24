@@ -27,19 +27,19 @@ export const navItems = [
 			{
 				title: 'Emoji Picker',
 				route: '/tools/emojipicker',
-				description: 'Pick the perfect emoji with a list of every character preview.',
+				description: 'Pick the perfect emoji with a list of every character preview',
 				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Inventory IDs',
 				route: '/tools/inventoryids',
-				description: 'Visualize slot numbers and see mapping values to speed up Skript development.',
+				description: 'Visualize slot numbers to speed up Skript development',
 				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Text Converter',
 				route: '/tools/textconverter',
-				description: 'Easily convert text to small text commonly seen in new servers.',
+				description: 'Easily convert text to small text commonly seen in new servers',
 				image: 'temporary-img-cover.png'
 			}
 		]
@@ -85,6 +85,14 @@ export const projects = {
 				After many long hours of perfecting a Linux desktop which fit
 				my needs, I made this Nix flake available so anyone can use my personal configs.
 				`,
+			image: 'Permafrost2.png'
+		},
+		{
+			title: '...',
+			role: '-',
+			description: `
+			todo
+			`,
 			image: 'Permafrost2.png'
 		}
 	],
