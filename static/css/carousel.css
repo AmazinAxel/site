@@ -4,7 +4,7 @@
   height: 20rem;
 }
 
-.embla { overflow: hidden; }
+.embla { overflow: hidden; cursor: grab; }
 .embla__container { display: flex; }
 .embla__slide { flex: 0 0 100%; }
 

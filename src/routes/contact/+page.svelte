@@ -64,7 +64,7 @@
 			</Tooltip>
 		</label>
 
-		<div style="padding: 0.5rem"/>
+		<div style="padding: 0.5rem"></div>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
 
 		{#if showError}
