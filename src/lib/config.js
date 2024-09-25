@@ -101,7 +101,7 @@ export const projects = {
 		{
 			title: 'Dueling',
 			role: 'Developer',
-			description: 'A fast-paced, 1v1 PvP matchup tournament event server.',
+			description: 'A fast-paced, 1v1 PvP matchup tournament event server',
 			image: 'Dueling1.png'
 		},
 		{
@@ -111,31 +111,6 @@ export const projects = {
 			image: 'Dueling1.png'
 		}
 	],
-
-	archived: [
-		{
-			title: 'Lofi Player',
-			url: 'TODO add url here',
-			description:
-				'The Lofi player is a music PWA intended for listening to Lo-fi music on-the-go.',
-			image: 'todo'
-		},
-		{
-			title: 'Siege',
-			url: '',
-			description:
-				'A rotating minigame server, focused on quick-combat, close-range gameplay. Inspired from Rainbow Six Siege.'
-		},
-		{
-			title: 'Egg Development',
-			description:
-				'My first solo indie game studio, I created various Minecraft servers, including: WizardryKB, EggEvents, EggSiege, and EggDuels. All assets from this studio were liquidated into the Permafrost community.',
-			image: 'todo'
-		},
-		{
-			title: ''
-		}
-	]
 };
 
 export const heroItems = [
@@ -147,7 +122,7 @@ export const heroItems = [
 	{
 		project: 'Permafrost',
 		description:
-			'A custom Minecraft survival server based in the dark, cold, snowy Northern tundra.',
+			'A custom Minecraft survival server based in the dark, cold, snowy Northern tundra',
 		images: [
 			{
 				image: 'Permafrost2.png'
@@ -157,7 +132,7 @@ export const heroItems = [
 	{
 		project: 'Dueling',
 		description:
-			'A fast-paced, 1v1 tournament-style matchup server featuring custom kits, maps, and Titles.',
+			'A fast-paced, 1v1 tournament-style matchup Minecraft server featuring rotating kits, maps, and collectible Titles',
 		images: [
 			{
 				image: 'Dueling1.png',
