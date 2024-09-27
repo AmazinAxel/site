@@ -18,12 +18,12 @@
 		on:click={maybeCloseMenu}
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
+		target={external ? "_blank" : ''}
+		rel={external ? "noopener noreferrer" : ''}
 	>
 		<img class="noImgStyle" 
 			src="/media/icons/{icon}.svg" 
 			alt="{href} Header icon"
-			target={external ? "_blank" : ''}
-   			rel={external ? "noopener noreferrer" : ''}
 		/>
 		<slot/>
 		{#if external}
