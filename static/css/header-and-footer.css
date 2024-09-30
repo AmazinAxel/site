@@ -109,16 +109,18 @@ nav:hover .navItems {
     background-image: url(/media/icons/squircle.svg);
     background-size: cover;
 	z-index: -1;
-	filter: brightness(0) saturate(100%) invert(36%) sepia(8%) saturate(1194%) hue-rotate(182deg) brightness(87%) contrast(94%);
+	filter: brightness(0) saturate(100%) invert(36%) sepia(8%) saturate(1194%) hue-rotate(182deg) brightness(87%) contrast(94%)
+	drop-shadow( 0 0 10px var(--darkest2));
 }
 
 .navItems ul li a img {
 	padding: 5px;
+    filter: drop-shadow(0 0 3px var(--darkest4));
 }
 
 .navItems a.active::before {
-	filter: brightness(0) saturate(100%) invert(69%) sepia(13%) saturate(820%) hue-rotate(169deg) brightness(88%) contrast(89%);
-	/*box-shadow: 1px 1px 6px var(--blue1); TODO FIND A WAY TO ADD THIS BACK */
+	filter: brightness(0) invert(80%) sepia(18%) saturate(840%) hue-rotate(180deg) brightness(75%) contrast(100%)
+	drop-shadow( 0 0 7px var(--blue2));
 }
 
 .navItems .external {
