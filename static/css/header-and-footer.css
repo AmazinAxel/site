@@ -110,7 +110,7 @@ nav:hover .navItems {
     background-size: cover;
 	z-index: -1;
 	filter: brightness(0) saturate(100%) invert(36%) sepia(8%) saturate(1194%) hue-rotate(182deg) brightness(87%) contrast(94%)
-	drop-shadow( 0 0 10px var(--darkest2));
+	drop-shadow( 0 0 5px var(--darkest2));
 }
 
 .navItems ul li a img {
