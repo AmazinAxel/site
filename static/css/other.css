@@ -401,6 +401,16 @@ textarea:focus-visible, input:focus-visible {
 .coverCard.innerCard {
 	text-align: center; 
 	position: relative;
+	scale: 1;
+	transition: scale .2s var(--ease);
+}
+
+.coverCard.innerCard:hover, .imgCard:hover {
+	scale: 0.99;
+}
+
+.coverCard.innerCard:active, .imgCard:active {
+	scale: 0.95;
 }
 
 .coverCard::after {
@@ -459,6 +469,8 @@ a:hover {
 .imgCard {
 	position: relative;
     overflow: hidden;
+	transition: scale .2s var(--ease);
+	scale: 1;
 }
 
 /* Image card for homepage */
