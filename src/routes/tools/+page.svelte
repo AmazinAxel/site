@@ -10,8 +10,7 @@
 
 <Admonition info>
 	<p>
-	Improve Minecraft development with my collection of tools designed
-	to make your development workflow quicker. 
+	My collection of tools which I use to improve development efficency
 	</p>
 </Admonition>
 

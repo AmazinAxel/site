@@ -1,5 +1,4 @@
 <script>
-	import { fade } from 'svelte/transition';
 	import Admonition from '$lib/components/admonition.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
@@ -15,53 +14,17 @@
 	const { projectItems } = data;
 	const { githubRepos } = data;
 
-	let randomSubtitle = "";
-	let subtitleVisibility = false;
-	let index = 0;
-
-	const randomSubtitleList = [
+	const randomSubtitle = shuffle([
 		"Permafrost lead developer and project manager",
-		"Avid Linux/NixOS user",
-		"Full-stack web dev",
 		"Open source enjoyer",
-		"10x Skript dev",
-		"Professional Linux desktop ricer",
-		"Upcoming vim user",
-	];
-
-	const randomSubtitles = shuffle(randomSubtitleList);
-	function updSubtitle(isInstant = false) {
-		if (isInstant == true) {
-			subtitleVisibility = true;
-			randomSubtitle = randomSubtitles[index];
-			index += 1
-			return;
-		}
-
-		subtitleVisibility = false;
-
-		// Get random element
-		setTimeout(function() {
-			randomSubtitle = randomSubtitles[index];
-			subtitleVisibility = true;
-		}, 300);
-
-		// Get subtitles and remove previous subtitle from the list
-		index += 1
-		if (index == randomSubtitleList.length) index = 0;
-	}
-
-	// Random subtitle every 10 seconds
-	setInterval(updSubtitle, 10000);
-	updSubtitle(true)
+		"Professional desktop ricer",
+	])[0];
 </script>
 
 <Title name="Home" dontShowHeader/>
 <Hero>
 	<h1>AmazinAxel</h1>
-	{#if subtitleVisibility}
-		<p out:fade={{ duration: 300 }} in:fade={{ duration: 300 }}>{randomSubtitle}</p>
-	{/if}
+	<p>{randomSubtitle}</p>
 </Hero>
 
 <Admonition error>

@@ -66,18 +66,18 @@
 	filter: blur(10px);
     z-index: -1;
     border-radius: 5px;
-	transition: filter 1s var(--ease), width 0.5s var(--ease);
+	transition: filter 1s var(--ease);
 }
 
 #hero.heroShow::before {
 	filter: blur(0);
-    width: 81%;
 }
 
 #hero h1, #hero p { 
 	margin: 0;
 	opacity: 1;
-	transition: opacity .35s var(--ease);
+	scale: 1;
+	transition: opacity .2s ease, scale .5s var(--ease);
 }
 
 #hero h1 { font-size: 3rem; }
@@ -87,47 +87,26 @@
     padding-bottom: 0.5rem;
 }
 
-#hero button {
-	background: none;
-	border: 0;
+#hero span {
 	cursor: pointer;
-	position: absolute;
-	right: 0;
-	padding: 10px;
-}
-
-#hero.heroShow h1, #hero.heroShow p:not(.heroInfo p) {
-	opacity: 0;
-}
-
-#hero button.heroClose {
-    top: 0;
-	z-index: 1;
-}
-
-#hero button:not(.heroClose) {
-	bottom: 0;
-}
-
-.heroInfo {
-	position: absolute;
-	position: absolute;
-    padding: 10px;
     position: absolute;
-    padding: 10px;
-    width: 20%;
-    height: 100%;
-    right: 0;
-    align-content: center;
-    background-color: var(--darkest4);
-    box-shadow: -5px 0px 20px 1px var(--darkest4);
-	color: var(--lightest1);
-	text-shadow: white 0px 1px 1rem;
-	border-radius: 0 4px 4px 0;
+    padding: 0.5rem;
+    font-family: var(--headerFont);
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--darkest4);
+    opacity: 0.5;
+    text-shadow: 0 0 5px var(--lightest1);
 }
+
+#hero.heroShow h1, #hero.heroShow p {
+	opacity: 0;
+	scale: 0.95;
+}
+
 
 #hero h1,
-#hero p:not(.heroInfo p) {
+#hero p {
 	color: var(--darkest1);
 }
 
@@ -401,15 +380,18 @@ textarea:focus-visible, input:focus-visible {
 .coverCard.innerCard {
 	text-align: center; 
 	position: relative;
+}
+
+a .coverCard.innerCard, a .imgCard {
 	scale: 1;
 	transition: scale .2s var(--ease);
 }
 
-.coverCard.innerCard:hover, .imgCard:hover {
+a .coverCard.innerCard:hover, a .imgCard:hover {
 	scale: 0.99;
 }
 
-.coverCard.innerCard:active, .imgCard:active {
+a .coverCard.innerCard:active, a .imgCard:active {
 	scale: 0.95;
 }
 
@@ -469,8 +451,6 @@ a:hover {
 .imgCard {
 	position: relative;
     overflow: hidden;
-	transition: scale .2s var(--ease);
-	scale: 1;
 }
 
 /* Image card for homepage */
