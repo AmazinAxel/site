@@ -1,22 +1,16 @@
 <script>
-	import { currentPage, isMenuOpen } from '../assets/js/store';
+	import { currentPage } from '../assets/js/store';
 
-	export let href, icon, external;
+	export let href, icon, external, nolink;
 
 	$: isCurrentPage = $currentPage.startsWith(href);
-
-	const maybeCloseMenu = () => {
-		if (href != $currentPage) {
-			isMenuOpen.set(false);
-		}
-	};
 </script>
 
 <li>
 	<a
-		{href}
-		on:click={maybeCloseMenu}
+		href={nolink ? '' : href}
 		class:active={isCurrentPage}
+		class:nolink={nolink}
 		aria-current={isCurrentPage ? 'page' : false}
 		target={external ? "_blank" : ''}
 		rel={external ? "noopener noreferrer" : ''}

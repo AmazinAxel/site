@@ -11,21 +11,24 @@
 <div class="navItems">
 	<ul>
 		{#each navItems as navitem}
+		{#if typeof navitem.subitems == 'undefined' }
 			<NavItem href={navitem.route} icon={navitem.icon}>
 				<p>{navitem.title}</p>
 			</NavItem>
-			{#if typeof navitem.subitems !== 'undefined' }
-				{#if $page.url.pathname.includes(navitem.title.toLowerCase())}
-					<ul>
-					{#each navitem.subitems as subpage}
-					<NavSubitem href={subpage.route}>
-						<p>{subpage.title}</p>
-					</NavSubitem>
-					{/each}
-					</ul>
-				{/if}
-			{/if}
+		{:else}
+			<NavItem href={navitem.route} icon={navitem.icon} nolink>
+				<p>{navitem.title}</p>
+			</NavItem>	
 
+
+			<ul>
+			{#each navitem.subitems as subpage}
+			<NavSubitem href="{navitem.route}/{subpage.route}">
+				<p>{subpage.title}</p>
+			</NavSubitem>
+			{/each}
+			</ul>
+	{/if}
 		{/each}
 	</ul>
 	<ul>

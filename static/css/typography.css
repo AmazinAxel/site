@@ -42,7 +42,7 @@ h1 {
 	overflow: hidden;
 }
 
-h2 {
+h2:not(:has(span)) {
 	font-size: clamp(1.8rem, calc(1.8rem + 1vw), 2rem);
 }
 
@@ -56,6 +56,10 @@ h4 {
 
 h5 {
 	font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.4rem);
+}
+
+h1:not(#hero), h2:not(:has(span)) {
+	text-shadow: 0px 3px 1rem var(--blue1);
 }
 
 a:has(> h1, h2, h3, h4) {

@@ -2,7 +2,7 @@
 <script>
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
-	import { currentPage, isMenuOpen } from '$lib/assets/js/store';
+	import { currentPage } from '$lib/assets/js/store';
 	import { navItems } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -33,7 +33,7 @@
 
 <!-- Data below is used on every page throughout the site -->
 
-<div class="layout" class:open={$isMenuOpen}>
+<div class="layout">
 	<Header/>
 	{#key data.path}
 		<main tabindex="-1" in:fade|local={transitionIn}>

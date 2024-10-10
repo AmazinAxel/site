@@ -91,9 +91,9 @@
 	cursor: pointer;
     position: absolute;
     padding: 0.5rem;
-    font-family: var(--headerFont);
-    font-size: 1.2rem;
-    line-height: 1;
+	font-family: var(--primaryFont);
+    font-size: 1rem;    
+	line-height: 1;
     color: var(--darkest4);
     opacity: 0.5;
     text-shadow: 0 0 5px var(--lightest1);
@@ -455,7 +455,13 @@ a:hover {
 
 /* Image card for homepage */
 .section .imgCard { max-height: 17.5rem; }
-.imgCard h3 { white-space: nowrap; }
+.imgCard h3 {
+	white-space: nowrap; 
+    position: relative;
+    margin: 0;
+    bottom: 0.5rem;
+}
+.imgCard .contentFader { height: 4rem; }
 
 .imgCard img {
 	margin: -10px;
@@ -666,4 +672,13 @@ sub a { color: var(--blue2)!important; }
 .innerCard h5 {
 	font-size: 1rem; 
 	margin-top: -0.75rem;
+}
+
+/* Links which aren't actually links */
+a.nolink {
+	/* TODO 
+	figure out a way to make this user-intuitive
+	used on the sidebar for Tools section
+	maybe grey out the icon?
+	*/
 }

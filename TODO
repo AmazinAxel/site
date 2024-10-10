@@ -10,3 +10,4 @@ minor:
 - merge CSS with journal site
 - research Bun support with svelte
 - convert to Typescript
+- refactor currentPage to use Svelte's built in current page global var

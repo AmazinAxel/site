@@ -26,43 +26,21 @@ export const navItems = [
 		subitems: [
 			{
 				title: 'Emoji Picker',
-				route: '/tools/emojipicker',
-				description: 'Pick the perfect emoji with a list of every character preview',
+				route: 'emojipicker',
 				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Inventory IDs',
-				route: '/tools/inventoryids',
-				description: 'Visualize slot numbers to speed up Skript development',
+				route: 'inventoryids',
 				image: 'temporary-img-cover.png'
 			},
 			{
 				title: 'Text Converter',
-				route: '/tools/textconverter',
-				description: 'Easily convert text to small text commonly seen in new servers',
+				route: 'textconverter',
 				image: 'temporary-img-cover.png'
 			}
 		]
-	},
-	/*{
-		title: 'Help',
-		route: '/help',
-		icon: 'about',
-		subitems: [
-			{
-				title: 'Questions',
-				route: '/help/askbetterquestions'
-			},
-			{
-				title: 'Handouts',
-				route: '/help/handouts'
-			},
-			{
-				title: 'Try it Yourself',
-				route: '/help/try-it-yourself'
-			}
-		]
-	}*/
+	}
 ];
 
 export const projects = {
