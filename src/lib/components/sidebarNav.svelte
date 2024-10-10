@@ -2,7 +2,6 @@
 	import { navItems } from '$lib/config';
 	import NavItem from '$lib/components/navItem.svelte';
 	import NavSubitem from '$lib/components/navSubitem.svelte';
-	import { page } from '$app/stores';
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. 

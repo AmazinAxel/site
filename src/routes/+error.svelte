@@ -19,8 +19,7 @@
 		<ul>
 			<li><a href="/projects">Projects List</a></li>
 			<li><a href="/contact">Contact</a></li>
-			<li><a href="/github">GitHub Repos</a></li>
-			<li><a href="/tools">Minecraft Development Utilities</a></li>
+			<li><a href="/github">My GitHub repos</a></li>
 			<li><a href="https://journal.amazinaxel.com">Journal</a></li>
 		</ul>
 	</div>

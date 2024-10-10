@@ -43,7 +43,7 @@
 	
 <!-- Minecraft utilities -->
 <div class="section right">
-	<a href="tools" class="notextdeco"><h2>Minecraft Utilities</h2></a>
+	<h2>Minecraft Utilities</h2>
 	<ImgCardList data={navItems[3].subitems} alt="Picture of"/>
 </div>
 <!-- Help articles 
