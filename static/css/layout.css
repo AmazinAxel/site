@@ -72,12 +72,11 @@ body {
 	.section.right h2 { text-align: right; }
 }
 
-.section.right {
-	background: #2d323a;
-    box-shadow: 0 0 20px var(--darkest1);
+/*.section.right {
+	background: #313947;
     padding: 0 1.5rem;
 	border-radius: 0.25rem;
-}
+}*/
 
 /* Mobile tap highlight */
 html {
