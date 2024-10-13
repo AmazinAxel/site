@@ -1,8 +1,8 @@
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="fade" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:white;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:white;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#81a1c1"/>
+      <stop offset="100%" style="stop-color:#5e81ac"/>
     </linearGradient>
     <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">
         <path d="M 0,0.5 C 0,0 0,0 0.5,0 S 1,0 1,0.5 1,1 0.5,1 0,1 0,0.5"/>

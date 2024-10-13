@@ -109,8 +109,8 @@ nav:hover .navItems {
     background-image: url(/media/icons/squircle.svg);
     background-size: cover;
 	z-index: -1;
-	filter: brightness(0) saturate(100%) invert(36%) sepia(8%) saturate(1194%) hue-rotate(182deg) brightness(87%) contrast(94%)
-	drop-shadow( 0 0 5px var(--darkest2));
+	filter: opacity(0.1) drop-shadow(0 0 5px var(--darkest2)) sepia(30%);
+	transition: filter .2s var(--ease);
 }
 
 .navItems ul li a img {
@@ -119,8 +119,7 @@ nav:hover .navItems {
 }
 
 .navItems a.active::before {
-	filter: brightness(0) invert(80%) sepia(18%) saturate(840%) hue-rotate(180deg) brightness(75%) contrast(100%)
-	drop-shadow( 0 0 7px var(--blue2));
+	filter: opacity(1) drop-shadow(0 0 7px var(--blue2));
 }
 
 .navItems .external {
@@ -304,8 +303,8 @@ nav:hover {
 nav ul ul {
 	max-height: 0px;
 	transition:
-		max-height 0.3s var(--ease),
-		margin-bottom 0.3s var(--ease);
+		max-height 0.1s var(--ease),
+		margin-bottom 0.1s var(--ease);
 	overflow: hidden;
 	padding-left: 10px;
 
