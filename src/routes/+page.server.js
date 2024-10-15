@@ -28,7 +28,7 @@ export const load = async () => {
 		return { 
 			journalPosts: {},
 			projectItems: {},
-			githubRepos: {},
+			githubRepos: {}
 		};
 	}
 };

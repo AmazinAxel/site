@@ -7,12 +7,14 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
 	export let data;
+	const { date } = data;
 
 	// Delays and fadeouts are glitchy atm ;(
 	const transitionIn = { duration: 150 };
 
-	$: currentPage.set(data.path); // Sets global store with the current site path
+	$: currentPage.set($page.url.pathname); // Sets global store with the current site path
 
 	// Prefetch all top-level routes for better speed
 	onMount(() => {
@@ -35,12 +37,12 @@
 
 <div class="layout">
 	<Header/>
-	{#key data.path}
+	{#key $page.url.pathname}
 		<main tabindex="-1" in:fade|local={transitionIn}>
 			<div id="content">
 				<slot/> <!-- Main content goes here -->
 			</div>
-			<Footer/>
+			<Footer date={date}/>
 		</main>
 	{/key}
 </div>

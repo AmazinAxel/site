@@ -119,7 +119,7 @@ nav:hover .navItems {
 }
 
 .navItems a.active::before {
-	filter: opacity(1) drop-shadow(0 0 7px var(--blue2));
+	filter: opacity(1) drop-shadow(0 0 10px var(--blue2));
 }
 
 .navItems .external {
