@@ -1,9 +1,9 @@
 <script>
-	import { currentPage } from '../assets/js/store';
+	import { page } from '$app/stores';
 
 	export let href;
 
-	$: isCurrentPage = $currentPage.startsWith(href);
+	$: isCurrentPage = $page.url.pathname.startsWith(href);
 
 </script>
 

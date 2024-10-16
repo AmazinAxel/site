@@ -5,8 +5,8 @@
 </script>
 
 <nav>
-	<a on:click|preventDefault={focusMainContent} class="skip-to-content-link" href="#content">
-		Skip to main content
+	<a on:click|preventDefault={focusMainContent} id="skipToContent" href="#content">
+		Skip to content
 	</a>
 	
 	<img src="/favicon.png" alt="AmazinAxel logo" id="logoicon">

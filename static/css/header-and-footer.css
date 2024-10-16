@@ -275,25 +275,9 @@ footer p {
 
 footer .date { color: var(--lightest4); }
 
-.skip-to-content-link {
-	position: absolute;
-	top: -6rem;
-	left: 0;
-	padding: 0.5em;
-	opacity: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 3rem;
-	background: var(--nordLightWhite);
-	color: var(--darkest2);
-}
-
-.skip-to-content-link:focus {
-	transform: translateY(6rem);
-	opacity: 1;
-	z-index: 11;
-}
+/* Skip to content accessibility button */
+#skipToContent { position: absolute; top: -100px; padding: 15px; font-family: var(--headerFont); }
+#skipToContent:focus { top: 0; }
 
 /* Navigation open on hover */
 nav:hover {

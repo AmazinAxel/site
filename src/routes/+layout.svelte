@@ -2,7 +2,6 @@
 <script>
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
-	import { currentPage } from '$lib/assets/js/store';
 	import { navItems } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -13,8 +12,6 @@
 
 	// Delays and fadeouts are glitchy atm ;(
 	const transitionIn = { duration: 150 };
-
-	$: currentPage.set($page.url.pathname); // Sets global store with the current site path
 
 	// Prefetch all top-level routes for better speed
 	onMount(() => {
