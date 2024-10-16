@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-
 	export let href, icon, external, nolink;
 
 	$: isCurrentPage = $page.url.pathname.startsWith(href);
