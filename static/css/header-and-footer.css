@@ -273,6 +273,8 @@ footer p {
 	font-size: 0.8rem;
 }
 
+footer .date { color: var(--lightest4); }
+
 .skip-to-content-link {
 	position: absolute;
 	top: -6rem;
