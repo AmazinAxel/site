@@ -323,8 +323,12 @@ textarea {
 	box-shadow: 1px 1px 9px var(--darkest2);
 	border-radius: 5px;
 }
-textarea:focus-visible, input:focus-visible {
+textarea:focus-visible, input:not([type="range"]):focus-visible {
 	outline: 3px solid var(--blue2);
+}
+
+input[type="range"]:hover {
+	border: 2px solid var(--blue3);
 }
 
 ::placeholder {

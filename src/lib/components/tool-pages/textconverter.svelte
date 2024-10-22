@@ -156,7 +156,7 @@
 
     <br><br>
     <div style="display: flex; gap: 5px">
-        <Tooltip inlineText="Subscript">
+        <Tooltip inlineText="Subscript" click={() => scriptType = 1}>
             Shown below the text
             <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle" style="border-radius: 5px">
@@ -167,7 +167,7 @@
             <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
         </div>
 
-        <Tooltip inlineText="Superscript">
+        <Tooltip inlineText="Superscript" click={() => scriptType = 3}>
             Shown above the text
             <div style="height: 0.5rem;"/>
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle" style="border-radius: 5px">
