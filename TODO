@@ -3,3 +3,4 @@
 - make title a variable that is set and use that instead of Title component
 - convert to Typescript
 - cleanup unused deps (markdown parser remnants)
+- add Github workflow to auto-build website at 7:00AM every day
