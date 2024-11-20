@@ -1,0 +1,120 @@
+.imgList {
+}
+
+.imgList .listCard {
+	padding: 0;
+}
+
+.imgList .listCard p {
+	padding: 10px;
+}
+
+.imgList .listCard h4 {
+	margin: 0;
+	white-space: nowrap;
+	font-size: 1.4rem;
+	position: relative;
+	margin-top: -1.5rem;
+	margin-bottom: 0.2rem;
+	z-index: 1;
+}
+
+.imgList .listCard .contentFader {
+	position: absolute;
+	left: 0;
+	top: 3.1rem;
+	width: 100%;
+	height: 4rem;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--darkest3) 100%);
+}
+
+.imgList .listCard a::before {
+	content: '';
+	height: 7rem;
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	left: 0;
+	background-size: cover;
+	top: 0;
+	background-image: var(--bg);
+
+	/* TODO remove this when list types are reorganized */
+	transform: revert;
+	filter: revert;
+}
+
+.listCard p {
+	font-size: 0.9rem;
+}
+
+.listCard.elipsis::after {
+	content: '';
+}
+
+.listCard:not(:first-child) {
+	margin-left: -100px;
+}
+
+.listCard:hover {
+	transform: translateY(-20px) rotate(-2deg);
+	transition: 0.4s var(--ease);
+}
+
+.listCard:hover ~ .listCard {
+	position: relative;
+	left: 75px;
+	transition: 0.2s var(--ease);
+}
+
+.listCard:active {
+	transform: translateY(-5px) rotate(-1deg);
+}
+
+/* Stacked cards list */
+.cardListContainer {
+	display: flex;
+	overflow-y: clip;
+	padding-top: 15px;
+	padding-left: 5px;
+	max-height: 20rem;
+	flex-wrap: wrap;
+	overflow-x: auto;
+}
+
+@media (min-width: 1000px) {
+	.cardListContainer {
+		padding-right: 5rem;
+	}
+}
+
+.listCard {
+	height: 280px;
+	width: 200px;
+	transition:
+		transform 0.2s var(--ease),
+		left 0.2s var(--ease);
+	position: relative;
+	transform: translateY(0px);
+	left: 0px;
+	overflow: hidden;
+}
+
+.listCard h4 {
+	font-size: 1rem;
+}
+
+.backgroundIcon::after {
+	content: '';
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	z-index: -1;
+	left: 0.5rem;
+	background-size: cover;
+	top: 0.5rem;
+	transform: rotateZ(-10deg);
+	display: inline-block;
+	background-image: var(--bg);
+	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
+}
