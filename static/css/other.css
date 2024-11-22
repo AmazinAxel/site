@@ -463,17 +463,14 @@ a:hover {
 	height: 100%;
 }
 
-.imgCard picture {
-	position: relative;
-}
 .imgCard picture::after {
-	content: '';
-	position: absolute;
-	right: -10px;
-	bottom: 0;
-	width: 300%;
-	height: 10rem;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--darkest3) 100%);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--darkest3) 100%);
 }
 /* Popups */
 

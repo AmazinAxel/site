@@ -32,7 +32,7 @@
     <!-- svelte-ignore a11y_consider_explicit_label -->
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
-    {#if emblaAPI} 
+    {#if emblaAPI}
     {#each data as _, i} <!-- Avoid shadowing by using underscore for unused loop variable --> 
     <span class:embla__dot={true} class:selected={currentlySelected == i} on:click={() => emblaAPI.scrollTo(i)} ></span> 
     {/each} 

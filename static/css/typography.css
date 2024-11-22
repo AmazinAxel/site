@@ -98,7 +98,7 @@ span.subtext::before {
 	transition: text-decoration-color 1s, text-underline-offset 1s, text-decoration 1s;
 }*/
 
-a:not(.navItems ul li a) {
+a:not(.navItems ul li a):not(.site-title) {
 	color: var(--lightest3);
 	text-decoration-thickness: 1px;
 	text-decoration-color: var(--lightest3);

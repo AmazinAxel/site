@@ -19,6 +19,7 @@
 	min-width: 0;
 	padding-left: var(--slide-spacing);
 	transform: translate3d(0, 0, 0);
+    overflow: hidden;
 }
 
 /* Actual carousel styling */
@@ -37,11 +38,12 @@
 
 .embla__slide.smallSlide .carouselContent {
 	position: absolute;
-	bottom: 0;
-	backdrop-filter: blur(2rem);
-	margin: 2px;
-	border-radius: 0 10px 0 6px;
-	box-shadow: 0px 10px 15px var(--darkest1);
+    bottom: 3px;
+    left: 1.2rem;
+    backdrop-filter: blur(2rem);
+    margin: 2px;
+    border-radius: 0 10px 0 5px;
+    box-shadow: 0px 10px 15px var(--darkest1);
 }
 
 .embla__slide.smallSlide .carouselContent.lightBackground h4,
@@ -180,7 +182,7 @@ span.embla__dot {
 	background-color: var(--darkest3);
 	position: relative;
 	flex: 50%;
-	margin: 5px;
+	margin: 3px;
 	border-radius: 5px;
 	transition:
 		background-color 0.5s var(--ease),

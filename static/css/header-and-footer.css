@@ -63,6 +63,7 @@ nav:hover #logoicon {
 	z-index: 3;
 	position: relative;
 	padding-left: 3px;
+	text-shadow: 0px 3px 1rem var(--blue1);
 }
 
 nav:hover .site-title {
