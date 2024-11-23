@@ -13,19 +13,11 @@
 	<Admonition error>Could not connect to the GitHub API! Repositories cannot be shown.</Admonition>
 {:else}
 	{#each data.repos as { ...repo }}
-		{#if repo.name !== "AmazinAxel"}
-			<a href={repo.homepage || repo.html_url}>
-				<GithubCard repo={repo}/>
-			</a>
-		{/if}
+		<a href={repo.homepage || repo.html_url}>
+			<GithubCard repo={repo}/>
+		</a>
 	{/each}
-	<Admonition info style="display: flex; flex: 33%;">
-		<div style="margin: auto">
-			<p style="padding-bottom: 0.5rem;">
-				This list excludes some repositories. View all repositories on my GitHub page.
-			</p> 
-			<a href="https://github.com/AmazinAxel?tab=repositories"><button>View Repositories on GitHub</button></a>
-		</div>
-	</Admonition>
 {/if}
 </div>
+
+<a class="showMoreBtn" href="https://github.com/AmazinAxel" style="margin-top: 1rem">GitHub Profile</a>

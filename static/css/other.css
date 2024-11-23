@@ -855,3 +855,22 @@ hr {
 #skipToContent:focus {
 	top: 0;
 }
+
+/* Show more button */
+.showMoreBtn {
+    display: flex;
+    line-height: 1.5rem;
+    text-decoration: none!important;
+    justify-content: flex-end;
+    margin: 0rem 0.2rem 1.5rem;
+}
+
+.showMoreBtn::after {
+    content: url(https://amazinaxel.com/media/icons/arrow-right.svg);
+    margin-left: 4px;
+    height: 0;
+    filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(96%) hue-rotate(181deg) brightness(98%) contrast(88%);
+    transition: transform .3s var(--ease);
+}
+.showMoreBtn:hover::after { transform: translateX(2px); }
+.showMoreBtn:active::after { transform: translateX(5px); }
