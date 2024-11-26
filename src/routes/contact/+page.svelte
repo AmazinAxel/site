@@ -1,7 +1,6 @@
 <script>
 	import Admonition from '$lib/components/admonition.svelte';
 	import Title from '$lib/components/title.svelte';
-	import Tooltip from '$lib/components/tooltip.svelte';
 	import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
 	import { Turnstile } from 'svelte-turnstile';
@@ -54,15 +53,6 @@
 		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your Name"/>
 		<div></div>
 		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
-		<div></div>
-		<label class="container" for="urgent">
-			<input type="checkbox" id="urgent" name="urgent">
-			<span class="checkmark"></span>
-			<Tooltip inlineText="Urgent">
-				Only select this option if this
-				message is urgent and time sensitive 
-			</Tooltip>
-		</label>
 
 		<div style="padding: 0.5rem"></div>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
