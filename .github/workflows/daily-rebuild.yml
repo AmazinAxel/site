@@ -1,0 +1,14 @@
+# Journal entries & Github repos constantly update so we should 
+# rebuild & redeploy each day to keep information up-to-date 
+
+name: Rebuild site
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  daily-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to Pages build webhook
+        run: curl -X POST ${{ secrets.PAGES_BUILD_ENDPOINT }}

@@ -6,7 +6,7 @@
 	import GithubCard from '$lib/components/githubCard.svelte';
 </script>
 
-<Title name="GitHub Projects"/>
+<Title name="GitHub Repos"/>
 
 <div class="gridLayout">
 {#if data.noConnection}

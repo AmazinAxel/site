@@ -56,7 +56,7 @@ export const projects = {
 				An entirely custom Minecraft survival server. Survive the harsh winter 
 				and explore the cold snowy tundra wasteland, or scavenge for resources 
 				with friends. Build a hideout and gather resources or attack enemy 
-				compounds for loot. Enjoy a survival experience like no other.
+				compounds for loot. Exeperience survival gameplay like never before.
 				`,
 			shortDesc: 'A custom survival Minecraft server set in a snowy tundra',
 			image: 'Permafrost2.png',
@@ -78,7 +78,7 @@ export const projects = {
 			role: '',
 			image: '../projects/flake.png',
 			description:
-				'My personal Nix configurations. Uses home-manager to manage $HOME dots and includes application configs.',
+				'My personal Nix configurations. Uses home-manager to manage user dots and application configs.',
 			shortDesc: 'Personal Linux desktop and machine configurations',
 			url: 'https://github.com/AmazinAxel/flake',
 			linkText: 'GitHub'
