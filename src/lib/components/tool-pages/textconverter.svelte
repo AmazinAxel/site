@@ -1,10 +1,10 @@
 <script>
 	import Tooltip from '$lib/components/tooltip.svelte';
 
-    var inputText;
-    var outputText;
-    let textType = false;
-    let scriptType = 2;
+    var inputText = $state();
+    var outputText = $state();
+    let textType = $state(false);
+    let scriptType = $state(2);
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
@@ -143,13 +143,13 @@
 
 <div class="selector">
     <h5 style="position: absolute; margin-top: -2rem; margin-left: 0.65rem;">OPTIONS</h5>
-    <div style="height: 0.5rem;"/>
+    <div style="height: 0.5rem;"></div>
     <label class="container">
-        <input type="checkbox" id="useDifferentText" bind:checked={textType} on:change={convertText}>
+        <input type="checkbox" id="useDifferentText" bind:checked={textType} onchange={convertText}>
         <span class="checkmark"></span>
         <Tooltip inlineText="Use alternate text style">
             Use a slightly different text charset
-            <div style="height: 0.5rem;"/>
+            <div style="height: 0.5rem;"></div>
             <img src="/media/tools/textconverter/texttypepreview.png" alt="Shows difference between the text type function" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
     </label>
@@ -158,18 +158,18 @@
     <div style="display: flex; gap: 5px">
         <Tooltip inlineText="Subscript" click={() => scriptType = 1}>
             Shown below the text
-            <div style="height: 0.5rem;"/>
+            <div style="height: 0.5rem;"></div>
             <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
 
         <!-- Slider -->
         <div class="slider_container" style="margin-left: 7px">
-            <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" on:input={convertText} id="scriptType">
+            <input type="range" class="seek_slider" min="1" bind:value={scriptType} max="3" oninput={convertText} id="scriptType">
         </div>
 
         <Tooltip inlineText="Superscript" click={() => scriptType = 3}>
             Shown above the text
-            <div style="height: 0.5rem;"/>
+            <div style="height: 0.5rem;"></div>
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle" style="border-radius: 5px">
         </Tooltip>
     </div>
@@ -178,7 +178,7 @@
 <br>
 
 <div class="inputs">
-    <textarea bind:value={inputText} on:input={convertText} placeholder="Normal text"/>
+    <textarea bind:value={inputText} oninput={convertText} placeholder="Normal text"></textarea>
     <p>➡️</p>
-    <textarea bind:value={outputText} on:input={() => convertText(false)} placeholder="Small text"/>
+    <textarea bind:value={outputText} oninput={() => convertText(false)} placeholder="Small text"></textarea>
 </div>

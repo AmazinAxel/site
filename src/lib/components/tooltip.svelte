@@ -1,19 +1,22 @@
 <script>
-    export let inlineText;
-    export let isIcon = false;
-    export let style = '';
-    export let click = '';
+    let {
+        inlineText,
+        isIcon = false,
+        style = '',
+        click = '',
+        children
+    } = $props();
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="tooltip" style={style} on:click={click}>
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="tooltip" style={style} onclick={click}>
     {#if isIcon}
         <img src="/media/icons/about.svg" alt="About tooltip" class="noImgStyle">
     {:else}
-        { @html inlineText }
+        {@html inlineText}
     {/if}
     <span class="tooltiptext">
-        <slot/>
+        {@render children?.()}
     </span>
 </div>

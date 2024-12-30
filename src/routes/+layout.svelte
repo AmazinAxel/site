@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
-	export let data;
+	let { data, children } = $props();
 	const { date } = data;
 
 	// Delays and fadeouts are glitchy atm ;(
@@ -37,7 +37,7 @@
 	{#key $page.url.pathname}
 		<main tabindex="-1" in:fade|local={transitionIn}>
 			<div id="content">
-				<slot/>
+				{@render children?.()}
 			</div>
 			<Footer date={date}/>
 		</main>

@@ -1,3 +1,7 @@
+<script>
+	let { children } = $props();
+</script>
+
 <div class="card">
-	<slot/>
+	{@render children?.()}
 </div>

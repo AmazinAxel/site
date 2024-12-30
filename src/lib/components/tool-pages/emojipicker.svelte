@@ -7,7 +7,7 @@
     // CONSIDER: Switch to CLIENT side rendering (CSR) on this page to fix page speed bandwidth issues
     import { commonIcons } from '$lib/components/tool-pages/emojipicker.js';
     const iconList = commonIcons.split('');
-    let showCopyMessage, alreadyCopied, isOpen = false;
+    let showCopyMessage = $state(), alreadyCopied = $state(), isOpen = $state(false);
     let randomID;
     function copy(event) {
         // Copy text and show admonition
@@ -56,7 +56,7 @@
 </div>
 
 {#each iconList as icon}
-    <button on:click={copy}>{icon}</button>
+    <button onclick={copy}>{icon}</button>
 {/each}
 
 <div class="card">
@@ -66,7 +66,7 @@
 <div class="card">
     <h3>Character list</h3>
     Want a full list of all characters?
-    <button type="button" on:click={() => togglePopup()}>Copy plaintext list of all characters</button>
+    <button type="button" onclick={() => togglePopup()}>Copy plaintext list of all characters</button>
     All characters are copied from the font mappings of the Minecraft 1.20 jar.
 </div>
 
@@ -79,9 +79,9 @@
     Warning can be ignored safely since this is a alias button
     svelte-ignore a11y-click-events-have-key-events 
 -->
-<div class="popupBg" tabindex="0" role="button" on:click={togglePopup} in:fly|local={transition} out:fly|local={transition}></div>
+<div class="popupBg" tabindex="0" role="button" onclick={togglePopup} in:fly|local={transition} out:fly|local={transition}></div>
 <div class="popup card" in:fly|local={transition} out:fly|local={transition}>
-    <button on:click={togglePopup}>Close</button>
+    <button onclick={togglePopup}>Close</button>
     not finished
 </div>
 {/if}

@@ -1,7 +1,14 @@
 <script>
-    export let link, titleText, icon, right, data, carousel;
     import Admonition from '$lib/components/admonition.svelte';
     import Carousel from '$lib/components/carousel.svelte';
+    let {
+        link,
+        titleText,
+        icon,
+        right,
+        data,
+        carousel
+    } = $props();
 </script>
 
 

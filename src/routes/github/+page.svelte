@@ -1,9 +1,11 @@
 <script>
-	// Necessary for the Github repo system to work
-	export let data;
+	
 	import Admonition from '$lib/components/admonition.svelte';
 	import Title from '$lib/components/title.svelte';
 	import GithubCard from '$lib/components/githubCard.svelte';
+	
+	// Necessary for the Github repo system to work
+	let { data } = $props();
 </script>
 
 <Title name="GitHub Repos"/>

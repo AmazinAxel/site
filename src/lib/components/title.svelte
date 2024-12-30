@@ -1,6 +1,5 @@
 <script>
-    export let name;
-    export let dontShowHeader;
+    let { name, dontShowHeader } = $props();
 </script>
 <svelte:head>
 	<title>{ name } - AmazinAxel.com</title>

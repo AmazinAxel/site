@@ -1,11 +1,11 @@
 <script>
-    export let data;
     const { pageContent } = data;
     import { navItems } from '$lib/config';
-    import { page } from '$app/stores';    
+    import { page } from '$app/stores';
+    let { data } = $props();    
 
 
-    let title;
+    let title = $state();
 
     // Loop each tool item and compare their route
     // If route matches, set the title
@@ -15,10 +15,12 @@
         if ($page.url.pathname.includes(navItem.route)) 
             title = navItem.title
     }
+
+    const SvelteComponent = $derived(pageContent);
 </script>
 
 <svelte:head> <!-- Custom title ending -->
 	<title>{ title } - Axel's Utils</title>
 </svelte:head>
 
-<svelte:component this={pageContent}/>
+<SvelteComponent/>

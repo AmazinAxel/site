@@ -7,9 +7,9 @@
 
 	const transition = { y: -5, duration: 500, easing: cubicOut };
 
-	let buttonText = 'Send Message';
-	let showError = false;
-	let errorMessage = '';
+	let buttonText = $state('Send Message');
+	let showError = $state(false);
+	let errorMessage = $state('');
 	async function handleSubmit( event ) {
 		event.preventDefault();
 		buttonText = 'Sending Message...'; // Show confirmation text
@@ -47,7 +47,7 @@
 <!-- https://kit.svelte.dev/docs/form-actions -->
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
-    <form method="POST" on:submit={handleSubmit}>
+    <form method="POST" onsubmit={handleSubmit}>
         <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message Subject"/>
 		<div></div>
 		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your Name"/>

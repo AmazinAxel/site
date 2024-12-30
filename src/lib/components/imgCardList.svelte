@@ -1,6 +1,5 @@
 <script>
-    export let data;
-    export let alt;
+    let { data, alt } = $props();
 </script>
 
 <div style="display: flex; gap: 0.5rem; align-items: center; margin: auto;">

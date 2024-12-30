@@ -1,11 +1,13 @@
 <script>
+	import { preventDefault } from 'svelte/legacy';
+
 	import SidebarNav from '$lib/components/sidebarNav.svelte';
 
 	const focusMainContent = () => { document.querySelector("main").focus(); }
 </script>
 
 <nav>
-	<a on:click|preventDefault={focusMainContent} id="skipToContent" href="#content">
+	<a onclick={preventDefault(focusMainContent)} id="skipToContent" href="#content">
 		Skip to content
 	</a>
 	

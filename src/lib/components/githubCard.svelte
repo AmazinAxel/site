@@ -1,5 +1,5 @@
 <script>
-    export let repo;
+    let { repo } = $props();
 
     const icon = (repo.fork) ? "git-fork.svg" : "github.svg"
     const attributes =     [repo.forks_count, repo.stargazers_count, repo.watchers_count]

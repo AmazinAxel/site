@@ -3,11 +3,9 @@
     import { heroItems } from '$lib/config';
     import { shuffle } from '$lib/utils'
 
-    import { fly } from 'svelte/transition';
-    import { cubicOut } from 'svelte/easing';
-	const transition = { x: 10, duration: 150, easing: cubicOut };
+    let { children } = $props();
     
-    let showHero = false;
+    let showHero = $state(false);
     
     const randomHero = shuffle(heroItems)[0]; // Random project
 
@@ -16,11 +14,11 @@
 </script>
 
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
-    <slot/>
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    {@render children?.()}
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
     <span 
-        on:mouseenter={() => (showHero = true)} 
-        on:mouseleave={() => (showHero = false)}
+        onmouseenter={() => (showHero = true)} 
+        onmouseleave={() => (showHero = false)}
         aria-label="Open hero information"
     >{randomHero.project} <span>- {randomHero.description} </span></span>
 </div>

@@ -1,8 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	export let href;
+	let { href, children } = $props();
 
-	$: isCurrentPage = $page.url.pathname.startsWith(href);
+	let isCurrentPage = $derived($page.url.pathname.startsWith(href));
 </script>
 
 <li>
@@ -11,6 +11,6 @@
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
 	>
-		<slot/>
+		{@render children?.()}
 	</a>
 </li>

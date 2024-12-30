@@ -1,8 +1,14 @@
 <script>
 	import { page } from '$app/stores';
-	export let href, icon, external, nolink;
+	let {
+		href,
+		icon,
+		external,
+		nolink,
+		children
+	} = $props();
 
-	$: isCurrentPage = $page.url.pathname.startsWith(href);
+	let isCurrentPage = $derived($page.url.pathname.startsWith(href));
 </script>
 
 <li>
@@ -18,7 +24,7 @@
 			src="/media/icons/{icon}.svg" 
 			alt="{href} Header icon"
 		/>
-		<slot/>
+		{@render children?.()}
 		{#if external}
 			<img class="noImgStyle external" src="/media/icons/external.svg" alt="External icon"/>
 		{/if}

@@ -5,7 +5,7 @@
 	import { navItems } from '$lib/config';
 
 	// Necessary for the journal post system
-	export let data;
+	let { data } = $props();
 	const { journalPosts } = data;
 	const { projectItems } = data;
 </script>
