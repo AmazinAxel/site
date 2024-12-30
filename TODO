@@ -1,5 +1,5 @@
-- fix all TODOs throughout the code
-- split css into more files
-- make title a variable that is set and use that instead of Title component
+- fix all other TODOs throughout the code
+- split up css & reorganize/cleanup styles
+- use a title var instead of the Title component
 - convert to Typescript
-- add Github workflow to auto-build website at 7:00AM every day
+- remove all warning suppressions and support all web best practices 

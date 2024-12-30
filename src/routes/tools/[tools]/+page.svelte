@@ -8,7 +8,7 @@
     let title;
 
     // Loop each tool item and compare their route
-    // If their route matches, set the title
+    // If route matches, set the title
     for (let i = 0; i < navItems[3].subitems.length; i++) {
         let navItem = navItems[3].subitems[i];
         
@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head> <!-- Custom title ending -->
-	<title>{ title } - AmazinAxel's Utilities</title>
+	<title>{ title } - Axel's Utils</title>
 </svelte:head>
 
 <svelte:component this={pageContent}/>
