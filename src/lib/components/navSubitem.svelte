@@ -1,8 +1,8 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	let { href, children } = $props();
 
-	let isCurrentPage = $derived($page.url.pathname.startsWith(href));
+	let isCurrentPage = $derived(page.url.pathname.startsWith(href));
 </script>
 
 <li>

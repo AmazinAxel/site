@@ -6,7 +6,7 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	let { data, children } = $props();
 	const { date } = data;
 
@@ -34,7 +34,7 @@
 
 <div class="layout">
 	<Header/>
-	{#key $page.url.pathname}
+	{#key page.url.pathname}
 		<main tabindex="-1" in:fade|local={transitionIn}>
 			<div id="content">
 				{@render children?.()}
