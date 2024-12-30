@@ -22,4 +22,4 @@
 {/if}
 </div>
 
-<a class="showMoreBtn" href="https://github.com/AmazinAxel" style="margin-top: 1rem">GitHub Profile</a>
+<a class="showMoreBtn" href="https://github.com/AmazinAxel" style="margin-top: 1rem">View Github profile</a>
