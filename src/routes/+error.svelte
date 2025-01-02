@@ -21,9 +21,6 @@
 		}, 500);
 	};
 </script>
-<style>
-
-</style>
 
 <Title name="Error {page.status}" dontShowHeader/>
 

@@ -78,8 +78,8 @@ export const projects = {
 			role: '',
 			image: '../projects/flake.png',
 			description:
-				'My personal Nix configurations. Uses home-manager to manage user dots and application configs.',
-			shortDesc: 'Personal Linux desktop and machine configurations',
+				'My Nix desktop & machine configurations. Built using Astal and home-manager.',
+			shortDesc: 'Personal Nix desktop and machine configurations',
 			url: 'https://github.com/AmazinAxel/flake',
 			linkText: 'GitHub'
 		}

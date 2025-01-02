@@ -686,25 +686,6 @@ sub a {
 	filter: blur(2px);
 }
 
-/* Github cards */
-.githubCard {
-	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-
-.githubCard div {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.githubCard h4 {
-	position: relative;
-	top: 2px;
-}
-
 /* Used as subtext */
 .innerCard h5 {
 	font-size: 1rem;

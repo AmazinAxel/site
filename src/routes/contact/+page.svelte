@@ -41,7 +41,7 @@
 
 <Admonition info>
 	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
-	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you expect a response.</p>
+	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you would like a response.</p>
 </Admonition>
 
 <!-- https://kit.svelte.dev/docs/form-actions -->
@@ -67,5 +67,5 @@
         <button type="submit" class="button">{ buttonText }</button>
     </form>
 	<br>
-	<sub>This form uses <a href="https://www.cloudflare.com/products/turnstile/">Cloudflare Turnstile</a> - read <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a></sub>
+	<sub>This form is protected by <a href="https://www.cloudflare.com/products/turnstile/">Cloudflare Turnstile</a> - read <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a></sub>
 </div>
