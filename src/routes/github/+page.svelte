@@ -39,7 +39,7 @@
 	{#each data.repos as { ...repo }}
 		<a href={repo.homepage || repo.html_url}>
 			<div class="coverCard innerCard" style="--bg: url(/media/icons/{icon(repo.fork)}); --size: 10rem;">
-				<h3>{repo.name}</h3>
+				<h3>{repo.name.replaceAll("-", " ")}</h3>
 				{#if repo.archived}<h5>📦️ ARCHIVED</h5>{/if}
 			
 				<p>{repo.description || ""}</p>
