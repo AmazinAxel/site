@@ -1,10 +1,7 @@
-# Journal entries & Github repos constantly update so we should 
-# rebuild & redeploy each day to keep information up-to-date 
-
 name: Rebuild site
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Run each day
 
 jobs:
   daily-task:

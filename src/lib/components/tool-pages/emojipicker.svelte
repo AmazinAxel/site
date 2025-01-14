@@ -4,7 +4,7 @@
     import { cubicOut } from 'svelte/easing';
 	const transition = { y: 10, duration: 250, easing: cubicOut };
 
-    // CONSIDER: Switch to CLIENT side rendering (CSR) on this page to fix page speed bandwidth issues
+    // TODO Switch to CSR on this page to improve page load speed
     import { commonIcons } from '$lib/components/tool-pages/emojipicker.js';
     const iconList = commonIcons.split('');
     let showCopyMessage = $state(), alreadyCopied = $state(), isOpen = $state(false);
@@ -17,7 +17,7 @@
             // If the admonition is already shown, let's play a pop animation
             alreadyCopied = true;
             setTimeout(() => { alreadyCopied = false }, 100);
-        }
+        };
 
         showCopyMessage = true;
         
@@ -30,11 +30,9 @@
             if (randomID == localRandom)
                 showCopyMessage = false
         }, 3000);
-    }
+    };
     
-    function togglePopup() {
-        isOpen = !isOpen;
-    }
+    const togglePopup = () => isOpen = !isOpen;
 </script>
 
 <Admonition error>This tool is not finished, please check back later</Admonition>
@@ -75,10 +73,9 @@
 {/if}
 
 {#if isOpen}
-<!-- 
-    Warning can be ignored safely since this is a alias button
-    svelte-ignore a11y-click-events-have-key-events 
--->
+
+<!-- Warning can be ignored safely since this is a alias button -->
+<!--   svelte-ignore a11y_click_events_have_key_events -->
 <div class="popupBg" tabindex="0" role="button" onclick={togglePopup} in:fly|local={transition} out:fly|local={transition}></div>
 <div class="popup card" in:fly|local={transition} out:fly|local={transition}>
     <button onclick={togglePopup}>Close</button>

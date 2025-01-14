@@ -22,8 +22,8 @@
 <!-- Projects list -->
 <Section carousel link="projects" titleText="My Projects" icon="projects" right data={ projectItems }/>
 
-<!-- Journal posts -->
-<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
+<!-- Journal posts
+<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/> -->
 	
 <!-- Minecraft utilities -->
 <div class="section right">

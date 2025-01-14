@@ -155,21 +155,6 @@
 	text-decoration: underline;
 }
 
-/* Cool decorations */
-.ribbon::before {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	left: -2rem;
-	top: 2rem;
-	width: 200%;
-	height: 4rem;
-	background-color: var(--blue2);
-	transform: rotateZ(-15deg);
-	opacity: 0.2;
-	filter: blur(6px);
-}
-
 /* Checkbox styling */
 
 input[type='checkbox'] {
