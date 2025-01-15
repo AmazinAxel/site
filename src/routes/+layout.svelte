@@ -2,7 +2,7 @@
 <script>
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
-	import { navItems } from '$lib/config';
+	import { pages } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
@@ -15,7 +15,7 @@
 
 	// Prefetch all top-level routes for better speed
 	onMount(() => {
-		const routes = navItems.map((item) => item.route);
+		const routes = pages.map((page) => page.route);
 		preloadCode(...routes);
 	});
 
@@ -23,7 +23,7 @@
 <svelte:head>
 	<!-- Top: least important styles | bottom: most important styles -->
 	<link rel="stylesheet" href="/css/vars.css"/>
-	<link rel="stylesheet" href="/css/header-and-footer.css"/>
+	<link rel="stylesheet" href="/css/footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
 	<link rel="stylesheet" href="/css/typography.css"/>
 	<link rel="stylesheet" href="/css/reset.css"/>

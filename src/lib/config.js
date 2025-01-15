@@ -3,7 +3,7 @@
  * Change sidebar-related settings easily
  */
 
-export const navItems = [
+export const pages = [
 	{
 		title: 'Contact',
 		route: '/contact',
