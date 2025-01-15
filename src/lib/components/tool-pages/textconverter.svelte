@@ -64,7 +64,7 @@
         padding: 20px;
         border-radius: 5px;
         margin-bottom: 10px;
-    } /* todo consider using & and combining this into selector */
+    }
 
     .selector::before {
         content: "";

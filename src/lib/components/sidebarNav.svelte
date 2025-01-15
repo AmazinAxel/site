@@ -6,7 +6,6 @@
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. 
  todo fix the messy .navbar css styling and remove its tag -->
-<!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <div class="navItems">
 	<ul>
 		{#each navItems as navitem}

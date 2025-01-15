@@ -74,8 +74,7 @@
 
 {#if isOpen}
 
-<!-- Warning can be ignored safely since this is a alias button -->
-<!--   svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_click_events_have_key_events (Warning can be ignored safely since this is an alias) -->
 <div class="popupBg" tabindex="0" role="button" onclick={togglePopup} in:fly|local={transition} out:fly|local={transition}></div>
 <div class="popup card" in:fly|local={transition} out:fly|local={transition}>
     <button onclick={togglePopup}>Close</button>

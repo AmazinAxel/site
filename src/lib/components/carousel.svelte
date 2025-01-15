@@ -21,7 +21,7 @@
           <p>{(smallSlide) ? shortDesc : description}</p>
           {#if linkText} <a href={url}>{linkText}</a> {/if}
         </div>
-        <img src="/media/herobanners/{image}" alt="TODO">
+        <img src="/media/herobanners/{image}" alt="Background hero of {title} - {description}">
       </div>
     {/each}
   </div>
@@ -29,13 +29,10 @@
   {#if !smallSlide}<button class="embla__prev" onclick={() => emblaAPI.scrollPrev()}><img class="noImgStyle" src="/media/icons/arrow-left.svg" alt="Left arrow"></button>{/if}
   <button class="embla__next" onclick={() => emblaAPI.scrollNext()}><img class="noImgStyle" src="/media/icons/arrow-right.svg" alt="Right arrow"></button>
   <div class="embla__dots">
-    <!-- svelte-ignore a11y_consider_explicit_label -->
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <!-- svelte-ignore a11y_no_static_element_interactions -->
     {#if emblaAPI}
-    {#each data as _, i} <!-- Avoid shadowing by using underscore for unused loop variable --> 
-    <span class:embla__dot={true} class:selected={currentlySelected == i} onclick={() => emblaAPI.scrollTo(i)}></span> 
-    {/each} 
+      {#each data as _, i}
+        <span class:embla__dot={true} role="button" tabindex="0" class:selected={currentlySelected == i} onkeydown={() => emblaAPI.scrollTo(i)} onclick={() => emblaAPI.scrollTo(i)}></span> 
+      {/each} 
     {/if}
     </div>
   {/if}

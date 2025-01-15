@@ -8,15 +8,13 @@
     let showHero = $state(false);
     
     const randomHero = shuffle(heroItems)[0]; // Random project
-
-    const image = shuffle(randomHero.images)[0]
-
+    const image = shuffle(randomHero.images)[0] // Random image from project
 </script>
 
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
     {@render children?.()}
-    <!-- svelte-ignore a11y_no_static_element_interactions -->
-    <span 
+    <span
+        role="article"
         onmouseenter={() => (showHero = true)} 
         onmouseleave={() => (showHero = false)}
         aria-label="Open hero information"

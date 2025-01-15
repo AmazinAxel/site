@@ -1,5 +1,3 @@
 - fix all other TODOs throughout the code
 - split up css & reorganize/cleanup styles
 - use a title var instead of the Title component
-- convert to Typescript
-- remove all warning suppressions and support all web best practices
