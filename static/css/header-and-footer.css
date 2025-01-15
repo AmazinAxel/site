@@ -96,12 +96,6 @@ nav:hover .navItems {
 	visibility: unset;
 }
 
-/*nav a img {
-	background-image: linear-gradient(240deg, var(--blue1) 0%, var(--blue2) 100%);
-	border-radius: 15px;
-	box-shadow: 0 0 10px 0 var(--blue1);
-	border: 0 solid;
-}*/
 .navItems a:has(> img)::before {
 	content: '';
 	position: absolute;
