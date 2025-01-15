@@ -92,19 +92,6 @@ span.subtext::before {
 	color: var(--blue2);
 }
 
-/*a h2 {
-	underline 0.15em rgba(0, 0, 0, 1);
-	text-underline-offset: 0em;
-	transition: text-decoration-color 1s, text-underline-offset 1s, text-decoration 1s;
-}*/
-
-a:not(.navItems ul li a):not(.site-title) {
-	color: var(--lightest3);
-	text-decoration-thickness: 1px;
-	text-decoration-color: var(--lightest3);
-	text-decoration: underline;
-}
-
 ul {
 	list-style-type: square;
 	padding-left: 1.5rem;

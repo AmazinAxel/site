@@ -2,7 +2,7 @@
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
 	import ImgCardList from '$lib/components/imgCardList.svelte';
-	import { navItems } from '$lib/config';
+	import { pages } from '$lib/config';
 
 	// Necessary for the journal post system
 	let { data } = $props();
@@ -28,5 +28,5 @@
 <!-- Minecraft utilities -->
 <div class="section right">
 	<h2>Minecraft Utilities</h2>
-	<ImgCardList data={navItems[3].subitems} alt="Picture of"/>
+	<ImgCardList data={pages[3].subitems} alt="Picture of"/>
 </div>

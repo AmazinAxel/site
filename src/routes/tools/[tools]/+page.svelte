@@ -1,18 +1,18 @@
 <script>
     let { data } = $props();
     const { pageContent } = data;
-    import { navItems } from '$lib/config';
+    import { pages } from '$lib/config';
     import { page } from '$app/state';
     
     let title = $state();
 
     // Loop each tool item and compare their route
     // If route matches, set the title
-    for (let i = 0; i < navItems[3].subitems.length; i++) {
-        let navItem = navItems[3].subitems[i];
+    for (let i = 0; i < pages[3].subitems.length; i++) {
+        let toolPage = pages[3].subitems[i];
         
-        if (page.url.pathname.includes(navItem.route)) 
-            title = navItem.title
+        if (page.url.pathname.includes(toolPage.route))
+            title = toolPage.title
     }
 
     const SvelteComponent = $derived(pageContent);
