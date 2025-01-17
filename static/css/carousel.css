@@ -23,7 +23,7 @@
 }
 
 /* Actual carousel styling */
-.embla__slide:not(.smallSlide) .carouselContent {
+.embla__slide .carouselContent {
 	position: absolute;
 	width: 50%;
 	left: 25%;
@@ -34,21 +34,6 @@
 	bottom: 1rem;
 	text-align: center;
 	box-shadow: 0px 10px 15px #ffffff4a;
-}
-
-.embla__slide.smallSlide .carouselContent {
-	position: absolute;
-    bottom: 3px;
-    left: 1.2rem;
-    backdrop-filter: blur(2rem);
-    margin: 2px;
-    border-radius: 0 10px 0 5px;
-    box-shadow: 0px 10px 15px var(--darkest1);
-}
-
-.embla__slide.smallSlide .carouselContent.lightBackground h4,
-.embla__slide.smallSlide .carouselContent.lightBackground .name {
-	color: var(--darkest1);
 }
 
 .embla__slide .carouselContent:not(.lightBackground) {
@@ -66,10 +51,6 @@
 	position: absolute;
 	width: 100%;
 	top: -1rem;
-}
-
-.embla__slide.smallSlide .name {
-	left: 0.7rem;
 }
 
 .carouselContent p {
@@ -92,11 +73,7 @@
 
 .embla__slide img {
 	object-fit: cover;
-	height: 45rem;
-}
-
-.embla__slide.smallSlide img {
-	height: 15rem;
+	height: 30rem;
 }
 
 /* Carousel buttons (small) */
@@ -108,19 +85,10 @@
 	margin-left: 1px;
 }
 
-.embla__slide.smallSlide a {
-	position: absolute;
-	right: 0;
-	width: auto;
-	top: -1.1rem;
-	margin-right: 5px;
-	text-shadow: 0 0 0.5rem black;
-}
-
 .embla__slide a {
 	justify-content: center;
 	display: flex;
-	margin-bottom: 0.5rem;
+	width: 100%;
 }
 
 .blurBackground::before {
@@ -136,7 +104,7 @@
 }
 
 @media (max-width: 1000px) {
-	.embla__slide:not(.smallSlide) .carouselContent {
+	.embla__slide .carouselContent {
 		width: calc(100% - 1rem);
 		left: 1rem;
 		bottom: 0;

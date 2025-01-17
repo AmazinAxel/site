@@ -66,8 +66,10 @@
 	background-image: var(--heroBackground);
 	background-size: cover;
 	filter: blur(10px);
-	border-radius: 0.7rem;
+	border-radius: 0.5rem;
 	transition: filter 1s var(--ease);
+	outline: 3px solid var(--darkest3);
+	box-shadow: 0 0 1rem 3px var(--darkest4);
 }
 
 #hero.heroShow::before {

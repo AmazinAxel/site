@@ -39,7 +39,7 @@
 <div class="section" class:right={right}>
     <a href={link} class="notextdeco"><h2>{titleText}</h2></a>
     {#if carousel}
-        <Carousel smallSlide data={data}></Carousel>
+        <Carousel data={data}></Carousel>
     {:else if github }
         <div>
             <div class="gridLayout">
