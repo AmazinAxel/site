@@ -9,7 +9,3 @@
 		Skip to content
 	</a>
 </nav>
-
-<div id="unexpandParent">
-	<img src="/media/icons/expand.svg" alt="Un-expand sidebar" id="unexpandbtn">
-</div>

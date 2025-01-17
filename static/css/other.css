@@ -52,9 +52,10 @@
 	display: grid;
 	align-items: end;
 	align-content: center;
-	border-radius: 0.5rem;
+	border-radius: 0.7rem;
 	margin-bottom: 3rem;
-	border: 3px solid #ffffff1c;
+	outline: 3px solid #ffffff1c;
+	outline-offset: -3px;
 }
 
 #hero::before {
@@ -65,8 +66,7 @@
 	background-image: var(--heroBackground);
 	background-size: cover;
 	filter: blur(10px);
-	z-index: -1;
-	border-radius: 5px;
+	border-radius: 0.7rem;
 	transition: filter 1s var(--ease);
 }
 

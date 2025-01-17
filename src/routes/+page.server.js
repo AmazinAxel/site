@@ -19,7 +19,7 @@ export const load = async () => {
 		// Return data
 		return { journalPosts, projectItems, githubRepos };
 	} catch (e) {
-		console.log('No connection to external server!');
+		console.log('No connection to external server');
 		return {
 			journalPosts: {},
 			projectItems: {},
