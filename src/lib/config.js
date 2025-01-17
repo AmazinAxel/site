@@ -10,16 +10,6 @@ export const pages = [
 		icon: 'contact'
 	},
 	{
-		title: 'Projects',
-		route: '/projects',
-		icon: 'projects'
-	},
-	{
-		title: 'GitHub',
-		route: '/github',
-		icon: 'github'
-	},
-	{
 		title: 'Tools',
 		route: '/tools',
 		icon: 'tools',
