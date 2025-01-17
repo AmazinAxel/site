@@ -8,6 +8,7 @@
 	let { data } = $props();
 	const { journalPosts } = data;
 	const { projectItems } = data;
+	const { githubRepos } = data;
 </script>
 
 <svelte:head>
@@ -24,7 +25,10 @@
 
 <!-- Journal posts
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/> -->
-	
+
+<!-- Github repos -->
+<Section github link="https://github.com/amazinaxel" titleText="Github Repos" icon="github" data={ githubRepos }/>
+
 <!-- Minecraft utilities -->
 <div class="section right">
 	<h2>Minecraft Utilities</h2>
