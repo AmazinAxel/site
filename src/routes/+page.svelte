@@ -7,7 +7,7 @@
 	// Necessary for the journal post system
 	let { data } = $props();
 	const { journalPosts } = data;
-	const { projectItems } = data;
+	const { projects } = data;
 	const { githubRepos } = data;
 </script>
 
@@ -21,13 +21,13 @@
 </Hero>
 
 <!-- Projects list -->
-<Section carousel link="projects" titleText="My Projects" icon="projects" right data={ projectItems }/>
-
-<!-- Journal posts
-<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/> -->
+<Section carousel link="projects" titleText="My Projects" icon="projects" right data={ projects }/>
 
 <!-- Github repos -->
 <Section github link="https://github.com/amazinaxel" titleText="Github Repos" icon="github" data={ githubRepos }/>
+
+<!-- Journal posts -->
+<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
 
 <!-- Minecraft utilities -->
 <div class="section right">
