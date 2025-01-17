@@ -8,8 +8,8 @@
 
     // Loop each tool item and compare their route
     // If route matches, set the title
-    for (let i = 0; i < pages[3].subitems.length; i++) {
-        let toolPage = pages[3].subitems[i];
+    for (let i = 0; i < pages[1].subitems.length; i++) {
+        let toolPage = pages[1].subitems[i];
         
         if (page.url.pathname.includes(toolPage.route))
             title = toolPage.title
