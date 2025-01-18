@@ -832,7 +832,6 @@ a.showMoreBtn {
     text-decoration: none!important;
     justify-content: flex-end;
     margin: 0rem 0.2rem 1.5rem;
-	color: var(--lightest3);
 	width: 100%;
 }
 
