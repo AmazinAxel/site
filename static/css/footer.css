@@ -1,12 +1,10 @@
 
 footer {
-	padding-top: 1rem;
+	padding: 1rem 0 0 1rem;
 	background-color: var(--darkest2);
 	height: 4rem;
 	z-index: 3;
 	position: relative;
-	margin-left: 5rem;
-	transition: margin-left 0.1s var(--ease);
 }
 
 footer p, footer a {
