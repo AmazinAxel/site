@@ -52,7 +52,7 @@
 	display: grid;
 	align-items: end;
 	align-content: center;
-	border-radius: 0.7rem;
+	border-radius: 0.5rem;
 	margin-bottom: 3rem;
 	outline: 3px solid #ffffff1c;
 	outline-offset: -3px;
@@ -66,14 +66,14 @@
 	background-image: var(--heroBackground);
 	background-size: cover;
 	filter: blur(10px);
-	border-radius: 0.5rem;
-	transition: filter 1s var(--ease);
+	transition: filter 1s var(--ease), border-radius 1s;
 	outline: 3px solid var(--darkest3);
 	box-shadow: 0 0 1rem 3px var(--darkest4);
 }
 
 #hero.heroShow::before {
 	filter: blur(0);
+	border-radius: 0.5rem;
 }
 
 #hero h1,
@@ -386,6 +386,7 @@ a .imgCard {
 	scale: 1;
 	transition: scale 0.2s var(--ease);
 	min-height: 95%;
+	width: 100%;
 }
 
 a .coverCard.innerCard:hover,
@@ -825,12 +826,14 @@ hr {
 }
 
 /* Show more button */
-.showMoreBtn {
+a.showMoreBtn {
     display: flex;
     line-height: 1.5rem;
     text-decoration: none!important;
     justify-content: flex-end;
     margin: 0rem 0.2rem 1.5rem;
+	color: var(--lightest3);
+	width: 100%;
 }
 
 .showMoreBtn::after {
