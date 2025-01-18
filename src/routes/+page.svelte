@@ -21,7 +21,7 @@
 </Hero>
 
 <!-- Projects list -->
-<Section carousel titleText="My Projects" icon="projects" right data={ projects }/>
+<Section carousel altBackground titleText="My Projects" icon="projects" right data={ projects }/>
 
 <!-- Github repos -->
 <Section github link="https://github.com/amazinaxel" titleText="Github Repos" icon="github" data={ githubRepos }/>
@@ -30,7 +30,7 @@
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
 
 <!-- Minecraft utilities -->
-<div class="section right">
+<div class="section right altBackground">
 	<h2>Minecraft Utilities</h2>
 	<ImgCardList data={pages[1].subitems} alt="Picture of"/>
 </div>

@@ -54,8 +54,9 @@ body {
 @media (min-width: 850px) {
 	.gridLayout a:not(.coverCard a) {
 		display: flex;
-		flex: 32%;
+		flex: 49%;
 		text-decoration: none;
+		
 	}
 }
 @media (max-width: 850px) {
@@ -100,10 +101,11 @@ body {
 }
 
 .section.right {
-	background: #282d37;
 	padding: 1rem 2rem;
 	border-radius: 0.1rem;
 }
+
+.altBackground { background: #282d37; }
 
 /* Mobile tap highlight */
 html {

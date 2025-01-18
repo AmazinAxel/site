@@ -7,6 +7,8 @@
         right,
         data,
         carousel,
+        fullwidth,
+        altBackground,
         github
     } = $props();
 
@@ -34,9 +36,9 @@
 		position: relative;
 		top: 2px;
 	}
-	h3 { text-transform: capitalize; }
+	h4 { text-transform: capitalize; }
 </style>
-<div class="section" class:right={right}>
+<div class:section={fullwidth} class:right={right} class:altBackground={altBackground}>
     <a href={link} class="notextdeco"><h2>{titleText}</h2></a>
     {#if carousel}
         <Carousel data={data}></Carousel>
@@ -46,7 +48,7 @@
             {#each data as { ...repo }}
                 <a href={repo.homepage || repo.html_url}>
                     <div class="coverCard innerCard" style="--bg: url(/media/icons/{ghIconType(repo.fork)}); --size: 10rem;">
-                        <h3>{repo.name.replaceAll("-", " ")}</h3>
+                        <h4>{repo.name.replaceAll("-", " ")}</h4>
                         {#if repo.archived}<h5>📦️ ARCHIVED</h5>{/if}
                     
                         <p>{repo.description || ""}</p>
