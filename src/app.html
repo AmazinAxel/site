@@ -8,6 +8,9 @@
 		%sveltekit.head%
 	</head>
 	<body>
-		%sveltekit.body%
+		<!-- Wrap in div to suppress svelte warning -->
+		<div style="display: contents">
+			%sveltekit.body%
+		</div>
 	</body>
 </html>
