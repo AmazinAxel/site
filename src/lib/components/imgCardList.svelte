@@ -7,7 +7,7 @@
         <a href="/tools/{item.route}" style="text-decoration: none;" class="gridItem">
             <div class="card imgCard">
                 <picture>
-                    <img src="/media/tools/previews/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt={alt}>
+                    <img src="/media/tools/previews/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt={alt + item.title}>
                 </picture>
                 <h3>{item.title}</h3>
                 <div class="contentFader"></div>

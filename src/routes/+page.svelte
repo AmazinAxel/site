@@ -1,4 +1,5 @@
 <script>
+	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Section from '$lib/components/section.svelte';
 	import ImgCardList from '$lib/components/imgCardList.svelte';
@@ -21,10 +22,17 @@
 </Hero>
 
 <!-- Projects list -->
-<Section carousel altBackground titleText="My Projects" icon="projects" right data={ projects }/>
+<div class="altBackground">
+    <h2>My Projects</h2>
+	<Carousel data={projects} type="project"></Carousel>
+</div>
 
 <!-- Github repos -->
-<Section github link="https://github.com/amazinaxel" titleText="Github Repos" icon="github" data={ githubRepos }/>
+<div class="altBackground">
+    <h2>Github Repos</h2>
+	<Carousel data={ githubRepos } type="repos"></Carousel>
+	<a class="showMoreBtn" href="https://github.com/AmazinAxel" target="_blank" style="margin-top: 1rem">View Github profile</a>
+</div>
 
 <!-- Journal posts -->
 <Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
