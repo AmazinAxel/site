@@ -1,6 +1,5 @@
 import { XMLParser } from 'fast-xml-parser';
-import { projects } from '$lib/config';
-// Load all of the posts from the journal
+
 export const load = async () => {
 	try {
 		// Get Journal posts
@@ -9,13 +8,9 @@ export const load = async () => {
 			.then((response) => response.text())
 			.then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);
 
-		// Return data
-		return { journalPosts, projects };
+		return { journalPosts };
 	} catch (e) {
 		console.log('No connection to external server');
-		return {
-			journalPosts: {},
-			projectItems: {},
-		};
+		return { journalPosts: {} };
 	}
 };
