@@ -9,18 +9,13 @@ export const load = async () => {
 			.then((response) => response.text())
 			.then((rawXml) => new XMLParser().parse(rawXml).rss.channel.item);
 
-		// Get Github repos
-		const repo_url = `https://api.github.com/users/amazinaxel/repos`;
-		const githubRepos = await fetch(repo_url).then((response) => response.json());
-
 		// Return data
-		return { journalPosts, projects, githubRepos };
+		return { journalPosts, projects };
 	} catch (e) {
 		console.log('No connection to external server');
 		return {
 			journalPosts: {},
 			projectItems: {},
-			githubRepos: {}
 		};
 	}
 };
