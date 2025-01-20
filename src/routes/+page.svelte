@@ -9,7 +9,6 @@
 	let { data } = $props();
 	const { journalPosts } = data;
 	const { projects } = data;
-	const { githubRepos } = data;
 </script>
 
 <svelte:head>
@@ -24,14 +23,7 @@
 <!-- Projects list -->
 <div class="altBackground">
     <h2>My Projects</h2>
-	<Carousel data={projects} type="project"></Carousel>
-</div>
-
-<!-- Github repos -->
-<div class="altBackground">
-    <h2>Github Repos</h2>
-	<Carousel data={ githubRepos } type="repos"></Carousel>
-	<a class="showMoreBtn" href="https://github.com/AmazinAxel" target="_blank" style="margin-top: 1rem">View Github profile</a>
+	<Carousel data={projects}></Carousel>
 </div>
 
 <!-- Journal posts -->

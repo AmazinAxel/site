@@ -21,6 +21,7 @@
 	transform: translate3d(0, 0, 0);
     overflow: hidden;
 	height: 30rem;
+	border-radius: 0.5rem;
 }
 
 /* Actual carousel styling */
@@ -161,4 +162,7 @@ span.embla__dot.selected {
 	box-shadow: 0 0 5px 0px var(--blue2);
 }
 
-.embla__slide.narrow { flex: 0 0 30rem; height: unset; }
+.embla__slide img { 
+	height: 30rem;
+	object-fit: cover;
+}

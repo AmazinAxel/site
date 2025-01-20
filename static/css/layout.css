@@ -105,8 +105,14 @@ body {
 	border-radius: 0.1rem;
 }
 
-.altBackground { background: #282d37; }
+.altBackground {
+	background: #282d37;
+	box-shadow: 0 0 10px 5px #282d37;
+	border-radius: 0.4rem;
+	padding: 0.5rem;
+}
 
+.altBackground h2 { margin: 10px; }
 /* Mobile tap highlight */
 html {
 	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
