@@ -37,6 +37,8 @@
 	}
 </script>
 
+<a class="showMoreBtn otherWay" href="/">Go back home</a>
+
 <Title name="Contact"/>
 
 <Admonition info>

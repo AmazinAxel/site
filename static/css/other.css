@@ -831,10 +831,10 @@ a.showMoreBtn {
     line-height: 1.5rem;
     text-decoration: none!important;
     justify-content: flex-end;
-    margin: 0rem 0.2rem 1.5rem;
+    margin: 0 0 1.5rem;
 	width: 100%;
 }
-
+.showMoreBtn.otherWay { justify-content: left; flex-direction: row-reverse; gap: 5px; }
 .showMoreBtn::after {
     content: url(https://amazinaxel.com/media/icons/arrow-right.svg);
     margin-left: 4px;
@@ -844,3 +844,7 @@ a.showMoreBtn {
 }
 .showMoreBtn:hover::after { transform: translateX(2px); }
 .showMoreBtn:active::after { transform: translateX(5px); }
+
+.showMoreBtn.otherWay::after { content: url(https://amazinaxel.com/media/icons/arrow-left.svg); }
+.otherWay:hover::after { transform: translateX(-2px); }
+.otherWay:active::after { transform: translateX(-5px); }

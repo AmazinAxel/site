@@ -11,9 +11,7 @@
 	function getQuote() {
 		visibility = false;
 
-		// Wait a second 
 		setTimeout(() => {
-			// Get a random quote from a quote API and display it
 			fetch('https://qapi.vercel.app/api/random') // Quotable API is down - use this endpoint for now
 				.then(response => response.ok ? response.json() : Promise.reject('An error occurred while fetching a quote.'))
 				.then(data => { quote = data.quote; author = data.author;})
