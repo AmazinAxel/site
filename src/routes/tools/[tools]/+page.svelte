@@ -22,4 +22,6 @@
 	<title>{ title } - Axel's Utils</title>
 </svelte:head>
 
+<a class="showMoreBtn otherWay" href="/#utils">Go back</a>
+
 <SvelteComponent/>

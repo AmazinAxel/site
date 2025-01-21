@@ -65,7 +65,7 @@ h2:not(:has(span)) {
 
 a { color: var(--lightest3); }
 
-a:has(> h1, h2, h3, h4) {
+a:has(> h1, h2, h3, h4), h2 a {
 	text-decoration: none !important;
 }
 
