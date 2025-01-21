@@ -1,7 +1,6 @@
 <script>
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import Section from '$lib/components/section.svelte';
 	import ImgCardList from '$lib/components/imgCardList.svelte';
 	import { pages } from '$lib/config';
 	import { projects } from '$lib/config';
@@ -27,16 +26,28 @@
 </div>
 
 <!-- Journal posts -->
-<Section link="https://journal.amazinaxel.com" titleText="What I'm writing about" icon="journal" data={ journalPosts }/>
+<h2>
+	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
+	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
+</h2>
+<div class="cardListContainer">
+	{#each journalPosts as { title, link }}
+		<div class="listCard card backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
+			<a href={link} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+				<h1>{title}</h1>
+				<div class="contentFader"></div>
+			</a>
+		</div>
+	{/each}
+</div>
+
 
 <!-- Minecraft utilities -->
-<div class="section right altBackground">
+<div class="section right altBackground" id="utils">
 	<h2>Minecraft Utilities</h2>
 	<ImgCardList data={pages[1].subitems} alt="Picture of"/>
 </div>
 
 <!-- Contact -->
-<div class="section" style="padding-top: 1rem;">
-	<h4 style="flex: 50%; margin: 0;">Contact me</h4>
-	<a class="showMoreBtn" href="contact" style="margin: unset">Send me a message</a>
-</div>
+<br><hr>
+<a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px;"><strong>Contact me -</strong>Send me a message</a>

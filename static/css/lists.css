@@ -23,7 +23,6 @@
 .cardListContainer {
 	display: flex;
 	overflow-y: clip;
-	padding-top: 15px;
 	padding-left: 5px;
 	max-height: 20rem;
 	flex-wrap: wrap;
