@@ -8,7 +8,7 @@
     let showHero = $state(false);
     
     const randomHero = shuffle(heroItems)[0]; // Random project
-    const image = shuffle(randomHero.images)[0] // Random image from project
+    const image = shuffle(randomHero.images)[0];
 </script>
 
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
