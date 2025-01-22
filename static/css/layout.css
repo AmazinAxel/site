@@ -40,34 +40,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.gridLayout {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-}
-
-.gridItem {
-	flex: 32%;
-}
-
-@media (min-width: 850px) {
-	.gridLayout a:not(.coverCard a) {
-		display: flex;
-		flex: 49%;
-		text-decoration: none;
-		
-	}
-}
-@media (max-width: 850px) {
-	.gridLayout a {
-		width: 100%;
-	}
-}
-
+.gridItem { flex: 32%; }
 @media (max-width: 700px) {
-	.gridItem {
-		flex: 100%;
-	}
+	.gridItem { flex: 100%; }
 }
 
 .section a {
@@ -117,7 +92,7 @@ html {
 	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
 }
 
-.antialised {
+* {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
