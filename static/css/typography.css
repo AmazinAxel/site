@@ -79,7 +79,6 @@ a:hover h2 {
 span.subtext {
 	color: var(--darkest4);
 	font-size: 1.5rem;
-	bottom: 0.1rem;
 	position: relative;
 	font-family: var(--primaryFont);
 	font-weight: 500;
@@ -87,9 +86,9 @@ span.subtext {
 
 span.subtext::before {
 	content: '◆';
-	padding-right: 0.6rem;
-	bottom: 0.2rem;
 	position: relative;
+	padding-right: 0.5rem;
+	bottom: 0.2rem;
 	font-size: 1rem;
 	color: var(--blue2);
 }

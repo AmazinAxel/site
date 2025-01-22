@@ -34,7 +34,7 @@
 
 <Hero>
 	<h1>Error {page.status}: {page.error.message}</h1>
-	<p>Something went wrong. Try <a href="/" >heading back to the homepage.</a></p>
+	<a href="/" >Go back to the homepage.</a>
 </Hero>
 
 <div class="card nomargin quoteParent" class:visible={visibility}>
