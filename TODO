@@ -1,3 +1,2 @@
 - fix all other TODOs throughout the code
-- split up css & reorganize/cleanup styles
 - use a title var instead of the Title component
