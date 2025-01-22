@@ -19,7 +19,17 @@
 		}, 500);
 	};
 </script>
-
+<style>
+	.quoteParent button {
+		position: absolute;
+		right: 0.5rem;
+		bottom: 0.5rem;
+    	color: var(--blue2);
+		background: none;
+		border: 0;
+		cursor: pointer;
+	}
+</style>
 <Title name="Error {page.status}" dontShowHeader/>
 
 <Hero>
@@ -27,19 +37,11 @@
 	<p>Something went wrong. Try <a href="/" >heading back to the homepage.</a></p>
 </Hero>
 
-<div class="card nomargin quoteParent" style="position: relative;" class:visible={visibility}>
+<div class="card nomargin quoteParent" class:visible={visibility}>
 	<blockquote>
 		<p>{quote}</p>
 		<p><em>- {author}</em></p>
 	</blockquote>
-	<button class="nostyle" style="
-		position: absolute;
-		right: 0.5rem;
-		bottom: 0.2rem;
-    	color: var(--blue2);
-		background: none;
-		border: 0;
-		cursor: pointer;
-	" 
+	<button class="nostyle"
 	onclick={() => getQuote()}> New quote </button>
 </div>

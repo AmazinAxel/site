@@ -30,10 +30,10 @@
 	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
 	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
 </h2>
-<div class="cardListContainer">
+<div class="flexGrid">
 	{#each journalPosts as { title, link }}
-		<div class="listCard card backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
-			<a href={link} target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
+			<a href={link} target="_blank" rel="noreferrer noopener">
 				<h1>{title}</h1>
 				<div class="contentFader"></div>
 			</a>
@@ -50,4 +50,4 @@
 
 <!-- Contact -->
 <br><hr>
-<a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px;"><strong>Contact me -</strong>Send me a message</a>
+<a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px;"><strong>Contact me</strong>• Send me a message</a>

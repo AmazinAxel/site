@@ -4,9 +4,7 @@
         warning,
         important,
         note,
-        info = false,
-        size = 20,
-        style = "",
+        info,
         children
     } = $props();
 
@@ -18,4 +16,4 @@
     else if (info) { t = 'info'; i = 'about'; }
 </script>
 
-<div class="coverCard {t} innerCard" style="--bg: url(/media/icons/{i}.svg); --size: {size}rem;{style}">{@render children?.()}</div>
+<div class="coverCard {t} innerCard" style="--bg: url(/media/icons/{i}.svg); --size: 20rem;">{@render children?.()}</div>
