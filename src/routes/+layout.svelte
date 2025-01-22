@@ -8,15 +8,11 @@
 	let { data, children } = $props();
 	const { date } = data;
 
-	// Delays and fadeouts are glitchy atm ;(
-	const transitionIn = { duration: 150 };
-
 	// Prefetch all top-level routes for better speed
 	onMount(() => {
 		const routes = pages.map((page) => page.route);
 		preloadCode(...routes);
 	});
-
 </script>
 <svelte:head>
 	<!-- Top: least important styles -- bottom: most important styles -->
@@ -28,16 +24,12 @@
 	<link rel="stylesheet" href="/css/other.css"/>
 </svelte:head>
 
-<div class="layout">	
-	{#key page.url.pathname}
-		<main tabindex="-1" in:fade|local={transitionIn}>
-			<div id="content">
-				{@render children?.()}
-			</div>
-			<footer>
-				<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
-				<a href="https://github.com/AmazinAxel/site" class="date">Site last generated on {date}</a>
-			</footer>
-		</main>
-	{/key}
-</div>
+{#key page.url.pathname}
+	<div in:fade|local={{ duration: 150 }} id="content">
+		{@render children?.()}
+	</div>
+	<footer>
+		<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
+		<a href="https://github.com/AmazinAxel/site" class="date">Site last generated on {date}</a>
+	</footer>
+{/key}
