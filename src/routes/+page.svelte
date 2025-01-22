@@ -25,7 +25,7 @@
 	<Carousel data={projects}></Carousel>
 </div>
 
-<!-- Journal posts -->
+<!-- Journal posts TODO add me back
 <h2>
 	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
 	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
@@ -39,7 +39,7 @@
 			</a>
 		</div>
 	{/each}
-</div>
+</div>-->
 
 
 <!-- Minecraft utilities -->
