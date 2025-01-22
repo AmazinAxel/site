@@ -1,4 +1,11 @@
-.listCard { 
+.flexGrid {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	margin: auto;
+}
+
+.gridCard { 
 	transition: scale 0.4s var(--ease);
 	overflow: hidden;
 	position: relative;
@@ -6,36 +13,10 @@
     flex: 45%;
 }
 
-.listCard .contentFader { height: 5rem; }
-.listCard h1 { font-size: 1.5rem; margin: 0; }
-.listCard:hover { scale: 0.99; transition: 0.4s var(--ease); } /* TODO all buttons should be auto-scaled */
-.listCard:active { scale: 0.97; }
-.listCard a {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-/* Stacked cards list */
-.cardListContainer {
-	display: flex;
-	overflow-y: clip;
-	padding-left: 5px;
-	max-height: 20rem;
-	flex-wrap: wrap;
-	overflow-x: auto;
-    column-gap: 1rem;
-	flex: 50%;
-}
-
-@media (min-width: 1000px) {
-	.cardListContainer {
-		padding-right: 5rem;
-	}
-}
+.gridCard .contentFader { height: 5rem; }
+.gridCard h1 { font-size: 1.5rem; margin: 0; }
+.gridCard:hover { scale: 0.99; transition: 0.4s var(--ease); }
+.gridCard:active { scale: 0.97; }
 
 .backgroundIcon::after {
 	content: '';

@@ -1,13 +1,12 @@
 <script>
     let { data, alt } = $props();
 </script>
-
-<div style="display: flex; gap: 0.5rem; align-items: center; margin: auto;">
+<div class="flexGrid">
     {#each data as item}
-        <a href="/tools/{item.route}" style="text-decoration: none;" class="gridItem">
+        <a href="/tools/{item.route}" class="gridItem">
             <div class="card imgCard">
                 <picture>
-                    <img src="/media/tools/previews/{item.image}" class="noImgStyle" style="border-radius: 0.5rem" alt={alt + item.title}>
+                    <img src="/media/tools/previews/{item.image}" class="noImgStyle" alt={alt + item.title}>
                 </picture>
                 <h3>{item.title}</h3>
                 <div class="contentFader"></div>

@@ -2,13 +2,12 @@
     let {
         inlineText,
         isIcon = false,
-        style = '',
         click = '',
         children
     } = $props();
 </script>
 
-<div class="tooltip" style={style}>
+<div class="tooltip">
     {#if isIcon}
         <img src="/media/icons/about.svg" alt="About tooltip" class="noImgStyle">
     {:else}
