@@ -7,8 +7,8 @@
 
 #content {
 	margin: auto;
-	max-width: 90rem;
-	padding: 2rem 10rem;
+	max-width: 75rem;
+	padding: 4rem 1rem 1rem 1rem;
 	/* Make footer anchored to bottom - 4rem is footer height */
 	min-height: calc(100vh - 5rem);
 }
