@@ -2,7 +2,6 @@
     import { page } from '$app/state';
 	import { onMount } from "svelte"; 
 	import Hero from '$lib/components/hero.svelte';
-	import Title from '$lib/components/title.svelte';
 	let quote = $state(), author = $state();
 	let visibility = $state(false);
 
@@ -30,7 +29,7 @@
 		cursor: pointer;
 	}
 </style>
-<Title name="Error {page.status}" dontShowHeader/>
+<svelte:head><title>Error {page.status} - AmazinAxel.com</title></svelte:head>
 
 <Hero>
 	<h1>Error {page.status}: {page.error.message}</h1>

@@ -4,7 +4,6 @@
     import { cubicOut } from 'svelte/easing';
 	const transition = { y: 10, duration: 250, easing: cubicOut };
 
-    // TODO Switch to CSR on this page to improve page load speed
     import { commonIcons } from '$lib/components/tool-pages/emojipicker.js';
     const iconList = commonIcons.split('');
     let showCopyMessage = $state(), alreadyCopied = $state(), isOpen = $state(false);

@@ -1,8 +1,8 @@
 <script>
-    let { name, dontShowHeader } = $props();
+    let { name } = $props();
 </script>
 <svelte:head>
 	<title>{ name } - AmazinAxel.com</title>
 </svelte:head>
 
-{#if !dontShowHeader}<h1>{name}</h1>{/if}
+<h1>{name}</h1>
