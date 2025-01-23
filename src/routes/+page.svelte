@@ -39,7 +39,7 @@
 		</div>
 	{/each}
 </div>
-
+<br>
 
 <!-- Minecraft utilities -->
 <div class="section right altBackground" id="utils">

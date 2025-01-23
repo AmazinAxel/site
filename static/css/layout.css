@@ -45,7 +45,7 @@ body {
 }
 
 /* Styles applied only on larger screens */
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	.section {
 		display: flex;
 		flex-direction: revert;
@@ -59,7 +59,7 @@ body {
 		font-size: 3rem;
 	}
 	.section a {
-		width: 15rem;
+		width: 25rem;
 	}
 	.section.right h2 {
 		text-align: right;
