@@ -8,7 +8,7 @@
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
-    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏᴢ';
+    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏᴢ⋆';
 
     const scriptChars = '0123456789+-=()';
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';
@@ -18,7 +18,7 @@
         let preConvertedText = '';
         let apostrapheMatch, quotationMatch = false;
 
-        var text = (toSmallText) ? inputText.toLowerCase() : outputText;
+        const text = (toSmallText) ? inputText.toLowerCase() : outputText;
         
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
