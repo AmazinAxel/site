@@ -33,7 +33,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.gridItem { flex: 32%; }
 @media (max-width: 700px) {
 	.gridItem { flex: 100%; }
 }
@@ -83,9 +82,4 @@ body {
 /* Mobile tap highlight */
 html {
 	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);
-}
-
-* {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }

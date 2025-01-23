@@ -16,18 +16,17 @@ export const pages = [
 		subitems: [
 			{
 				title: 'Text Converter',
-				route: 'textconverter',
-				image: 'textconverter.png'
+				route: 'textconverter'
 			},
 			{
 				title: 'Emoji Picker',
 				route: 'emojipicker',
-				image: 'placeholder.png'
+				notFinished: true
 			},
 			{
 				title: 'Inventory IDs',
 				route: 'inventoryids',
-				image: 'placeholder.png'
+				notFinished: true
 			}
 		]
 	}

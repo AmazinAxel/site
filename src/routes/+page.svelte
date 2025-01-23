@@ -1,7 +1,6 @@
 <script>
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import ImgCardList from '$lib/components/imgCardList.svelte';
 	import { pages } from '$lib/config';
 	import { projects } from '$lib/config';
 
@@ -25,7 +24,7 @@
 	<Carousel data={projects}></Carousel>
 </div>
 
-<!-- Journal posts TODO add me back
+<!-- Journal posts -->
 <h2>
 	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
 	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
@@ -39,13 +38,36 @@
 			</a>
 		</div>
 	{/each}
-</div>-->
+</div>
 
 
 <!-- Minecraft utilities -->
 <div class="section right altBackground" id="utils">
 	<h2>Minecraft Utilities</h2>
-	<ImgCardList data={pages[1].subitems} alt="Picture of"/>
+	<div class="flexGrid">
+		{#each pages[1].subitems as util}
+			<a href="/tools/{util.route}" class="gridItem" style="flex: 30%">
+				<div class="card imgCard">
+					<picture>
+						<img src="/media/tools/previews/{util.route}.png" class="noImgStyle" alt={util.title + "preview"}>
+					</picture>
+					<h3>{util.title}</h3>
+					{#if util.notFinished} <p style="
+						margin: 0;
+						padding: 0;
+						position: absolute;
+						bottom: 2px;
+						left: 0;
+						width: 100%;
+						font-size: 0.8rem;">
+						🚧 Not finished 🚧
+					</p>
+					{/if}
+					<div class="contentFader"></div>
+				</div>
+			</a>
+		{/each}
+	</div>
 </div>
 
 <!-- Contact -->

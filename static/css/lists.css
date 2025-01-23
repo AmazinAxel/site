@@ -1,16 +1,18 @@
 .flexGrid {
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-	margin: auto;
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .gridCard { 
-	transition: scale 0.4s var(--ease);
-	overflow: hidden;
-	position: relative;
-	transform: scale(1);
-    flex: 45%;
+    transition: scale 0.4s var(--ease);
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    padding: 0.5rem 5rem;
+    margin: 5px 0;
 }
 
 .gridCard .contentFader { height: 5rem; }
