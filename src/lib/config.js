@@ -62,7 +62,7 @@ export const heroItems = [
 		description: 'A custom Minecraft survival server',
 		images: [
 			{
-				image: 'Permafrost2.png'
+				image: 'Permafrost1.png'
 			}
 		]
 	},
@@ -72,6 +72,10 @@ export const heroItems = [
 		images: [
 			{
 				image: 'Dueling1.png',
+				invertColors: true
+			},
+			{
+				image: 'Dueling2.png',
 				invertColors: true
 			}
 		]
