@@ -52,17 +52,6 @@
 						<img src="/media/tools/previews/{util.route}.png" class="noImgStyle" alt={util.title + "preview"}>
 					</picture>
 					<h3>{util.title}</h3>
-					{#if util.notFinished} <p style="
-						margin: 0;
-						padding: 0;
-						position: absolute;
-						bottom: 2px;
-						left: 0;
-						width: 100%;
-						font-size: 0.8rem;">
-						🚧 Not finished 🚧
-					</p>
-					{/if}
 					<div class="contentFader"></div>
 				</div>
 			</a>

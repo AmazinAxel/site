@@ -36,13 +36,25 @@
 }
 button { font-family: 'Monocraft'; }
 </style>
+<svelte:head>
+	<link rel="stylesheet" href="/css/lists.css"/>
+</svelte:head>
 
 <h1>Minecraft Emoji picker</h1>
 
-{#each iconList as icon}
-    <button onclick={copy}>{icon}</button>
-{/each}
+<p>Character width</p>
+<div class="slider_container">
+    <input type="range" min="3" max="19" id="scriptType"
+        oninput={(self) => document.querySelectorAll('button').forEach(b => b.style.setProperty('flex', self.target.value + '%'))}
+    >
+</div>
+<br>
 
+<div class="flexGrid">
+    {#each iconList as icon}
+        <button onclick={copy} style="min-width: unset; flex: 10%">{icon}</button>
+    {/each}
+</div>
 {#if showCopyMessage}
     <p class="stickyAdmonition" in:fly|local={transition} out:fly|local={transition} class:alreadyCopied={alreadyCopied}>Copied!</p>
 {/if}

@@ -15,8 +15,7 @@ export const pages = [
 			},
 			{
 				title: 'Emoji Picker',
-				route: 'emojipicker',
-				notFinished: true
+				route: 'emojipicker'
 			}
 		]
 	}
