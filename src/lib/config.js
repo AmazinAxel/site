@@ -1,8 +1,3 @@
-/*
- * AmazinAxel.com quick config options
- * Change sidebar-related settings easily
- */
-
 export const pages = [
 	{
 		title: 'Contact',
@@ -21,11 +16,6 @@ export const pages = [
 			{
 				title: 'Emoji Picker',
 				route: 'emojipicker',
-				notFinished: true
-			},
-			{
-				title: 'Inventory IDs',
-				route: 'inventoryids',
 				notFinished: true
 			}
 		]

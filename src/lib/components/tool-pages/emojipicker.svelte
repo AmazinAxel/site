@@ -1,10 +1,11 @@
 <script>
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
+    import Admonition from '../admonition.svelte';
 	const transition = { y: 10, duration: 250, easing: cubicOut };
 
-    import { commonIcons } from '$lib/components/tool-pages/emojipicker.js';
-    const iconList = commonIcons.split('').filter((v) => v != '\n');
+    import { allChars } from '$lib/components/tool-pages/emojipicker.js';
+    const iconList = allChars.split('').filter((v) => v != '\n');
     let showCopyMessage = $state(), alreadyCopied = $state();
     let copyMessageTime = 0;
     function copy(event) {
@@ -12,9 +13,9 @@
         navigator.clipboard.writeText(event.target.innerText);
 
         if (showCopyMessage == true) {
-            // If the admonition is already shown, let's play a pop animation
+            // Play pop animation if admonition is visible
             alreadyCopied = true;
-            setTimeout(() => { alreadyCopied = false }, 100);
+            setTimeout(() => alreadyCopied = false, 100);
         };
 
         showCopyMessage = true;
@@ -31,14 +32,12 @@
 <style>
 @font-face {
 	font-family: 'Monocraft';
-	font-style: normal;
-	font-weight: 200;
-	font-display: swap;
 	src: url(/fonts/Monocraft.otf) format('opentype');
-    
 }
 button { font-family: 'Monocraft'; }
 </style>
+
+<h1>Minecraft Emoji picker</h1>
 
 {#each iconList as icon}
     <button onclick={copy}>{icon}</button>
@@ -47,3 +46,8 @@ button { font-family: 'Monocraft'; }
 {#if showCopyMessage}
     <p class="stickyAdmonition" in:fly|local={transition} out:fly|local={transition} class:alreadyCopied={alreadyCopied}>Copied!</p>
 {/if}
+
+<Admonition info>
+    <p>The characters displayed here are taken directly from the Minecraft jar font.</p>
+    <p>Some icons here are not displayed properly in the Monocraft font - hopefully to be fixed soon.</p>
+</Admonition>
