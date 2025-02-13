@@ -4,9 +4,7 @@
 	import { pages } from '$lib/config';
 	import { projects } from '$lib/config';
 
-	// Necessary for the journal post system
-	let { data } = $props();
-	const { journalPosts } = data;
+	let { data } = $props(); // For journal posts
 </script>
 
 <svelte:head>
@@ -30,7 +28,7 @@
 	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
 </h2>
 <div class="flexGrid">
-	{#each journalPosts as { title, link }}
+	{#each [data.journalPosts] as {link, title}}
 		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
 			<a href={link} target="_blank" rel="noreferrer noopener">
 				<h1>{title}</h1>
@@ -61,4 +59,4 @@
 
 <!-- Contact -->
 <br><hr>
-<a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px;"><strong>Contact me</strong>• Send me a message</a>
+<a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px; font-weight: bold;">Contact me</a>

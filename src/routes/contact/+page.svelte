@@ -42,11 +42,10 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
-	<p>If you cannot use Discord for any reason, use the below contact form. Include a contact method if you would like a response.</p>
+	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code>.</p>
+	<p>As an alternative communication channel, I provide the below contact form. Include a contact method if you would like a response.</p>
 </Admonition>
 
-<!-- https://kit.svelte.dev/docs/form-actions -->
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
     <form method="POST" onsubmit={handleSubmit}>
