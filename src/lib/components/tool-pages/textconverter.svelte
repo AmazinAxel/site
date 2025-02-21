@@ -5,6 +5,7 @@
     var outputText = $state();
     let textType = $state(false);
     let scriptType = $state(2);
+    let autoCopy = $state(true);
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
     const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
@@ -62,7 +63,9 @@
         };
 
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
-    } 
+
+        if (autoCopy) navigator.clipboard.writeText(outputText);
+    }
 </script>
 
 <style>
@@ -149,6 +152,15 @@
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle">
         </Tooltip>
     </div>
+    <br>
+    <label class="container">
+        <input type="checkbox" id="autoCopy" bind:checked={autoCopy}>
+        <span class="checkmark"></span>
+        <Tooltip inlineText="Auto copy text on change">
+            Whether to automatically copy small text when new text is entered
+            <br><strong>NOTE:</strong> This may spam your clipboard!
+        </Tooltip>
+    </label>
 </div>
 
 <br>

@@ -283,6 +283,7 @@ input[type='checkbox'] {
 
 .tooltiptext img {
 	box-shadow: -1px -1px 6px var(--darkest1);
+	margin: auto;
 }
 
 /* Inputs */
