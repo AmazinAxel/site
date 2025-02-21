@@ -18,7 +18,7 @@
 
 <!-- Projects list -->
 <div class="altBackground">
-    <h2>My Projects</h2>
+    <h2>Projects</h2>
 	<Carousel data={projects}></Carousel>
 </div>
 

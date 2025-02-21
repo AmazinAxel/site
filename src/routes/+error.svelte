@@ -11,7 +11,7 @@
 		visibility = false;
 
 		setTimeout(() => {
-			fetch('https://qapi.vercel.app/api/random') // Quotable API is down - use this endpoint for now
+			fetch('https://quoteslate.vercel.app/api/quotes/random')
 				.then(response => response.ok ? response.json() : Promise.reject('An error occurred while fetching a quote.'))
 				.then(data => { quote = data.quote; author = data.author;})
 				.then(() => { visibility = true; });
@@ -42,5 +42,5 @@
 		<p><em>- {author}</em></p>
 	</blockquote>
 	<button class="nostyle"
-	onclick={() => getQuote()}> New quote </button>
+	onclick={() => getQuote()}>New quote</button>
 </div>

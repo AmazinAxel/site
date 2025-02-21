@@ -1,13 +1,10 @@
 <script>
-    let { data } = $props();
+    let { title, data } = $props();
     const { pageContent } = data;
     import { pages } from '$lib/config';
     import { page } from '$app/state';
-    
-    let title = $state();
 
-    // Loop each tool item and compare their route
-    // If route matches, set the title
+    // Loop each tool object and compare their route to get page title
     for (let i = 0; i < pages[1].subitems.length; i++) {
         let toolPage = pages[1].subitems[i];
         

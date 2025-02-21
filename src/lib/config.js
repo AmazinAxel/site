@@ -25,12 +25,7 @@ export const projects = [
 	{
 		title: 'Permafrost',
 		role: 'Project Manager',
-		description: `
-			An entirely custom Minecraft survival server. Survive the harsh winter 
-			and explore the cold snowy tundra wasteland, or scavenge for resources 
-			with friends. Build a hideout and gather resources or attack enemy 
-			compounds for loot. Exeperience survival gameplay like never before.
-			`,
+		description: 'An all-custom & unique Minecraft survival server set in a desolate tundra.',
 		image: 'Permafrost2.png',
 		lightBackground: true
 	},
@@ -38,15 +33,16 @@ export const projects = [
 		title: 'Dueling',
 		role: '',
 		description:
-			'A competitive 1v1 PvP matchup tournament event server. Duel others to the death in quick 1v1 duels. Featuring collectible Titles, various custom kits, and rotating maps. Available on Minekeep.',
+			`A competitive 1v1 PvP matchup tournament event server.
+			Featuring collectible Titles and rotating kits/maps.
+			Available on Minekeep.`,
 		image: 'Dueling1.png'
 	},
 	{
 		title: 'Nix Flake',
 		role: '',
 		image: '../projects/flake.png',
-		description:
-			'My Nix desktop & machine configurations. Built using Astal and home-manager.',
+		description: 'My Nix desktop & machine configurations. Built using Astal and home-manager.',
 		url: 'https://github.com/AmazinAxel/flake',
 	}
 ]

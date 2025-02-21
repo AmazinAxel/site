@@ -16,6 +16,8 @@
     const subChars = '₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
     function convertText(toSmallText = true) {
+        if (typeof inputText == 'undefined') return;
+        
         let preConvertedText = '';
         let apostrapheMatch, quotationMatch = false;
 

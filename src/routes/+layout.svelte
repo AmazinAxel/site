@@ -1,21 +1,11 @@
-<!-- Wraps every page on the site, most important parent layout -->
 <script>
-	import { pages } from '$lib/config';
-	import { preloadCode } from '$app/navigation';
-	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/state';
 	let { data, children } = $props();
 	const { date } = data;
-
-	// Prefetch all top-level routes for better speed
-	onMount(() => {
-		const routes = pages.map((page) => page.route);
-		preloadCode(...routes);
-	});
 </script>
 <svelte:head>
-	<!-- Top: least important styles -- bottom: most important styles -->
+	<!-- Bottom-to-top in order of importance -->
 	<link rel="stylesheet" href="/css/vars.css"/>
 	<link rel="stylesheet" href="/css/footer.css"/>
 	<link rel="stylesheet" href="/css/layout.css"/>
