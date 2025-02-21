@@ -34,7 +34,9 @@ body {
 }
 
 @media (max-width: 700px) {
-	.gridItem { flex: 100%; }
+	.gridItem {
+		flex: 100%;
+	}
 }
 
 .section a {
@@ -67,7 +69,9 @@ body {
 	}
 }
 
-.section.right { border-radius: 0.1rem; }
+.section.right {
+	border-radius: 0.1rem;
+}
 
 .altBackground {
 	background: #282d37;
@@ -76,7 +80,9 @@ body {
 	padding: 0.5rem;
 }
 
-.altBackground h2 { margin: 10px; }
+.altBackground h2 {
+	margin: 10px;
+}
 /* Mobile tap highlight */
 html {
 	-webkit-tap-highlight-color: rgba(128, 128, 128, 0.5);

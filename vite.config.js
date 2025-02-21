@@ -6,7 +6,7 @@ const config = {
 	build: {
 		target: 'es2020'
 	},
-	
+
 	terserOptions: {
 		compress: {
 			hoist_funs: true, // Reduce computation in loops

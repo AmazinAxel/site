@@ -43,9 +43,9 @@ export const projects = [
 		role: '',
 		image: '../projects/flake.png',
 		description: 'My Nix desktop & machine configurations. Built using Astal and home-manager.',
-		url: 'https://github.com/AmazinAxel/flake',
+		url: 'https://github.com/AmazinAxel/flake'
 	}
-]
+];
 
 export const heroItems = [
 	{

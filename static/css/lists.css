@@ -1,30 +1,46 @@
 .flexGrid {
-    display: inline-flex;
-    column-gap: 0.5rem;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
+	display: inline-flex;
+	column-gap: 0.5rem;
+	align-items: center;
+	margin: auto;
+	flex-wrap: wrap;
 }
 
-.gridCard { 
-    transition: scale 0.4s var(--ease);
-    overflow: hidden;
-    position: relative;
-    transform: scale(1);
-    padding: 0.5rem 5rem;
-    margin: 5px 0;
+.gridCard {
+	transition: scale 0.4s var(--ease);
+	overflow: hidden;
+	position: relative;
+	transform: scale(1);
+	padding: 0.5rem 5rem;
+	margin: 5px 0;
 }
 
 @media (max-width: 800px) {
-	.gridItem { flex: 100%!important; }
-	.flexGrid { display: block; }
-	.gridCard { padding: 0.5rem 0.2rem;}
+	.gridItem {
+		flex: 100% !important;
+	}
+	.flexGrid {
+		display: block;
+	}
+	.gridCard {
+		padding: 0.5rem 0.2rem;
+	}
 }
 
-.gridCard .contentFader { height: 5rem; }
-.gridCard h1 { font-size: 1.5rem; margin: 0; }
-.gridCard:hover { scale: 0.99; transition: 0.4s var(--ease); }
-.gridCard:active { scale: 0.97; }
+.gridCard .contentFader {
+	height: 5rem;
+}
+.gridCard h1 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+.gridCard:hover {
+	scale: 0.99;
+	transition: 0.4s var(--ease);
+}
+.gridCard:active {
+	scale: 0.97;
+}
 
 .backgroundIcon::after {
 	content: '';

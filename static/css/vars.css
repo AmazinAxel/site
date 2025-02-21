@@ -24,8 +24,9 @@
 
 	/* Fonts */
 	--headerFont: 'Hammersmith One', Roboto, Helvetica, Arial, sans-serif;
-	--primaryFont: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--primaryFont:
+		'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 	--ease: cubic-bezier(0, 0.6, 0.3, 1);
 }

@@ -19,7 +19,7 @@
 	min-width: 0;
 	padding-left: var(--slide-spacing);
 	transform: translate3d(0, 0, 0);
-    overflow: hidden;
+	overflow: hidden;
 	height: 30rem;
 	border-radius: 0.5rem;
 }
@@ -72,7 +72,6 @@
 .carouselContent.lightBackground p {
 	color: revert;
 }
-
 
 /* Carousel buttons (small) */
 .embla__slide a::after {
@@ -138,7 +137,7 @@ span.embla__dot.selected {
 	box-shadow: 0 0 5px 0px var(--blue2);
 }
 
-.embla__slide img { 
+.embla__slide img {
 	height: 30rem;
 	object-fit: cover;
 }
