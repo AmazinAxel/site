@@ -49,9 +49,9 @@
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
     <form method="POST" onsubmit={handleSubmit}>
-        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message Subject"/>
+        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message subject"/>
 		<div></div>
-		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your Name"/>
+		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your name"/>
 		<div></div>
 		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
 
