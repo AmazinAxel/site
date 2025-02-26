@@ -31,9 +31,10 @@
 </style>
 <svelte:head><title>Error {page.status} - AmazinAxel.com</title></svelte:head>
 
+<a class="showMoreBtn otherWay" href="/">Go back home</a>
+
 <Hero>
 	<h1>Error {page.status}: {page.error.message}</h1>
-	<a href="/" >Go back to the homepage.</a>
 </Hero>
 
 <div class="card nomargin quoteParent" class:visible={visibility}>

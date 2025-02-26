@@ -2,6 +2,7 @@
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
     import Admonition from '../admonition.svelte';
+    import Options from '../options.svelte';
 	const transition = { y: 10, duration: 250, easing: cubicOut };
 
     import { allChars } from '$lib/components/tool-pages/emojipicker.js';
@@ -40,15 +41,18 @@ button { font-family: 'Monocraft'; }
 	<link rel="stylesheet" href="/css/lists.css"/>
 </svelte:head>
 
-<h1>Minecraft Emoji picker</h1>
+<h1>Minecraft Emoji Picker</h1>
 
-<p>Character width</p>
-<div class="slider_container">
-    <input type="range" min="3" max="19" id="scriptType"
+<!--<Options>
+    <label for="charwidth">Character width:</label>
+    <input type="range" min="3" max="19" name="charwidth"
         oninput={(self) => document.querySelectorAll('button').forEach(b => b.style.setProperty('flex', self.target.value + '%'))}
     >
-</div>
-<br>
+    <br>
+    <label for="search">Search:</label>
+    <input type="text" name="search" style="margin-bottom: 0;">
+</Options>
+<br>-->
 
 <div class="flexGrid">
     {#each iconList as icon}

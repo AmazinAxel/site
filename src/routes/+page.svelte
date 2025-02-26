@@ -22,22 +22,14 @@
 	<Carousel data={projects}></Carousel>
 </div>
 
-<!-- Journal posts -->
+<!-- Permafrost
 <h2>
-	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
-	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
+	<a href="https://permafrost.amazinaxel.com">Permafrost</a>
+	<a href="https://permafrost.amazinaxel.com"><span class='subtext'>Custom Minecraft survival</span></a>
 </h2>
-<div class="flexGrid">
-	{#each [data.journalPosts] as {link, title}}
-		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
-			<a href={link} target="_blank" rel="noreferrer noopener">
-				<h1>{title}</h1>
-				<div class="contentFader"></div>
-			</a>
-		</div>
-	{/each}
-</div>
-<br>
+<div class="altBackground">
+	<p></p>
+</div>-->
 
 <!-- Minecraft utilities -->
 <div class="section right altBackground" id="utils">
@@ -57,6 +49,22 @@
 	</div>
 </div>
 
+<!-- Journal posts -->
+<h2>
+	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
+	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
+</h2>
+<div class="flexGrid">
+	{#each [data.journalPosts] as {link, title}}
+		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
+			<a href={link} target="_blank" rel="noreferrer noopener">
+				<h1>{title}</h1>
+				<div class="contentFader"></div>
+			</a>
+		</div>
+	{/each}
+</div>
+
 <!-- Contact -->
-<br><hr>
+<br><br><hr>
 <a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px; font-weight: bold;">Contact me</a>
