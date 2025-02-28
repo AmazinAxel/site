@@ -18,5 +18,5 @@
         onmouseenter={() => (showHero = true)} 
         onmouseleave={() => (showHero = false)}
         aria-label="Open hero information"
-    >{randomHero.project} <span>- {randomHero.description} </span></span>
+    >{randomHero.name} <span>, {randomHero.location} </span></span>
 </div>

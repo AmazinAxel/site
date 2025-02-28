@@ -1,7 +1,7 @@
 <script>
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import { pages } from '$lib/config';
+	import { tools } from '$lib/config';
 	import { projects } from '$lib/config';
 
 	let { data } = $props(); // For journal posts
@@ -35,13 +35,13 @@
 <div class="section right altBackground" id="utils">
 	<h2>Minecraft Utilities</h2>
 	<div class="flexGrid">
-		{#each pages[1].subitems as util}
-			<a href="/tools/{util.route}" class="gridItem" style="flex: 30%">
+		{#each tools as tool}
+			<a href="/tools/{tool.route}" class="gridItem" style="flex: 30%">
 				<div class="card imgCard">
 					<picture>
-						<img src="/media/tools/previews/{util.route}.png" class="noImgStyle" alt={util.title + "preview"}>
+						<img src="/media/tools/previews/{tool.route}.png" class="noImgStyle" alt={tool.title + "preview"}>
 					</picture>
-					<h3>{util.title}</h3>
+					<h3>{tool.title}</h3>
 					<div class="contentFader"></div>
 				</div>
 			</a>

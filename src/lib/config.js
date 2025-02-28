@@ -1,23 +1,11 @@
-export const pages = [
+export const tools = [
 	{
-		title: 'Contact',
-		route: '/contact',
-		icon: 'contact'
+		title: 'Text Converter',
+		route: 'textconverter'
 	},
 	{
-		title: 'Tools',
-		route: '/tools',
-		icon: 'tools',
-		subitems: [
-			{
-				title: 'Text Converter',
-				route: 'textconverter'
-			},
-			{
-				title: 'Emoji Picker',
-				route: 'emojipicker'
-			}
-		]
+		title: 'Emoji Picker',
+		route: 'emojipicker'
 	}
 ];
 
@@ -26,7 +14,7 @@ export const projects = [
 		title: 'Permafrost',
 		role: 'Project Manager',
 		description: 'An all-custom & unique Minecraft survival server set in a desolate tundra.',
-		image: 'Permafrost2.png',
+		image: 'permafrost.png',
 		lightBackground: true
 	},
 	{
@@ -36,12 +24,12 @@ export const projects = [
 			`A competitive 1v1 PvP matchup tournament event server.
 			Featuring collectible Titles and rotating kits/maps.
 			Available on Minekeep.`,
-		image: 'Dueling1.png'
+		image: 'dueling.png'
 	},
 	{
 		title: 'Nix Flake',
 		role: '',
-		image: '../projects/flake.png',
+		image: 'flake.png',
 		description: 'My Nix desktop & machine configurations. Built using Astal and home-manager.',
 		url: 'https://github.com/AmazinAxel/flake'
 	}
@@ -49,29 +37,21 @@ export const projects = [
 
 export const heroItems = [
 	{
-		project: 'Myst',
-		description: 'A discontinued Roblox exploration game',
-		images: [{ image: 'Myst.jpg' }]
+		name: 'Mt. Baker',
+		location: 'Washington State',
+		images: [{ image: 'baker.png' }]
 	},
 	{
-		project: 'Permafrost',
-		description: 'A custom Minecraft survival server',
-		images: [
-			{
-				image: 'Permafrost1.png'
-			}
-		]
+		name: 'Bellingham Bay',
+		location: 'Washington State',
+		images: [{ image: 'sailboat-sunset.jpg' }]
 	},
 	{
-		project: 'Dueling',
-		description: '1v1 tournament matchup Minecraft server',
+		name: 'Nooksack Valley',
+		location: 'Washington State',
 		images: [
 			{
-				image: 'Dueling1.png',
-				invertColors: true
-			},
-			{
-				image: 'Dueling2.png',
+				image: 'valley.jpg',
 				invertColors: true
 			}
 		]

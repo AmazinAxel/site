@@ -38,6 +38,7 @@
 	height: 100%;
 	background-image: var(--heroBackground);
 	background-size: cover;
+    background-position: center;
 	filter: blur(10px);
 	transition:
 		filter 1s var(--ease),
@@ -98,7 +99,7 @@
 }
 
 #hero.heroShow span span {
-	margin-left: 5px;
+	margin-left: 0;
 	opacity: 1;
 }
 

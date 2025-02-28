@@ -26,7 +26,7 @@
           <h6>{role}</h6>
           <p>{description}</p>
         </div>
-        <img src="/media/herobanners/{image}" alt="Background hero of {title} - {description}">
+        <img src="/media/projects/{image}" alt="Background hero of {title} - {description}">
       </div>
     {/each}
   </div>
