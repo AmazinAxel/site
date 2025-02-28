@@ -5,7 +5,7 @@
 	let quote = $state(), author = $state();
 	let visibility = $state(false);
 
-	onMount(getQuote);
+	onMount(getQuote());
 
 	function getQuote() {
 		visibility = false;
