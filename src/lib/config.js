@@ -42,18 +42,33 @@ export const heroItems = [
 		images: [{ image: 'baker.png' }]
 	},
 	{
-		name: 'Bellingham Bay',
-		location: 'Washington State',
-		images: [{ image: 'sailboat-sunset.jpg' }]
+		name: 'Boulevard Park',
+		location: 'Bellingham, WA',
+		images: [{ image: 'boulevard-park.jpg' }]
 	},
 	{
-		name: 'Nooksack Valley',
+		name: 'Lake Cushman',
+		location: 'Washington State',
+		images: [{ image: 'lake-cushman.jpg' }]
+	},
+	{
+		name: 'Picture Lake',
 		location: 'Washington State',
 		images: [
 			{
-				image: 'valley.jpg',
+				image: 'picture-lake.jpg',
 				invertColors: true
 			}
 		]
+	},
+	{
+		name: 'Rainier National Park',
+		location: 'Washington State',
+		images: [{ image: 'rainier.jpg' }]
+	},
+	{
+		name: 'San Juan Islands',
+		location: 'Washington State',
+		images: [{ image: 'san-juan-islands.jpg' }]
 	}
 ];
