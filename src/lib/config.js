@@ -39,27 +39,20 @@ export const heroItems = [
 	{
 		name: 'Mt. Baker',
 		location: 'Washington State',
-		images: [{ image: 'baker.png' }]
-	},
-	{
-		name: 'Boulevard Park',
-		location: 'Bellingham, WA',
-		images: [{ image: 'boulevard-park.jpg' }]
-	},
-	{
-		name: 'Lake Cushman',
-		location: 'Washington State',
-		images: [{ image: 'lake-cushman.jpg' }]
-	},
-	{
-		name: 'Picture Lake',
-		location: 'Washington State',
 		images: [
+			{
+				image: 'baker.png'
+			},
 			{
 				image: 'picture-lake.jpg',
 				invertColors: true
 			}
 		]
+	},
+	{
+		name: 'Boulevard Park',
+		location: 'Bellingham, WA',
+		images: [{ image: 'boulevard-park.jpg' }]
 	},
 	{
 		name: 'Rainier National Park',
