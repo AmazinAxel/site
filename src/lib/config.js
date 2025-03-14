@@ -20,8 +20,8 @@ export const projects = [
 	{
 		title: 'Dueling',
 		role: '',
-		description:
-			`A competitive 1v1 PvP matchup tournament event server.
+		description: `
+			A competitive 1v1 PvP matchup tournament event server.
 			Featuring collectible Titles and rotating kits/maps.
 			Available on Minekeep.`,
 		image: 'dueling.png'

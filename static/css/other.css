@@ -38,7 +38,7 @@
 	height: 100%;
 	background-image: var(--heroBackground);
 	background-size: cover;
-    background-position: center;
+	background-position: center;
 	filter: blur(10px);
 	transition:
 		filter 1s var(--ease),
@@ -80,22 +80,34 @@
 	line-height: 1;
 	color: black;
 	opacity: 0.5;
-	text-shadow: 0 0 5px var(--lightest1);
 	width: max-content;
 	text-align: left;
+	transition: background-color .1s var(--ease);
+	background-color:rgba(0, 0, 0, 0);
+	border-radius: 0 0 0 0.5rem;
+}
+#hero span:not(span span) {
+	padding-right: calc(0.5rem - 3px);
+}
+#hero.heroShow span {
+	background-color:rgba(255, 255, 255, 0.75);
+}
+#hero span span {
+	border-radius: 0 0.5rem 0 0;
 }
 
 #hero.invertColors span {
 	color: white;
 }
+#hero.invertColors.heroShow span {
+	background-color:rgba(0, 0, 0, 0.75);
+}
 
 #hero span span {
-	padding: 0;
-	margin-left: -5px;
-	opacity: 0;
-	transition:
-		margin-left 0.1s var(--ease),
-		opacity 0.1s var(--ease);
+    padding-left: 0;
+	top: 0;
+    opacity: 0;
+    transition: margin-left 0.1s var(--ease), opacity 0.1s var(--ease);
 }
 
 #hero.heroShow span span {
@@ -346,7 +358,7 @@ a .imgCard:active {
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
-	transition: .2s filter var(--ease);
+	transition: 0.2s filter var(--ease);
 }
 
 .innerCard * {
