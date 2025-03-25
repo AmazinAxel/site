@@ -14,7 +14,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 10rem;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--darkest3) 100%);
+	background-image: linear-gradient(to bottom, transparent, var(--darkest3) 100%);
 }
 
 /* Homepage hero */
@@ -83,14 +83,14 @@
 	width: max-content;
 	text-align: left;
 	transition: background-color .1s var(--ease);
-	background-color:rgba(0, 0, 0, 0);
+	background-color: transparent;
 	border-radius: 0 0 0 0.5rem;
 }
 #hero span:not(span span) {
 	padding-right: calc(0.5rem - 3px);
 }
 #hero.heroShow span {
-	background-color:rgba(255, 255, 255, 0.75);
+	background-color: white;
 }
 #hero span span {
 	border-radius: 0 0.5rem 0 0;
@@ -100,7 +100,7 @@
 	color: white;
 }
 #hero.invertColors.heroShow span {
-	background-color:rgba(0, 0, 0, 0.75);
+	background-color: black;
 }
 
 #hero span span {
@@ -404,7 +404,7 @@ a:hover {
 	bottom: 0;
 	width: 100%;
 	height: 10rem;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--darkest3) 100%);
+	background-image: linear-gradient(to bottom, transparent, var(--darkest3) 100%);
 }
 /* Popups */
 
