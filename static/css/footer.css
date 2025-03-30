@@ -15,3 +15,8 @@ footer .date {
 	text-decoration: none !important;
 	display: block;
 }
+
+footer #inner {
+	margin: auto;
+    max-width: 59rem; /* 60rem content width with -1rem content padding */
+}

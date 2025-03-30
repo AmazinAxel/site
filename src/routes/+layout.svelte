@@ -19,7 +19,9 @@
 		{@render children?.()}
 	</div>
 	<footer>
-		<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
-		<a href="https://github.com/AmazinAxel/site" class="date">Site last generated on {date}</a>
+		<div id="inner">
+			<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
+			<a href="https://github.com/AmazinAxel/site" class="date">Site last generated on {date}</a>
+		</div>
 	</footer>
 {/key}
