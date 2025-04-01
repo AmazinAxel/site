@@ -12,29 +12,31 @@
 	let errorMessage = $state('');
 	async function handleSubmit( event ) {
 		event.preventDefault();
-		buttonText = 'Sending Message...'; // Show confirmation text
+		buttonText = 'Sending Message...';
 
 		if (showError == true) { // Hide error on submit
 			showError = false;
-			setTimeout(() => { error = ""; }, 400); // Completely remove the error element
+			setTimeout(() => { error = ""; }, 400);
 		}
 
-		const data = new FormData(event.target); // Create formData to send
-		const xhr = new XMLHttpRequest(); // Create HTTP request
-		xhr.open('POST', 'https://journal.amazinaxel.com/contact-form'); // Open the HTTP request
+		const data = new FormData(event.target);
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST', 'https://journal.amazinaxel.com/contact-form');
 		console.log("Sending message....");
 		
-		xhr.onload = () => { // Get the response
-			if (xhr.status == 200) { buttonText = 'Message Sent!'; window.turnstile.reset(); } // Success!
-			else { // There was an error, show a helpful error message
-				buttonText = 'Resubmit'; // Show error confirmation on button
-				errorMessage = `<p>${xhr.responseText}</p>`; // Create error message
-				showError = true // Insert error message
-				window.turnstile.reset(); // Reset Turnstile captcha
+		xhr.onload = () => {
+			if (xhr.status == 200) { 
+				buttonText = 'Message Sent!';
+				window.turnstile.reset(); 
+			} else {
+				buttonText = 'Resubmit';
+				errorMessage = `<p>${xhr.responseText}</p>`;
+				showError = true;
+				window.turnstile.reset();
 			};
 		};
-		xhr.send(data); // Send off the form data
-	}
+		xhr.send(data);
+	};
 </script>
 
 <a class="showMoreBtn otherWay" href="/">Go back home</a>
@@ -42,8 +44,8 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code>.</p>
-	<p>I also provide the below contact form. Include a contact method if you would like a response.</p>
+	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
+	<p>I also provide the below contact form. Include a contact method if you would like a response</p>
 </Admonition>
 
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">

@@ -10,7 +10,7 @@ const config = {
 	terserOptions: {
 		compress: {
 			hoist_funs: true, // Reduce computation in loops
-			drop_console: true, // Remove console spam
+			drop_console: true, // Reduce console spam
 			drop_debugger: true // Remove debugger statements
 		}
 	}

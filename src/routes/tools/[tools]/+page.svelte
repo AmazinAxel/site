@@ -15,7 +15,7 @@
     const SvelteComponent = $derived(pageContent);
 </script>
 
-<svelte:head> <!-- Custom title ending -->
+<svelte:head>
 	<title>{ title } - Axel's Utils</title>
 </svelte:head>
 

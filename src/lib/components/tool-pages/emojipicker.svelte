@@ -64,6 +64,6 @@ button { font-family: 'Monocraft'; }
 {/if}
 
 <Admonition info>
-    <p>The characters displayed here are taken directly from the Minecraft jar font.</p>
-    <p>Some icons here are not displayed properly in the Monocraft font - hopefully to be fixed soon.</p>
+    <p>The characters displayed here are taken directly from the Minecraft jar font</p>
+    <p>Some icons here are not displayed properly in the Monocraft font - hopefully to be fixed soon</p>
 </Admonition>

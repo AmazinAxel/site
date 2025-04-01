@@ -31,7 +31,7 @@
         for (let i = 0; i < text.length; i++) {
             const char = text[i];
 
-            // Convert to twirly apostraphes & quotes
+            // Convert to better apostraphes & quotes
             if (char == "'") {
                 preConvertedText += (apostrapheMatch) ? '’' : '‘';
                 apostrapheMatch = !apostrapheMatch;
