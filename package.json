@@ -3,6 +3,7 @@
 	"description": "My personal website",
 	"version": "2.1.7",
 	"scripts": {
+		"prepare": "svelte-kit sync",
 		"build": "vite build",
 		"preview": "vite preview",
 		"dev": "vite dev",
