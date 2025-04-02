@@ -11,7 +11,7 @@
 		visibility = false;
 
 		setTimeout(() => {
-			fetch('https://quoteslate.vercel.app/api/quotes/random')
+			fetch('https://transcendentalism.amazinaxel.com')
 				.then(response => response.ok ? response.json() : Promise.reject('An error occurred while fetching a quote'))
 				.then(data => { quote = data.quote; author = data.author;})
 				.then(() => { visibility = true; });
