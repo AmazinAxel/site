@@ -37,7 +37,7 @@ export async function onRequest({ request, env }) {
 		
 		if (diffInMinutes < 15) return new Response('A message was already sent through this contact form recently. Please wait before sending your message', { status: 409 });
 
-		if (output.message.length < 1000)
+		if (output.message.length > 1000)
 			return new Response('Please shorten your message', { status: 412 });
 
 		// Send the message
