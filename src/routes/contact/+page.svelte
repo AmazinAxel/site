@@ -21,8 +21,7 @@
 
 		const data = new FormData(event.target);
 		const xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://journal.amazinaxel.com/contact-form');
-		console.log("Sending message....");
+		xhr.open('POST', 'https://amazinaxel.com/contact-form');
 		
 		xhr.onload = () => {
 			if (xhr.status == 200) { 
