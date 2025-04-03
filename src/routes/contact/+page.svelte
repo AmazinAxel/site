@@ -17,7 +17,9 @@
 		if (showError == true) { // Hide error on submit
 			showError = false;
 			setTimeout(() => { error = ""; }, 400);
-		}
+		};
+
+		let turnstileReset = $state();
 
 		const data = new FormData(event.target);
 		const xhr = new XMLHttpRequest();
@@ -26,12 +28,12 @@
 		xhr.onload = () => {
 			if (xhr.status == 200) { 
 				buttonText = 'Message Sent!';
-				window.turnstile.reset(); 
+				turnstileReset?.();
 			} else {
 				buttonText = 'Resubmit';
 				errorMessage = `<p>${xhr.responseText}</p>`;
 				showError = true;
-				window.turnstile.reset();
+				turnstileReset?.();
 			};
 		};
 		xhr.send(data);
