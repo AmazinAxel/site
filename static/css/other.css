@@ -358,7 +358,8 @@ a .imgCard:active {
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
-	transition: 0.2s filter var(--ease);
+    opacity: 1;
+    transition: .3s opacity;
 }
 
 .innerCard * {
