@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 
+// For CF Pages support
 export const prerender = true;
 export const csr = true;
 
