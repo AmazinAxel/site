@@ -3,7 +3,6 @@
 	"description": "My personal website",
 	"version": "2.1.8",
 	"scripts": {
-		"prepare": "svelte-kit sync",
 		"build": "vite build && vite preview",
 		"dev": "vite dev",
 		"lint": "prettier --check plugin-search-dir=. . && eslint .",
@@ -12,7 +11,7 @@
 	"author": "AmazinAxel (Alec)",
 	"license": "UNLICENSED",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/adapter-cloudflare": "^7.0.1",
 		"@sveltejs/kit": "^2.17.3",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"embla-carousel-svelte": "^8.5.2",
