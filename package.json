@@ -4,8 +4,7 @@
 	"version": "2.1.8",
 	"scripts": {
 		"prepare": "svelte-kit sync",
-		"build": "vite build",
-		"preview": "vite preview",
+		"build": "vite build && vite preview",
 		"dev": "vite dev",
 		"lint": "prettier --check plugin-search-dir=. . && eslint .",
 		"format": "prettier --write ."
