@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 export const prerender = true;
 export const csr = true;
 
-export const load = async () => {
+export function load() {
 	try {
 		return {
 			date: new Date().toLocaleString('en-US', {

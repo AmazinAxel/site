@@ -10,7 +10,7 @@
 	let buttonText = $state('Send Message');
 	let showError = $state(false);
 	let errorMessage = $state('');
-	async function handleSubmit( event ) {
+	function handleSubmit( event ) {
 		event.preventDefault();
 		buttonText = 'Sending Message...';
 
