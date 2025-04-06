@@ -4,6 +4,7 @@ export const load = async () => {
 	try {
 		return {
 			date: new Date().toLocaleString('en-US', {
+				timezone: 'US/Pacific',
 				weekday: 'long',
 				year: 'numeric',
 				month: 'long',

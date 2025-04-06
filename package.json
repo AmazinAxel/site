@@ -3,6 +3,7 @@
 	"description": "My personal website",
 	"version": "2.1.8",
 	"scripts": {
+		"prepare": "svelte-kit sync",
 		"build": "vite build && vite preview",
 		"dev": "vite dev",
 		"lint": "prettier --check plugin-search-dir=. . && eslint .",
