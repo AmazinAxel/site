@@ -12,19 +12,19 @@
 	"author": "AmazinAxel (Alec)",
 	"license": "UNLICENSED",
 	"dependencies": {
-		"@sveltejs/adapter-cloudflare": "^7.0.1",
-		"@sveltejs/kit": "^2.17.3",
+		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/kit": "^2.20.4",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
-		"embla-carousel-svelte": "^8.5.2",
-		"fast-xml-parser": "^5.0.8",
-		"svelte": "^5.20.5",
-		"vite": "^6.2.0"
+		"embla-carousel-svelte": "^8.6.0",
+		"fast-xml-parser": "^5.2.0",
+		"svelte": "^5.25.7",
+		"vite": "^6.2.5"
 	},
 	"devDependencies": {
-		"eslint": "^9.21.0",
-		"eslint-config-prettier": "^10.0.2",
-		"eslint-plugin-svelte": "^3.0.2",
-		"prettier": "^3.5.2",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-svelte": "^3.5.1",
+		"prettier": "^3.5.3",
 		"svelte-turnstile": "^0.10.0"
 	},
 	"type": "module",
