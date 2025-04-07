@@ -40,7 +40,7 @@
 	};
 </script>
 
-<a class="showMoreBtn otherWay" href="/">Go back home</a>
+<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
 
 <Title name="Contact"/>
 

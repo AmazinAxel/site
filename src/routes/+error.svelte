@@ -31,7 +31,7 @@
 </style>
 <svelte:head><title>Error {page.status} - AmazinAxel.com</title></svelte:head>
 
-<a class="showMoreBtn otherWay" href="/">Go back home</a>
+<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
 
 <Hero>
 	<h1>Error {page.status}: {page.error.message}</h1>
