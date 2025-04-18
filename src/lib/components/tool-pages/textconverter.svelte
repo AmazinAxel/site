@@ -108,7 +108,7 @@
         <input type="checkbox" bind:checked={autoCopy}>
         <span class="checkmark"></span>
         <Tooltip inlineText="Auto copy text on change">
-            Whether to automatically copy small text when new text is entered - this may spam your clipboard!
+            Whether to automatically copy small text when new text is entered - this may spam your clipboard
         </Tooltip>
     </label>
 </Options>

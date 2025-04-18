@@ -60,7 +60,7 @@ button { font-family: 'Monocraft'; }
     {/each}
 </div>
 {#if showCopyMessage}
-    <p class="stickyAdmonition" in:fly|local={transition} out:fly|local={transition} class:alreadyCopied={alreadyCopied}>Copied!</p>
+    <p class="stickyAdmonition" in:fly|local={transition} out:fly|local={transition} class:alreadyCopied={alreadyCopied}>Copied</p>
 {/if}
 
 <Admonition info>

@@ -23,11 +23,11 @@
 
 		const data = new FormData(event.target);
 		const xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://amazinaxel.com/contact-form');
-		
+		xhr.open('POST', 'https://contact.amazinaxel.workers.dev');
+
 		xhr.onload = () => {
 			if (xhr.status == 200) { 
-				buttonText = 'Message Sent!';
+				buttonText = 'Message sent';
 				turnstileReset?.();
 			} else {
 				buttonText = 'Resubmit';
