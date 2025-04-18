@@ -41,8 +41,8 @@
 	background-position: center;
 	filter: blur(10px);
 	transition:
-		filter 1s var(--ease),
-		border-radius 1s;
+		filter 0.3s var(--ease),
+		border-radius 0.2s;
 	outline: 3px solid var(--darkest3);
 	box-shadow: 0 0 1rem 3px var(--darkest4);
 }
@@ -58,7 +58,7 @@
 	opacity: 1;
 	scale: 1;
 	transition:
-		opacity 0.2s ease,
+		opacity 0.1s ease,
 		scale 0.5s var(--ease);
 }
 
