@@ -13,7 +13,8 @@ export const projects = [
 	{
 		title: 'Permafrost',
 		role: '',
-		description: 'All-custom survival set in a cold, desolate Northern tundra - featuring unique gameplay & mechanics',
+		description:
+			'All-custom survival set in a cold, desolate Northern tundra - featuring unique gameplay & mechanics',
 		image: 'permafrost.png',
 		lightBackground: true
 	},

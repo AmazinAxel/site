@@ -111,35 +111,40 @@ input[type='checkbox'] {
 
 /* More Info labels */
 .moreInfoBtn {
-    display: inline-flex;
-    position: relative;
-    justify-content: center;
-    cursor: context-menu;
-    width: 1rem;
-    right: 2px;
-    bottom: 5px;
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	cursor: context-menu;
+	width: 1rem;
+	right: 2px;
+	bottom: 5px;
 }
 
 .moreInfo {
-    border-radius: 7px;
-    background-color: var(--darkest2);
-    box-shadow: 5px 4px 20px var(--darkest3), inset 11px 7px 20px 0px var(--darkest2), 0px 20px 20px 5px inset var(--darkest1);
-    min-width: 275px;
-    position: absolute;
-    overflow: auto;
-    text-align: center;
-    max-height: 150px;
-    color: var(--lightest1);
-    line-height: 1.2;
-    font-size: 1em;
-    border: 2px solid var(--blue2);
-    z-index: 3;
-    margin-top: 2rem;
+	border-radius: 7px;
+	background-color: var(--darkest2);
+	box-shadow:
+		5px 4px 20px var(--darkest3),
+		inset 11px 7px 20px 0px var(--darkest2),
+		0px 20px 20px 5px inset var(--darkest1);
+	min-width: 275px;
+	position: absolute;
+	overflow: auto;
+	text-align: center;
+	max-height: 150px;
+	color: var(--lightest1);
+	line-height: 1.2;
+	font-size: 1em;
+	border: 2px solid var(--blue2);
+	z-index: 3;
+	margin-top: 2rem;
 }
-.moreInfo:not(.imgInfo) { padding: 1rem; }
+.moreInfo:not(.imgInfo) {
+	padding: 1rem;
+}
 .moreInfo.imgInfo {
 	max-width: 275px;
-    min-width: max-content;
+	min-width: max-content;
 }
 .moreInfo img {
 	box-shadow: -1px -1px 6px var(--darkest1);
@@ -202,8 +207,8 @@ a .imgCard:active {
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
-    opacity: 1;
-    transition: .3s opacity;
+	opacity: 1;
+	transition: 0.3s opacity;
 }
 
 .innerCard * {
@@ -672,8 +677,7 @@ input[type='range']:hover {
 input::-webkit-slider-thumb,
 input[type='range'] {
 	transform: scale(1);
-	transition:
-		transform 0.3s var(--ease);
+	transition: transform 0.3s var(--ease);
 }
 
 input:hover::-webkit-slider-thumb {

@@ -6,7 +6,6 @@
 		"prepare": "svelte-kit sync",
 		"build": "vite build && vite preview",
 		"dev": "vite dev",
-		"lint": "prettier --check plugin-search-dir=. . && eslint .",
 		"format": "prettier --write ."
 	},
 	"author": "AmazinAxel (Alec)",
