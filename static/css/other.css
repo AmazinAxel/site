@@ -17,134 +17,6 @@
 	background-image: linear-gradient(to bottom, transparent, var(--darkest3) 100%);
 }
 
-/* Homepage hero */
-#hero {
-	position: relative;
-	text-align: center;
-	height: 25rem;
-	display: grid;
-	align-items: end;
-	align-content: center;
-	border-radius: 0.5rem;
-	margin-bottom: 3rem;
-	outline: 3px solid #ffffff1c;
-	outline-offset: -3px;
-}
-
-#hero::before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: var(--heroBackground);
-	background-size: cover;
-	background-position: center;
-	filter: blur(10px);
-	transition:
-		filter 0.3s var(--ease),
-		border-radius 0.2s;
-	outline: 3px solid var(--darkest3);
-	box-shadow: 0 0 1rem 3px var(--darkest4);
-}
-
-#hero.heroShow::before {
-	filter: blur(0);
-	border-radius: 0.5rem;
-}
-
-#hero h1,
-#hero a {
-	margin: 0;
-	opacity: 1;
-	scale: 1;
-	transition:
-		opacity 0.1s ease,
-		scale 0.5s var(--ease);
-}
-
-#hero h1 {
-	font-size: 3rem;
-}
-
-#hero a {
-	font-size: 15px;
-	padding-bottom: 0.5rem;
-}
-
-#hero span {
-	cursor: pointer;
-	position: absolute;
-	padding: 0.5rem;
-	font-family: var(--primaryFont);
-	font-size: 1rem;
-	line-height: 1;
-	color: black;
-	opacity: 0.5;
-	width: max-content;
-	text-align: left;
-	transition: background-color .1s var(--ease);
-	background-color: transparent;
-	border-radius: 0 0 0 0.5rem;
-}
-#hero span:not(span span) {
-	padding-right: calc(0.5rem - 3px);
-}
-#hero.heroShow span {
-	background-color: white;
-}
-#hero span span {
-	border-radius: 0 0.5rem 0 0;
-}
-
-#hero.invertColors span {
-	color: white;
-}
-#hero.invertColors.heroShow span {
-	background-color: black;
-}
-
-#hero span span {
-    padding-left: 0;
-	top: 0;
-    opacity: 0;
-    transition: margin-left 0.1s var(--ease), opacity 0.1s var(--ease);
-}
-
-#hero.heroShow span span {
-	margin-left: 5px;
-	opacity: 1;
-}
-
-#hero.heroShow h1,
-#hero.heroShow a {
-	opacity: 0;
-	scale: 0.95;
-}
-
-#hero h1,
-#hero a {
-	color: var(--darkest1);
-	text-shadow: 0 0 23px var(--darkest4);
-}
-
-#hero.invertColors h1,
-#hero.invertColors a {
-	color: var(--lightest1) !important;
-	text-shadow: 0 0 1rem white;
-}
-
-#hero:not(.invertColors) img:not(.closeHeroImg) {
-	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(50%);
-}
-
-#hero:not(.invertColors) a {
-	color: var(--darkest1);
-}
-
-#hero a:hover {
-	text-decoration: underline;
-}
-
 /* Checkbox styling */
 
 input[type='checkbox'] {
@@ -156,7 +28,7 @@ input[type='checkbox'] {
 /* The checkbox container */
 .container {
 	position: relative;
-	padding-left: 35px;
+	padding-left: 40px;
 	cursor: pointer;
 	user-select: none;
 }
@@ -237,70 +109,42 @@ input[type='checkbox'] {
 	opacity: 1;
 }
 
-/* Tooltips */
-
-.tooltip {
-	display: inline-block;
-	border-bottom: 2px dotted var(--lightest1);
-	position: relative;
-	left: 0.25rem;
+/* More Info labels */
+.moreInfoBtn {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    cursor: context-menu;
+    width: 1rem;
+    right: 2px;
+    bottom: 5px;
 }
 
-.tooltip .tooltiptext {
-	opacity: 0;
-	transition:
-		opacity 0.1s ease,
-		visibility 0.1s,
-		transform 0.15s ease;
-	padding: 10px;
-	border-radius: 10px 7px 7px 10px;
-	background-color: var(--darkest2);
-	box-shadow:
-		5px 4px 20px var(--darkest3),
-		inset 11px 7px 20px 0px var(--darkest2),
-		0px 20px 20px 5px inset var(--darkest1);
-	width: 275px;
-	position: absolute;
-	left: 50%;
-	top: -70px;
-	transform: translate(-50%, -40%);
-	overflow: auto;
-	text-align: center;
-	visibility: hidden;
-	cursor: text;
-	max-height: 150px;
-	color: var(--lightest1);
-	line-height: 1.2;
-	font-size: 1em;
-	border-top: 8px solid var(--blue2);
-	z-index: 3;
+.moreInfo {
+    border-radius: 7px;
+    background-color: var(--darkest2);
+    box-shadow: 5px 4px 20px var(--darkest3), inset 11px 7px 20px 0px var(--darkest2), 0px 20px 20px 5px inset var(--darkest1);
+    min-width: 275px;
+    position: absolute;
+    overflow: auto;
+    text-align: center;
+    max-height: 150px;
+    color: var(--lightest1);
+    line-height: 1.2;
+    font-size: 1em;
+    border: 2px solid var(--blue2);
+    z-index: 3;
+    margin-top: 2rem;
 }
-
-.tooltiptext::-webkit-scrollbar-thumb {
-	border-radius: 0 5px 5px 0;
+.moreInfo:not(.imgInfo) { padding: 1rem; }
+.moreInfo.imgInfo {
+	max-width: 275px;
+    min-width: max-content;
 }
-.tooltip:hover .tooltiptext,
-.tooltip:active .tooltiptext {
-	opacity: 1;
-	visibility: visible;
-	transform: translate(-50%, -50%);
-}
-.tooltip:hover {
-	cursor: pointer;
-}
-
-.tooltiptext::before {
-	content: '◆';
-	padding-right: 0.4rem;
-	position: relative;
-	bottom: 0.25rem;
-	font-size: 0.8rem;
-	color: var(--blue2);
-}
-
-.tooltiptext img {
+.moreInfo img {
 	box-shadow: -1px -1px 6px var(--darkest1);
 	margin: auto;
+	border-radius: 0.25rem;
 }
 
 /* Inputs */
@@ -804,7 +648,6 @@ ul::marker {
 	color: var(--blue1);
 }
 
-/* Modify the appearance of the slider */
 input[type='range'] {
 	appearance: none;
 	height: 5px;
@@ -813,7 +656,6 @@ input[type='range'] {
 	width: 20%;
 }
 
-/* Modify the appearance of the slider thumb */
 input[type='range']::-webkit-slider-thumb {
 	appearance: none;
 	width: 15px;
@@ -831,12 +673,9 @@ input::-webkit-slider-thumb,
 input[type='range'] {
 	transform: scale(1);
 	transition:
-		transform 0.3s cubic-bezier(0, 0.6, 0, 1),
-		box-shadow 0.3s cubic-bezier(0, 0.6, 0, 1);
-	box-shadow: var(--darkest1) 0px 0px 20px 10px;
+		transform 0.3s var(--ease);
 }
 
 input:hover::-webkit-slider-thumb {
 	transform: scale(1.5);
-	box-shadow: var(--darkest1) 0px 0px 20px 10px;
 }

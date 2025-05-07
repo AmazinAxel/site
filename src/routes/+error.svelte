@@ -12,9 +12,9 @@
 
 		setTimeout(() => {
 			fetch('https://transcendentalism.amazinaxel.com')
-				.then(response => response.ok ? response.json() : Promise.reject('An error occurred while fetching a quote'))
-				.then(data => { quote = data.quote; author = data.author;})
-				.then(() => { visibility = true; });
+				.then(response => response.ok ? response.json() : Promise.reject('Error occurred while fetching a quote'))
+				.then(data => ({ author, quote } = data))
+				.then(() => visibility = true);
 		}, 500);
 	};
 </script>

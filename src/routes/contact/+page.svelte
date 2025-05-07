@@ -45,18 +45,16 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p><strong><a href="https://discord.com/">Discord</a> is my preferred communication platform.</strong> Reach out to me under my Discord handle: <code>@amazinaxel</code></p>
-	<p>I also provide the below contact form. Include a contact method if you would like a response</p>
+	<strong>Reach out to <code>@amazinaxel</code> on Discord for a faster response.</strong>
+	<p>Include a contact method if you would like a reply.</p>
 </Admonition>
 
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
     <form method="POST" onsubmit={handleSubmit}>
-        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message subject"/>
+        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message topic"/>
 		<div></div>
-		<label for="name">Name:</label> <input type="text" name="name" placeholder="Your name"/>
-		<div></div>
-		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Enter your message here"></textarea>
+		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Your message here"></textarea>
 
 		<div style="padding: 0.5rem"></div>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>

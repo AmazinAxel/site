@@ -11,6 +11,10 @@
     const image = shuffle(randomHero.images)[0];
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="/css/hero.css"/>
+</svelte:head>
+
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
     {@render children?.()}
     <span

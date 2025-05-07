@@ -1,5 +1,5 @@
 <script>
-	import Tooltip from '../tooltip.svelte';
+	import MoreInfo from '../moreInfo.svelte';
 	import Options from '../options.svelte';
 
     var inputText = $state();
@@ -9,8 +9,8 @@
     let autoCopy = $state(true);
 
     const normalAlphabet = 'abcdefghijklmnopqrstuvwxyz*';
-    const smallTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
-    const altTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏᴢ⋆';
+    const smallTextChars = 'ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏᴢ⋆';
+    const altTextChars = 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘꞯʀsᴛᴜᴠᴡxʏᴢ⋆';
 
     const scriptChars = '0123456789+-=()';
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';
@@ -77,39 +77,35 @@
     <label class="container">
         <input type="checkbox" bind:checked={textType} onchange={convertText}>
         <span class="checkmark"></span>
-        <Tooltip inlineText="Use alternate text style">
-            Use a slightly different text charset
-            <div class="seperator"></div>
+        Use alternate text style
+        <MoreInfo imgInfo>
             <img src="/media/tools/textconverter/texttypepreview.png" alt="Shows difference between the text type function" class="noImgStyle">
-        </Tooltip>
+        </MoreInfo>
     </label>
 
     <br><br>
     <div style="display: flex; gap: 5px">
-        <Tooltip inlineText="Subscript" click={() => scriptType = 1}>
-            Shown below the text
-            <div style="height: 0.5rem;"></div>
+        <p click={() => scriptType = 1}>Subscript</p>
+        <MoreInfo imgInfo>
             <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle">
-        </Tooltip>
+        </MoreInfo>
 
         <!-- Slider -->
-        <div class="slider_container" style="margin-left: 8px">
+        <div class="slider_container">
             <input type="range" min="1" bind:value={scriptType} max="3" oninput={convertText} id="scriptType">
         </div>
 
-        <Tooltip inlineText="Superscript" click={() => scriptType = 3}>
-            Shown above the text
-            <div style="height: 0.5rem;"></div>
+        <p click={() => scriptType = 3}>Superscript</p>
+        <MoreInfo imgInfo>
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle">
-        </Tooltip>
+        </MoreInfo>
     </div>
     <br>
     <label class="container">
         <input type="checkbox" bind:checked={autoCopy}>
         <span class="checkmark"></span>
-        <Tooltip inlineText="Auto copy text on change">
-            Whether to automatically copy small text when new text is entered - this may spam your clipboard
-        </Tooltip>
+        Auto copy small text on change
+        <MoreInfo>This may spam your clipboard history</MoreInfo>
     </label>
 </Options>
 

@@ -17,7 +17,7 @@
 </Hero>
 
 <!-- Projects list -->
-<div class="altBackground">
+<div>
     <h2>Projects</h2>
 	<Carousel data={projects}></Carousel>
 </div>
@@ -32,7 +32,7 @@
 </div>-->
 
 <!-- Minecraft utilities -->
-<div class="section right altBackground" id="utils">
+<div class="section right altBackground" id="utils" style="margin-top: 1rem">
 	<h2>Minecraft Utilities</h2>
 	<div class="flexGrid">
 		{#each tools as tool}

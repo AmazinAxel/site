@@ -1,0 +1,129 @@
+
+/* Homepage hero */
+#hero {
+	position: relative;
+	text-align: center;
+	height: 25rem;
+	display: grid;
+	align-items: end;
+	align-content: center;
+	border-radius: 0.5rem;
+	margin-bottom: 2rem;
+	outline: 3px solid #ffffff1c;
+	outline-offset: -3px;
+}
+
+#hero::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: var(--heroBackground);
+	background-size: cover;
+	background-position: center;
+	filter: blur(10px);
+	transition:
+		filter 0.3s var(--ease),
+		border-radius 0.2s;
+	outline: 3px solid var(--darkest3);
+	box-shadow: 0 0 1rem 3px var(--darkest4);
+}
+
+#hero.heroShow::before {
+	filter: blur(0);
+	border-radius: 0.5rem;
+}
+
+#hero h1,
+#hero a {
+	margin: 0;
+	opacity: 1;
+	scale: 1;
+	transition:
+		opacity 0.1s ease,
+		scale 0.5s var(--ease);
+}
+
+#hero h1 {
+	font-size: 3rem;
+}
+
+#hero a {
+	font-size: 15px;
+	padding-bottom: 0.5rem;
+}
+
+#hero span {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5rem;
+	font-family: var(--primaryFont);
+	font-size: 1rem;
+	line-height: 1;
+	color: black;
+	opacity: 0.5;
+	width: max-content;
+	text-align: left;
+	transition: background-color .1s var(--ease);
+	background-color: transparent;
+	border-radius: 0 0 0 0.5rem;
+}
+#hero span:not(span span) {
+	padding-right: calc(0.5rem - 3px);
+}
+#hero.heroShow span {
+	background-color: white;
+}
+#hero span span {
+	border-radius: 0 0.5rem 0 0;
+}
+
+#hero.invertColors span {
+	color: white;
+}
+#hero.invertColors.heroShow span {
+	background-color: black;
+}
+
+#hero span span {
+    padding-left: 0;
+	top: 0;
+    opacity: 0;
+    margin-left: 10px;
+    transition: margin-left 0.1s var(--ease), opacity 0.1s var(--ease);
+}
+
+#hero.heroShow span span {
+	margin-left: 5px;
+	opacity: 1;
+}
+
+#hero.heroShow h1,
+#hero.heroShow a {
+	opacity: 0;
+	scale: 0.95;
+}
+
+#hero h1,
+#hero a {
+	color: var(--darkest1);
+	text-shadow: 0 0 23px var(--darkest4);
+}
+
+#hero.invertColors h1,
+#hero.invertColors a {
+	color: var(--lightest1) !important;
+	text-shadow: 0 0 1rem white;
+}
+
+#hero:not(.invertColors) img:not(.closeHeroImg) {
+	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(50%);
+}
+
+#hero:not(.invertColors) a {
+	color: var(--darkest1);
+}
+
+#hero a:hover {
+	text-decoration: underline;
+}
