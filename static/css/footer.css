@@ -10,7 +10,7 @@ footer a {
 	font-size: 0.8rem;
 }
 
-footer .date {
+footer #date {
 	opacity: 0.7;
 	text-decoration: none !important;
 	display: block;
@@ -19,4 +19,15 @@ footer .date {
 footer #inner {
 	margin: auto;
 	max-width: 59rem; /* 60rem content width with -1rem content padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+	footer #inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	footer { height: 7rem; }
 }

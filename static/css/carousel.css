@@ -21,7 +21,6 @@
 	transform: translate3d(0, 0, 0);
 	overflow: hidden;
 	height: 30rem;
-	border-radius: 0.5rem;
 }
 
 /* Actual carousel styling */
@@ -29,7 +28,6 @@
 	position: absolute;
 	width: 50%;
 	left: 25%;
-	border-radius: 0.5rem;
 	backdrop-filter: blur(2rem);
 	-webkit-backdrop-filter: blur(2rem);
 	border: 3px solid #ffffff3b;
@@ -140,4 +138,5 @@ span.embla__dot.selected {
 .embla__slide img {
 	height: 30rem;
 	object-fit: cover;
+	border-radius: 0.5rem;
 }

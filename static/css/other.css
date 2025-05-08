@@ -609,7 +609,6 @@ a.showMoreBtn {
 	text-decoration: none !important;
 	justify-content: flex-end;
 	margin: 0 0 1.5rem;
-	width: 100%;
 }
 .showMoreBtn.otherWay {
 	justify-content: left;

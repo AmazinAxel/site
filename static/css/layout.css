@@ -37,6 +37,8 @@ body {
 	.gridItem {
 		flex: 100%;
 	}
+	/* Make footer anchored to bottom - 7rem is footer height */
+	#content { min-height: calc(100vh - 8rem); }
 }
 
 .section a {

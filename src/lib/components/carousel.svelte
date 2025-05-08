@@ -21,7 +21,7 @@
           {#if url}
             <div class="name"><a href={url}><h4>{title}</h4></a></div>
           {:else}
-          <div class="name"><h4>{title}</h4></div>
+            <div class="name"><h4>{title}</h4></div>
           {/if}
           <h6>{role}</h6>
           <p>{description}</p>
