@@ -16,7 +16,7 @@
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"embla-carousel-svelte": "^8.6.0",
 		"fast-xml-parser": "^5.2.2",
-		"fuse.js": "2.2.0",
+		"fuse.js": "2.7.4",
 		"svelte": "^5.28.2",
 		"vite": "^6.3.5"
 	},
