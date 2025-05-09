@@ -1,6 +1,6 @@
 <script>
-	import MoreInfo from '../moreInfo.svelte';
-	import Options from '../options.svelte';
+	import MoreInfo from '$lib/components/moreInfo.svelte';
+	import Options from '$lib/components/options.svelte';
 
     var inputText = $state();
     var outputText = $state();
@@ -70,7 +70,11 @@
         if (autoCopy) navigator.clipboard.writeText(outputText);
     }
 </script>
+<svelte:head>
+	<title>Small Text Converter - Axel's Utils</title>
+</svelte:head>
 
+<a class="showMoreBtn otherWay" href="/#utils">Go to homepage</a>
 <h1>Small Text Converter</h1>
 
 <Options>

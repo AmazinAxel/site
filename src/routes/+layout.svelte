@@ -27,7 +27,7 @@
 					<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
 					<a href="https://github.com/AmazinAxel/site" id="date">Site last generated on {date}</a>
 				</div>
-				<a href="https://derpydoggo.pages.dev" class="showMoreBtn" style="margin: 0; font-size: 0.9rem;">Lil' bro's site</a>
+				<a href="https://derpydoggo.is-a.dev" class="showMoreBtn" style="margin: 0; font-size: 0.9rem;">Lil' bro's site</a>
 			</div>
 		</footer>
 	{/if}

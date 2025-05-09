@@ -1,8 +1,7 @@
 <script>
+	import { tools, projects } from '$lib/config';
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
-	import { tools } from '$lib/config';
-	import { projects } from '$lib/config';
 
 	let { data } = $props(); // For journal posts
 </script>
@@ -36,7 +35,7 @@
 	<h2>Minecraft Utilities</h2>
 	<div class="flexGrid">
 		{#each tools as tool}
-			<a href="/tools/{tool.route}" class="gridItem" style="flex: 30%">
+			<a href="/{tool.route}" class="gridItem" style="flex: 30%">
 				<div class="card imgCard">
 					<picture>
 						<img src="/media/tools/previews/{tool.route}.png" class="noImgStyle" alt={tool.title + "preview"}>
