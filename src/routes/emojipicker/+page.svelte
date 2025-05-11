@@ -34,7 +34,7 @@
 
     const fuse = new Fuse(formattedSearchableChars, {
         keys: ['desc'],
-        threshold: 0.6,
+        threshold: 0.9,
         ignoreLocation: true,
     });
 
