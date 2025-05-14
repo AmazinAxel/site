@@ -49,5 +49,15 @@ export const heroItems = [
 		name: 'San Juan Islands',
 		location: 'Washington State',
 		images: [{ image: 'san-juan-islands.jpg' }]
+	},
+	{
+		name: 'Ross Lake',
+		location: 'North Cascade Mountains',
+		images: [{ image: 'ross-lake.jpg', invertColors: true }]
+	},
+	{
+		name: 'North Cascades National Park',
+		location: 'Washington State',
+		images: [{ image: 'north-cascades.jpg', invertColors: true }]
 	}
 ];
