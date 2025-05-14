@@ -37,7 +37,7 @@
         threshold: 0.9
     });
 
-    export function searchCharacters(query) {
+    export function searchCharacters(query: string) {
         if (!query || query.trim() === '') return [];
         return fuse.search(query);
     };

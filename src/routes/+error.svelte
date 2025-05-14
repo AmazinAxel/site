@@ -35,7 +35,7 @@
 <a class="showMoreBtn otherWay" href="/">Go to homepage</a>
 
 <Hero>
-	<h1>Error {page.status}: {page.error.message}</h1>
+	<h1>Error {page.status}: {page.error?.message}</h1>
 </Hero>
 
 <div class="card nomargin quoteParent" class:visible={visibility}>

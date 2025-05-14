@@ -21,6 +21,6 @@ export function load() {
 			})
 		};
 	} catch (err) {
-		error(500, err);
+		error(500, String(err));
 	}
 }
