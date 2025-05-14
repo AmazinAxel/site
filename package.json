@@ -11,13 +11,13 @@
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.20.8",
+		"@sveltejs/kit": "^2.21.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"svelte-turnstile": "^0.11.0",
 		"embla-carousel-svelte": "^8.6.0",
-		"fast-xml-parser": "^5.2.2",
+		"fast-xml-parser": "^5.2.3",
 		"fuse.js": "2.7.4",
-		"svelte": "^5.28.2",
+		"svelte": "^5.28.6",
 		"vite": "^6.3.5"
 	},
 	"type": "module",
