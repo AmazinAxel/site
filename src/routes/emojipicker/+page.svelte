@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
-    import { allChars, searchableChars } from './emojis.js';
+    import { allChars, searchableChars } from './emojis';
     import MoreInfo from '$lib/components/moreInfo.svelte';
     import Options from '$lib/components/options.svelte';
     import Fuse from 'fuse.js';
