@@ -19,9 +19,9 @@ footer #date {
 footer #inner {
 	margin: auto;
 	max-width: 59rem; /* 60rem content width with -1rem content padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 @media (max-width: 700px) {

@@ -1,12 +1,11 @@
 {
 	"name": "amazinaxelsite",
 	"description": "My personal website",
-	"version": "2.1.9",
+	"version": "2.2.0",
 	"scripts": {
 		"prepare": "svelte-kit sync",
 		"build": "vite build && vite preview",
-		"dev": "vite dev",
-		"format": "prettier --write ."
+		"dev": "vite dev"
 	},
 	"author": "AmazinAxel (Alec)",
 	"license": "UNLICENSED",
@@ -14,18 +13,12 @@
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
+		"svelte-turnstile": "^0.11.0",
 		"embla-carousel-svelte": "^8.6.0",
 		"fast-xml-parser": "^5.2.2",
 		"fuse.js": "2.7.4",
 		"svelte": "^5.28.2",
 		"vite": "^6.3.5"
-	},
-	"devDependencies": {
-		"eslint": "^9.26.0",
-		"eslint-config-prettier": "^10.1.5",
-		"eslint-plugin-svelte": "^3.5.1",
-		"prettier": "^3.5.3",
-		"svelte-turnstile": "^0.11.0"
 	},
 	"type": "module",
 	"private": true
