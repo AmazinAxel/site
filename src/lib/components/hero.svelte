@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     // Get all projects
     import { heroItems } from '$lib/config';
     import { shuffle } from '$lib/utils'
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="/css/hero.css"/>
 </svelte:head>
 
-<div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={image.invertColors} class:heroShow={showHero}>
+<div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={(image as any).invertColors} class:heroShow={showHero}>
     {@render children?.()}
     <span
         role="article"

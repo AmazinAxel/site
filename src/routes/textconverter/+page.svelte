@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import MoreInfo from '$lib/components/moreInfo.svelte';
 	import Options from '$lib/components/options.svelte';
 
-    var inputText = $state();
-    var outputText = $state();
+    var inputText = $state('');
+    var outputText = $state('');
     let textType = $state(false);
     let scriptType = $state(2);
     let autoCopy = $state(true);
@@ -17,7 +17,7 @@
     const subChars = '₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
     function convertText(toSmallText = true) {
-        if (typeof inputText == 'undefined') return;
+        if (inputText == '') return;
         
         let preConvertedText = '';
         let apostrapheMatch, quotationMatch = false;
@@ -78,8 +78,9 @@
 <h1>Small Text Converter</h1>
 
 <Options>
+    <div style="height: 0.5rem;"></div>
     <label class="container">
-        <input type="checkbox" bind:checked={textType} onchange={convertText}>
+        <input type="checkbox" bind:checked={textType} onchange={() => convertText()}>
         <span class="checkmark"></span>
         Use alternate text style
         <MoreInfo imgInfo>
@@ -89,17 +90,17 @@
 
     <br><br>
     <div style="display: flex; gap: 5px">
-        <p click={() => scriptType = 1}>Subscript</p>
+        <p>Subscript</p>
         <MoreInfo imgInfo>
             <img src="/media/tools/textconverter/subtext-demo.png" alt="Subscript text demo" class="noImgStyle">
         </MoreInfo>
 
         <!-- Slider -->
         <div class="slider_container">
-            <input type="range" min="1" bind:value={scriptType} max="3" oninput={convertText} id="scriptType">
+            <input type="range" min="1" bind:value={scriptType} max="3" oninput={() => convertText()} id="scriptType">
         </div>
 
-        <p click={() => scriptType = 3}>Superscript</p>
+        <p>Superscript</p>
         <MoreInfo imgInfo>
             <img src="/media/tools/textconverter/supertext-demo.png" alt="Superscript text demo" class="noImgStyle">
         </MoreInfo>
@@ -116,7 +117,7 @@
 <br>
 
 <div class="inputs">
-    <textarea bind:value={inputText} oninput={convertText} placeholder="Normal text"></textarea>
+    <textarea bind:value={inputText} oninput={() => convertText()} placeholder="Normal text"></textarea>
     <p>➡️</p>
     <textarea bind:value={outputText} oninput={() => convertText(false)} placeholder="Small text"></textarea>
 </div>

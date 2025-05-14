@@ -1,5 +1,17 @@
-<script>
-    let { imgInfo, children, style } = $props();
+<script lang="ts">
+    type moreInfoProps = {
+        imgInfo?: boolean;
+        style?: string;
+        children?: () => any;
+    }
+    const props: moreInfoProps = $props();
+
+    let {
+        imgInfo,
+        style,
+        children
+    } = props;
+
     let showInfo = $state(false);
     import { fly } from 'svelte/transition';
     import { quintOut } from 'svelte/easing';

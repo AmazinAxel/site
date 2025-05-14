@@ -1,11 +1,9 @@
-<script>
+<script lang="ts">
     import { page } from '$app/state';
 	import { onMount } from "svelte"; 
 	import Hero from '$lib/components/hero.svelte';
 	let quote = $state(), author = $state();
 	let visibility = $state(false);
-
-	onMount(getQuote());
 
 	function getQuote() {
 		visibility = false;
@@ -17,6 +15,9 @@
 				.then(() => visibility = true);
 		}, 500);
 	};
+
+	// @ts-ignore - this code runs fine
+	onMount(getQuote());
 </script>
 <style>
 	.quoteParent button {

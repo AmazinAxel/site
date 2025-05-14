@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
     import { allChars, searchableChars } from './emojis.js';
@@ -10,9 +10,9 @@
     const iconList = allChars.split('').filter((v) => v != '\n');
     let showCopyMessage = $state(), alreadyCopied = $state();
     let copyMessageTime = 0;
-    
-    function copy(event) {
-        navigator.clipboard.writeText(event.target.innerText);
+
+    function copy(event: Event) {
+        navigator.clipboard.writeText((event.target as HTMLElement).innerText);
 
         if (showCopyMessage == true) {
             alreadyCopied = true;
@@ -62,17 +62,10 @@
 <a class="showMoreBtn otherWay" href="/#utils">Go to homepage</a>
 <h1>Minecraft Emoji Picker</h1>
 
-<Options>
-    <div style="display: flex; align-items: center; gap: 5px;">
-        <label for="charwidth">Button width:</label>
-        <input type="range" min="3" max="19" name="charwidth"
-            oninput={(self) => document.querySelectorAll('button').forEach(b => b.style.setProperty('flex', self.target.value + '%'))}
-        >
-    </div>
-    
+<Options>    
     <label for="search">Search:</label>
     <input type="text" name="search" style="margin-bottom: 0;" bind:value={query} oninput={() => searchCharacters(query)}>
-    <MoreInfo style="right: 10px; bottom: 10px;">Search feature only available for common characters</MoreInfo>
+    <MoreInfo style="right: 10px; bottom: 10px;">Search feature only available for some common characters</MoreInfo>
 </Options>
 <br>
 

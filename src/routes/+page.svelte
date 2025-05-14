@@ -1,5 +1,5 @@
-<script>
-	import { tools, projects } from '$lib/config';
+<script lang="ts">
+	import { tools, projects } from '$lib/config.js';
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
 

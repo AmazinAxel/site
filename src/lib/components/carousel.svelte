@@ -1,19 +1,16 @@
-<script>
+<script lang="ts">
   import emblaCarouselSvelte from 'embla-carousel-svelte';
 
-  let { 
-    data,
-    emblaAPI = $bindable() } = $props();
-  let currentlySelected = $state(0);
   let options = { loop: true, watchSlides: false };
-  function initAPI(event) { emblaAPI = event.detail; emblaAPI.on('select', onSlideMoved); }
-
+  let { data, emblaAPI = $bindable() } = $props();
+  let currentlySelected = $state(0);
+  function initAPI(event: CustomEvent) { emblaAPI = event.detail; emblaAPI.on('select', onSlideMoved); }
   const onSlideMoved = () => 
     currentlySelected = emblaAPI.selectedScrollSnap();
 </script>
 
 
-<section class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={initAPI}>
+<section class="embla" use:emblaCarouselSvelte={{ options, plugins: [] }} onemblaInit={initAPI}>
   <div class="embla__container">
     {#each data as { title, role, description, image, url, lightBackground }}
       <div class="embla__slide">

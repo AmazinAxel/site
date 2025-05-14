@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
 	import { Turnstile } from 'svelte-turnstile';
@@ -10,18 +10,18 @@
 	let buttonText = $state('Send Message');
 	let showError = $state(false);
 	let errorMessage = $state('');
-	function handleSubmit( event ) {
+	function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
 		buttonText = 'Sending Message...';
 
 		if (showError == true) { // Hide error on submit
 			showError = false;
-			setTimeout(() => { error = ""; }, 400);
+			setTimeout(() => { errorMessage = ''; }, 400);
 		};
 
-		let turnstileReset = $state();
+		let turnstileReset = $state<() => void>();
 
-		const data = new FormData(event.target);
+		const data = new FormData(event.target as HTMLFormElement);
 		const xhr = new XMLHttpRequest();
 		xhr.open('POST', 'https://contact.amazinaxel.workers.dev');
 
@@ -54,7 +54,7 @@
     <form method="POST" onsubmit={handleSubmit}>
         <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message topic"/>
 		<div></div>
-		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" type="text" placeholder="Your message here"></textarea>
+		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" placeholder="Your message here"></textarea>
 
 		<div style="padding: 0.5rem"></div>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>

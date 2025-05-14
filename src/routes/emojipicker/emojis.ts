@@ -232,7 +232,6 @@ export const searchableChars = {
 '¼': 'fraction one quarter',
 '½': 'fraction one half',
 '¾': 'fraction three quarters',
-'·': 'middle dot',
 '‐': 'hyphen',
 '‚': 'single low-9 quotation mark',
 '†': 'dagger',

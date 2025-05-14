@@ -1,4 +1,15 @@
-<script>
+<script lang="ts">
+    type AdmonitionProps = {
+        error?: boolean;
+        warning?: boolean;
+        important?: boolean;
+        note?: boolean;
+        info?: boolean;
+        children?: () => any;
+    }
+
+    const props: AdmonitionProps = $props();
+
     let {
         error,
         warning,
@@ -6,7 +17,7 @@
         note,
         info,
         children
-    } = $props();
+    } = props;
 
     let t = $state(), i = $state();
     if (error) { t = 'error'; i = 'error'; }
