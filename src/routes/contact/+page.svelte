@@ -14,10 +14,8 @@
 		event.preventDefault();
 		buttonText = 'Sending Message...';
 
-		if (showError == true) { // Hide error on submit
+		if (showError == true) // Hide error on submit
 			showError = false;
-			setTimeout(() => { errorMessage = ''; }, 400);
-		};
 
 		let turnstileReset = $state<() => void>();
 
