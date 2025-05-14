@@ -1,4 +1,4 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
-	"include": ["src/**/*.js", "src/**/*.svelte", "src/lib/utils.ts", "src/lib/utils.ts", "src/lib/config.ts", "src/lib/config.ts", "src/routes/emojipicker/emojis.ts", "src/routes/emojipicker/emojis.ts", "src/routes/+layout.server.ts", "src/routes/+layout.server.ts", "src/routes/+page.server.ts"]
+	"include": ["src/**/*.ts", "src/**/*.svelte"]
 }

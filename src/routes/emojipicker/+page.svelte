@@ -34,8 +34,7 @@
 
     const fuse = new Fuse(formattedSearchableChars, {
         keys: ['desc'],
-        threshold: 0.9,
-        ignoreLocation: true,
+        threshold: 0.9
     });
 
     export function searchCharacters(query) {
@@ -72,7 +71,7 @@
 <div class="flexGrid">
     {#if showSearchResults}
         {#each results as icon}
-            <button onclick={copy} style="min-width: unset; flex: 10%">{icon.char}</button>
+            <button onclick={copy} style="min-width: unset; flex: 10%">{(icon as { char: string }).char}</button>
         {/each}
     {:else}
         {#each iconList as icon}
