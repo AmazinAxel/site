@@ -30,10 +30,3 @@
   <button class="embla__prev" onclick={() => emblaAPI.scrollPrev()}><img class="noImgStyle" src="/media/icons/arrow-left.svg" alt="Left arrow"></button>
   <button class="embla__next" onclick={() => emblaAPI.scrollNext()}><img class="noImgStyle" src="/media/icons/arrow-right.svg" alt="Right arrow"></button>
 </section>
-<div class="embla__dots">
-  {#if emblaAPI}
-    {#each data as _, i}
-      <span class:embla__dot={true} role="button" tabindex="0" class:selected={currentlySelected == i} onkeydown={() => emblaAPI.scrollTo(i)} onclick={() => emblaAPI.scrollTo(i)}></span> 
-    {/each} 
-  {/if}
-</div>

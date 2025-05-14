@@ -41,11 +41,6 @@ export const heroItems = [
 		images: [{ image: 'baker.png' }]
 	},
 	{
-		name: 'Boulevard Park',
-		location: 'Bellingham, WA',
-		images: [{ image: 'boulevard-park.jpg' }]
-	},
-	{
 		name: 'San Juan Islands',
 		location: 'Washington State',
 		images: [{ image: 'san-juan-islands.jpg' }]
