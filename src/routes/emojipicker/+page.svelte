@@ -58,7 +58,7 @@
 	<link rel="stylesheet" href="/css/lists.css"/>
 </svelte:head>
 
-<a class="showMoreBtn otherWay" href="/#utils">Go to homepage</a>
+<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
 <h1>Minecraft Emoji Picker</h1>
 
 <Options>    

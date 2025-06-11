@@ -99,8 +99,12 @@ span.subtext {
 span.subtext::before {
 	content: '◆';
 	position: relative;
-	padding-right: 0.5rem;
+	padding: 0.5rem;
 	bottom: 0.2rem;
 	font-size: 1rem;
 	color: var(--blue2);
+}
+
+@media (max-width: 700px) {
+	.subtext { display: none; }
 }

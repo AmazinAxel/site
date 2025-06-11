@@ -15,7 +15,7 @@
 	touch-action: pan-y pinch-zoom;
 }
 
-.embla__slide {
+.blurredShadow.embla__slide {
 	flex: 0 0 var(--slide-size);
 	min-width: 0;
 	padding-left: var(--slide-spacing);
@@ -25,7 +25,7 @@
 }
 
 /* Actual carousel styling */
-.embla__slide .carouselContent {
+.blurredShadow.embla__slide .carouselContent {
 	position: absolute;
 	width: 50%;
 	left: 25%;
@@ -90,7 +90,7 @@
 	height: 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 	.embla__slide .carouselContent {
 		width: calc(100% - 1rem);
 		left: 1rem;

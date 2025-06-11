@@ -21,7 +21,7 @@
 <section class="embla" use:emblaCarouselSvelte={{ options, plugins: [] }} onemblaInit={initAPI}>
   <div class="embla__container">
     {#each data as { title, description, image, url, lightBackground }}
-      <div class="embla__slide">
+      <div class="embla__slide blurredShadow" style="--background: url(/media/showcases/{image}">
         <div class="carouselContent" class:lightBackground={lightBackground}>
           {#if url}
             <div class="name"><a href={url}><h4>{title}</h4></a></div>
@@ -30,7 +30,6 @@
           {/if}
           <p>{description}</p>
         </div>
-        <img src="/media/showcases/{image}" alt="Background hero of {title} - {description}">
       </div>
     {/each}
     {@render children?.()}

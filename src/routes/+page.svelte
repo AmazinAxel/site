@@ -19,7 +19,7 @@
 
 <!-- Permafrost make it look background like hero but not blurry -->
 <h2 class="sectionHeader">Featured Project</h2>
-<div id="featured" style="--heroBackground: url(/media/showcases/permafrost-2.png">
+<div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost-2.png">
 	<h2 style="justify-content: center; display: flex; margin: 0;">
 		<a class="external" href="https://permafrost.pages.dev">Permafrost</a>
 	</h2>

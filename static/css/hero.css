@@ -1,5 +1,5 @@
 /* Homepage hero */
-#hero, #featured {
+.blurredShadow {
 	position: relative;
 	text-align: center;
 	height: 25rem;
@@ -9,14 +9,15 @@
 	border-radius: 0.8rem;
 	outline: 3px solid #ffffff1c;
 	outline-offset: -8px;
+	transition: outline 0.3s var(--ease);
 }
 
-#hero::before, #featured::before, #featured::after {
+.blurredShadow::before, .blurredShadow::after {
 	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-image: var(--heroBackground);
+	background-image: var(--background);
 	background-size: cover;
 	background-position: center;
 	filter: blur(10px);
@@ -26,7 +27,9 @@
 	z-index: -1;
 }
 
-#hero.heroShow::before {
+.blurredShadow:not(#hero)::after { filter: blur(0); }
+
+#hero.heroShow::after {
 	filter: blur(0);
 	border-radius: 0.5rem;
 }
@@ -63,41 +66,41 @@
 	font-size: 1rem;
 	line-height: 1;
 	color: black;
-	opacity: 0.5;
 	width: max-content;
 	text-align: left;
 	transition: background-color 0.1s var(--ease);
 	background-color: transparent;
-	border-radius: 0 0 0 0.5rem;
+	border-radius: 0 0 0 0.3rem;
+	bottom: 8px;
+	left: 8px;
 }
 #hero.heroShow span {
-	background-color: white;
+	background-color: #ffffff7c;
 }
+#hero.heroShow {
+	outline: 3px solid #ffffff7c;
+}
+
+#hero img {
+	filter: invert(100%);
+	transition: filter .2s var(--ease);
+}
+#hero.heroShow img, #hero:not(.invertColors) img { filter: invert(0%); }
 #hero span span {
 	border-radius: 0 0.5rem 0 0;
-}
-
-#hero.invertColors span {
-	color: white;
-}
-#hero.invertColors.heroShow span {
-	background-color: black;
-}
-
-#hero span span {
-	padding-left: 0;
-	top: 0;
+	color: black;
+	bottom: 0;
 	opacity: 0;
-	margin-left: -5px;
+	left: -5px;
 	scale: 0.9;
 	transition:
-		margin-left 0.1s var(--ease),
+		left 0.1s var(--ease),
 		scale 0.1s var(--ease),
 		opacity 0.1s var(--ease);
 }
 
 #hero.heroShow span span {
-	margin-left: 5px;
+	left: 2rem;
 	scale: 1;
 	opacity: 1;
 }
@@ -114,10 +117,6 @@
 	text-shadow: 0 0 1rem white;
 }
 
-#hero:not(.invertColors) img:not(.closeHeroImg) {
-	filter: invert(50%) sepia(5%) saturate(2600%) hue-rotate(180deg) brightness(50%);
-}
-
 #hero:not(.invertColors) a {
 	color: var(--darkest1);
 }
@@ -126,7 +125,7 @@
 	text-decoration: underline;
 }
 
-#featured::before {
+.blurredShadow::before {
 	filter: blur(1rem);
 }
 #featured::after {

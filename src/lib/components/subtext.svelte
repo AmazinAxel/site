@@ -15,9 +15,11 @@
 </script>
 
 {#if url}
-    <a href="https://permafrost.amazinaxel.com" class="external">
-        <h2>{header} <span class="subtext">{subtext}</span></h2>
-    </a>
+    <h2 class="sectionHeader">
+        <a href="https://permafrost.amazinaxel.com" class="external">
+            {header} <span class="subtext">{subtext}</span>
+        </a>
+    </h2>
 {:else}
     <h2>{header} <span class="subtext">{subtext}</span></h2>
 {/if}

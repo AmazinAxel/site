@@ -74,7 +74,7 @@
 	<title>Small Text Converter - Axel's Utils</title>
 </svelte:head>
 
-<a class="showMoreBtn otherWay" href="/#utils">Go to homepage</a>
+<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
 <h1>Small Text Converter</h1>
 
 <Options>
