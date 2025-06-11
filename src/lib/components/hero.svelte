@@ -1,5 +1,4 @@
 <script lang="ts">
-    // Get all projects
     import { heroItems } from '$lib/config';
     import { shuffle } from '$lib/utils'
 
@@ -7,7 +6,7 @@
     
     let showHero = $state(false);
     
-    const randomHero = shuffle(heroItems)[0]; // Random project
+    const randomHero = shuffle(heroItems)[0]; // Random background
     const image = shuffle(randomHero.images)[0];
 </script>
 
@@ -17,10 +16,12 @@
 
 <div id="hero" style="--heroBackground: url(/media/herobanners/{ image.image })" class:invertColors={(image as any).invertColors} class:heroShow={showHero}>
     {@render children?.()}
-    <span
+    <!--<span
         role="article"
         onmouseenter={() => (showHero = true)} 
         onmouseleave={() => (showHero = false)}
         aria-label="Open hero information"
-    >{randomHero.name}<span>- {randomHero.location}</span></span>
+    >
+    
+    <img class="noImgStyle" style="width: 1rem" src="/media/icons/location.svg" alt="Background location"><span>- {randomHero.location}</span></span>-->
 </div>

@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { tools, projects } from '$lib/config';
+	import { showcases } from '$lib/config';
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
+	import Subtext from '$lib/components/subtext.svelte';
+    import ToolItem from '$lib/components/toolItem.svelte';
 
 	let { data } = $props(); // For journal posts
 </script>
@@ -15,46 +17,31 @@
 	<h1>AmazinAxel</h1>
 </Hero>
 
-<!-- Projects list -->
-<div>
-    <h2>Projects</h2>
-	<Carousel data={projects}></Carousel>
+<!-- Permafrost make it look background like hero but not blurry -->
+<h2 class="sectionHeader">Featured Project</h2>
+<div id="featured" style="--heroBackground: url(/media/showcases/permafrost-2.png">
+	<h2 style="justify-content: center; display: flex; margin: 0;">
+		<a class="external" href="https://permafrost.pages.dev">Permafrost</a>
+	</h2>
+	<p>Explore, gather, survive, and build in all all-custom survival Minecraft server</p>
 </div>
 
-<!-- Permafrost
-<h2>
-	<a href="https://permafrost.amazinaxel.com">Permafrost</a>
-	<a href="https://permafrost.amazinaxel.com"><span class='subtext'>Custom Minecraft survival</span></a>
-</h2>
-<div class="altBackground">
-	<p></p>
-</div>-->
-
-<!-- Minecraft utilities -->
-<div class="section right altBackground" id="utils" style="margin-top: 1rem">
-	<h2>Minecraft Utilities</h2>
-	<div class="flexGrid">
-		{#each tools as tool}
-			<a href="/{tool.route}" class="gridItem" style="flex: 30%">
-				<div class="card imgCard">
-					<picture>
-						<img src="/media/tools/previews/{tool.route}.png" class="noImgStyle" alt={tool.title + "preview"}>
-					</picture>
-					<h3>{tool.title}</h3>
-					<div class="contentFader"></div>
-				</div>
-			</a>
-		{/each}
-	</div>
+<!-- Showcases -->
+<div>
+    <h2 class="sectionHeader">Other Projects</h2>
+	<Carousel data={showcases}>
+		<!-- Other carousel items -->
+		<!--<div class="flexGrid">
+			<ToolItem title="Text Converter" route="textconverter"/>
+			<ToolItem title="Emoji Picker" route="emojipicker"/>
+		</div>-->
+	</Carousel>
 </div>
 
 <!-- Journal posts -->
-<h2>
-	<a href="https://journal.amazinaxel.com">What I'm writing about</a>
-	<a href="https://journal.amazinaxel.com"><span class='subtext'>Recent Journal entries</span></a>
-</h2>
+<Subtext header="What I'm writing about" subtext="Recent Journal entries" url="https://journal.amazinaxel.com"/>
 <div class="flexGrid">
-	{#each [data.journalPosts] as {link, title}}
+	{#each data.journalPosts as {link, title}}
 		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
 			<a href={link} target="_blank" rel="noreferrer noopener">
 				<h1>{title}</h1>
@@ -65,5 +52,5 @@
 </div>
 
 <!-- Contact -->
-<br><br><hr>
+<br><hr>
 <a class="showMoreBtn" href="contact" style="margin: 1rem 0 0 0; gap: 4px; font-weight: bold;">Contact me</a>

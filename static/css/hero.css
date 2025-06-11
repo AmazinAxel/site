@@ -1,18 +1,17 @@
 /* Homepage hero */
-#hero {
+#hero, #featured {
 	position: relative;
 	text-align: center;
 	height: 25rem;
 	display: grid;
 	align-items: end;
 	align-content: center;
-	border-radius: 0.5rem;
-	margin-bottom: 2rem;
+	border-radius: 0.8rem;
 	outline: 3px solid #ffffff1c;
-	outline-offset: -3px;
+	outline-offset: -8px;
 }
 
-#hero::before {
+#hero::before, #featured::before, #featured::after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -24,8 +23,7 @@
 	transition:
 		filter 0.3s var(--ease),
 		border-radius 0.2s;
-	outline: 3px solid var(--darkest3);
-	box-shadow: 0 0 1rem 3px var(--darkest4);
+	z-index: -1;
 }
 
 #hero.heroShow::before {
@@ -35,6 +33,8 @@
 
 #hero h1,
 #hero a {
+	color: var(--darkest1);
+	text-shadow: 0 0 23px var(--darkest4);
 	margin: 0;
 	opacity: 1;
 	scale: 1;
@@ -45,6 +45,9 @@
 
 #hero h1 {
 	font-size: 3rem;
+	text-decoration: underline;
+  	text-decoration-thickness: 0.2rem;
+	text-decoration-color: var(--blue2);
 }
 
 #hero a {
@@ -67,9 +70,6 @@
 	background-color: transparent;
 	border-radius: 0 0 0 0.5rem;
 }
-#hero span:not(span span) {
-	padding-right: calc(0.5rem - 3px);
-}
 #hero.heroShow span {
 	background-color: white;
 }
@@ -88,14 +88,17 @@
 	padding-left: 0;
 	top: 0;
 	opacity: 0;
-	margin-left: 10px;
+	margin-left: -5px;
+	scale: 0.9;
 	transition:
 		margin-left 0.1s var(--ease),
+		scale 0.1s var(--ease),
 		opacity 0.1s var(--ease);
 }
 
 #hero.heroShow span span {
 	margin-left: 5px;
+	scale: 1;
 	opacity: 1;
 }
 
@@ -103,12 +106,6 @@
 #hero.heroShow a {
 	opacity: 0;
 	scale: 0.95;
-}
-
-#hero h1,
-#hero a {
-	color: var(--darkest1);
-	text-shadow: 0 0 23px var(--darkest4);
 }
 
 #hero.invertColors h1,
@@ -127,4 +124,16 @@
 
 #hero a:hover {
 	text-decoration: underline;
+}
+
+#featured::before {
+	filter: blur(1rem);
+}
+#featured::after {
+	filter: blur(2px);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+#featured h2 {
+	z-index: 2;
 }

@@ -1,8 +1,8 @@
 <script lang="ts">
     type moreInfoProps = {
-        imgInfo?: boolean;
+        imgInfo: boolean;
         style?: string;
-        children?: () => any;
+        children: () => any;
     }
     const props: moreInfoProps = $props();
 

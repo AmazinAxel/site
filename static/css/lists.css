@@ -1,5 +1,5 @@
 .flexGrid {
-	display: inline-flex;
+	display: flex;
 	column-gap: 0.5rem;
 	align-items: center;
 	margin: auto;
@@ -12,7 +12,7 @@
 	overflow: hidden;
 	position: relative;
 	transform: scale(1);
-	padding: 0.5rem 5rem;
+	padding: 0.5rem 2.5rem;
 	margin: 5px 0;
 }
 
@@ -56,4 +56,8 @@
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
+}
+
+.gridCard.backgroundIcon::after {
+	top: 0;
 }
