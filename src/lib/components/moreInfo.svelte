@@ -1,6 +1,6 @@
 <script lang="ts">
     type moreInfoProps = {
-        imgInfo: boolean;
+        imgInfo?: boolean;
         style?: string;
         children: () => any;
     }

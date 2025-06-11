@@ -16,7 +16,7 @@
 
 {#if url}
     <h2 class="sectionHeader">
-        <a href="https://permafrost.amazinaxel.com" class="external">
+        <a href={url} class="external">
             {header} <span class="subtext">{subtext}</span>
         </a>
     </h2>
