@@ -1,35 +1,33 @@
-/* Necessary Embla styling */
 .embla {
-	overflow: hidden;
+	overflow-x: clip;
 	cursor: grab;
-	--slide-spacing: 1rem;
-	--slide-size: 100%;
+	--slide-size: 70%;
 	width: 100%;
 	position: relative;
-    border-radius: 0.5rem;
 }
 
 .embla__container {
 	display: flex;
-	margin-left: calc(var(--slide-spacing) * -1);
 	touch-action: pan-y pinch-zoom;
+	gap: 13px;
+	padding-left: 13px;
+	border-radius: 1rem;
 }
 
-.blurredShadow.embla__slide {
+.embla__slide {
 	flex: 0 0 var(--slide-size);
-	min-width: 0;
-	padding-left: var(--slide-spacing);
-	transform: translate3d(0, 0, 0);
-	overflow: hidden;
-	height: 30rem;
+	transition: opacity 0.5s var(--ease), filter 0.5s var(--ease)!important;
+	height: 20rem;
+	filter: blur(0px);
 }
+.embla .embla__slide::after { filter: blur(0px); }
 
-/* Actual carousel styling */
-.blurredShadow.embla__slide .carouselContent {
+/* Carousel content (title, description) styling */
+.carouselContent {
 	position: absolute;
-	width: 50%;
-	left: 25%;
-	backdrop-filter: blur(2rem);
+	width: 70%;
+	left: 15%;
+  	backdrop-filter: blur(2rem);
 	-webkit-backdrop-filter: blur(2rem);
 	border: 3px solid #ffffff3b;
 	bottom: 1rem;
@@ -39,7 +37,7 @@
 	border-radius: 0.5rem;
 }
 
-.embla__slide .carouselContent:not(.lightBackground) {
+.carouselContent:not(.lightBackground) {
 	backdrop-filter: blur(2rem) brightness(0.8);
 	-webkit-backdrop-filter: blur(2rem) brightness(0.8);
 }
@@ -74,15 +72,6 @@
 	color: revert;
 }
 
-/* Carousel buttons (small) */
-.embla__slide a::after {
-	content: url(/media/icons/external.svg);
-	scale: 0.6;
-	width: 5px;
-	height: 0;
-	margin-left: 1px;
-}
-
 .embla__slide a {
 	justify-content: center;
 	display: flex;
@@ -92,9 +81,9 @@
 
 @media (max-width: 900px) {
 	.embla__slide .carouselContent {
-		width: calc(100% - 1rem);
-		left: 1rem;
-		bottom: 0;
+		width: calc(100% - 10px);
+		left: 5px;
+		bottom: 5px;
 		box-shadow: none;
 	}
 }
@@ -107,16 +96,9 @@
 	background: transparent;
 	backdrop-filter: blur(2rem) brightness(0.8);
 	border-radius: 10px;
+	border: 3px solid #fff3;
 	box-shadow: 0 0 10px 0 var(--darkest1) !important;
+	z-index: 2;
 }
-button.embla__next {
-	right: 1rem;
-}
-button.embla__prev {
-	left: 1rem;
-}
-
-.embla__slide img {
-	height: 30rem;
-	object-fit: cover;
-}
+button.embla__next { right: 1rem; }
+button.embla__prev { left: 1rem; }

@@ -562,10 +562,10 @@ video:not(.noImgStyle) {
 hr {
 	border-style: solid;
 	color: var(--darkest4);
-	border-width: 2px;
-	border-radius: 2px;
+	background-color: var(--darkest4);
+	border-radius: 1rem;
 	transition: color 0.2s ease;
-	height: 0;
+	height: 0.2rem;
 }
 
 /* Scrollbar & text selection styles */

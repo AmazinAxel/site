@@ -37,6 +37,7 @@
 <Hero>
 	<h1>Error {page.status}: {page.error?.message}</h1>
 </Hero>
+<br>
 
 <div class="card nomargin quoteParent" class:visible={visibility}>
 	<blockquote>

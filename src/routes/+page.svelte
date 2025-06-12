@@ -17,26 +17,24 @@
 	<h1>AmazinAxel</h1>
 </Hero>
 
-<!-- Permafrost make it look background like hero but not blurry -->
+<!-- Permafrost -->
 <h2 class="sectionHeader">Featured Project</h2>
 <div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost-2.png">
-	<h2 style="justify-content: center; display: flex; margin: 0;">
-		<a class="external" href="https://permafrost.pages.dev">Permafrost</a>
-	</h2>
-	<p>Explore, gather, survive, and build in all all-custom survival Minecraft server</p>
+	<h2 style="justify-content: center; display: flex; margin: 0;">Permafrost</h2>
+	<p>Explore, gather, survive, and build in an all-custom Minecraft server</p>
+	<div style="height: 1rem;"></div>
+	<a class="showMoreBtn button" href="https://permafrost.pages.dev">See more</a>
 </div>
 
 <!-- Showcases -->
-<div>
-    <h2 class="sectionHeader">Other Projects</h2>
-	<Carousel data={showcases}>
-		<!-- Other carousel items -->
-		<!--<div class="flexGrid">
-			<ToolItem title="Text Converter" route="textconverter"/>
-			<ToolItem title="Emoji Picker" route="emojipicker"/>
-		</div>-->
-	</Carousel>
-</div>
+<h2 class="sectionHeader">Other Projects</h2>
+<Carousel data={showcases}>
+	<!-- Other carousel items -->
+	<div class="embla__slide blurredShadow">
+		<ToolItem title="Text Converter" route="textconverter"/>
+		<ToolItem title="Emoji Picker" route="emojipicker"/>
+	</div>
+</Carousel>
 
 <!-- Journal posts -->
 <Subtext header="What I'm writing about" subtext="Recent Journal entries" url="https://journal.amazinaxel.com"/>
