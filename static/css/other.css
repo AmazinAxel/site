@@ -175,7 +175,7 @@ input[type='checkbox'] {
 .permafrostHeader {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   justify-content: center;
 }
 
