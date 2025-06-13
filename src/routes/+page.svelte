@@ -20,7 +20,7 @@
 <!-- Permafrost -->
 <h2 class="sectionHeader">Featured Project</h2>
 <div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost.png">
-	<h2 style="justify-content: center; display: flex; margin: 0;">Permafrost</h2>
+	<h2 style="justify-content: center; display: flex; margin: 0;" class="permafrostHeader">Permafrost</h2>
 	<p>Explore, gather, survive, and build in an all-custom Minecraft server</p>
 	<div style="height: 1rem;"></div>
 	<a class="showMoreBtn button" href="https://permafrost.pages.dev">See more</a>

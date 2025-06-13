@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512">
+  <polyline fill="#eceff4" points="53.5,0 0,113.38 48.41,242.68 102.55,122.93 53.5,0" transform="matrix(1.07,-0.03,0.03,1.05,198,4)"/>
+  <polyline fill="#eceff4" points="53.5,0 0,113.38 48.41,242.68 102.55,122.93 53.5,0" transform="matrix(0.03,1.07,-1.04,0.03,509,198)"/>
+  <polyline fill="#eceff4" points="53.5,0 0,113.38 48.41,242.68 102.55,122.93 53.5,0" transform="matrix(-1.07,0.03,-0.03,-1.05,316,510)"/>
+  <polyline fill="#eceff4" points="53.5,0 0,113.38 48.41,242.68 102.55,122.93 53.5,0" transform="matrix(-0.03,-1.07,1.06,-0.03,3,317)"/>
+  <polyline fill="#eceff4" points="29.28,71.3 0,0 71.97,28.87 97.48,96.24" transform="matrix(1.32,0,0,1.32,72,72)"/>
+  <polyline fill="#eceff4" points="21.27,28.71 90.99,0 64.91,68.54 0,96.81 21.27,28.71" transform="matrix(1.31,0.02,-0.02,1.31,317,75)"/>
+  <polyline fill="#eceff4" points="0,0 30.99,66.71 104.02,92.5 70.58,25.09" transform="matrix(1.31,0.03,-0.03,1.31,316,316)"/>
+  <polyline fill="#eceff4" points="94.2,0 27.86,25.77 0,96.17 70,66.85" transform="matrix(1.33,0,0,1.33,72,317)"/>
+</svg>

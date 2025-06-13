@@ -171,6 +171,23 @@ input[type='checkbox'] {
 	bottom: 5px;
 }
 
+/* Permafrost inline logo */
+.permafrostHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.permafrostHeader::before {
+  content: url('https://amazinaxel.com/media/icons/permafrost-logo.svg');
+  display: inherit;
+  transform: rotate(-5deg);
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0px 0px 10px #fff);
+}
+
 /* Inputs */
 textarea {
 	resize: none;
