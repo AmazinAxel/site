@@ -159,13 +159,16 @@ input[type='checkbox'] {
 }
 .external::after {
 	content: url('/media/icons/external.svg');
-	opacity: 0.3;
 	display: inherit;
 	position: relative;
 	width: 1rem;
 	height: 1rem;
 	left: 3px;
-  	bottom: 5px;
+  	bottom: 10px;
+}
+.sectionHeader .external::after {
+	opacity: 0.3;
+	bottom: 5px;
 }
 
 /* Inputs */
@@ -241,7 +244,8 @@ a:hover {
 .imgCard {
 	position: relative;
 	overflow: hidden;
-	height: 10rem;
+	height: 8rem;
+	width: calc(100% - 4rem);
 }
 
 .imgCard h3 {

@@ -19,7 +19,7 @@
 
 <!-- Permafrost -->
 <h2 class="sectionHeader">Featured Project</h2>
-<div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost-2.png">
+<div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost.png">
 	<h2 style="justify-content: center; display: flex; margin: 0;">Permafrost</h2>
 	<p>Explore, gather, survive, and build in an all-custom Minecraft server</p>
 	<div style="height: 1rem;"></div>
@@ -31,6 +31,7 @@
 <Carousel data={showcases}>
 	<!-- Other carousel items -->
 	<div class="embla__slide blurredShadow">
+		<h2>Minecraft Tools</h2>
 		<ToolItem title="Text Converter" route="textconverter"/>
 		<ToolItem title="Emoji Picker" route="emojipicker"/>
 	</div>

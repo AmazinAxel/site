@@ -1,21 +1,21 @@
 export const showcases = [
 	{
 		title: 'Dueling',
+		image: 'dueling.png',
 		description: `
-			A competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`,
-		image: 'dueling.png'
+			A competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
 	},
 	{
 		title: 'Nix Flake',
 		image: 'flake.png',
-		description: 'My NixOS desktop & machine configurations - built with home-manager & Astal',
-		url: 'https://github.com/AmazinAxel/flake'
+		url: 'https://github.com/AmazinAxel/flake',
+		description: 'My NixOS desktop & machine configurations, built with home-manager & Astal'
 	},
 	{
 		title: 'Shootout',
-		image: 'flake.png',
-		description: 'Wild west gun-game Minecraft server with duels and FFA - shootout.minekeep.gg',
-		url: 'https://github.com/AmazinAxel/shootout'
+		image: 'shootout.png',
+		url: 'https://github.com/AmazinAxel/shootout',
+		description: 'Wild west gun-game Minecraft server with duels and FFA - shootout.minekeep.gg'
 	}
 ];
 

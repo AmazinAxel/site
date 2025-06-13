@@ -25,9 +25,9 @@
 /* Carousel content (title, description) styling */
 .carouselContent {
 	position: absolute;
-	width: 70%;
-	left: 15%;
-  	backdrop-filter: blur(2rem);
+	width: 75%;
+	left: 12.5%;
+	backdrop-filter: blur(2rem);
 	-webkit-backdrop-filter: blur(2rem);
 	border: 3px solid #ffffff3b;
 	bottom: 1rem;

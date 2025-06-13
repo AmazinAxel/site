@@ -7,7 +7,7 @@
     let { title, route } = props;
 
 </script>
-<a href="/{route}" class="gridItem" style="flex: 30%">
+<a href="/{route}">
     <div class="card imgCard">
         <picture>
             <img src="/media/tools/previews/{route}.png" class="noImgStyle" alt={title + "preview"}>
