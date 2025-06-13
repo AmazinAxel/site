@@ -105,6 +105,6 @@ span.subtext::before {
 	color: var(--blue2);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 	.subtext { display: none; }
 }
