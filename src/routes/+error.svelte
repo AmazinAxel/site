@@ -29,6 +29,13 @@
 		border: 0;
 		cursor: pointer;
 	}
+	.quoteParent a {
+		opacity: 0.3;
+		text-decoration: none;
+		position: relative;
+		top: 0.5rem;
+	}
+	a.external::after { bottom: 5px; }
 </style>
 <svelte:head><title>Error {page.status} - AmazinAxel.com</title></svelte:head>
 
@@ -44,6 +51,6 @@
 		<p>{quote}</p>
 		<p><em>- {author}</em></p>
 	</blockquote>
-	<button class="nostyle"
-	onclick={() => getQuote()}>New quote</button>
+	<a href="https://transcendentalism.amazinaxel.com/" class="external" target="_blank" rel="noopener noreferrer">Transcendentalism quote generator</a>
+	<button class="nostyle" onclick={() => getQuote()}>New quote</button>
 </div>
