@@ -46,7 +46,7 @@ h2.sectionHeader::after {
     height: 0.2rem;
     background-color: var(--darkest4);
     width: 100%;
-	margin-left: 0.75rem;
+	margin: 0.5rem;
     border-radius: 1rem;
 }
 

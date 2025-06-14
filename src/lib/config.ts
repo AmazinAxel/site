@@ -6,7 +6,7 @@ export const showcases = [
 			A competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
 	},
 	{
-		title: 'Nix Flake',
+		title: 'NixOS Flake',
 		image: 'flake.png',
 		url: 'https://github.com/AmazinAxel/flake',
 		description: 'My NixOS desktop & machine configurations, built with home-manager & Astal'
