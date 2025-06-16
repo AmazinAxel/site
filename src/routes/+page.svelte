@@ -23,7 +23,7 @@
 	<h1 style="justify-content: center; display: flex; margin: 0;" class="permafrostHeader">Permafrost</h1>
 	<p>Explore, gather, survive, and build in an all-custom Minecraft server</p>
 	<div style="height: 1rem;"></div>
-	<a class="showMoreBtn button" href="https://permafrost.pages.dev">See more</a>
+	<a class="showMoreBtn button" href="https://permafrost.pages.dev" target="_blank" rel="noopener noreferrer">See more</a>
 </div>
 
 <!-- Showcases -->

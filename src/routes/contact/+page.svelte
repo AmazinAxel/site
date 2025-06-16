@@ -67,5 +67,5 @@
         <button type="submit" class="button">{ buttonText }</button>
     </form>
 	<br>
-	<sub>This form is protected by <a href="https://www.cloudflare.com/products/turnstile/">Cloudflare Turnstile</a> - read <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a></sub>
+	<sub>This form is protected by <a href="https://www.cloudflare.com/products/turnstile/" target="_blank" rel="noopener noreferrer">Cloudflare Turnstile</a> - read <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare's privacy policy</a></sub>
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import type { EmblaCarouselType } from 'embla-carousel';
+    import Anchor from './anchor.svelte';
 
   type carouselProps = {
       data: any;
@@ -24,7 +25,7 @@
       <div class="embla__slide blurredShadow" style="--background: url(/media/showcases/{image})">
         <div class="carouselContent" class:lightBackground={lightBackground}>
           {#if url}
-            <div class="name"><a href={url} class="external"><h4>{title}</h4></a></div>
+            <div class="name"><Anchor href={url}><h4>{title}</h4></Anchor></div>
           {:else}
             <div class="name"><h4>{title}</h4></div>
           {/if}

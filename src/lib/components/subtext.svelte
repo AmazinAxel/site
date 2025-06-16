@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Anchor from "./anchor.svelte";
+
     type subtextProps = {
         header: string;
         subtext: string;
@@ -16,9 +18,9 @@
 
 {#if url}
     <h2 class="sectionHeader">
-        <a href={url} class="external">
+        <Anchor href={url}>
             {header} <span class="subtext">{subtext}</span>
-        </a>
+        </Anchor>
     </h2>
 {:else}
     <h2>{header} <span class="subtext">{subtext}</span></h2>

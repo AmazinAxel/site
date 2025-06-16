@@ -159,7 +159,7 @@ input[type='checkbox'] {
 }
 .external::after {
 	content: url('/media/icons/external.svg');
-	display: inherit;
+	display: flex;
 	position: relative;
 	width: 1rem;
 	height: 1rem;
