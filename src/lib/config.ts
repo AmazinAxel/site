@@ -15,7 +15,7 @@ export const showcases = [
 		title: 'Shootout',
 		image: 'shootout.png',
 		url: 'https://github.com/AmazinAxel/shootout',
-		description: 'Wild west gun-game Minecraft server with duels and FFA - shootout.minekeep.gg'
+		description: 'Wild west Minecraft gun-game server with duels and FFA - shootout.minekeep.gg'
 	}
 ];
 

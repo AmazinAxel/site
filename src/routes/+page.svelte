@@ -33,7 +33,7 @@
 	<div class="embla__slide blurredShadow">
 		<h2>Minecraft Tools</h2>
 		<ToolItem title="Text Converter" route="textconverter"/>
-		<ToolItem title="Emoji Picker" route="emojipicker"/>
+		<ToolItem title="Emojis" route="emojipicker"/>
 	</div>
 </Carousel>
 
