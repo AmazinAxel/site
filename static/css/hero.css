@@ -36,7 +36,7 @@
 #hero h1,
 #hero a {
 	color: var(--darkest1);
-	text-shadow: 0 0 23px var(--darkest4);
+	text-shadow: 0 0 0.6rem var(--darkest4);
 	margin: 0;
 	opacity: 1;
 	scale: 1;
@@ -44,14 +44,7 @@
 		opacity 0.1s ease,
 		scale 0.5s var(--ease);
 }
-
-#hero h1 {
-	font-size: 3rem;
-	text-decoration: underline;
-  	text-decoration-thickness: 0.2rem;
-	text-decoration-color: var(--blue2);
-}
-
+#hero h1 { font-size: 3rem; }
 #hero a {
 	font-size: 15px;
 	padding-bottom: 0.5rem;
