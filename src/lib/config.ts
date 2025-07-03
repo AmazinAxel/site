@@ -1,9 +1,15 @@
 export const showcases = [
 	{
+		title: 'Nocturn',
+		image: 'nocturn.png',
+		url: 'https://discord.gg/hJnapqFFC4',
+		description: 'Murder mystery minigame with tons of custom items and roles - nocturn.minekeep.gg'
+	},
+	{
 		title: 'Dueling',
 		image: 'dueling.png',
 		description: `
-			A competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
+			Competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
 	},
 	{
 		title: 'NixOS Flake',
