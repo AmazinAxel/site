@@ -34,7 +34,7 @@
 	padding-top: 1rem;
 	text-align: center;
 	box-shadow: 0px 10px 15px #ffffff4a;
-	border-radius: 0.5rem;
+	border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .carouselContent:not(.lightBackground) {

@@ -1,7 +1,7 @@
 .flexGrid {
 	display: flex;
 	column-gap: 0.5rem;
-	align-items: center;
+	align-items: stretch;
 	margin: auto;
 	flex-wrap: wrap;
 	width: 100%;
@@ -12,8 +12,13 @@
 	overflow: hidden;
 	position: relative;
 	transform: scale(1);
-	padding: 0.5rem 2.5rem;
 	margin: 5px 0;
+	flex: 45%;
+}
+
+.gridCard a h1 {
+	height: 100%;
+	align-content: center;
 }
 
 @media (max-width: 800px) {
