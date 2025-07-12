@@ -31,7 +31,7 @@
 <Carousel data={showcases}>
 	<!-- Other carousel items -->
 	<div class="embla__slide blurredShadow">
-		<h2>Minecraft Tools</h2>
+		<h2>MC Dev Tools</h2>
 		<ToolItem title="Text Converter" route="textconverter"/>
 		<ToolItem title="Emojis" route="emojipicker"/>
 	</div>

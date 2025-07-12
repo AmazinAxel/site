@@ -54,7 +54,7 @@
     button { font-family: 'Monocraft'; }
 </style>
 <svelte:head>
-	<title>Minecraft Emoji Picker - Axel's Utils</title>
+	<title>Minecraft Emoji Picker - AmazinAxel's MC Tools</title>
 	<link rel="stylesheet" href="/css/lists.css"/>
 </svelte:head>
 
