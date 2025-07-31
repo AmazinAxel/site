@@ -2,7 +2,7 @@ export const showcases = [
 	{
 		title: 'Nocturn',
 		image: 'nocturn.png',
-		url: 'https://discord.gg/hJnapqFFC4',
+		url: 'https://nocturn.paynow.store',
 		description: 'Murder mystery minigame with tons of custom items and roles - nocturn.minekeep.gg'
 	},
 	{
