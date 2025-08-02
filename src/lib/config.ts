@@ -12,16 +12,16 @@ export const showcases = [
 			Competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
 	},
 	{
-		title: 'NixOS Flake',
-		image: 'flake.png',
-		url: 'https://github.com/AmazinAxel/flake',
-		description: 'My NixOS desktop & machine configurations, built with home-manager & Astal'
-	},
-	{
 		title: 'Shootout',
 		image: 'shootout.png',
 		url: 'https://github.com/AmazinAxel/shootout',
 		description: 'Wild west Minecraft gun-game server with duels and FFA - shootout.minekeep.gg'
+	},
+		{
+		title: 'NixOS Flake',
+		image: 'flake.png',
+		url: 'https://github.com/AmazinAxel/flake',
+		description: 'My NixOS desktop & machine configurations, built with home-manager & Astal'
 	}
 ];
 
