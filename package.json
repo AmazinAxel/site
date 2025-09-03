@@ -10,13 +10,13 @@
 	"author": "AmazinAxel (Alec)",
 	"license": "UNLICENSED",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.27.0",
-		"@sveltejs/vite-plugin-svelte": "^6.1.0",
+		"@sveltejs/adapter-static": "^3.0.9",
+		"@sveltejs/kit": "^2.37.0",
+		"@sveltejs/vite-plugin-svelte": "^6.1.4",
 		"embla-carousel-svelte": "^8.6.0",
 		"fast-xml-parser": "^5.2.5",
 		"fuse.js": "2.7.4",
-		"svelte": "^5.37.2",
+		"svelte": "^5.38.6",
 		"svelte-turnstile": "^0.11.0",
 		"typescript": "^5.9.2",
 		"vite": "^6.3.5"
