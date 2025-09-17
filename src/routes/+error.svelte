@@ -2,6 +2,7 @@
     import { page } from '$app/state';
 	import { onMount } from "svelte"; 
 	import Hero from '$lib/components/hero.svelte';
+    import BackToHomepage from '$lib/components/backToHomepage.svelte';
 	let quote = $state(), author = $state();
 	let visibility = $state(false);
 
@@ -39,7 +40,7 @@
 </style>
 <svelte:head><title>Error {page.status} - AmazinAxel.com</title></svelte:head>
 
-<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
+<BackToHomepage/>
 
 <Hero>
 	<h1>Error {page.status}: {page.error?.message}</h1>

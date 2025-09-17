@@ -5,6 +5,7 @@
     import MoreInfo from '$lib/components/moreInfo.svelte';
     import Options from '$lib/components/options.svelte';
     import Fuse from 'fuse.js';
+    import BackToHomepage from '$lib/components/backToHomepage.svelte';
     const transition = { y: 10, duration: 250, easing: cubicOut };
 
     const iconList = allChars.split('').filter((v) => v != '\n');
@@ -58,7 +59,7 @@
 	<link rel="stylesheet" href="/css/lists.css"/>
 </svelte:head>
 
-<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
+<BackToHomepage/>
 <h1>Minecraft Emoji Picker</h1>
 
 <Options>    

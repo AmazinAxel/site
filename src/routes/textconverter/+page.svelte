@@ -1,4 +1,5 @@
 <script lang="ts">
+    import BackToHomepage from '$lib/components/backToHomepage.svelte';
 	import MoreInfo from '$lib/components/moreInfo.svelte';
 	import Options from '$lib/components/options.svelte';
 
@@ -74,7 +75,7 @@
 	<title>Minecraft Small Text Converter - AmazinAxel's MC Tools</title>
 </svelte:head>
 
-<a class="showMoreBtn otherWay" href="/">Go to homepage</a>
+<BackToHomepage/>
 <h1>Minecraft Small Text Converter</h1>
 
 <Options>
