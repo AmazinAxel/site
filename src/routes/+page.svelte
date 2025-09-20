@@ -21,6 +21,7 @@
 <h2 class="sectionHeader">Featured Project</h2>
 <div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost.png">
 	<h1 style="justify-content: center; display: flex; margin: 0; font-size: 3rem;" class="permafrostHeader">Permafrost</h1>
+	<h2 style="font-size: 1.1rem; margin: 0; font-weight: bold; font-family: 'Sora';">Snowy hardcore survival server</h2>
 	<div style="height: 1rem;"></div>
 	<a class="showMoreBtn button" href="https://permafrost.pages.dev" target="_blank" rel="noopener noreferrer">See more</a>
 </div>
@@ -41,7 +42,7 @@
 <div class="flexGrid">
 	{#each data.journalPosts as {link, title}}
 		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">
-			<a href={link} target="_blank" rel="noreferrer noopener">
+			<a href={link} target="_blank" class="external journalExternal" rel="noreferrer noopener">
 				<h1>{title}</h1>
 				<div class="contentFader"></div>
 			</a>

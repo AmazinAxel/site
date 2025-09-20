@@ -17,6 +17,15 @@
 	background-image: linear-gradient(to bottom, transparent, var(--darkest4) 100%);
 }
 
+.journalExternal { height: 100%; }
+.external.journalExternal::after {
+	position: absolute;
+	top: 0.1rem;
+	right: 0.1rem;
+	left: unset;
+	opacity: 0.5;
+}
+
 /* Checkbox styling */
 
 input[type='checkbox'] {

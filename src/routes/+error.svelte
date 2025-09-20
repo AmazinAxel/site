@@ -29,6 +29,7 @@
 		background: none;
 		border: 0;
 		cursor: pointer;
+		text-shadow: 0 0 5px var(--blue2);
 	}
 	.quoteParent a {
 		opacity: 0.3;
@@ -50,7 +51,7 @@
 <div class="card nomargin quoteParent" class:visible={visibility}>
 	<blockquote>
 		<p>{quote}</p>
-		<p><em>- {author}</em></p>
+		<p style="color: var(--blue2)"><em>- {author}</em></p>
 	</blockquote>
 	<a href="https://transcendentalism.amazinaxel.com/" class="external" target="_blank" rel="noopener noreferrer">Transcendentalism quote generator</a>
 	<button class="nostyle" onclick={() => getQuote()}>New quote</button>
