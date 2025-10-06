@@ -56,7 +56,7 @@
 </style>
 <svelte:head>
 	<title>Minecraft Emoji Picker - AmazinAxel's MC Tools</title>
-	<link rel="stylesheet" href="/css/lists.css"/>
+	<link rel="stylesheet" href="/css/home/lists.css"/>
 </svelte:head>
 
 <BackToHomepage/>

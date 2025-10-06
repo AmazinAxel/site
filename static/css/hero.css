@@ -84,16 +84,13 @@
 	bottom: 0;
 	opacity: 0;
 	left: -5px;
-	scale: 0.8;
 	transition:
 		left 0.1s var(--ease),
-		scale 0.2s var(--ease),
 		opacity 0.2s var(--ease);
 }
 
 #hero.heroShow span span {
 	left: 2rem;
-	scale: 1;
 	opacity: 1;
 }
 
