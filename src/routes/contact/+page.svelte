@@ -43,7 +43,6 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<p>This contact form is intended for professional inquires.</p>
 	<strong>Reach out to <code>@amazinaxel</code> on Discord for a faster response.</strong>
 	<p>Include a contact method if you would like a reply.</p>
 </Admonition>
