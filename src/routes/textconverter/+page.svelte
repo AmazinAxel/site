@@ -72,11 +72,11 @@
     }
 </script>
 <svelte:head>
-	<title>Minecraft Small Text Converter - AmazinAxel's MC Tools</title>
+	<title>MC small text converter - AmazinAxel's Tools</title>
 </svelte:head>
 
 <BackToHomepage/>
-<h1>Minecraft Small Text Converter</h1>
+<h1>MC small text converter</h1>
 
 <Options>
     <div style="height: 0.5rem;"></div>
