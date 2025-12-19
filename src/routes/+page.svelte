@@ -23,7 +23,7 @@
 	<h1 style="justify-content: center; display: flex; margin: 0; font-size: 3rem;" class="permafrostHeader">Permafrost</h1>
 	<h2 style="font-size: 1.1rem; margin: 0; font-weight: 400; font-family: 'Sora';">Snowy hardcore survival server</h2>
 	<div style="height: 1rem;"></div>
-	<a class="showMoreBtn button" href="https://permafrost.pages.dev" target="_blank" rel="noopener noreferrer">See more</a>
+	<a class="showMoreBtn button" href="https://permafrostmc.com" target="_blank" rel="noopener noreferrer">See more</a>
 </div>
 
 <!-- Showcases -->
