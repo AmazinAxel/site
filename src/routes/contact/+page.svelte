@@ -49,10 +49,9 @@
 
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
-    <form method="POST" onsubmit={handleSubmit}>
-        <label for="subject">Subject:</label> <input type="text" name="title" placeholder="Message topic"/>
-		<div></div>
-		<label for="message" class="heavy">Message:</label> <textarea name="message" style="width: 300px; height: 150px;" placeholder="Your message here"></textarea>
+    <form method="POST" onsubmit={handleSubmit} style="display: flex; flex-direction: column; align-items: center;">
+		<input type="text" name="title" placeholder="Subject"/>
+		<textarea name="message" style="width: 300px; height: 150px; margin: 0;" placeholder="Message"></textarea>
 
 		<div style="padding: 0.5rem"></div>
 		<Turnstile siteKey="0x4AAAAAAAEGFTl2ESubJ-n9" theme="dark"/>
