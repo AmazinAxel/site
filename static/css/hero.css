@@ -73,11 +73,11 @@
 	outline: 3px solid #ffffff7c;
 }
 
-#hero img {
+#hero img, #hero video {
 	filter: invert(100%);
 	transition: filter .2s var(--ease);
 }
-#hero.heroShow img, #hero:not(.invertColors) img { filter: invert(0%); }
+#hero.heroShow img, #hero.heroShow video, #hero:not(.invertColors) img, #hero:not(.invertColors) video { filter: invert(0%); }
 #hero span span {
 	border-radius: 0 0.5rem 0 0;
 	color: black;
