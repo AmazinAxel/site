@@ -44,7 +44,7 @@
     };
 
     let query = $state('');
-    let results = $derived(searchCharacters(query));
+    let results = $derived(searchCharacters(query).map((r: any) => r.char).filter(Boolean));
     let showSearchResults = $derived(query.trim() !== '');
 </script>
 <style>
@@ -72,7 +72,7 @@
 <div class="flexGrid">
     {#if showSearchResults}
         {#each results as icon}
-            <button onclick={copy} style="min-width: unset; flex: 10%">{(icon as { char: string }).char}</button>
+            <button onclick={copy} style="min-width: unset; flex: 10%">{icon}</button>
         {/each}
     {:else}
         {#each iconList as icon}
