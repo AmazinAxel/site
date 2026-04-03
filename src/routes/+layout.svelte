@@ -2,7 +2,6 @@
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/state';
 	let { data, children } = $props();
-	const { date } = data;
 </script>
 <svelte:head>
 	<!-- Bottom-to-top in order of importance -->
@@ -24,7 +23,7 @@
 			<div id="inner">
 				<div>
 					<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
-					<a href="https://github.com/AmazinAxel/site" id="date" target="_blank" rel="noopener noreferrer">Site last generated on {date}</a>
+					<a href="https://github.com/AmazinAxel/site" id="date" target="_blank" rel="noopener noreferrer">Site last generated on {data.date}</a>
 				</div>
 				<a href="https://derpydoggo.is-a.dev" class="showMoreBtn" style="margin: 0; font-size: 0.9rem;" target="_blank" rel="noopener noreferrer">Lil' bro's site</a>
 			</div>

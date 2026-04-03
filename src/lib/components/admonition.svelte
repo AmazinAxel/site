@@ -8,16 +8,7 @@
         children?: () => any;
     }
 
-    const props: AdmonitionProps = $props();
-
-    let {
-        error,
-        warning,
-        important,
-        note,
-        info,
-        children
-    } = props;
+    let { error, warning, important, note, info, children }: AdmonitionProps = $props();
 
     let t = $state(), i = $state();
     if (error) { t = 'error'; i = 'error'; }

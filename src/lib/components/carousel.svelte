@@ -7,8 +7,7 @@
       data: any;
       children?: () => any;
   }
-  const props: carouselProps = $props();
-  let { data, children } = props;
+  let { data, children }: carouselProps = $props();
 
   let emblaAPI: EmblaCarouselType;
   let currentlySelected = $state(0);

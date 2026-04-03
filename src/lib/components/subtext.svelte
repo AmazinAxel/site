@@ -6,13 +6,7 @@
         subtext: string;
         url?: string;
     }
-    const props: subtextProps = $props();
-
-    let {
-        header,
-        subtext,
-        url,
-    } = props;
+    let { header, subtext, url }: subtextProps = $props();
 
 </script>
 

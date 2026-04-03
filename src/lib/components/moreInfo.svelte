@@ -4,13 +4,7 @@
         style?: string;
         children: () => any;
     }
-    const props: moreInfoProps = $props();
-
-    let {
-        imgInfo,
-        style,
-        children
-    } = props;
+    let { imgInfo, style, children }: moreInfoProps = $props();
 
     let showInfo = $state(false);
     import { fly } from 'svelte/transition';

@@ -3,8 +3,7 @@
         route: string;
         title: string;
     }
-    const props: toolItemProps = $props();
-    let { title, route } = props;
+    let { title, route }: toolItemProps = $props();
 
 </script>
 <a href="/{route}">

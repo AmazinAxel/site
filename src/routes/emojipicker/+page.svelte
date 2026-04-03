@@ -44,7 +44,7 @@
     };
 
     let query = $state('');
-    let results = $derived(searchCharacters(query).map((r: any) => r.char).filter(Boolean));
+    let results = $derived(searchCharacters(query).map((r: any) => r.item.char).filter(Boolean));
     let showSearchResults = $derived(query.trim() !== '');
 </script>
 <style>
