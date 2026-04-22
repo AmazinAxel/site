@@ -260,7 +260,7 @@ a:hover {
 	position: relative;
 	overflow: hidden;
 	height: 8rem;
-	width: calc(100% - 4rem);
+	width: calc(100% - 8rem);
 }
 
 .imgCard h3 {

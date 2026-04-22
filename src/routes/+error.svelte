@@ -53,6 +53,6 @@
 		<p>{quote}</p>
 		<p style="color: var(--blue2)"><em>- {author}</em></p>
 	</blockquote>
-	<a href="https://transcendentalism.amazinaxel.com/" class="external" target="_blank" rel="noopener noreferrer">Transcendentalism quote generator</a>
+	<a href="https://transcendentalism.amazinaxel.com" class="external" target="_blank" rel="noopener noreferrer">Transcendentalism API</a>
 	<button class="nostyle" onclick={() => getQuote()}>New quote</button>
 </div>

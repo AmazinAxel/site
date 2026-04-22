@@ -17,8 +17,13 @@
 	<h1>AmazinAxel</h1>
 </Hero>
 
+<!--<h2 class="sectionHeader">A little about me</h2>
+<div id="about" style="display: flex; padding: 1rem">
+	<p style="text-align: left; width: 100%;">...</p>
+</div>-->
+
 <!-- Permafrost -->
-<h2 class="sectionHeader">Featured Project</h2>
+<h2 class="sectionHeader">Featured project</h2>
 <div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost.png">
 	<h1 style="justify-content: center; display: flex; margin: 0; font-size: 3rem;" class="permafrostHeader">Permafrost</h1>
 	<h2 style="font-size: 1.1rem; margin: 0; font-weight: 400; font-family: 'Sora';">Snowy hardcore survival server</h2>
@@ -27,7 +32,7 @@
 </div>
 
 <!-- Showcases -->
-<h2 class="sectionHeader">Other Projects</h2>
+<h2 class="sectionHeader">Other things</h2>
 <Carousel data={showcases}>
 	<!-- Other carousel items -->
 	<div class="embla__slide blurredShadow">
@@ -38,7 +43,7 @@
 </Carousel>
 
 <!-- Journal posts -->
-<Subtext header="What I'm writing about" subtext="Recent Journal entries" url="https://journal.amazinaxel.com"/>
+<Subtext header="What I'm writing" subtext="See all journal entries" url="https://journal.amazinaxel.com"/>
 <div class="flexGrid">
 	{#each data.journalPosts as {link, title}}
 		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">

@@ -3,25 +3,12 @@ export const showcases = [
 		title: 'Nocturn',
 		image: 'nocturn.png',
 		url: 'https://nocturn.paynow.store',
-		description: 'Murder mystery minigame with tons of custom items and roles - nocturn.minekeep.gg'
-	},
-	{
-		title: 'Dueling',
-		image: 'dueling.png',
-		description: `
-			Competitive 1v1 PvP matchup tournament server featuring collectible Titles and rotating kits & maps - dueling.minekeep.gg`
-	},
-	{
-		title: 'Shootout',
-		image: 'shootout.png',
-		url: 'https://github.com/AmazinAxel/shootout',
-		description: 'Wild west Minecraft gun-game server with duels and FFA - shootout.minekeep.gg'
-	},
-		{
-		title: 'NixOS Flake',
+		description: 'Murder mystery MC minigame with tons of custom items & roles - nocturn.minekeep.gg'
+	}, {
+		title: 'Flake',
 		image: 'flake.png',
 		url: 'https://github.com/AmazinAxel/flake',
-		description: 'My NixOS desktop & machine configurations, built with home-manager & Astal'
+		description: 'A hyperfocused NixOS desktop configuration built with home-manager & Astal'
 	}
 ];
 
