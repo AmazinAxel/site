@@ -9,8 +9,8 @@
 	margin: auto;
 	max-width: 60rem;
 	padding: 5rem 1rem 1rem 1rem;
-	/* Make footer anchored to bottom - 4rem is footer height */
-	min-height: calc(100vh - 6rem);
+	/* Make footer anchored to bottom - 5.5rem is footer height */
+	min-height: calc(100vh - 5.5rem);
 }
 
 img:not(.noImgStyle) {
@@ -37,7 +37,7 @@ body {
 footer {
 	padding: 1rem;
 	margin-top: 1rem;
-	height: 5rem;
+	height: 4.5rem;
 	background-color: var(--darkest2);
 }
 footer p { color: var(--blue2); }
@@ -74,6 +74,7 @@ footer .showMoreBtn {
 		align-items: flex-start;
 	}
 	footer { height: 7rem; }
+	footer .showMoreBtn { width: 100%; }
 }
 
 .section a {

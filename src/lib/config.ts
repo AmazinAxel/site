@@ -16,16 +16,13 @@ export const heroItems = [
 	{
 		location: 'Mt. Baker - Washington State',
 		images: [{ image: 'baker.png' }]
-	},
-	{
+	}, {
 		location: 'San Juan Islands - Washington State',
 		images: [{ image: 'san-juan-islands.jpg', invertColors: true  }]
-	},
-	{
+	}, {
 		location: 'North Cascades National Park - Washington State',
 		images: [{ image: 'north-cascades.jpg', invertColors: true }]
-	},
-	{
+	}, {
 		location: 'First Hill - Seattle, WA',
 		images: [{ image: 'seattle-first-hill.jpg' }]
 	}

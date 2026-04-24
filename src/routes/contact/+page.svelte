@@ -43,7 +43,7 @@
 <Title name="Contact"/>
 
 <Admonition info>
-	<strong>Reach out to <code>@amazinaxel</code> on Discord for a faster response.</strong>
+	<strong>Reach out to <code>@amazinaxel</code> on Discord for a faster response</strong>
 	<p>Include a contact method if you would like a reply.</p>
 </Admonition>
 

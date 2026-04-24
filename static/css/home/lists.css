@@ -76,13 +76,13 @@
 
 .backgroundIcon::after {
 	content: '';
-	height: 50px;
-	width: 50px;
+	height: 55px;
+	width: 55px;
 	position: absolute;
 	z-index: -1;
-	left: 0.5rem;
+	left: 0.1rem;
 	background-size: cover;
-	top: 0.5rem;
+	top: 0.1rem;
 	transform: rotateZ(-10deg);
 	display: inline-block;
 	background-image: var(--bg);
