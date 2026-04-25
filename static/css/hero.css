@@ -91,7 +91,7 @@
 }
 
 #hero.heroShow h1,
-#hero.heroShow a {
+#hero.heroShow p {
 	opacity: 0;
 	scale: 0.95;
 }
