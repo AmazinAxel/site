@@ -35,7 +35,8 @@
 
 #hero h1,
 #hero h2,
-#hero a {
+#hero a,
+#hero p {
 	color: var(--darkest1);
 	text-shadow: 0 0 0.6rem var(--darkest4);
 	margin: 0;
@@ -100,7 +101,8 @@
 
 #hero.invertColors h1,
 #hero.invertColors h2,
-#hero.invertColors a {
+#hero.invertColors a,
+#hero.invertColors p {
 	color: var(--lightest1) !important;
 	text-shadow: 0 0 1rem white;
 }
