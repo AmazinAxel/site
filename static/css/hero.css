@@ -34,6 +34,7 @@
 }
 
 #hero h1,
+#hero h2,
 #hero a {
 	color: var(--darkest1);
 	text-shadow: 0 0 0.6rem var(--darkest4);
@@ -91,12 +92,14 @@
 }
 
 #hero.heroShow h1,
+#hero.heroShow h2,
 #hero.heroShow p {
 	opacity: 0;
 	scale: 0.95;
 }
 
 #hero.invertColors h1,
+#hero.invertColors h2,
 #hero.invertColors a {
 	color: var(--lightest1) !important;
 	text-shadow: 0 0 1rem white;
