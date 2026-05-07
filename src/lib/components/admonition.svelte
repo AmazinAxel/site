@@ -10,12 +10,18 @@
 
     let { error, warning, important, note, info, children }: AdmonitionProps = $props();
 
-    let t = $state(), i = $state();
-    if (error) { t = 'error'; i = 'error'; }
-    else if (warning) { t = 'warning'; i = 'warning'; }
-    else if (important) { t = 'important'; i = 'warning';  }
-    else if (note) { t = 'note'; i = 'about'; }
-    else if (info) { t = 'info'; i = 'about'; }
+    const type = $derived(
+        error ? 'error' :
+        warning ? 'warning' :
+        important ? 'important' :
+        note ? 'note' :
+        info ? 'info' : undefined
+    );
+    const icon = $derived(
+        error ? 'error' :
+        (warning || important) ? 'warning' :
+        (note || info) ? 'about' : undefined
+    );
 </script>
 
-<div class="coverCard {t} innerCard" style="--bg: url(/media/icons/{i}.svg); --size: 20rem;">{@render children?.()}</div>
+<div class="coverCard {type} innerCard" style="--bg: url(/media/icons/{icon}.svg); --size: 20rem;">{@render children?.()}</div>
