@@ -11,15 +11,15 @@
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/kit": "^2.55.0",
-		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@sveltejs/kit": "^2.59.1",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"embla-carousel-svelte": "^8.6.0",
-		"fast-xml-parser": "^5.5.10",
-		"fuse.js": "7.2.0",
-		"svelte": "^5.55.1",
+		"fast-xml-parser": "^5.7.3",
+		"fuse.js": "7.3.0",
+		"svelte": "^5.55.5",
 		"svelte-turnstile": "^0.11.0",
-		"typescript": "^6.0.2",
-		"vite": "^8.0.3"
+		"typescript": "^6.0.3",
+		"vite": "^8.0.11"
 	},
 	"type": "module",
 	"private": true
