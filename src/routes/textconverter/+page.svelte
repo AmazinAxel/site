@@ -17,14 +17,23 @@
     const superChars = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾';
     const subChars = '₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎';
 
+    let inputArea: HTMLTextAreaElement;
+    $effect(() => inputArea.focus());
+
+    let copyTimeout: ReturnType<typeof setTimeout>;
+    function queueCopy() {
+        clearTimeout(copyTimeout);
+        copyTimeout = setTimeout(() => navigator.clipboard.writeText(outputText), 500);
+    }
+
     function convertText(toSmallText = true) {
         if (inputText == '') return;
-        
+
         let preConvertedText = '';
         let apostrapheMatch, quotationMatch = false;
 
         const text = (toSmallText) ? inputText.toLowerCase() : outputText;
-        
+
         // Get character type
         const chars = textType ? smallTextChars : altTextChars;
         const scriptTypeChars = (scriptType == 1) ? subChars : superChars;
@@ -59,7 +68,7 @@
                     if (scriptIndex !== -1) {
                         preConvertedText += scriptChars[scriptIndex];
                     } else {
-                        preConvertedText += (index !== -1) ? 
+                        preConvertedText += (index !== -1) ?
                             normalAlphabet[index] : char;
                     };
                 };
@@ -68,7 +77,7 @@
 
         (toSmallText) ? outputText = preConvertedText : inputText = preConvertedText;
 
-        if (autoCopy) navigator.clipboard.writeText(outputText);
+        if (autoCopy) queueCopy();
     }
 </script>
 <svelte:head>
@@ -118,7 +127,7 @@
 <br>
 
 <div class="inputs">
-    <textarea bind:value={inputText} oninput={() => convertText()} placeholder="Normal text"></textarea>
+    <textarea bind:this={inputArea} bind:value={inputText} oninput={() => convertText()} placeholder="Normal text"></textarea>
     <p>➡️</p>
     <textarea bind:value={outputText} oninput={() => convertText(false)} placeholder="Small text"></textarea>
 </div>

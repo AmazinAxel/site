@@ -46,6 +46,9 @@
     let query = $state('');
     let results = $derived(searchCharacters(query).map((r: any) => r.item.char).filter(Boolean));
     let showSearchResults = $derived(query.trim() !== '');
+
+    let searchInput: HTMLInputElement;
+    $effect(() => searchInput.focus());
 </script>
 <style>
     @font-face {
@@ -64,7 +67,7 @@
 
 <Options>    
     <label for="search">Search:</label>
-    <input type="text" name="search" style="margin-bottom: 0;" bind:value={query} oninput={() => searchCharacters(query)}>
+    <input type="text" name="search" style="margin-bottom: 0;" bind:this={searchInput} bind:value={query} oninput={() => searchCharacters(query)}>
     <MoreInfo style="right: 10px; bottom: 10px;">Search feature only available for some common characters</MoreInfo>
 </Options>
 <br>
