@@ -25,5 +25,20 @@ export const heroItems = [
 	}, {
 		location: 'First Hill - Seattle, WA',
 		images: [{ image: 'seattle-first-hill.jpg' }]
+	}, {
+		location: 'Concrete - Washington State',
+		images: [{ image: 'concrete.png', invertColors: true }]
+	}, {
+		location: 'La Jolla - California',
+		images: [{ image: 'la-jolla.png' }]
+	}, {
+		location: 'Ross Lake - North Cascades National Park',
+		images: [{ image: 'ross-lake.png', invertColors: true }]
+	}, {
+		location: 'San Diego I-8 (south) - California',
+		images: [{ image: 'san-diego-i8-south.png' }]
+	}, {
+		location: 'Wenatchee River - Washington State',
+		images: [{ image: 'wenatchee-river.png', invertColors: true }]
 	}
 ];
