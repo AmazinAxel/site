@@ -40,5 +40,11 @@ export const heroItems = [
 	}, {
 		location: 'Wenatchee River - Washington State',
 		images: [{ image: 'wenatchee-river.png', invertColors: true }]
+	}, {
+		location: 'Shaw Island - Washington State',
+		images: [{ image: 'shaw-island-trees.png', invertColors: true }]
+	}, {
+		location: 'Puget Sound - Washington State',
+		images: [{ image: 'puget-sound.png', invertColors: true }]
 	}
 ];
