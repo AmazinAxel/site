@@ -26,7 +26,21 @@
 	background-image: linear-gradient(to bottom, transparent, var(--darkest4) 100%);
 }
 
-.journalExternal { height: 100%; width: 100%; }
+.journalExternal {
+	height: 100%;
+	width: 100%;
+}
+
+.gridCard:has(.journalExternal) {
+	outline: 0px var(--blue3) solid;
+	outline-offset: -1px;
+}
+
+.gridCard:has(.journalExternal):hover {
+	outline: 2px var(--blue2) solid;
+	outline-offset: 4px;
+}
+
 .external.journalExternal::after {
 	position: absolute;
 	top: 0.1rem;
@@ -46,13 +60,16 @@
 	.gridItem {
 		flex: 100% !important;
 	}
+
 	.flexGrid {
 		display: block;
 	}
+
 	.gridCard {
 		padding: 0.5rem 0.2rem;
 	}
 }
+
 @media (max-width: 750px) {
 	.gridItem {
 		flex: 100%;
@@ -62,33 +79,32 @@
 .gridCard .contentFader {
 	height: 2rem;
 }
+
 .gridCard h1 {
 	font-size: 1.5rem;
 	margin: 0;
 }
+
 .gridCard:hover {
 	scale: 0.99;
 	transition: 0.4s var(--ease);
 }
+
 .gridCard:active {
 	scale: 0.97;
 }
 
 .backgroundIcon::after {
 	content: '';
-	height: 55px;
-	width: 55px;
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	z-index: -1;
-	left: 0.1rem;
-	background-size: cover;
-	top: 0.1rem;
+	left: 0;
 	transform: rotateZ(-10deg);
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
-}
-
-.gridCard.backgroundIcon::after {
 	top: 0;
+	scale: 2.3;
 }

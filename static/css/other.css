@@ -32,6 +32,7 @@ input[type='checkbox'] {
 	height: 0;
 	width: 0;
 }
+
 /* Create a custom checkbox */
 .container .checkmark {
 	position: absolute;
@@ -46,22 +47,27 @@ input[type='checkbox'] {
 	box-shadow: 0 1px 3px 0 var(--darkest4);
 	background-color: var(--darkest3);
 }
+
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
 	box-shadow: 0 0 10px 1px var(--darkest4);
 }
-.container input:checked ~ .checkmark:hover {
+
+.container input:checked~.checkmark:hover {
 	box-shadow: 0 0 10px 1px var(--darkest4);
 }
-.container input:checked ~ .checkmark:active {
+
+.container input:checked~.checkmark:active {
 	background-color: var(--darkest2);
 	box-shadow: 0 1px 3px 0 var(--darkest4);
 }
-.container:active input ~ .checkmark {
+
+.container:active input~.checkmark {
 	background-color: var(--darkest4);
 	box-shadow: 0 1px 3px 0 var(--darkest4);
 }
-.container input:checked ~ .checkmark {
+
+.container input:checked~.checkmark {
 	transition:
 		background-color 0.3s,
 		box-shadow 0.3s;
@@ -69,6 +75,7 @@ input[type='checkbox'] {
 	box-shadow: 0 1px 3px 0 var(--darkest1);
 	background-color: var(--darkest4);
 }
+
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
 	content: '';
@@ -94,7 +101,7 @@ input[type='checkbox'] {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
 	border-width: 6px;
 	transform: rotate(45deg);
 	opacity: 1;
@@ -130,13 +137,16 @@ input[type='checkbox'] {
 	z-index: 3;
 	margin-top: 2rem;
 }
+
 .moreInfo:not(.imgInfo) {
 	padding: 1rem;
 }
+
 .moreInfo.imgInfo {
 	max-width: 275px;
 	min-width: max-content;
 }
+
 .moreInfo img {
 	box-shadow: -1px -1px 6px var(--darkest1);
 	margin: auto;
@@ -148,6 +158,7 @@ input[type='checkbox'] {
 	align-items: center;
 	width: fit-content;
 }
+
 .external::after {
 	content: url('https://amazinaxel.com/media/icons/external.svg');
 	display: flex;
@@ -155,8 +166,9 @@ input[type='checkbox'] {
 	width: 1rem;
 	height: 1rem;
 	left: 3px;
-  	bottom: 10px;
+	bottom: 10px;
 }
+
 .sectionHeader .external::after {
 	opacity: 0.3;
 	bottom: 5px;
@@ -164,28 +176,29 @@ input[type='checkbox'] {
 
 /* Permafrost inline logo */
 .permafrostHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	justify-content: center;
 }
 
 .permafrostHeader::before {
-  content: url('https://amazinaxel.com/media/icons/permafrost-logo.svg');
-  display: inherit;
-  transform: rotate(-7deg);
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0px 0px 10px #fff);
-  position: absolute;
-  scale: 2.6;
-  opacity: 0.5;
+	content: url('https://amazinaxel.com/media/icons/permafrost-logo.svg');
+	display: inherit;
+	transform: rotate(-7deg);
+	width: 40px;
+	height: 40px;
+	filter: drop-shadow(0px 0px 10px #fff);
+	position: absolute;
+	scale: 2.6;
+	opacity: 0.5;
 }
 
 /* Underlined text */
-#hero h1, .embla__slide h2 {
+#hero h1,
+.embla__slide h2 {
 	text-decoration: underline;
-  	text-decoration-thickness: 0.2rem;
+	text-decoration-thickness: 0.2rem;
 	text-decoration-color: var(--blue2);
 }
 
@@ -197,6 +210,7 @@ textarea {
 	box-shadow: 1px 1px 9px var(--darkest2);
 	border-radius: 5px;
 }
+
 textarea:focus-visible,
 input:not([type='range']):focus-visible {
 	outline: 3px solid var(--blue2);
@@ -233,19 +247,19 @@ a .imgCard:active {
 
 .coverCard::after {
 	content: '';
-	height: var(--size);
-	width: var(--size);
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	z-index: 1;
-	left: calc(var(--size) / 5 * -1);
-	background-size: cover;
-	top: calc(var(--size) / 5 * -1);
+	left: 0;
+	top: 0;
 	transform: rotateZ(-10deg);
 	display: inline-block;
 	background-image: var(--bg);
 	filter: invert(50%) sepia(5%) saturate(2000%) hue-rotate(180deg) brightness(87%) blur(1px);
 	opacity: 1;
 	transition: 0.3s opacity;
+	scale: 2.5;
 }
 
 .innerCard * {
@@ -273,6 +287,7 @@ a:hover {
 	bottom: 0;
 	width: 100%;
 }
+
 .imgCard .contentFader {
 	height: 4rem;
 }
@@ -294,6 +309,7 @@ a:hover {
 	height: 10rem;
 	background-image: linear-gradient(to bottom, transparent, var(--darkest3) 100%);
 }
+
 /* Popups */
 
 .popupBg {
@@ -326,7 +342,8 @@ button:not(.nostyle) {
 	box-shadow: 0 0 10px 0 var(--blue2);
 	padding: 10px;
 	color: white;
-	cursor: pointer; /* For <button> elements */
+	cursor: pointer;
+	/* For <button> elements */
 	text-decoration: none;
 	transition:
 		scale 0.3s cubic-bezier(0, 1.4, 0.5, 1.3),
@@ -343,6 +360,7 @@ button:not(.nostyle):hover {
 	scale: 1.02;
 	box-shadow: 0 0 10px 3px var(--blue2);
 }
+
 .button:active,
 button:not(.nostyle):active {
 	scale: 0.98;
@@ -350,7 +368,7 @@ button:not(.nostyle):active {
 
 /* codeblocks */
 pre,
-:not(pre) > code {
+:not(pre)>code {
 	/* Applied to small & large codeblocks */
 	background-color: var(--darkest2);
 	padding: 1px 5px 2px 5px;
@@ -461,6 +479,7 @@ label {
 sub {
 	color: var(--blue1);
 }
+
 sub a {
 	color: var(--blue2) !important;
 }
@@ -499,10 +518,13 @@ sub a {
 .error.coverCard::after,
 .warning.coverCard::after,
 .important.coverCard::after,
-.note.coverCard::after,
-.info.coverCard::after {
+.note.coverCard::after {
 	opacity: 0.3;
 	filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) blur(2px);
+}
+
+.coverCard.info.innerCard::after {
+	opacity: 0.5;
 }
 
 /* Block quote styling */
@@ -596,18 +618,22 @@ hr {
 	width: 10px;
 	height: 10px;
 }
+
 ::-webkit-scrollbar-corner {
 	background: var(--darkest1);
 }
+
 ::-webkit-scrollbar-track {
 	background: var(--darkest1);
 	border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
 	background: var(--darkest3);
 	border-radius: 4px;
 	box-shadow: 0 1px 3px 0 var(--darkest3);
 }
+
 ::selection {
 	background-color: var(--blue2);
 	color: var(--lightest1);
@@ -617,14 +643,17 @@ hr {
 .innerCard:target {
 	animation: animateTarget 1.5s cubic-bezier(0, 2, 1, 1);
 }
+
 @keyframes animateTarget {
 	0% {
 		position: relative;
 		transform: scale(1);
 	}
+
 	70% {
 		transform: scale(1.05);
 	}
+
 	100% {
 		transform: scale(1);
 	}
@@ -637,6 +666,7 @@ hr {
 	padding: 15px;
 	font-family: var(--headerFont);
 }
+
 #skipToContent:focus {
 	top: 0;
 }
@@ -649,22 +679,25 @@ a.showMoreBtn {
 	justify-content: flex-end;
 	margin: 0 0 1.5rem;
 }
+
 .showMoreBtn.otherWay {
 	justify-content: left;
 	flex-direction: row-reverse;
 	gap: 5px;
 }
+
 .showMoreBtn::after {
 	content: url(https://amazinaxel.com/media/icons/arrow-right.svg);
 	margin-left: 4px;
 	height: 0;
-	filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(96%) hue-rotate(181deg)
-		brightness(98%) contrast(88%);
+	filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(96%) hue-rotate(181deg) brightness(98%) contrast(88%);
 	transition: transform 0.3s var(--ease);
 }
+
 .showMoreBtn:hover::after {
 	transform: translateX(2px);
 }
+
 .showMoreBtn:active::after {
 	transform: translateX(5px);
 }
@@ -672,9 +705,11 @@ a.showMoreBtn {
 .showMoreBtn.otherWay::after {
 	content: url(https://amazinaxel.com/media/icons/arrow-left.svg);
 }
+
 .otherWay:hover::after {
 	transform: translateX(-2px);
 }
+
 .otherWay:active::after {
 	transform: translateX(-5px);
 }
@@ -684,9 +719,11 @@ ul {
 	list-style-type: square;
 	padding-left: 1.5rem;
 }
+
 ul ul {
 	list-style-type: circle;
 }
+
 ul::marker {
 	color: var(--blue1);
 }

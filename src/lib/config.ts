@@ -1,14 +1,19 @@
-export const showcases = [
+export const otherShowcases = [
 	{
-		title: 'Nocturn',
-		image: 'nocturn.png',
-		url: 'https://nocturn.paynow.store',
-		description: 'Murder mystery MC minigame with tons of custom items & roles - nocturn.minekeep.gg'
+		title: 'Wintergreen',
+		image: 'wintergreen.png',
+		url: 'https://github.com/AmazinAxel/wintergreen',
+		description: 'A hyperfocused precached reading firmware with Bluetooth page turner support & compiled book sync for the Xteink X4'
+	}, {
+		title: 'Snowlayer + Conifer',
+		image: 'snowlayer.png',
+		url: 'https://github.com/amazinaxel/snowlayer',
+		description: 'Ortholinear, columnarstaggered Corne-like low-profile embedded CH32X035 wired split keyboard with a custom firmware!'
 	}, {
 		title: 'Flake',
 		image: 'flake.png',
 		url: 'https://github.com/AmazinAxel/flake',
-		description: 'A hyperfocused NixOS desktop configuration built with home-manager & Astal'
+		description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for daily use and workflow speed'
 	}
 ];
 
