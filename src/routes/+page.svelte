@@ -38,7 +38,7 @@
 	{#each minecraftServers as { title, image, description, align, headerClass, url, label, copy }}
 		<div class="featured blurredShadow align-{align}" style="--background: url(/media/showcases/{image})">
 			<div class="featuredBorder"></div>
-		<h1 class={headerClass}>{title}</h1>
+			<h1 class={headerClass}>{title}</h1>
 			<h2>{description}</h2>
 			{#if copy}
 				<button class="button" onclick={() => copyIp(copy)}>{copied === copy ? 'IP copied!' : copy}</button>
