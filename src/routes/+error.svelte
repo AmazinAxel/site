@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from '$app/state';
-	import { onMount } from "svelte"; 
+	import { onMount } from "svelte";
 	import Hero from '$lib/components/hero.svelte';
     import BackToHomepage from '$lib/components/backToHomepage.svelte';
 	let quote = $state(), author = $state();
@@ -29,7 +29,7 @@
 		background: none;
 		border: 0;
 		cursor: pointer;
-		text-shadow: 0 0 5px var(--blue2);
+		text-shadow: 0 0 1rem var(--blue2);
 	}
 	.quoteParent a {
 		opacity: 0.3;

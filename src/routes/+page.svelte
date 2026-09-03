@@ -1,11 +1,21 @@
 <script lang="ts">
-	import { otherShowcases } from '$lib/config';
+	import { otherShowcases, minecraftServers } from '$lib/config';
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import Subtext from '$lib/components/subtext.svelte';
     import ToolItem from '$lib/components/toolItem.svelte';
 
 	let { data } = $props(); // For journal posts
+
+	let copied = $state('');
+	let copiedTimeout: ReturnType<typeof setTimeout>;
+
+	const copyIp = (ip: string) => {
+		navigator.clipboard.writeText(ip);
+		copied = ip;
+		clearTimeout(copiedTimeout);
+		copiedTimeout = setTimeout(() => copied = '', 2000);
+	};
 </script>
 
 <svelte:head>
@@ -22,21 +32,22 @@
 	<p style="text-align: left; width: 100%;">...</p>
 </div>-->
 
-<!-- Permafrost -->
+<!-- MC servers -->
 <h2 class="sectionHeader">Minecraft server projects</h2>
-<div id="featured" class="blurredShadow" style="--background: url(/media/showcases/permafrost.png">
-	<h1 style="justify-content: center; display: flex; margin: 0; font-size: 3rem;" class="permafrostHeader">Permafrost</h1>
-	<h2 style="font-size: 1.1rem; margin: 0; font-weight: 400; font-family: 'Sora';">Snowy hardcore survival server</h2>
-	<div style="height: 1rem;"></div>
-	<a class="showMoreBtn button" href="https://permafrostmc.com" target="_blank" rel="noopener noreferrer">Playtesting soon!</a>
+<div class="featuredList">
+	{#each minecraftServers as { title, image, description, align, headerClass, url, label, copy }}
+		<div class="featured blurredShadow align-{align}" style="--background: url(/media/showcases/{image})">
+			<div class="featuredBorder"></div>
+		<h1 class={headerClass}>{title}</h1>
+			<h2>{description}</h2>
+			{#if copy}
+				<button class="button" onclick={() => copyIp(copy)}>{copied === copy ? 'IP copied!' : copy}</button>
+			{:else}
+				<a class="showMoreBtn button" href={url} target="_blank" rel="noopener noreferrer">{label}</a>
+			{/if}
+		</div>
+	{/each}
 </div>
-
-<!-- <div id="featured" class="blurredShadow" style="--background: url(/media/showcases/nocturn.png"> -->
-	<!-- <h1 style="justify-content: center; display: flex; margin: 0; font-size: 3rem;">Nocturn</h1> -->
-	<!-- <h2 style="font-size: 1.1rem; margin: 0; font-weight: 400; font-family: 'Sora';">Murder mystery server with a ton of roles</h2> -->
-	<!-- <div style="height: 1rem;"></div> -->
-	<!-- <a class="showMoreBtn button" href="https://permafrostmc.com" target="_blank" rel="noopener noreferrer">nocturn.minekeep.gg</a> -->
-<!-- </div> -->
 
 <!-- Showcases -->
 <h2 class="sectionHeader">Other projects</h2>
@@ -50,7 +61,7 @@
 </Carousel>
 
 <!-- Journal posts -->
-<Subtext header="What I'm writing about" subtext="Journal entries" url="https://journal.amazinaxel.com"/>
+<Subtext header="What I'm writing about" subtext="Recent journal entries" url="https://journal.amazinaxel.com"/>
 <div class="flexGrid">
 	{#each data.journalPosts as {link, title}}
 		<div class="card gridCard backgroundIcon" style="--bg: url(/media/icons/journal.svg)">

@@ -17,6 +17,24 @@ export const otherShowcases = [
 	}
 ];
 
+export const minecraftServers = [
+	{
+		title: 'Permafrost',
+		image: 'permafrost.png',
+		description: 'Hardcore survival in a snowy tundra',
+		align: 'left',
+		headerClass: 'permafrostHeader',
+		url: 'https://permafrostmc.com',
+		label: 'Playtest soon!'
+	}, {
+		title: 'Nocturn',
+		image: 'nocturn.png',
+		description: 'Murder mystery with a ton of roles',
+		align: 'right',
+		copy: 'nocturn.minekeep.gg'
+	}
+];
+
 export const heroItems = [
 	{
 		location: 'Mt. Baker - Washington State',
