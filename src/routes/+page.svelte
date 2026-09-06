@@ -53,11 +53,11 @@
 <h2 class="sectionHeader">Other projects</h2>
 <Carousel data={otherShowcases}>
 	<!-- Other carousel items -->
-	<div class="embla__slide blurredShadow">
-		<h2>MC dev tools</h2>
-		<ToolItem title="Text Converter" route="textconverter"/>
-		<ToolItem title="Emojis" route="emojipicker"/>
-	</div>
+	<!-- <div class="embla__slide blurredShadow"> -->
+		<!-- <h2>MC dev tools</h2> -->
+		<!-- <ToolItem title="Text Converter" route="textconverter"/> -->
+		<!-- <ToolItem title="Emojis" route="emojipicker"/> -->
+	<!-- </div> -->
 </Carousel>
 
 <!-- Journal posts -->
