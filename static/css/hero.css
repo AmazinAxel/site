@@ -200,7 +200,7 @@
 }
 
 .blurredShadow.featured::after {
-	filter: blur(0);
+	filter: blur(2px);
 	mask-image: linear-gradient(var(--featuredFade), #000, transparent);
 }
 
