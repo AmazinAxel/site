@@ -174,24 +174,34 @@ input[type='checkbox'] {
 	bottom: 5px;
 }
 
-/* Permafrost inline logo */
-.permafrostHeader {
+/* Permafrost & Nocturn inline logos */
+.permafrostHeader,
+.nocturnHeader {
 	display: flex;
 	align-items: center;
 	gap: 0.4rem;
 	justify-content: center;
 }
 
-.permafrostHeader::before {
-	content: url('https://amazinaxel.com/media/icons/permafrost-logo.svg');
+.permafrostHeader::before,
+.nocturnHeader::before {
 	display: inherit;
-	transform: rotate(-7deg);
+	transform: rotate(-97deg);
 	width: 40px;
 	height: 40px;
 	filter: drop-shadow(0px 0px 10px #fff);
 	position: absolute;
 	scale: 2.6;
 	opacity: 0.5;
+}
+
+.permafrostHeader::before {
+	content: url('https://amazinaxel.com/media/icons/permafrost-logo.svg');
+}
+
+.nocturnHeader::before {
+	content: url('/media/icons/nocturn-logo.svg');
+	right: -3px;
 }
 
 /* Underlined text */

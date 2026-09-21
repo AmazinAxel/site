@@ -3,7 +3,7 @@ export const otherShowcases = [
 		title: 'Wintergreen',
 		image: 'wintergreen.png',
 		url: 'https://github.com/AmazinAxel/wintergreen',
-		description: 'A hyperfocused precached reading firmware with Bluetooth page turner support & compiled book sync for the Xteink X4'
+		description: 'A precached and hyperfocused reading firmware with Bluetooth page turner support & compiled book sync for the Xteink X4 ereader'
 	}, {
 		title: 'Snowlayer + Conifer',
 		image: 'snowlayer.png',
@@ -13,7 +13,17 @@ export const otherShowcases = [
 		title: 'Flake',
 		image: 'flake.png',
 		url: 'https://github.com/AmazinAxel/flake',
-		description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for daily use and workflow speed'
+		description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
+	}, {
+		// title: 'Firewatch',
+		// image: 'flake.png',
+		// url: 'https://github.com/AmazinAxel/flake',
+		// description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
+	// }, {
+	// 	title: 'WATCH FIRMWARE',
+	// 	image: 'flake.png',
+	// 	url: 'https://github.com/AmazinAxel/flake',
+	// 	description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
 	}
 ];
 
@@ -31,6 +41,7 @@ export const minecraftServers = [
 		image: 'nocturn.png',
 		description: 'Murder mystery with a ton of roles',
 		align: 'right',
+		headerClass: 'nocturnHeader',
 		copy: 'nocturn.minekeep.gg'
 	}
 ];

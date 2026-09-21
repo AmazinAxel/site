@@ -22,10 +22,10 @@
 		<footer>
 			<div id="inner">
 				<div>
-					<p>&copy;2016-{new Date().getFullYear()} AmazinAxel (Alec) • All Rights Reserved</p>
+					<p>&copy;2016-{new Date().getFullYear()} • AmazinAxel/Alec</p>
 					<a href="https://github.com/AmazinAxel/site" id="date" target="_blank" rel="noopener noreferrer">Site last generated on {data.date}</a>
 				</div>
-				<a href="https://derpydoggo.is-a.dev" class="external" target="_blank" rel="noopener noreferrer">(lil' bro's site)</a>
+				<a href="https://derpydoggo.is-a.dev" class="external" target="_blank" rel="noopener noreferrer">lil' bro's site</a>
 			</div>
 		</footer>
 	{/if}

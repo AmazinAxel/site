@@ -25,7 +25,7 @@
 		xhr.open('POST', 'https://contact.amazinaxel.workers.dev');
 
 		xhr.onload = () => {
-			if (xhr.status == 200) { 
+			if (xhr.status == 200) {
 				buttonText = 'Message sent';
 				turnstileReset?.();
 			} else {
@@ -42,10 +42,10 @@
 <BackToHomepage/>
 <Title name="Contact"/>
 
-<Admonition info>
+<div class="card" style="padding: 1.5rem;">
 	<strong>Reach out to <code>@amazinaxel</code> on Discord for a faster response</strong>
 	<p>Include a contact method if you would like a reply.</p>
-</Admonition>
+</div>
 
 <div class="innerCard coverCard" style="--bg: url(/media/icons/contact.svg); --size: 20rem;">
 	<h2>Get in touch</h2>
@@ -62,9 +62,9 @@
 			</div>
 			<br>
 		{/if}
-		
+
         <button type="submit" class="button">{ buttonText }</button>
     </form>
 	<br>
-	<sub>This form is protected by <a href="https://www.cloudflare.com/products/turnstile/" target="_blank" rel="noopener noreferrer">Cloudflare Turnstile</a> - read <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare's privacy policy</a></sub>
+	<!-- <sub>This form is protected by <a href="https://www.cloudflare.com/products/turnstile/" target="_blank" rel="noopener noreferrer">Cloudflare Turnstile</a> (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare privacy policy</a>)</sub> -->
 </div>

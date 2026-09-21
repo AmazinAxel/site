@@ -1,1 +1,1 @@
-<a class="showMoreBtn otherWay" href="/">Back to homepage</a>
+<a class="showMoreBtn otherWay" href="/">Back</a>
