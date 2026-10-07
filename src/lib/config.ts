@@ -5,9 +5,9 @@ export const otherShowcases = [
 		url: 'https://github.com/AmazinAxel/wintergreen',
 		description: 'A precached and hyperfocused reading firmware with Bluetooth page turner support & compiled book sync for the Xteink X4 ereader'
 	}, {
-		title: 'Snowlayer + Conifer',
-		image: 'snowlayer.png',
-		url: 'https://github.com/amazinaxel/snowlayer',
+		title: 'Snowboard + Conifer',
+		image: 'snowboard.png',
+		url: 'https://github.com/amazinaxel/snowboard',
 		description: 'Ortholinear, columnarstaggered Corne-like low-profile embedded CH32X035 wired split keyboard with a custom firmware!'
 	}, {
 		title: 'Flake',
