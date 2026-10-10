@@ -2,9 +2,9 @@
 	import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
 	import { Turnstile } from 'svelte-turnstile';
-	import Admonition from '$lib/components/admonition.svelte';
-	import Title from '$lib/components/title.svelte';
-    import BackToHomepage from '$lib/components/backToHomepage.svelte';
+	import Admonition from '#lib/components/admonition.svelte';
+	import Title from '#lib/components/title.svelte';
+    import BackToHomepage from '#lib/components/backToHomepage.svelte';
 
 	const transition = { y: -5, duration: 500, easing: cubicOut };
 

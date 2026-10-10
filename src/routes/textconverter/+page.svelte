@@ -1,7 +1,7 @@
 <script lang="ts">
-    import BackToHomepage from '$lib/components/backToHomepage.svelte';
-	import MoreInfo from '$lib/components/moreInfo.svelte';
-	import Options from '$lib/components/options.svelte';
+    import BackToHomepage from '#lib/components/backToHomepage.svelte';
+    import MoreInfo from '#lib/components/moreInfo.svelte';
+    import Options from '#lib/components/options.svelte';
 
     var inputText = $state('');
     var outputText = $state('');

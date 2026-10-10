@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { heroItems } from '$lib/config';
+    import { heroItems } from '#lib/config';
     let { children } = $props();
 
 

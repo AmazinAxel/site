@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from '$app/state';
 	import { onMount } from "svelte";
-	import Hero from '$lib/components/hero.svelte';
-    import BackToHomepage from '$lib/components/backToHomepage.svelte';
+	import Hero from '#lib/components/hero.svelte';
+    import BackToHomepage from '#lib/components/backToHomepage.svelte';
 	let quote = $state(), author = $state();
 	let visibility = $state(false);
 

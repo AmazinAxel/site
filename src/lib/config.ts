@@ -14,16 +14,16 @@ export const otherShowcases = [
 		image: 'flake.png',
 		url: 'https://github.com/AmazinAxel/flake',
 		description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
-	}, {
-		// title: 'Firewatch',
-		// image: 'flake.png',
-		// url: 'https://github.com/AmazinAxel/flake',
-		// description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
 	// }, {
-	// 	title: 'WATCH FIRMWARE',
-	// 	image: 'flake.png',
-	// 	url: 'https://github.com/AmazinAxel/flake',
-	// 	description: 'A highly keyboard-oriented NixOS desktop configuration & custom shell optimized for very efficient daily use and workflow speed'
+		// title: 'Firewatch',
+		// image: 'firewatch.png',
+		// url: 'https://github.com/AmazinAxel/firewatch',
+		// description: 'A custom ESP32-powered SDS011 wildfire smoke sensor hooked up to a solar cell battery that displays AQI health readings on trmnl and on the web!'
+	// }, {
+	// 	title: 'Aurora',
+	// 	image: 'aurora.png',
+	// 	url: 'https://github.com/AmazinAxel/aurora',
+	// 	description: 'A lightweight custom legible Watchy firmware integrating a Pomodoro timer'
 	}
 ];
 

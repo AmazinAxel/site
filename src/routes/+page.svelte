@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { otherShowcases, minecraftServers } from '$lib/config';
-	import Carousel from '$lib/components/carousel.svelte';
-	import Hero from '$lib/components/hero.svelte';
-	import Subtext from '$lib/components/subtext.svelte';
-    import ToolItem from '$lib/components/toolItem.svelte';
+	import { otherShowcases, minecraftServers } from '#lib/config';
+	import Carousel from '#lib/components/carousel.svelte';
+	import Hero from '#lib/components/hero.svelte';
+	import Subtext from '#lib/components/subtext.svelte';
+  import ToolItem from '#lib/components/toolItem.svelte';
 
 	let { data } = $props(); // For journal posts
 

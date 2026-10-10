@@ -2,10 +2,10 @@
     import { fly } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
     import { allChars, searchableChars } from './emojis';
-    import MoreInfo from '$lib/components/moreInfo.svelte';
-    import Options from '$lib/components/options.svelte';
+    import MoreInfo from '#lib/components/moreInfo.svelte';
+    import Options from '#lib/components/options.svelte';
     import Fuse from 'fuse.js';
-    import BackToHomepage from '$lib/components/backToHomepage.svelte';
+    import BackToHomepage from '#lib/components/backToHomepage.svelte';
     const transition = { y: 10, duration: 250, easing: cubicOut };
 
     const iconList = allChars.split('').filter((v) => v != '\n');
@@ -65,7 +65,7 @@
 <BackToHomepage/>
 <h1>MC emoji picker</h1>
 
-<Options>    
+<Options>
     <label for="search">Search:</label>
     <input type="text" name="search" style="margin-bottom: 0;" bind:this={searchInput} bind:value={query} oninput={() => searchCharacters(query)}>
     <MoreInfo style="right: 10px; bottom: 10px;">Search feature only available for some common characters</MoreInfo>
